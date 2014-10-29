@@ -2,4 +2,4 @@
  * @author Thomas Durieux
  *
  */
-package github.tdurieux.spoon.main;
+package github.tdurieux.spoon.graph;
