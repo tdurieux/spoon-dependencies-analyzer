@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE dependencies SYSTEM "http://depfind.sourceforge.net/dtd/dependencies.dtd">
+
+<dependencies>
+    <package confirmed="yes">
+        <name>durieux.vlille.api</name>
+        <class confirmed="yes">
+            <name>durieux.vlille.api.Station</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.StationImpl</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getAddress()</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getAttachs()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getBikes()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getCity()</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getId()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getLat()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getLng()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getName()</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getPaiement()</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.getStatus()</name>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setAddress(java.lang.String)</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setAttachs(int)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setBikes(int)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setCity(java.lang.String)</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setId(int)</name>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setLat(double)</name>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setLng(double)</name>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setName(java.lang.String)</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setPaiement(java.lang.String)</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.Station.setStatus(int)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.api.StationFactory</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactory.StationFactory()</name>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Double.parseDouble(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Integer.parseInt(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.NumberFormatException</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="feature" confirmed="no">java.lang.RuntimeException.RuntimeException(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">java.lang.String.equals(java.lang.Object)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NamedNodeMap</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NamedNodeMap.getLength()</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NamedNodeMap.item(int)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Node.getAttributes()</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Node.getNodeName()</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Node.getTextContent()</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.api.StationFactoryTest</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.StationFactoryTest()</name>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getId()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getLat()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getLng()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getName()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.assertEquals(double, double, double)</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.assertEquals(java.lang.Object, java.lang.Object)</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.assertEquals(long, long)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getId()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getLat()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getLng()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getName()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.assertEquals(double, double, double)</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.assertEquals(java.lang.Object, java.lang.Object)</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.assertEquals(long, long)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</name>
+                <outbound type="feature" confirmed="no">java.io.BufferedReader.BufferedReader(java.io.Reader)</outbound>
+                <outbound type="class" confirmed="no">java.io.IOException</outbound>
+                <outbound type="class" confirmed="no">java.io.Reader</outbound>
+                <outbound type="feature" confirmed="no">java.io.StringReader.StringReader(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">javax.xml.parsers.DocumentBuilder</outbound>
+                <outbound type="feature" confirmed="no">javax.xml.parsers.DocumentBuilder.parse(org.xml.sax.InputSource)</outbound>
+                <outbound type="class" confirmed="no">javax.xml.parsers.DocumentBuilderFactory</outbound>
+                <outbound type="feature" confirmed="no">javax.xml.parsers.DocumentBuilderFactory.newDocumentBuilder()</outbound>
+                <outbound type="feature" confirmed="no">javax.xml.parsers.DocumentBuilderFactory.newInstance()</outbound>
+                <outbound type="class" confirmed="no">javax.xml.parsers.ParserConfigurationException</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getDocumentElement()</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Element</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Element.normalize()</outbound>
+                <outbound type="class" confirmed="no">org.xml.sax.InputSource</outbound>
+                <outbound type="feature" confirmed="no">org.xml.sax.InputSource.InputSource(java.io.Reader)</outbound>
+                <outbound type="class" confirmed="no">org.xml.sax.SAXException</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.api.StationImpl</name>
+            <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.id</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lat</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lng</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.name</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.address</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.attachs</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.bikes</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.city</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.id</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.name</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.paiement</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.status</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.address</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getAddress()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setAddress(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.attachs</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getAttachs()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setAttachs(int)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.bikes</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getBikes()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setBikes(int)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.city</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getCity()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setCity(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getAddress()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.address</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getAttachs()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.attachs</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getBikes()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.bikes</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getCity()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.city</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getId()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.id</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getLat()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lat</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getLng()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lng</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getName()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.name</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getPaiement()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.paiement</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.getStatus()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.status</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.id</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getId()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setId(int)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.lat</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getLat()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setLat(double)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.lng</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getLng()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setLng(double)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.name</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getName()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setName(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.paiement</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getPaiement()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setPaiement(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setAddress(java.lang.String)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.address</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setAttachs(int)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.attachs</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setBikes(int)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.bikes</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setCity(java.lang.String)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.city</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setId(int)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.id</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setLat(double)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lat</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setLng(double)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lng</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setName(java.lang.String)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.name</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setPaiement(java.lang.String)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.paiement</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.setStatus(int)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.status</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.status</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getStatus()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setStatus(int)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationImpl.toString()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.address</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.attachs</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.bikes</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.city</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.id</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lat</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.lng</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.name</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.paiement</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.status</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(double)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(int)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.api.StationTest</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationTest.StationTest()</name>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.StationTest.test()</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.api.VLille</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.VLilleImpl</inbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLille.getStations()</name>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLille.getStationsWithDetails()</name>
+                <outbound type="class" confirmed="no">java.io.IOException</outbound>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.api.VLilleImpl</name>
+            <outbound type="class" confirmed="yes">durieux.vlille.api.VLille</outbound>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.URLVLILLE</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.static {}</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.URLVLILLEXML</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.static {}</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.VLilleImpl()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.hasDetails</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.stations</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+                <outbound type="feature" confirmed="no">java.util.HashMap.HashMap()</outbound>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.getStations()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getId()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.URLVLILLEXML</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.stations</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String, java.nio.charset.Charset)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</outbound>
+                <outbound type="class" confirmed="no">java.lang.Integer</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Integer.valueOf(int)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">java.nio.charset.Charset</outbound>
+                <outbound type="feature" confirmed="no">java.nio.charset.Charset.forName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+                <outbound type="feature" confirmed="no">java.util.Map.put(java.lang.Object, java.lang.Object)</outbound>
+                <outbound type="feature" confirmed="no">java.util.Map.size()</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getElementsByTagName(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Node</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.NodeList</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.getLength()</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.NodeList.item(int)</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.getStationsWithDetails()</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.setAddress(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.setAttachs(int)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.setBikes(int)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.setCity(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.setPaiement(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.setStatus(int)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.URLVLILLE</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.hasDetails</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.stations</outbound>
+                <outbound type="class" confirmed="no">java.io.IOException</outbound>
+                <outbound type="class" confirmed="no">java.lang.CharSequence</outbound>
+                <outbound type="class" confirmed="no">java.lang.Integer</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Integer.parseInt(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Integer.valueOf(int)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">java.lang.String.contains(java.lang.CharSequence)</outbound>
+                <outbound type="class" confirmed="no">java.util.Iterator</outbound>
+                <outbound type="feature" confirmed="no">java.util.Iterator.hasNext()</outbound>
+                <outbound type="feature" confirmed="no">java.util.Iterator.next()</outbound>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+                <outbound type="feature" confirmed="no">java.util.Map.get(java.lang.Object)</outbound>
+                <outbound type="feature" confirmed="no">java.util.Map.put(java.lang.Object, java.lang.Object)</outbound>
+                <outbound type="class" confirmed="no">org.jsoup.Connection</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.Connection.get()</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.Jsoup.connect(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.jsoup.nodes.Document</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.nodes.Document.select(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.jsoup.nodes.Element</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.nodes.Element.attr(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.nodes.Element.id()</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.nodes.Element.select(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.nodes.Element.text()</outbound>
+                <outbound type="class" confirmed="no">org.jsoup.select.Elements</outbound>
+                <outbound type="feature" confirmed="no">org.jsoup.select.Elements.iterator()</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails(boolean)</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.getStationsWithDetails(boolean)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.hasDetails</outbound>
+                <outbound type="class" confirmed="no">java.io.IOException</outbound>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.hasDetails</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.VLilleImpl()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails(boolean)</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.static {}</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.URLVLILLE</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.URLVLILLEXML</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.api.VLilleImpl.stations</name>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.VLilleImpl()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="yes">
+        <name>durieux.vlille.main</name>
+        <class confirmed="yes">
+            <name>durieux.vlille.main.Main</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.main.Main.Main()</name>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.main.Main.main(java.lang.String[])</name>
+                <outbound type="class" confirmed="yes">durieux.vlille.api.Station</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getAddress()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getAttachs()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getBikes()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getId()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getLat()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getLng()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getName()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.Station.getPaiement()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLille.getStationsWithDetails()</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.VLilleImpl()</outbound>
+                <outbound type="class" confirmed="no">java.io.IOException</outbound>
+                <outbound type="class" confirmed="no">java.io.PrintStream</outbound>
+                <outbound type="feature" confirmed="no">java.io.PrintStream.println(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(double)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(int)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.System.out</outbound>
+                <outbound type="class" confirmed="no">java.util.Collection</outbound>
+                <outbound type="feature" confirmed="no">java.util.Collection.iterator()</outbound>
+                <outbound type="class" confirmed="no">java.util.Iterator</outbound>
+                <outbound type="feature" confirmed="no">java.util.Iterator.hasNext()</outbound>
+                <outbound type="feature" confirmed="no">java.util.Iterator.next()</outbound>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+                <outbound type="feature" confirmed="no">java.util.Map.values()</outbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="yes">
+        <name>durieux.vlille.util</name>
+        <class confirmed="yes">
+            <name>durieux.vlille.util.XMLFromUrl</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.url</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String, java.nio.charset.Charset)</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.charset</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.url</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">java.nio.charset.Charset</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLFromUrl.charset</name>
+                <outbound type="class" confirmed="no">java.nio.charset.Charset</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String, java.nio.charset.Charset)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLFromUrl.parse()</name>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.charset</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.url</outbound>
+                <outbound type="class" confirmed="yes">durieux.vlille.util.XMLParserException</outbound>
+                <outbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.Throwable)</outbound>
+                <outbound type="feature" confirmed="no">java.io.BufferedReader.BufferedReader(java.io.Reader)</outbound>
+                <outbound type="feature" confirmed="no">java.io.BufferedReader.close()</outbound>
+                <outbound type="feature" confirmed="no">java.io.BufferedReader.readLine()</outbound>
+                <outbound type="class" confirmed="no">java.io.IOException</outbound>
+                <outbound type="class" confirmed="no">java.io.InputStream</outbound>
+                <outbound type="feature" confirmed="no">java.io.InputStreamReader.InputStreamReader(java.io.InputStream)</outbound>
+                <outbound type="feature" confirmed="no">java.io.InputStreamReader.InputStreamReader(java.io.InputStream, java.nio.charset.Charset)</outbound>
+                <outbound type="class" confirmed="no">java.io.Reader</outbound>
+                <outbound type="feature" confirmed="no">java.io.StringReader.StringReader(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
+                <outbound type="class" confirmed="no">java.lang.Throwable</outbound>
+                <outbound type="class" confirmed="no">java.net.MalformedURLException</outbound>
+                <outbound type="feature" confirmed="no">java.net.URL.URL(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.net.URL.openStream()</outbound>
+                <outbound type="class" confirmed="no">java.nio.charset.Charset</outbound>
+                <outbound type="class" confirmed="no">javax.xml.parsers.DocumentBuilder</outbound>
+                <outbound type="feature" confirmed="no">javax.xml.parsers.DocumentBuilder.parse(org.xml.sax.InputSource)</outbound>
+                <outbound type="class" confirmed="no">javax.xml.parsers.DocumentBuilderFactory</outbound>
+                <outbound type="feature" confirmed="no">javax.xml.parsers.DocumentBuilderFactory.newDocumentBuilder()</outbound>
+                <outbound type="feature" confirmed="no">javax.xml.parsers.DocumentBuilderFactory.newInstance()</outbound>
+                <outbound type="class" confirmed="no">javax.xml.parsers.ParserConfigurationException</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Document</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Document.getDocumentElement()</outbound>
+                <outbound type="class" confirmed="no">org.w3c.dom.Element</outbound>
+                <outbound type="feature" confirmed="no">org.w3c.dom.Element.normalize()</outbound>
+                <outbound type="class" confirmed="no">org.xml.sax.InputSource</outbound>
+                <outbound type="feature" confirmed="no">org.xml.sax.InputSource.InputSource(java.io.Reader)</outbound>
+                <outbound type="class" confirmed="no">org.xml.sax.SAXException</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLFromUrl.url</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String, java.nio.charset.Charset)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.util.XMLFromUrlParserTest</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLFromUrlParserTest.XMLFromUrlParserTest()</name>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLFromUrlParserTest.test()</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">org.junit.Assert.fail(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">org.junit.Test</outbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>durieux.vlille.util.XMLParserException</name>
+            <outbound type="class" confirmed="no">java.lang.RuntimeException</outbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLParserException.XMLParserException()</name>
+                <outbound type="feature" confirmed="no">java.lang.RuntimeException.RuntimeException()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLParserException.XMLParserException(java.lang.String)</name>
+                <outbound type="feature" confirmed="no">java.lang.RuntimeException.RuntimeException(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLParserException.XMLParserException(java.lang.String, java.lang.Throwable)</name>
+                <outbound type="feature" confirmed="no">java.lang.RuntimeException.RuntimeException(java.lang.String, java.lang.Throwable)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">java.lang.Throwable</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>durieux.vlille.util.XMLParserException.XMLParserException(java.lang.Throwable)</name>
+                <outbound type="feature" confirmed="no">java.lang.RuntimeException.RuntimeException(java.lang.Throwable)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Throwable</outbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>java.io</name>
+        <class confirmed="no">
+            <name>java.io.BufferedReader</name>
+            <feature confirmed="no">
+                <name>java.io.BufferedReader.BufferedReader(java.io.Reader)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.io.BufferedReader.close()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.io.BufferedReader.readLine()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.io.IOException</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLille.getStationsWithDetails()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails(boolean)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.io.InputStream</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.io.InputStreamReader</name>
+            <feature confirmed="no">
+                <name>java.io.InputStreamReader.InputStreamReader(java.io.InputStream)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.io.InputStreamReader.InputStreamReader(java.io.InputStream, java.nio.charset.Charset)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.io.PrintStream</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <feature confirmed="no">
+                <name>java.io.PrintStream.println(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.io.Reader</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.io.StringReader</name>
+            <feature confirmed="no">
+                <name>java.io.StringReader.StringReader(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>java.lang</name>
+        <class confirmed="no">
+            <name>java.lang.CharSequence</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Double</name>
+            <feature confirmed="no">
+                <name>java.lang.Double.parseDouble(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Exception</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Integer</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <feature confirmed="no">
+                <name>java.lang.Integer.parseInt(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Integer.valueOf(int)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.NumberFormatException</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Object</name>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.Station</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.StationFactory</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.StationFactoryTest</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.StationImpl</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.StationTest</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.VLille</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.api.VLilleImpl</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.main.Main</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.util.XMLFromUrl</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.util.XMLFromUrlParserTest</inbound>
+            <feature confirmed="no">
+                <name>java.lang.Object.Object()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.StationFactory()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.StationFactoryTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationTest.StationTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.VLilleImpl()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.Main()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String, java.nio.charset.Charset)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrlParserTest.XMLFromUrlParserTest()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.RuntimeException</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            <inbound type="class" confirmed="yes">durieux.vlille.util.XMLParserException</inbound>
+            <feature confirmed="no">
+                <name>java.lang.RuntimeException.RuntimeException()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.RuntimeException.RuntimeException(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.String)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.RuntimeException.RuntimeException(java.lang.String, java.lang.Throwable)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.String, java.lang.Throwable)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.RuntimeException.RuntimeException(java.lang.Throwable)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.Throwable)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.String</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.getAddress()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.getCity()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.getName()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.getPaiement()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.setAddress(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.setCity(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.setName(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.Station.setPaiement(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, double, double)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.StationImpl(int, java.lang.String, java.lang.String, java.lang.String, int, int, int, java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.address</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.city</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getAddress()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getCity()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getName()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.getPaiement()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.name</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.paiement</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setAddress(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setCity(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setName(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.setPaiement(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationTest.test()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.URLVLILLE</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.URLVLILLEXML</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.static {}</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String, java.nio.charset.Charset)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.url</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrlParserTest.test()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.String, java.lang.Throwable)</inbound>
+            <feature confirmed="no">
+                <name>java.lang.String.contains(java.lang.CharSequence)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.String.equals(java.lang.Object)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.StringBuilder</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.StringBuilder()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.append(double)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.append(int)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.append(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.toString()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationImpl.toString()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.System</name>
+            <feature confirmed="no">
+                <name>java.lang.System.out</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Throwable</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.String, java.lang.Throwable)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLParserException.XMLParserException(java.lang.Throwable)</inbound>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>java.net</name>
+        <class confirmed="no">
+            <name>java.net.MalformedURLException</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.net.URL</name>
+            <feature confirmed="no">
+                <name>java.net.URL.URL(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.net.URL.openStream()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>java.nio.charset</name>
+        <class confirmed="no">
+            <name>java.nio.charset.Charset</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.XMLFromUrl(java.lang.String, java.nio.charset.Charset)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.charset</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="no">
+                <name>java.nio.charset.Charset.forName(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>java.util</name>
+        <class confirmed="no">
+            <name>java.util.Collection</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <feature confirmed="no">
+                <name>java.util.Collection.iterator()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.util.HashMap</name>
+            <feature confirmed="no">
+                <name>java.util.HashMap.HashMap()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.VLilleImpl()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.util.Iterator</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <feature confirmed="no">
+                <name>java.util.Iterator.hasNext()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.util.Iterator.next()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.util.Map</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLille.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLille.getStationsWithDetails()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.VLilleImpl()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails(boolean)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.stations</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            <feature confirmed="no">
+                <name>java.util.Map.get(java.lang.Object)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.util.Map.put(java.lang.Object, java.lang.Object)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.util.Map.size()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.util.Map.values()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>javax.xml.parsers</name>
+        <class confirmed="no">
+            <name>javax.xml.parsers.DocumentBuilder</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="no">
+                <name>javax.xml.parsers.DocumentBuilder.parse(org.xml.sax.InputSource)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>javax.xml.parsers.DocumentBuilderFactory</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="no">
+                <name>javax.xml.parsers.DocumentBuilderFactory.newDocumentBuilder()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>javax.xml.parsers.DocumentBuilderFactory.newInstance()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>javax.xml.parsers.ParserConfigurationException</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>org.jsoup</name>
+        <class confirmed="no">
+            <name>org.jsoup.Connection</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <feature confirmed="no">
+                <name>org.jsoup.Connection.get()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.jsoup.Jsoup</name>
+            <feature confirmed="no">
+                <name>org.jsoup.Jsoup.connect(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>org.jsoup.nodes</name>
+        <class confirmed="no">
+            <name>org.jsoup.nodes.Document</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <feature confirmed="no">
+                <name>org.jsoup.nodes.Document.select(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.jsoup.nodes.Element</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <feature confirmed="no">
+                <name>org.jsoup.nodes.Element.attr(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.jsoup.nodes.Element.id()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.jsoup.nodes.Element.select(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.jsoup.nodes.Element.text()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>org.jsoup.select</name>
+        <class confirmed="no">
+            <name>org.jsoup.select.Elements</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            <feature confirmed="no">
+                <name>org.jsoup.select.Elements.iterator()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStationsWithDetails()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>org.junit</name>
+        <class confirmed="no">
+            <name>org.junit.Assert</name>
+            <feature confirmed="no">
+                <name>org.junit.Assert.assertEquals(double, double, double)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.junit.Assert.assertEquals(java.lang.Object, java.lang.Object)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.junit.Assert.assertEquals(long, long)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.junit.Assert.fail(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationTest.test()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrlParserTest.test()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.junit.Test</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationTest.test()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrlParserTest.test()</inbound>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>org.w3c.dom</name>
+        <class confirmed="no">
+            <name>org.w3c.dom.Document</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="no">
+                <name>org.w3c.dom.Document.getDocumentElement()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.w3c.dom.Document.getElementsByTagName(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.w3c.dom.Element</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="no">
+                <name>org.w3c.dom.Element.normalize()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.w3c.dom.NamedNodeMap</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            <feature confirmed="no">
+                <name>org.w3c.dom.NamedNodeMap.getLength()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.w3c.dom.NamedNodeMap.item(int)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.w3c.dom.Node</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <feature confirmed="no">
+                <name>org.w3c.dom.Node.getAttributes()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.w3c.dom.Node.getNodeName()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.w3c.dom.Node.getTextContent()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactory.createStationFromXML(org.w3c.dom.Node)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.w3c.dom.NodeList</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            <feature confirmed="no">
+                <name>org.w3c.dom.NodeList.getLength()</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>org.w3c.dom.NodeList.item(int)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromBigIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromEmptyNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromWihtoutNameTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLEmptyIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLatTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidLngTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLInvalidTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.createStationFromXMLWihtoutIdTest()</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.VLilleImpl.getStations()</inbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>org.xml.sax</name>
+        <class confirmed="no">
+            <name>org.xml.sax.InputSource</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            <feature confirmed="no">
+                <name>org.xml.sax.InputSource.InputSource(java.io.Reader)</name>
+                <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>org.xml.sax.SAXException</name>
+            <inbound type="feature" confirmed="yes">durieux.vlille.api.StationFactoryTest.parseXML(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">durieux.vlille.util.XMLFromUrl.parse()</inbound>
+        </class>
+    </package>
+</dependencies>

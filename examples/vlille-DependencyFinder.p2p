@@ -1,0 +1,63 @@
+durieux.vlille.api
+    <-- durieux.vlille.main
+    --> durieux.vlille.util
+    --> java.io *
+    --> java.lang *
+    --> java.nio.charset *
+    --> java.util *
+    --> javax.xml.parsers *
+    --> org.jsoup *
+    --> org.jsoup.nodes *
+    --> org.jsoup.select *
+    --> org.junit *
+    --> org.w3c.dom *
+    --> org.xml.sax *
+durieux.vlille.main
+    --> durieux.vlille.api
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+durieux.vlille.util
+    <-- durieux.vlille.api
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.nio.charset *
+    --> javax.xml.parsers *
+    --> org.junit *
+    --> org.w3c.dom *
+    --> org.xml.sax *
+java.io *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.main
+    <-- durieux.vlille.util
+java.lang *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.main
+    <-- durieux.vlille.util
+java.net *
+    <-- durieux.vlille.util
+java.nio.charset *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.util
+java.util *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.main
+javax.xml.parsers *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.util
+org.jsoup *
+    <-- durieux.vlille.api
+org.jsoup.nodes *
+    <-- durieux.vlille.api
+org.jsoup.select *
+    <-- durieux.vlille.api
+org.junit *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.util
+org.w3c.dom *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.util
+org.xml.sax *
+    <-- durieux.vlille.api
+    <-- durieux.vlille.util

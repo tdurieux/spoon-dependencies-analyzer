@@ -1,0 +1,3210 @@
+ *
+    <-- org.apache.commons.io
+    <-- org.apache.commons.io.output
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.bzip2
+    <-- org.eclipse.jdt.core.compiler
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    <-- org.eclipse.jdt.internal.compiler.flow
+    <-- org.eclipse.jdt.internal.compiler.lookup
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+    <-- spoon.test.arrays
+com.martiansoftware.jsap
+    <-- com.martiansoftware.jsap.ant
+    <-- com.martiansoftware.jsap.defaultsources
+    <-> com.martiansoftware.jsap.stringparsers
+    <-> com.martiansoftware.jsap.xml
+    --> com.martiansoftware.util
+    --> java.awt *
+    --> java.io *
+    --> java.lang *
+    --> java.math *
+    --> java.net *
+    --> java.util *
+    <-- spoon
+    <-- spoon.test
+    <-- spoon.test.api
+com.martiansoftware.jsap.ant
+    --> com.martiansoftware.jsap
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.tools.ant
+com.martiansoftware.jsap.defaultsources
+    --> com.martiansoftware.jsap
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+com.martiansoftware.jsap.stringparsers
+    <-> com.martiansoftware.jsap
+    --> java.awt *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.math *
+    --> java.net *
+    --> java.text *
+    --> java.util *
+    --> java.util.regex *
+    <-- spoon
+com.martiansoftware.jsap.xml
+    <-> com.martiansoftware.jsap
+    --> com.thoughtworks.xstream *
+    --> com.thoughtworks.xstream.io *
+    --> com.thoughtworks.xstream.io.xml *
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+com.martiansoftware.util
+    <-- com.martiansoftware.jsap
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+com.thoughtworks.xstream *
+    <-- com.martiansoftware.jsap.xml
+com.thoughtworks.xstream.io *
+    <-- com.martiansoftware.jsap.xml
+com.thoughtworks.xstream.io.xml *
+    <-- com.martiansoftware.jsap.xml
+java.awt *
+    <-- com.martiansoftware.jsap
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.lf5
+    <-- org.apache.log4j.lf5.util
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- spoon.support.gui
+java.awt.event *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- spoon.support.gui
+    <-- spoon.test.secondaryclasses
+java.beans *
+    <-- org.apache.log4j.config
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.rewrite
+java.io *
+    <-- com.martiansoftware.jsap
+    <-- com.martiansoftware.jsap.ant
+    <-- com.martiansoftware.jsap.defaultsources
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- com.martiansoftware.jsap.xml
+    <-- com.martiansoftware.util
+    <-- junit.framework
+    <-- junit.runner
+    <-- junit.textui
+    <-- org.apache.commons.io
+    <-- org.apache.commons.io.filefilter
+    <-- org.apache.commons.io.input
+    <-- org.apache.commons.io.output
+    <-- org.apache.log4j
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.config
+    <-- org.apache.log4j.helpers
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.lf5
+    <-- org.apache.log4j.lf5.util
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.pattern
+    <-- org.apache.log4j.spi
+    <-- org.apache.log4j.varia
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.filters.util
+    <-- org.apache.tools.ant.helper
+    <-- org.apache.tools.ant.input
+    <-- org.apache.tools.ant.listener
+    <-- org.apache.tools.ant.loader
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.compilers
+    <-- org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.taskdefs.email
+    <-- org.apache.tools.ant.taskdefs.rmic
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.mappers
+    <-- org.apache.tools.ant.types.resolver
+    <-- org.apache.tools.ant.types.selectors
+    <-- org.apache.tools.ant.types.selectors.modifiedselector
+    <-- org.apache.tools.ant.util
+    <-- org.apache.tools.bzip2
+    <-- org.apache.tools.mail
+    <-- org.apache.tools.tar
+    <-- org.apache.tools.zip
+    <-- org.eclipse.jdt.core
+    <-- org.eclipse.jdt.core.compiler.batch
+    <-- org.eclipse.jdt.internal.antadapter
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.impl
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-- org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- org.hamcrest
+    <-- org.junit.experimental
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.results
+    <-- org.junit.internal
+    <-- org.junit.internal.matchers
+    <-- org.junit.rules
+    <-- org.junit.runner
+    <-- org.junit.runner.notification
+    <-- spoon
+    <-- spoon.compiler
+    <-- spoon.processing
+    <-- spoon.reflect
+    <-- spoon.reflect.cu
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.factory
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.processing
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test.api
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.limits
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+java.lang *
+    <-- com.martiansoftware.jsap
+    <-- com.martiansoftware.jsap.ant
+    <-- com.martiansoftware.jsap.defaultsources
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- com.martiansoftware.jsap.xml
+    <-- com.martiansoftware.util
+    <-- junit.extensions
+    <-- junit.framework
+    <-- junit.runner
+    <-- junit.textui
+    <-- org.apache.commons.io
+    <-- org.apache.commons.io.filefilter
+    <-- org.apache.commons.io.input
+    <-- org.apache.commons.io.output
+    <-- org.apache.log4j
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.config
+    <-- org.apache.log4j.helpers
+    <-- org.apache.log4j.jdbc
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.lf5
+    <-- org.apache.log4j.lf5.util
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.nt
+    <-- org.apache.log4j.or
+    <-- org.apache.log4j.or.jms
+    <-- org.apache.log4j.or.sax
+    <-- org.apache.log4j.pattern
+    <-- org.apache.log4j.rewrite
+    <-- org.apache.log4j.spi
+    <-- org.apache.log4j.varia
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.filters.util
+    <-- org.apache.tools.ant.helper
+    <-- org.apache.tools.ant.input
+    <-- org.apache.tools.ant.listener
+    <-- org.apache.tools.ant.loader
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.compilers
+    <-- org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.taskdefs.email
+    <-- org.apache.tools.ant.taskdefs.rmic
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.mappers
+    <-- org.apache.tools.ant.types.resolver
+    <-- org.apache.tools.ant.types.selectors
+    <-- org.apache.tools.ant.types.selectors.modifiedselector
+    <-- org.apache.tools.ant.util
+    <-- org.apache.tools.ant.util.facade
+    <-- org.apache.tools.ant.util.regexp
+    <-- org.apache.tools.bzip2
+    <-- org.apache.tools.mail
+    <-- org.apache.tools.tar
+    <-- org.apache.tools.zip
+    <-- org.eclipse.jdt.core
+    <-- org.eclipse.jdt.core.compiler
+    <-- org.eclipse.jdt.core.compiler.batch
+    <-- org.eclipse.jdt.internal.antadapter
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    <-- org.eclipse.jdt.internal.compiler.env
+    <-- org.eclipse.jdt.internal.compiler.flow
+    <-- org.eclipse.jdt.internal.compiler.impl
+    <-- org.eclipse.jdt.internal.compiler.lookup
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-- org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- org.hamcrest
+    <-- org.hamcrest.core
+    <-- org.hamcrest.internal
+    <-- org.junit
+    <-- org.junit.experimental
+    <-- org.junit.experimental.categories
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.results
+    <-- org.junit.experimental.runners
+    <-- org.junit.experimental.theories
+    <-- org.junit.experimental.theories.internal
+    <-- org.junit.experimental.theories.suppliers
+    <-- org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.matchers
+    <-- org.junit.internal.requests
+    <-- org.junit.internal.runners
+    <-- org.junit.internal.runners.model
+    <-- org.junit.internal.runners.rules
+    <-- org.junit.internal.runners.statements
+    <-- org.junit.matchers
+    <-- org.junit.rules
+    <-- org.junit.runner
+    <-- org.junit.runner.manipulation
+    <-- org.junit.runner.notification
+    <-- org.junit.runners
+    <-- org.junit.runners.model
+    <-- spoon
+    <-- spoon.compiler
+    <-- spoon.processing
+    <-- spoon.reflect
+    <-- spoon.reflect.code
+    <-- spoon.reflect.cu
+    <-- spoon.reflect.declaration
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.eval.observer
+    <-- spoon.reflect.factory
+    <-- spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.processing
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test
+    <-- spoon.test.annotation
+    <-- spoon.test.api
+    <-- spoon.test.arrays
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits
+    <-- spoon.test.limits.utils
+    <-- spoon.test.main
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+    <-- spoon.test.visibility.packageprotected
+java.lang.annotation *
+    <-- junit.framework
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.hamcrest
+    <-- org.junit
+    <-- org.junit.experimental.categories
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.theories
+    <-- org.junit.experimental.theories.internal
+    <-- org.junit.experimental.theories.suppliers
+    <-- org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.runners
+    <-- org.junit.runner
+    <-- org.junit.runners
+    <-- org.junit.runners.model
+    <-- spoon.processing
+    <-- spoon.reflect.declaration
+    <-- spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.template
+    <-- spoon.test.annotation
+java.lang.ref *
+    <-- org.apache.commons.io
+    <-- org.apache.tools.ant
+java.lang.reflect *
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- junit.framework
+    <-- junit.runner
+    <-- org.apache.log4j
+    <-- org.apache.log4j.config
+    <-- org.apache.log4j.helpers
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.pattern
+    <-- org.apache.log4j.rewrite
+    <-- org.apache.log4j.spi
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.filters.util
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.compilers
+    <-- org.apache.tools.ant.taskdefs.rmic
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.util
+    <-- org.apache.tools.zip
+    <-- org.eclipse.jdt.core
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.lookup
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- org.hamcrest.core
+    <-- org.hamcrest.internal
+    <-- org.junit.experimental.theories
+    <-- org.junit.experimental.theories.internal
+    <-- org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.matchers
+    <-- org.junit.internal.runners
+    <-- org.junit.internal.runners.model
+    <-- org.junit.runners
+    <-- org.junit.runners.model
+    <-- spoon.processing
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.factory
+    <-- spoon.reflect.reference
+    <-- spoon.support
+    <-- spoon.support.gui
+    <-- spoon.support.processing
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.template
+java.math *
+    <-- com.martiansoftware.jsap
+    <-- com.martiansoftware.jsap.stringparsers
+java.net *
+    <-- com.martiansoftware.jsap
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- com.martiansoftware.jsap.xml
+    <-- org.apache.commons.io
+    <-- org.apache.log4j
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.helpers
+    <-- org.apache.log4j.lf5
+    <-- org.apache.log4j.lf5.util
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.spi
+    <-- org.apache.log4j.varia
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.helper
+    <-- org.apache.tools.ant.loader
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.resolver
+    <-- org.apache.tools.ant.util
+    <-- org.apache.tools.mail
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- spoon.support.compiler.jdt
+java.nio *
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.tool
+java.nio.charset *
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.tool
+java.security *
+    <-- org.apache.log4j
+    <-- org.apache.tools.ant.loader
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.selectors.modifiedselector
+    <-- spoon.test.prettyprinter
+java.security.cert *
+    <-- org.apache.tools.ant.types
+java.sql *
+    <-- org.apache.log4j.jdbc
+    <-- org.apache.tools.ant.taskdefs
+java.text *
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- junit.runner
+    <-- junit.textui
+    <-- org.apache.log4j
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.helpers
+    <-- org.apache.log4j.lf5.util
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.pattern
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.types.selectors
+    <-- org.apache.tools.ant.util
+    <-- org.eclipse.jdt.internal.antadapter
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- org.junit.internal
+    <-- org.junit.runners
+java.util *
+    <-- com.martiansoftware.jsap
+    <-- com.martiansoftware.jsap.ant
+    <-- com.martiansoftware.jsap.defaultsources
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- com.martiansoftware.jsap.xml
+    <-- com.martiansoftware.util
+    <-- junit.framework
+    <-- junit.runner
+    <-- junit.textui
+    <-- org.apache.commons.io
+    <-- org.apache.commons.io.filefilter
+    <-- org.apache.commons.io.output
+    <-- org.apache.log4j
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.config
+    <-- org.apache.log4j.helpers
+    <-- org.apache.log4j.jdbc
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.lf5
+    <-- org.apache.log4j.lf5.util
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.or
+    <-- org.apache.log4j.pattern
+    <-- org.apache.log4j.rewrite
+    <-- org.apache.log4j.spi
+    <-- org.apache.log4j.varia
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.filters.util
+    <-- org.apache.tools.ant.helper
+    <-- org.apache.tools.ant.input
+    <-- org.apache.tools.ant.listener
+    <-- org.apache.tools.ant.loader
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.taskdefs.email
+    <-- org.apache.tools.ant.taskdefs.rmic
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.mappers
+    <-- org.apache.tools.ant.types.resolver
+    <-- org.apache.tools.ant.types.selectors
+    <-- org.apache.tools.ant.types.selectors.modifiedselector
+    <-- org.apache.tools.ant.util
+    <-- org.apache.tools.ant.util.facade
+    <-- org.apache.tools.ant.util.regexp
+    <-- org.apache.tools.mail
+    <-- org.apache.tools.tar
+    <-- org.apache.tools.zip
+    <-- org.eclipse.jdt.core
+    <-- org.eclipse.jdt.internal.antadapter
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    <-- org.eclipse.jdt.internal.compiler.env
+    <-- org.eclipse.jdt.internal.compiler.flow
+    <-- org.eclipse.jdt.internal.compiler.impl
+    <-- org.eclipse.jdt.internal.compiler.lookup
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- org.hamcrest
+    <-- org.hamcrest.core
+    <-- org.hamcrest.internal
+    <-- org.junit
+    <-- org.junit.experimental.categories
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.results
+    <-- org.junit.experimental.theories
+    <-- org.junit.experimental.theories.internal
+    <-- org.junit.experimental.theories.suppliers
+    <-- org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.requests
+    <-- org.junit.internal.runners
+    <-- org.junit.internal.runners.model
+    <-- org.junit.internal.runners.rules
+    <-- org.junit.internal.runners.statements
+    <-- org.junit.rules
+    <-- org.junit.runner
+    <-- org.junit.runner.manipulation
+    <-- org.junit.runner.notification
+    <-- org.junit.runners
+    <-- org.junit.runners.model
+    <-- spoon
+    <-- spoon.compiler
+    <-- spoon.processing
+    <-- spoon.reflect
+    <-- spoon.reflect.code
+    <-- spoon.reflect.cu
+    <-- spoon.reflect.declaration
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.eval.observer
+    <-- spoon.reflect.factory
+    <-- spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.processing
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test
+    <-- spoon.test.annotation
+    <-- spoon.test.api
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+java.util.concurrent *
+    <-- org.junit.experimental
+    <-- org.junit.internal.runners
+    <-- org.junit.rules
+java.util.concurrent.atomic *
+    <-- org.junit.runner
+java.util.jar *
+    <-- org.apache.tools.ant.loader
+java.util.regex *
+    <-- com.martiansoftware.jsap.stringparsers
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.hamcrest.core
+    <-- org.junit.runner
+    <-- spoon.processing
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.template
+java.util.zip *
+    <-- org.apache.commons.io
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.loader
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.zip
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler
+javax.annotation.processing *
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.tool
+javax.jms *
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.or.jms
+javax.lang.model *
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.tool
+javax.lang.model.element *
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.tool
+javax.lang.model.type *
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+javax.lang.model.util *
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+javax.mail *
+    <-- org.apache.log4j.net
+javax.mail.internet *
+    <-- org.apache.log4j.net
+javax.management *
+    <-- org.apache.log4j.jmx
+javax.naming *
+    <-- org.apache.log4j.net
+javax.swing *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.lf5.util
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- spoon.support.gui
+    <-- spoon.test.secondaryclasses
+javax.swing.border *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.lf5.viewer
+javax.swing.event *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+javax.swing.table *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- spoon.support.gui
+javax.swing.text *
+    <-- org.apache.log4j.chainsaw
+javax.swing.tree *
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- spoon.support.gui
+javax.tools *
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.tool
+javax.xml.parsers *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.util
+    <-- spoon.processing
+javax.xml.transform *
+    <-- org.apache.tools.ant.types
+javax.xml.transform.sax *
+    <-- org.apache.tools.ant.types
+junit.extensions
+    --> java.lang *
+    --> junit.framework
+    <-- org.junit.internal.runners
+junit.framework
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    <-- junit.extensions
+    <-- junit.runner
+    <-- junit.textui
+    --> org.junit
+    <-- org.junit.experimental.max
+    --> org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.runners
+    <-> org.junit.runner
+    --> org.junit.runner.manipulation
+    --> org.junit.runner.notification
+junit.runner
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.text *
+    --> java.util *
+    --> junit.framework
+    <-- junit.textui
+    <-- org.junit.runner
+junit.textui
+    --> java.io *
+    --> java.lang *
+    --> java.text *
+    --> java.util *
+    --> junit.framework
+    --> junit.runner
+org.apache.bcel.classfile *
+    <-- org.apache.tools.ant.filters.util
+org.apache.bsf *
+    <-- org.apache.tools.ant.util
+org.apache.commons.io
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.ref *
+    --> java.net *
+    --> java.util *
+    --> java.util.zip *
+    <-> org.apache.commons.io.filefilter
+    <-- org.apache.commons.io.input
+    <-> org.apache.commons.io.output
+    <-- spoon.support.compiler.jdt
+org.apache.commons.io.filefilter
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-> org.apache.commons.io
+org.apache.commons.io.input
+    --> java.io *
+    --> java.lang *
+    --> org.apache.commons.io
+org.apache.commons.io.output
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-> org.apache.commons.io
+org.apache.log4j
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.security *
+    --> java.text *
+    --> java.util *
+    <-- org.apache.log4j.chainsaw
+    <-> org.apache.log4j.config
+    <-> org.apache.log4j.helpers
+    <-- org.apache.log4j.jdbc
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.lf5
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.nt
+    <-> org.apache.log4j.or
+    <-> org.apache.log4j.pattern
+    <-- org.apache.log4j.rewrite
+    <-> org.apache.log4j.spi
+    <-- org.apache.log4j.varia
+    <-- org.apache.log4j.xml
+    <-- spoon
+    <-- spoon.compiler
+    <-- spoon.processing
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.visitor
+    <-- spoon.template
+org.apache.log4j.chainsaw
+    --> java.awt *
+    --> java.awt.event *
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.text *
+    --> java.util *
+    --> javax.swing *
+    --> javax.swing.border *
+    --> javax.swing.event *
+    --> javax.swing.table *
+    --> javax.swing.text *
+    --> javax.xml.parsers *
+    --> org.apache.log4j
+    --> org.apache.log4j.spi
+    --> org.xml.sax *
+    --> org.xml.sax.helpers *
+org.apache.log4j.config
+    --> java.beans *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    <-> org.apache.log4j
+    --> org.apache.log4j.helpers
+    --> org.apache.log4j.spi
+    <-- org.apache.log4j.xml
+org.apache.log4j.helpers
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.text *
+    --> java.util *
+    <-> org.apache.log4j
+    <-- org.apache.log4j.config
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.nt
+    <-- org.apache.log4j.or
+    <-- org.apache.log4j.or.jms
+    <-> org.apache.log4j.pattern
+    <-- org.apache.log4j.rewrite
+    <-> org.apache.log4j.spi
+    <-- org.apache.log4j.varia
+    <-- org.apache.log4j.xml
+org.apache.log4j.jdbc
+    --> java.lang *
+    --> java.sql *
+    --> java.util *
+    --> org.apache.log4j
+    --> org.apache.log4j.spi
+org.apache.log4j.jmx
+    --> java.beans *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> javax.management *
+    --> org.apache.log4j
+    --> org.apache.log4j.helpers
+    --> org.apache.log4j.spi
+org.apache.log4j.lf5
+    --> java.awt *
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    --> org.apache.log4j
+    <-- org.apache.log4j.lf5.util
+    <-> org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.categoryexplorer
+    <-- org.apache.log4j.lf5.viewer.configure
+    --> org.apache.log4j.spi
+org.apache.log4j.lf5.util
+    --> java.awt *
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.text *
+    --> java.util *
+    --> javax.swing *
+    --> org.apache.log4j.lf5
+    <-> org.apache.log4j.lf5.viewer
+org.apache.log4j.lf5.viewer
+    --> java.awt *
+    --> java.awt.event *
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    --> javax.swing *
+    --> javax.swing.border *
+    --> javax.swing.event *
+    --> javax.swing.table *
+    <-> org.apache.log4j.lf5
+    <-> org.apache.log4j.lf5.util
+    --> org.apache.log4j.lf5.viewer.categoryexplorer
+    <-> org.apache.log4j.lf5.viewer.configure
+org.apache.log4j.lf5.viewer.categoryexplorer
+    --> java.awt *
+    --> java.awt.event *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    --> javax.swing *
+    --> javax.swing.event *
+    --> javax.swing.table *
+    --> javax.swing.tree *
+    --> org.apache.log4j.lf5
+    <-- org.apache.log4j.lf5.viewer
+    <-- org.apache.log4j.lf5.viewer.configure
+org.apache.log4j.lf5.viewer.configure
+    --> java.awt *
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    --> javax.swing *
+    --> javax.swing.tree *
+    --> javax.xml.parsers *
+    --> org.apache.log4j.lf5
+    <-> org.apache.log4j.lf5.viewer
+    --> org.apache.log4j.lf5.viewer.categoryexplorer
+    --> org.w3c.dom *
+org.apache.log4j.net
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.text *
+    --> java.util *
+    --> javax.jms *
+    --> javax.mail *
+    --> javax.mail.internet *
+    --> javax.naming *
+    --> org.apache.log4j
+    --> org.apache.log4j.helpers
+    --> org.apache.log4j.spi
+    --> org.apache.log4j.xml
+    --> org.w3c.dom *
+org.apache.log4j.nt
+    --> java.lang *
+    --> org.apache.log4j
+    --> org.apache.log4j.helpers
+    --> org.apache.log4j.spi
+org.apache.log4j.or
+    --> java.lang *
+    --> java.util *
+    <-> org.apache.log4j
+    --> org.apache.log4j.helpers
+    <-- org.apache.log4j.or.jms
+    <-- org.apache.log4j.or.sax
+    <-- org.apache.log4j.pattern
+    <-> org.apache.log4j.spi
+    <-- org.apache.log4j.xml
+org.apache.log4j.or.jms
+    --> java.lang *
+    --> javax.jms *
+    --> org.apache.log4j.helpers
+    --> org.apache.log4j.or
+org.apache.log4j.or.sax
+    --> java.lang *
+    --> org.apache.log4j.or
+    --> org.xml.sax *
+org.apache.log4j.pattern
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.text *
+    --> java.util *
+    <-> org.apache.log4j
+    <-> org.apache.log4j.helpers
+    --> org.apache.log4j.or
+    --> org.apache.log4j.spi
+org.apache.log4j.rewrite
+    --> java.beans *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.log4j
+    --> org.apache.log4j.helpers
+    --> org.apache.log4j.spi
+    --> org.apache.log4j.xml
+    --> org.w3c.dom *
+org.apache.log4j.spi
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.util *
+    <-> org.apache.log4j
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.config
+    <-> org.apache.log4j.helpers
+    <-- org.apache.log4j.jdbc
+    <-- org.apache.log4j.jmx
+    <-- org.apache.log4j.lf5
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.nt
+    <-> org.apache.log4j.or
+    <-- org.apache.log4j.pattern
+    <-- org.apache.log4j.rewrite
+    <-- org.apache.log4j.varia
+    <-- org.apache.log4j.xml
+org.apache.log4j.varia
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    --> org.apache.log4j
+    --> org.apache.log4j.helpers
+    --> org.apache.log4j.spi
+org.apache.log4j.xml
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.util *
+    --> javax.xml.parsers *
+    --> org.apache.log4j
+    --> org.apache.log4j.config
+    --> org.apache.log4j.helpers
+    <-- org.apache.log4j.net
+    --> org.apache.log4j.or
+    <-- org.apache.log4j.rewrite
+    --> org.apache.log4j.spi
+    --> org.w3c.dom *
+    --> org.xml.sax *
+org.apache.tools.ant
+    <-- com.martiansoftware.jsap.ant
+    --> java.io *
+    --> java.lang *
+    --> java.lang.ref *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.util *
+    --> java.util.zip *
+    --> javax.xml.parsers *
+    <-- org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.filters.util
+    <-> org.apache.tools.ant.helper
+    <-> org.apache.tools.ant.input
+    --> org.apache.tools.ant.launch *
+    <-- org.apache.tools.ant.listener
+    <-> org.apache.tools.ant.loader
+    <-> org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.compilers
+    <-> org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.taskdefs.email
+    <-- org.apache.tools.ant.taskdefs.rmic
+    <-> org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.mappers
+    <-- org.apache.tools.ant.types.resolver
+    <-> org.apache.tools.ant.types.selectors
+    <-- org.apache.tools.ant.types.selectors.modifiedselector
+    <-> org.apache.tools.ant.util
+    <-- org.apache.tools.ant.util.regexp
+    <-- org.eclipse.jdt.core
+    --> org.w3c.dom *
+    --> org.xml.sax *
+    --> org.xml.sax.helpers *
+    <-- spoon
+org.apache.tools.ant.filters
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.tools.ant
+    <-- org.apache.tools.ant.filters.util
+    <-> org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+    --> org.apache.tools.ant.util.regexp
+org.apache.tools.ant.filters.util
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.bcel.classfile *
+    --> org.apache.tools.ant
+    --> org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.mappers
+    <-> org.apache.tools.ant.util
+org.apache.tools.ant.helper
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    <-> org.apache.tools.ant
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+    --> org.xml.sax *
+    --> org.xml.sax.helpers *
+org.apache.tools.ant.input
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-> org.apache.tools.ant
+    <-- org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.util
+org.apache.tools.ant.launch *
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.util
+org.apache.tools.ant.listener
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.tools.ant
+    --> org.apache.tools.ant.taskdefs.email
+    --> org.apache.tools.ant.util
+    --> org.apache.tools.mail
+org.apache.tools.ant.loader
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.security *
+    --> java.util *
+    --> java.util.jar *
+    --> java.util.zip *
+    <-> org.apache.tools.ant
+    --> org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.util
+org.apache.tools.ant.taskdefs
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.security *
+    --> java.sql *
+    --> java.text *
+    --> java.util *
+    --> java.util.zip *
+    --> javax.xml.parsers *
+    <-> org.apache.tools.ant
+    --> org.apache.tools.ant.filters.util
+    --> org.apache.tools.ant.helper
+    --> org.apache.tools.ant.input
+    <-- org.apache.tools.ant.loader
+    <-> org.apache.tools.ant.taskdefs.compilers
+    <-> org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    --> org.apache.tools.ant.taskdefs.email
+    <-> org.apache.tools.ant.taskdefs.rmic
+    <-> org.apache.tools.ant.types
+    --> org.apache.tools.ant.types.selectors
+    --> org.apache.tools.ant.types.selectors.modifiedselector
+    --> org.apache.tools.ant.util
+    --> org.apache.tools.ant.util.facade
+    --> org.apache.tools.bzip2
+    --> org.apache.tools.tar
+    --> org.apache.tools.zip
+    <-- org.eclipse.jdt.core
+    --> org.w3c.dom *
+    --> org.xml.sax *
+    <-- spoon
+org.apache.tools.ant.taskdefs.compilers
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> org.apache.tools.ant
+    <-> org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+    <-- org.eclipse.jdt.core
+org.apache.tools.ant.taskdefs.condition
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    <-> org.apache.tools.ant
+    <-> org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+    <-> org.apache.tools.ant.types.selectors
+    <-> org.apache.tools.ant.util
+org.apache.tools.ant.taskdefs.cvslib
+    --> java.io *
+    --> java.lang *
+    --> java.text *
+    --> java.util *
+    --> org.apache.tools.ant
+    --> org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+    --> org.w3c.dom *
+org.apache.tools.ant.taskdefs.email
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.tools.ant
+    <-- org.apache.tools.ant.listener
+    <-- org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+    --> org.apache.tools.mail
+    --> sun.misc *
+org.apache.tools.ant.taskdefs.rmic
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.tools.ant
+    <-> org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+org.apache.tools.ant.types
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.security *
+    --> java.security.cert *
+    --> java.util *
+    --> java.util.zip *
+    --> javax.xml.parsers *
+    --> javax.xml.transform *
+    --> javax.xml.transform.sax *
+    <-> org.apache.tools.ant
+    <-> org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.filters.util
+    --> org.apache.tools.ant.helper
+    <-> org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.compilers
+    <-- org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.taskdefs.email
+    <-- org.apache.tools.ant.taskdefs.rmic
+    <-- org.apache.tools.ant.types.mappers
+    <-- org.apache.tools.ant.types.resolver
+    <-> org.apache.tools.ant.types.selectors
+    <-> org.apache.tools.ant.types.selectors.modifiedselector
+    <-> org.apache.tools.ant.util
+    <-- org.apache.tools.ant.util.facade
+    --> org.apache.tools.ant.util.regexp
+    --> org.apache.tools.zip
+    <-- org.eclipse.jdt.core
+    --> org.xml.sax *
+    <-- spoon
+org.apache.tools.ant.types.mappers
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.tools.ant
+    --> org.apache.tools.ant.filters.util
+    --> org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+org.apache.tools.ant.types.resolver
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    --> org.apache.tools.ant
+    --> org.apache.tools.ant.types
+    --> org.apache.xml.resolver *
+    --> org.apache.xml.resolver.helpers *
+    --> org.apache.xml.resolver.tools *
+org.apache.tools.ant.types.selectors
+    --> java.io *
+    --> java.lang *
+    --> java.text *
+    --> java.util *
+    <-> org.apache.tools.ant
+    <-- org.apache.tools.ant.taskdefs
+    <-> org.apache.tools.ant.taskdefs.condition
+    <-> org.apache.tools.ant.types
+    <-> org.apache.tools.ant.types.selectors.modifiedselector
+    <-> org.apache.tools.ant.util
+    --> org.apache.tools.ant.util.regexp
+org.apache.tools.ant.types.selectors.modifiedselector
+    --> java.io *
+    --> java.lang *
+    --> java.security *
+    --> java.util *
+    --> org.apache.tools.ant
+    <-- org.apache.tools.ant.taskdefs
+    <-> org.apache.tools.ant.types
+    <-> org.apache.tools.ant.types.selectors
+org.apache.tools.ant.util
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.text *
+    --> java.util *
+    --> javax.xml.parsers *
+    --> org.apache.bsf *
+    <-> org.apache.tools.ant
+    <-- org.apache.tools.ant.filters
+    <-> org.apache.tools.ant.filters.util
+    <-- org.apache.tools.ant.helper
+    <-- org.apache.tools.ant.input
+    --> org.apache.tools.ant.launch *
+    <-- org.apache.tools.ant.listener
+    <-- org.apache.tools.ant.loader
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.compilers
+    <-> org.apache.tools.ant.taskdefs.condition
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.taskdefs.email
+    <-- org.apache.tools.ant.taskdefs.rmic
+    <-> org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.mappers
+    <-> org.apache.tools.ant.types.selectors
+    --> org.apache.tools.ant.util.regexp
+    <-- org.eclipse.jdt.core
+    --> org.w3c.dom *
+    --> org.xml.sax *
+org.apache.tools.ant.util.facade
+    --> java.lang *
+    --> java.util *
+    <-- org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+org.apache.tools.ant.util.regexp
+    --> java.lang *
+    --> java.util *
+    --> org.apache.tools.ant
+    <-- org.apache.tools.ant.filters
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.types.selectors
+    <-- org.apache.tools.ant.util
+org.apache.tools.bzip2
+    -->  *
+    --> java.io *
+    --> java.lang *
+    <-- org.apache.tools.ant.taskdefs
+org.apache.tools.mail
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    <-- org.apache.tools.ant.listener
+    <-- org.apache.tools.ant.taskdefs.email
+org.apache.tools.tar
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-- org.apache.tools.ant.taskdefs
+org.apache.tools.zip
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> java.util.zip *
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.types
+org.apache.xml.resolver *
+    <-- org.apache.tools.ant.types.resolver
+org.apache.xml.resolver.helpers *
+    <-- org.apache.tools.ant.types.resolver
+org.apache.xml.resolver.tools *
+    <-- org.apache.tools.ant.types.resolver
+org.eclipse.jdt.core
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.tools.ant
+    --> org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.taskdefs.compilers
+    --> org.apache.tools.ant.types
+    --> org.apache.tools.ant.util
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.antadapter
+    <-- org.eclipse.jdt.internal.compiler
+    --> org.eclipse.jdt.internal.compiler.impl
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.core.compiler
+    -->  *
+    --> java.lang *
+    <-- org.eclipse.jdt.core
+    <-- org.eclipse.jdt.core.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    <-- org.eclipse.jdt.internal.compiler.env
+    <-- org.eclipse.jdt.internal.compiler.flow
+    <-- org.eclipse.jdt.internal.compiler.impl
+    <-- org.eclipse.jdt.internal.compiler.lookup
+    <-> org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-> org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.util
+org.eclipse.jdt.core.compiler.batch
+    --> java.io *
+    --> java.lang *
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.compiler.batch
+org.eclipse.jdt.internal.antadapter
+    --> java.io *
+    --> java.lang *
+    --> java.text *
+    --> java.util *
+    <-- org.eclipse.jdt.core
+org.eclipse.jdt.internal.compiler
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.eclipse.jdt.core
+    --> org.eclipse.jdt.core.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-> org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    --> org.eclipse.jdt.internal.compiler.classfmt
+    <-> org.eclipse.jdt.internal.compiler.codegen
+    --> org.eclipse.jdt.internal.compiler.env
+    <-> org.eclipse.jdt.internal.compiler.impl
+    <-> org.eclipse.jdt.internal.compiler.lookup
+    <-> org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-> org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-> org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+org.eclipse.jdt.internal.compiler.apt.dispatch
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.net *
+    --> java.nio.charset *
+    --> java.util *
+    --> java.util.regex *
+    --> javax.annotation.processing *
+    --> javax.lang.model *
+    --> javax.lang.model.element *
+    --> javax.lang.model.util *
+    --> javax.tools *
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.compiler
+    <-> org.eclipse.jdt.internal.compiler.apt.model
+    --> org.eclipse.jdt.internal.compiler.apt.util
+    --> org.eclipse.jdt.internal.compiler.ast
+    --> org.eclipse.jdt.internal.compiler.batch
+    --> org.eclipse.jdt.internal.compiler.classfmt
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.impl
+    --> org.eclipse.jdt.internal.compiler.lookup
+    --> org.eclipse.jdt.internal.compiler.problem
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.internal.compiler.apt.model
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> java.util.regex *
+    --> javax.lang.model *
+    --> javax.lang.model.element *
+    --> javax.lang.model.type *
+    --> javax.lang.model.util *
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.compiler
+    <-> org.eclipse.jdt.internal.compiler.apt.dispatch
+    --> org.eclipse.jdt.internal.compiler.ast
+    --> org.eclipse.jdt.internal.compiler.batch
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.impl
+    --> org.eclipse.jdt.internal.compiler.lookup
+    --> org.eclipse.jdt.internal.compiler.problem
+org.eclipse.jdt.internal.compiler.apt.util
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.nio *
+    --> java.nio.charset *
+    --> java.text *
+    --> java.util *
+    --> java.util.zip *
+    --> javax.lang.model.element *
+    --> javax.tools *
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    --> org.eclipse.jdt.internal.compiler.batch
+    --> org.eclipse.jdt.internal.compiler.classfmt
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.internal.compiler.ast
+    -->  *
+    --> java.lang *
+    --> java.util *
+    --> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-> org.eclipse.jdt.internal.compiler.codegen
+    --> org.eclipse.jdt.internal.compiler.env
+    <-> org.eclipse.jdt.internal.compiler.flow
+    <-> org.eclipse.jdt.internal.compiler.impl
+    <-> org.eclipse.jdt.internal.compiler.lookup
+    <-> org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-> org.eclipse.jdt.internal.compiler.problem
+    <-> org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+org.eclipse.jdt.internal.compiler.batch
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.text *
+    --> java.util *
+    --> java.util.zip *
+    --> org.eclipse.jdt.core.compiler
+    <-- org.eclipse.jdt.core.compiler.batch
+    --> org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    --> org.eclipse.jdt.internal.compiler.classfmt
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.impl
+    --> org.eclipse.jdt.internal.compiler.lookup
+    --> org.eclipse.jdt.internal.compiler.parser
+    --> org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-> org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+org.eclipse.jdt.internal.compiler.classfmt
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> java.util.zip *
+    --> org.eclipse.jdt.core.compiler
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    --> org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-> org.eclipse.jdt.internal.compiler.codegen
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.impl
+    <-- org.eclipse.jdt.internal.compiler.tool
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.internal.compiler.codegen
+    -->  *
+    --> java.lang *
+    --> java.text *
+    --> java.util *
+    --> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler
+    <-> org.eclipse.jdt.internal.compiler.ast
+    <-> org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.flow
+    --> org.eclipse.jdt.internal.compiler.impl
+    <-> org.eclipse.jdt.internal.compiler.lookup
+    --> org.eclipse.jdt.internal.compiler.problem
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.internal.compiler.env
+    --> java.lang *
+    --> java.util *
+    --> org.eclipse.jdt.core.compiler
+    <-- org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-- org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-> org.eclipse.jdt.internal.compiler.impl
+    <-- org.eclipse.jdt.internal.compiler.lookup
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.util
+org.eclipse.jdt.internal.compiler.flow
+    -->  *
+    --> java.lang *
+    --> java.util *
+    --> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler.ast
+    --> org.eclipse.jdt.internal.compiler.codegen
+    --> org.eclipse.jdt.internal.compiler.impl
+    <-> org.eclipse.jdt.internal.compiler.lookup
+    --> org.eclipse.jdt.internal.compiler.problem
+org.eclipse.jdt.internal.compiler.impl
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-- org.eclipse.jdt.core
+    --> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-> org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    <-> org.eclipse.jdt.internal.compiler.env
+    <-- org.eclipse.jdt.internal.compiler.flow
+    <-> org.eclipse.jdt.internal.compiler.lookup
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-> org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    --> org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+org.eclipse.jdt.internal.compiler.lookup
+    -->  *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-> org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-> org.eclipse.jdt.internal.compiler.codegen
+    --> org.eclipse.jdt.internal.compiler.env
+    <-> org.eclipse.jdt.internal.compiler.flow
+    <-> org.eclipse.jdt.internal.compiler.impl
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-> org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-> org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+org.eclipse.jdt.internal.compiler.parser
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler
+    <-> org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.impl
+    --> org.eclipse.jdt.internal.compiler.lookup
+    <-> org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-> org.eclipse.jdt.internal.compiler.problem
+    --> org.eclipse.jdt.internal.compiler.util
+    <-- spoon.support.compiler.jdt
+org.eclipse.jdt.internal.compiler.parser.diagnose
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.compiler
+    --> org.eclipse.jdt.internal.compiler.ast
+    --> org.eclipse.jdt.internal.compiler.impl
+    <-> org.eclipse.jdt.internal.compiler.parser
+    --> org.eclipse.jdt.internal.compiler.problem
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.internal.compiler.problem
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.model
+    <-> org.eclipse.jdt.internal.compiler.ast
+    <-- org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    --> org.eclipse.jdt.internal.compiler.env
+    <-- org.eclipse.jdt.internal.compiler.flow
+    <-> org.eclipse.jdt.internal.compiler.impl
+    <-> org.eclipse.jdt.internal.compiler.lookup
+    <-> org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-- org.eclipse.jdt.internal.compiler.tool
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.internal.compiler.tool
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.nio *
+    --> java.nio.charset *
+    --> java.text *
+    --> java.util *
+    --> java.util.zip *
+    --> javax.annotation.processing *
+    --> javax.lang.model *
+    --> javax.lang.model.element *
+    --> javax.tools *
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.compiler
+    --> org.eclipse.jdt.internal.compiler.batch
+    --> org.eclipse.jdt.internal.compiler.classfmt
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.impl
+    --> org.eclipse.jdt.internal.compiler.lookup
+    --> org.eclipse.jdt.internal.compiler.problem
+    --> org.eclipse.jdt.internal.compiler.util
+org.eclipse.jdt.internal.compiler.util
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.text *
+    --> java.util *
+    --> java.util.zip *
+    <-- org.eclipse.jdt.core
+    --> org.eclipse.jdt.core.compiler
+    <-> org.eclipse.jdt.internal.compiler
+    <-- org.eclipse.jdt.internal.compiler.apt.dispatch
+    <-- org.eclipse.jdt.internal.compiler.apt.util
+    <-> org.eclipse.jdt.internal.compiler.ast
+    <-> org.eclipse.jdt.internal.compiler.batch
+    <-- org.eclipse.jdt.internal.compiler.classfmt
+    <-- org.eclipse.jdt.internal.compiler.codegen
+    --> org.eclipse.jdt.internal.compiler.env
+    <-- org.eclipse.jdt.internal.compiler.impl
+    <-> org.eclipse.jdt.internal.compiler.lookup
+    <-- org.eclipse.jdt.internal.compiler.parser
+    <-- org.eclipse.jdt.internal.compiler.parser.diagnose
+    <-- org.eclipse.jdt.internal.compiler.problem
+    <-- org.eclipse.jdt.internal.compiler.tool
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.util
+org.hamcrest
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    <-> org.hamcrest.core
+    <-> org.hamcrest.internal
+    <-- org.junit
+    <-- org.junit.experimental.results
+    <-- org.junit.internal
+    <-- org.junit.internal.matchers
+    <-- org.junit.matchers
+    <-- org.junit.rules
+org.hamcrest.core
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> java.util.regex *
+    <-> org.hamcrest
+    <-- org.junit.matchers
+org.hamcrest.internal
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    <-> org.hamcrest
+org.junit
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    <-- junit.framework
+    --> org.hamcrest
+    <-- org.junit.experimental.theories
+    <-> org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.runners
+    <-- org.junit.internal.runners.rules
+    <-- org.junit.rules
+    <-> org.junit.runners
+    <-- org.junit.runners.model
+    <-- spoon.test.annotation
+    <-- spoon.test.api
+    <-- spoon.test.arrays
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.main
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+org.junit.experimental
+    --> java.io *
+    --> java.lang *
+    --> java.util.concurrent *
+    --> org.junit.runner
+    --> org.junit.runners
+    --> org.junit.runners.model
+org.junit.experimental.categories
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> org.junit.runner
+    --> org.junit.runner.manipulation
+    --> org.junit.runners
+    --> org.junit.runners.model
+org.junit.experimental.max
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> junit.framework
+    --> org.junit.internal.requests
+    --> org.junit.internal.runners
+    --> org.junit.runner
+    --> org.junit.runner.notification
+    --> org.junit.runners
+    --> org.junit.runners.model
+org.junit.experimental.results
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.hamcrest
+    --> org.junit.internal
+    --> org.junit.runner
+    --> org.junit.runner.notification
+org.junit.experimental.runners
+    --> java.lang *
+    --> org.junit.runners
+    --> org.junit.runners.model
+org.junit.experimental.theories
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.junit
+    <-> org.junit.experimental.theories.internal
+    <-- org.junit.experimental.theories.suppliers
+    --> org.junit.internal
+    --> org.junit.runners
+    --> org.junit.runners.model
+org.junit.experimental.theories.internal
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    <-> org.junit.experimental.theories
+    --> org.junit.runners.model
+org.junit.experimental.theories.suppliers
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> org.junit.experimental.theories
+org.junit.internal
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.text *
+    --> java.util *
+    <-- junit.framework
+    --> org.hamcrest
+    <-> org.junit
+    <-- org.junit.experimental.results
+    <-- org.junit.experimental.theories
+    <-- org.junit.internal.matchers
+    <-- org.junit.internal.runners
+    <-- org.junit.internal.runners.model
+    <-- org.junit.internal.runners.statements
+    <-- org.junit.rules
+    <-> org.junit.runner
+    --> org.junit.runner.notification
+    <-> org.junit.runners
+    <-- org.junit.runners.model
+org.junit.internal.builders
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> junit.framework
+    --> org.junit
+    <-- org.junit.internal.requests
+    --> org.junit.internal.runners
+    <-> org.junit.runner
+    --> org.junit.runner.notification
+    <-> org.junit.runners
+    --> org.junit.runners.model
+org.junit.internal.matchers
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> org.hamcrest
+    --> org.junit.internal
+    <-- org.junit.matchers
+    <-- org.junit.rules
+org.junit.internal.requests
+    --> java.lang *
+    --> java.util *
+    <-- org.junit.experimental.max
+    --> org.junit.internal.builders
+    --> org.junit.internal.runners
+    <-> org.junit.runner
+    --> org.junit.runner.manipulation
+org.junit.internal.runners
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> java.util.concurrent *
+    --> junit.extensions
+    --> junit.framework
+    --> org.junit
+    <-- org.junit.experimental.max
+    --> org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.requests
+    <-> org.junit.runner
+    --> org.junit.runner.manipulation
+    --> org.junit.runner.notification
+    <-- org.junit.runners
+    <-> org.junit.runners.model
+org.junit.internal.runners.model
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.junit.internal
+    --> org.junit.runner
+    --> org.junit.runner.notification
+    <-- org.junit.runners
+    <-> org.junit.runners.model
+org.junit.internal.runners.rules
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> org.junit.rules
+    <-- org.junit.runners
+    --> org.junit.runners.model
+org.junit.internal.runners.statements
+    --> java.lang *
+    --> java.util *
+    --> org.junit.internal
+    <-- org.junit.rules
+    <-- org.junit.runners
+    --> org.junit.runners.model
+org.junit.matchers
+    --> java.lang *
+    --> org.hamcrest
+    --> org.hamcrest.core
+    --> org.junit.internal.matchers
+    <-- org.junit.rules
+org.junit.rules
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> java.util.concurrent *
+    --> org.hamcrest
+    --> org.junit
+    --> org.junit.internal
+    --> org.junit.internal.matchers
+    <-- org.junit.internal.runners.rules
+    --> org.junit.internal.runners.statements
+    --> org.junit.matchers
+    --> org.junit.runner
+    <-- org.junit.runners
+    --> org.junit.runners.model
+org.junit.runner
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> java.util.concurrent.atomic *
+    --> java.util.regex *
+    <-> junit.framework
+    --> junit.runner
+    <-- org.junit.experimental
+    <-- org.junit.experimental.categories
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.results
+    <-> org.junit.internal
+    <-> org.junit.internal.builders
+    <-> org.junit.internal.requests
+    <-> org.junit.internal.runners
+    <-- org.junit.internal.runners.model
+    <-- org.junit.rules
+    <-> org.junit.runner.manipulation
+    <-> org.junit.runner.notification
+    <-> org.junit.runners
+    <-> org.junit.runners.model
+org.junit.runner.manipulation
+    --> java.lang *
+    --> java.util *
+    <-- junit.framework
+    <-- org.junit.experimental.categories
+    <-- org.junit.internal.requests
+    <-- org.junit.internal.runners
+    <-> org.junit.runner
+    <-- org.junit.runners
+org.junit.runner.notification
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-- junit.framework
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.results
+    <-- org.junit.internal
+    <-- org.junit.internal.builders
+    <-- org.junit.internal.runners
+    <-- org.junit.internal.runners.model
+    <-> org.junit.runner
+    <-- org.junit.runners
+org.junit.runners
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.text *
+    --> java.util *
+    <-> org.junit
+    <-- org.junit.experimental
+    <-- org.junit.experimental.categories
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.runners
+    <-- org.junit.experimental.theories
+    <-> org.junit.internal
+    <-> org.junit.internal.builders
+    --> org.junit.internal.runners
+    --> org.junit.internal.runners.model
+    --> org.junit.internal.runners.rules
+    --> org.junit.internal.runners.statements
+    --> org.junit.rules
+    <-> org.junit.runner
+    --> org.junit.runner.manipulation
+    --> org.junit.runner.notification
+    --> org.junit.runners.model
+org.junit.runners.model
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.junit
+    <-- org.junit.experimental
+    <-- org.junit.experimental.categories
+    <-- org.junit.experimental.max
+    <-- org.junit.experimental.runners
+    <-- org.junit.experimental.theories
+    <-- org.junit.experimental.theories.internal
+    --> org.junit.internal
+    <-- org.junit.internal.builders
+    <-> org.junit.internal.runners
+    <-> org.junit.internal.runners.model
+    <-- org.junit.internal.runners.rules
+    <-- org.junit.internal.runners.statements
+    <-- org.junit.rules
+    <-> org.junit.runner
+    <-- org.junit.runners
+org.w3c.dom *
+    <-- org.apache.log4j.lf5.viewer.configure
+    <-- org.apache.log4j.net
+    <-- org.apache.log4j.rewrite
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.taskdefs.cvslib
+    <-- org.apache.tools.ant.util
+    <-- spoon.processing
+org.xml.sax *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.log4j.or.sax
+    <-- org.apache.log4j.xml
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.helper
+    <-- org.apache.tools.ant.taskdefs
+    <-- org.apache.tools.ant.types
+    <-- org.apache.tools.ant.util
+    <-- spoon
+    <-- spoon.processing
+    <-- spoon.support
+    <-- spoon.support.processing
+org.xml.sax.helpers *
+    <-- org.apache.log4j.chainsaw
+    <-- org.apache.tools.ant
+    <-- org.apache.tools.ant.helper
+    <-- spoon
+    <-- spoon.support.processing
+spoon
+    --> com.martiansoftware.jsap
+    --> com.martiansoftware.jsap.stringparsers
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.log4j
+    --> org.apache.tools.ant
+    --> org.apache.tools.ant.taskdefs
+    --> org.apache.tools.ant.types
+    --> org.xml.sax *
+    --> org.xml.sax.helpers *
+    <-> spoon.compiler
+    <-> spoon.processing
+    <-- spoon.reflect.declaration
+    --> spoon.reflect.factory
+    <-> spoon.reflect.visitor
+    <-> spoon.support
+    <-> spoon.support.compiler
+    <-> spoon.support.compiler.jdt
+    <-> spoon.support.gui
+    <-> spoon.support.processing
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.template
+    <-- spoon.test
+    <-- spoon.test.annotation
+    <-- spoon.test.api
+    <-- spoon.test.exceptions
+    <-- spoon.test.filters
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.main
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.replace
+    <-- spoon.test.template
+spoon.compiler
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.log4j
+    <-> spoon
+    <-> spoon.processing
+    --> spoon.reflect.declaration
+    <-- spoon.reflect.eval.observer
+    <-- spoon.reflect.factory
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-> spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.processing
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.visitor
+    <-- spoon.test
+    <-- spoon.test.annotation
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.template
+spoon.processing
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> java.util.regex *
+    --> javax.xml.parsers *
+    --> org.apache.log4j
+    --> org.w3c.dom *
+    --> org.xml.sax *
+    <-> spoon
+    <-> spoon.compiler
+    --> spoon.reflect
+    <-- spoon.reflect.cu
+    <-> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    <-> spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.compiler.jdt
+    <-> spoon.support.processing
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    --> spoon.support.util
+    <-- spoon.support.visitor
+    <-- spoon.test.processing
+spoon.reflect
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-- spoon.processing
+    --> spoon.reflect.factory
+    <-- spoon.support
+spoon.reflect.code
+    --> java.lang *
+    --> java.util *
+    <-> spoon.reflect.declaration
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.factory
+    <-> spoon.reflect.reference
+    <-> spoon.reflect.visitor
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-> spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-> spoon.template
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+spoon.reflect.cu
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> spoon.processing
+    <-> spoon.reflect.declaration
+    <-- spoon.reflect.factory
+    --> spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.sourcePosition
+spoon.reflect.declaration
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> spoon
+    <-- spoon.compiler
+    <-> spoon.processing
+    <-> spoon.reflect.code
+    <-> spoon.reflect.cu
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.factory
+    <-> spoon.reflect.reference
+    <-> spoon.reflect.visitor
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test
+    <-- spoon.test.annotation
+    <-- spoon.test.api
+    <-- spoon.test.arrays
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+spoon.reflect.eval
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    <-- spoon.reflect.eval.observer
+    <-> spoon.reflect.factory
+    --> spoon.reflect.reference
+    <-- spoon.support.reflect.declaration
+    <-> spoon.support.reflect.eval
+    --> spoon.support.util
+spoon.reflect.eval.observer
+    --> java.lang *
+    --> java.util *
+    --> spoon.compiler
+    --> spoon.reflect.eval
+    <-- spoon.reflect.factory
+    --> spoon.support.reflect.eval
+spoon.reflect.factory
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    <-- spoon
+    --> spoon.compiler
+    <-- spoon.processing
+    <-- spoon.reflect
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    <-> spoon.reflect.eval
+    --> spoon.reflect.eval.observer
+    --> spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-> spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.processing
+    <-- spoon.support.reflect.code
+    <-> spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-> spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.visitor
+    <-> spoon.template
+    <-- spoon.test
+    <-- spoon.test.annotation
+    <-- spoon.test.casts
+    <-- spoon.test.ctCase
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+spoon.reflect.reference
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    <-> spoon.processing
+    <-> spoon.reflect.code
+    <-- spoon.reflect.cu
+    <-> spoon.reflect.declaration
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.factory
+    <-> spoon.reflect.visitor
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.processing
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test.annotation
+    <-- spoon.test.arrays
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.generics
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+spoon.reflect.visitor
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> org.apache.log4j
+    <-> spoon
+    --> spoon.compiler
+    --> spoon.processing
+    <-> spoon.reflect.code
+    --> spoon.reflect.cu
+    <-> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    <-> spoon.reflect.reference
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.reflect.code
+    --> spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    --> spoon.support.util
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test.annotation
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+spoon.reflect.visitor.filter
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util.regex *
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.template
+    <-- spoon.template
+    <-- spoon.test.annotation
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+spoon.support
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.log4j
+    --> org.xml.sax *
+    <-> spoon
+    --> spoon.compiler
+    --> spoon.processing
+    --> spoon.reflect
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    <-> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    --> spoon.support.processing
+    --> spoon.support.reflect.code
+    --> spoon.support.reflect.cu
+    --> spoon.support.reflect.declaration
+    --> spoon.support.reflect.reference
+    --> spoon.support.util
+    --> spoon.support.visitor
+    <-- spoon.test
+    <-- spoon.test.api
+    <-- spoon.test.factory
+    <-- spoon.test.generics
+spoon.support.compiler
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> java.util.zip *
+    --> org.apache.log4j
+    <-> spoon
+    <-> spoon.compiler
+    <-> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    <-> spoon.support.compiler.jdt
+    <-- spoon.support.reflect.code
+    <-> spoon.support.reflect.declaration
+spoon.support.compiler.jdt
+    -->  *
+    --> java.io *
+    --> java.lang *
+    --> java.net *
+    --> java.util *
+    --> org.apache.commons.io
+    --> org.apache.log4j
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.compiler
+    --> org.eclipse.jdt.internal.compiler.ast
+    --> org.eclipse.jdt.internal.compiler.batch
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.impl
+    --> org.eclipse.jdt.internal.compiler.lookup
+    --> org.eclipse.jdt.internal.compiler.parser
+    --> org.eclipse.jdt.internal.compiler.util
+    <-> spoon
+    --> spoon.compiler
+    --> spoon.processing
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.support
+    <-> spoon.support.compiler
+spoon.support.gui
+    --> java.awt *
+    --> java.awt.event *
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> javax.swing *
+    --> javax.swing.table *
+    --> javax.swing.tree *
+    --> org.apache.log4j
+    <-> spoon
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.support
+spoon.support.processing
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.xml.sax *
+    --> org.xml.sax.helpers *
+    <-> spoon
+    --> spoon.compiler
+    <-> spoon.processing
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    <-- spoon.support
+spoon.support.reflect.code
+    --> java.lang *
+    --> java.util *
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    <-- spoon.support
+    --> spoon.support.compiler
+    <-> spoon.support.reflect.declaration
+    --> spoon.support.reflect.eval
+spoon.support.reflect.cu
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> spoon.compiler
+    --> spoon.processing
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    <-> spoon.reflect.factory
+    --> spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.reflect.declaration
+spoon.support.reflect.declaration
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.log4j
+    --> spoon
+    --> spoon.compiler
+    --> spoon.processing
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.eval
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-> spoon.support.compiler
+    <-> spoon.support.reflect.code
+    --> spoon.support.reflect.cu
+    --> spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    --> spoon.support.util
+    --> spoon.support.visitor
+    <-- spoon.test.factory
+    <-- spoon.test.filters
+spoon.support.reflect.eval
+    --> java.lang *
+    --> java.util *
+    --> org.apache.log4j
+    --> spoon
+    --> spoon.compiler
+    --> spoon.processing
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    <-> spoon.reflect.eval
+    <-- spoon.reflect.eval.observer
+    <-> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.declaration
+    --> spoon.support.util
+spoon.support.reflect.reference
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.log4j
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    <-- spoon.support
+    --> spoon.support.reflect.declaration
+    --> spoon.support.util
+    --> spoon.support.visitor
+spoon.support.template
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.apache.log4j
+    --> spoon
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.support.util
+    <-> spoon.template
+spoon.support.util
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
+    --> org.eclipse.jdt.core.compiler
+    --> org.eclipse.jdt.internal.compiler.env
+    --> org.eclipse.jdt.internal.compiler.util
+    <-- spoon.processing
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    <-- spoon.reflect.eval
+    --> spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.template
+spoon.support.visitor
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.log4j
+    --> spoon.compiler
+    --> spoon.processing
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.reference
+spoon.template
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> java.util.regex *
+    --> org.apache.log4j
+    --> spoon
+    <-> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    <-> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    <-> spoon.support.template
+    --> spoon.support.util
+    <-- spoon.test.processing
+    <-- spoon.test.template
+spoon.test
+    --> com.martiansoftware.jsap
+    --> java.lang *
+    --> java.util *
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.support
+    <-- spoon.test.annotation
+    <-- spoon.test.arrays
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.processing
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+spoon.test.annotation
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.api
+    --> com.martiansoftware.jsap
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.reflect.declaration
+    --> spoon.support
+spoon.test.arrays
+    -->  *
+    --> java.lang *
+    --> org.junit
+    --> spoon.reflect.declaration
+    --> spoon.reflect.reference
+    --> spoon.test
+spoon.test.casts
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.control
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.ctCase
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.enums
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.declaration
+    --> spoon.test
+spoon.test.eval
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.test
+spoon.test.exceptions
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.test
+spoon.test.factory
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.support
+    --> spoon.support.reflect.declaration
+    --> spoon.test
+spoon.test.fieldaccesses
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.filters
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.support.reflect.declaration
+    --> spoon.test
+spoon.test.generics
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.support
+    --> spoon.test
+spoon.test.initializers
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.intercession
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.test
+spoon.test.intercession.insertBefore
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+spoon.test.limits
+    --> java.io *
+    --> java.lang *
+    --> spoon.test.limits.utils
+spoon.test.limits.utils
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.declaration
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+    <-- spoon.test.limits
+spoon.test.main
+    --> java.lang *
+    --> org.junit
+    --> spoon
+spoon.test.model
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.parent
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+spoon.test.prettyprinter
+    --> java.lang *
+    --> java.security *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+spoon.test.processing
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.compiler
+    --> spoon.processing
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.template
+    --> spoon.test
+    --> spoon.test.template
+spoon.test.replace
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+spoon.test.secondaryclasses
+    --> java.awt.event *
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> javax.swing *
+    --> org.junit
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.snippets
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.test
+spoon.test.sourcePosition
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.strings
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.template
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon
+    --> spoon.compiler
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.template
+    <-- spoon.test.processing
+spoon.test.trycatch
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.reflect.reference
+    --> spoon.reflect.visitor
+    --> spoon.reflect.visitor.filter
+    --> spoon.test
+spoon.test.visibility
+    --> java.lang *
+    --> java.util *
+    --> org.junit
+    --> spoon.reflect.code
+    --> spoon.reflect.declaration
+    --> spoon.reflect.factory
+    --> spoon.test
+    --> spoon.test.visibility.packageprotected
+spoon.test.visibility.packageprotected
+    --> java.lang *
+    <-- spoon.test.visibility
+sun.misc *
+    <-- org.apache.tools.ant.taskdefs.email

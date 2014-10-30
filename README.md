@@ -12,10 +12,8 @@ Thomas Durieux
 - [Approche](#approche)
 - [Réalisation](#réalisation)
     - [Usage](#usage)
-    - [Compilation](#compilation)
     - [Analyse des résultats](#analyse-des-résultats)
     - [Validation des résultats](#validation-des-résultats)
-    - [Utilisation avancée](#utilisation-avancée)
 - [Pistes d'améliorations](#pistes-daméliorations)
 - [Références](#références)
 
@@ -73,9 +71,17 @@ Les graphes de dépendances ont pu être réalisé à partir des informations ob
 
 ## Réalisation
 
-L'outil réalisé a été réalisé en Java et se présente sous format d'un programme en ligne de commandes qui comportent plusieurs options (voir Usage).
+L'outil a été réalisé en Java et peut soit être exécuté via une interface d'utilisateur basique et et soit via un programme en ligne de commandes.
 
 ### Usage
+
+#### Interface d'utilisateur
+
+```bash
+mvn exec:java
+```
+
+#### Ligne de commande
 
 ```text
 Usage:
@@ -115,10 +121,17 @@ Get the dependency graph of a project
         Regex to ignore element, sepearated by a ','.
 ```
 
-### Compilation
+#### Exemple
 
-```bash
+```Bash
 mvn package
+
+java -jar target/DependencyAnalyzer-0.0.1-SNAPSHOT.jar \
+    spoon/src \
+    --ignore-external \
+    --ignore '.*(Impl)$','^([^\.]+\.)*(?!Ct)[^\.]+$','.*Abstract.*'\
+    --format dot \
+    --level class;
 ```
 
 ### Analyse des résultats 
@@ -144,24 +157,14 @@ Cette validation a été effectuée sur différents projets de taille variables.
 
 Les graphes de dépendances au niveau des paquets sont très similaire. Il y a néanmoins quelques différences. Ce projet traite les annotations comme des dépendances au contraire de Dependency Finder. Étant donnée que Dependency Finder analyse du code compilé certains éléments ne sont pas détecté à l'analyse du code source comme par exemple les package-info.java qui sont transformés en classe à la compilation. L'ordre des dépendances est également légèrement différente nous avons fait le choix de séparer les dépendances entrante et sortante, Dependency Finder ne fait qu'un tris alphabétique.
 
-Les graphes de dépendances au niveau des classes été plus difficile à analyser d'un part parce que les deux formats de fichier diffèrent d'autre part parce que des duplications ont été détectés dans le graphes de dépendances générés par Dependency Finder. Les quelques différences détectées au niveau des paquets sont également présentes au niveau des classes. Cette outil remonte néanmoins plus haut dans l'arbre de hiérarchie, par ce fait trouve dans dépendances qui ne sont pas listées comme des dépendances directe dans Dependency Finder.
-
-### Utilisation avancée
-
-```Bash
-java DependencySpooned.jar spoon/src \
-    --ignore-external \
-    --ignore '.*(Impl)$','^([^\.]+\.)*(?!Ct)[^\.]+$','.*Abstract.*'\
-    --format dot \
-    --level class;
-```
+Les quelques différences détectées au niveau des paquets sont également présentes au niveau des classes. Cet outil analyse le code source des projets et par conséquent ne traite pas la même chose que Dependency Finder. Par exemple Dependency Finder considère que toutes les classes héritent d'Object, cet outil ne considérera que si le développeur l'indique explicitement dans son code source.
 
 ## Pistes d'améliorations
 
 Plusieurs pistent d'amélioration sont envisageables:
 
 - gérer dans les exports la position d'utilisation des dépendances,
-- détecter le type de la dépendances (interface, classe, package, énumération, classe abstraite),
+- détecter dans quel contexte la dépendance est utilisée (variable locale, paramètre, variable de classe, héritage, ...),
 - créer un format de sortie qui supporte des filtres dynamiques,
 - analyser les dépendances au niveau des méthodes.
 

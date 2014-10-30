@@ -1,0 +1,166 @@
+com.martiansoftware.jsap *
+    <-- github.tdurieux.dependencies.main
+com.martiansoftware.jsap.stringparsers *
+    <-- github.tdurieux.dependencies.main
+github.tdurieux.dependencies
+    --> github.tdurieux.dependencies.graph
+    <-- github.tdurieux.dependencies.graph.export
+    --> github.tdurieux.dependencies.graph.node
+    --> github.tdurieux.dependencies.graph.node.classDep
+    --> github.tdurieux.dependencies.graph.node.packageDep
+    <-- github.tdurieux.dependencies.gui
+    <-- github.tdurieux.dependencies.main
+    --> github.tdurieux.dependencies.spoon.analyzer
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> org.apache.log4j *
+    --> spoon *
+    --> spoon.compiler *
+    --> spoon.processing *
+    --> spoon.reflect.factory *
+    --> spoon.support *
+    --> spoon.support.compiler *
+github.tdurieux.dependencies.graph
+    <-- github.tdurieux.dependencies
+    <-- github.tdurieux.dependencies.graph.export
+    --> github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies.gui
+    <-- github.tdurieux.dependencies.main
+    <-- github.tdurieux.dependencies.spoon.analyzer
+    --> java.lang *
+    --> java.util *
+github.tdurieux.dependencies.graph.export
+    --> github.tdurieux.dependencies
+    --> github.tdurieux.dependencies.graph
+    --> github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies.gui
+    <-- github.tdurieux.dependencies.main
+    --> java.lang *
+    --> java.util *
+    --> java.util.regex *
+github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies
+    <-- github.tdurieux.dependencies.graph
+    <-- github.tdurieux.dependencies.graph.export
+    <-- github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies.graph.node.packageDep
+    <-- github.tdurieux.dependencies.spoon.analyzer
+    --> java.io *
+    --> java.lang *
+    --> spoon.reflect.cu *
+    --> spoon.reflect.declaration *
+    --> spoon.reflect.reference *
+github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies
+    --> github.tdurieux.dependencies.graph.node
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> spoon *
+    --> spoon.reflect.cu *
+    --> spoon.reflect.declaration *
+    --> spoon.reflect.reference *
+github.tdurieux.dependencies.graph.node.packageDep
+    <-- github.tdurieux.dependencies
+    --> github.tdurieux.dependencies.graph.node
+    --> java.io *
+    --> java.lang *
+    --> spoon.reflect.cu *
+    --> spoon.reflect.declaration *
+    --> spoon.reflect.reference *
+github.tdurieux.dependencies.gui
+    --> github.tdurieux.dependencies
+    --> github.tdurieux.dependencies.graph
+    --> github.tdurieux.dependencies.graph.export
+    <-- github.tdurieux.dependencies.main
+    --> java.awt *
+    --> java.awt.event *
+    --> java.io *
+    --> java.lang *
+    --> javax.swing *
+    --> javax.swing.event *
+github.tdurieux.dependencies.main
+    --> com.martiansoftware.jsap *
+    --> com.martiansoftware.jsap.stringparsers *
+    --> github.tdurieux.dependencies
+    --> github.tdurieux.dependencies.graph
+    --> github.tdurieux.dependencies.graph.export
+    --> github.tdurieux.dependencies.gui
+    --> java.io *
+    --> java.lang *
+github.tdurieux.dependencies.spoon.analyzer
+    <-- github.tdurieux.dependencies
+    --> github.tdurieux.dependencies.graph
+    --> github.tdurieux.dependencies.graph.node
+    --> java.lang *
+    --> java.util *
+    --> spoon.processing *
+    --> spoon.reflect.code *
+    --> spoon.reflect.declaration *
+    --> spoon.reflect.reference *
+java.awt *
+    <-- github.tdurieux.dependencies.gui
+java.awt.event *
+    <-- github.tdurieux.dependencies.gui
+java.io *
+    <-- github.tdurieux.dependencies
+    <-- github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies.graph.node.packageDep
+    <-- github.tdurieux.dependencies.gui
+    <-- github.tdurieux.dependencies.main
+java.lang *
+    <-- github.tdurieux.dependencies
+    <-- github.tdurieux.dependencies.graph
+    <-- github.tdurieux.dependencies.graph.export
+    <-- github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies.graph.node.packageDep
+    <-- github.tdurieux.dependencies.gui
+    <-- github.tdurieux.dependencies.main
+    <-- github.tdurieux.dependencies.spoon.analyzer
+java.util *
+    <-- github.tdurieux.dependencies
+    <-- github.tdurieux.dependencies.graph
+    <-- github.tdurieux.dependencies.graph.export
+    <-- github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies.spoon.analyzer
+java.util.regex *
+    <-- github.tdurieux.dependencies.graph.export
+javax.swing *
+    <-- github.tdurieux.dependencies.gui
+javax.swing.event *
+    <-- github.tdurieux.dependencies.gui
+org.apache.log4j *
+    <-- github.tdurieux.dependencies
+spoon *
+    <-- github.tdurieux.dependencies
+    <-- github.tdurieux.dependencies.graph.node.classDep
+spoon.compiler *
+    <-- github.tdurieux.dependencies
+spoon.processing *
+    <-- github.tdurieux.dependencies
+    <-- github.tdurieux.dependencies.spoon.analyzer
+spoon.reflect.code *
+    <-- github.tdurieux.dependencies.spoon.analyzer
+spoon.reflect.cu *
+    <-- github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies.graph.node.packageDep
+spoon.reflect.declaration *
+    <-- github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies.graph.node.packageDep
+    <-- github.tdurieux.dependencies.spoon.analyzer
+spoon.reflect.factory *
+    <-- github.tdurieux.dependencies
+spoon.reflect.reference *
+    <-- github.tdurieux.dependencies.graph.node
+    <-- github.tdurieux.dependencies.graph.node.classDep
+    <-- github.tdurieux.dependencies.graph.node.packageDep
+    <-- github.tdurieux.dependencies.spoon.analyzer
+spoon.support *
+    <-- github.tdurieux.dependencies
+spoon.support.compiler *
+    <-- github.tdurieux.dependencies

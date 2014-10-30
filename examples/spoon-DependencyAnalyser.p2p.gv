@@ -1,0 +1,881 @@
+digraph G {
+	node [shape=box]; compound=true; ratio=fill;
+	"spoon.test.limits.utils" -> "java.lang";
+	"spoon.test.limits.utils" -> "spoon.test";
+	"spoon.test.limits.utils" -> "spoon.reflect.declaration";
+	"spoon.test.limits.utils" -> "spoon.reflect.code";
+	"spoon.test.limits.utils" -> "spoon.processing";
+	"spoon.test.limits.utils" -> "spoon.reflect.visitor.filter";
+	"spoon.test.limits.utils" -> "spoon.reflect.visitor";
+	"spoon.test.limits.utils" -> "java.util";
+	"javax.swing.tree" [color=grey];
+	"org.apache.log4j" [color=grey];
+	"spoon.test.intercession" -> "spoon.test";
+	"spoon.test.intercession" -> "spoon.reflect.factory";
+	"spoon.test.intercession" -> "java.lang";
+	"spoon.test.intercession" -> "spoon.reflect.code";
+	"spoon.test.intercession" -> "spoon.reflect.declaration";
+	"spoon.test.intercession" -> "spoon.processing";
+	"spoon.test.intercession" -> "java.util";
+	"spoon.test.intercession" -> "spoon.template";
+	"spoon.test.casts" -> "spoon.test";
+	"spoon.test.casts" -> "spoon.reflect.factory";
+	"spoon.test.casts" -> "java.lang";
+	"spoon.test.casts" -> "spoon.reflect.code";
+	"spoon.test.casts" -> "spoon.reflect.declaration";
+	"spoon.test.casts" -> "spoon.processing";
+	"spoon.test.casts" -> "java.util";
+	"spoon.test.casts" -> "spoon.template";
+	"spoon.test.casts" -> "spoon.reflect.visitor.filter";
+	"spoon.test.casts" -> "spoon.reflect.visitor";
+	"spoon.support.util" -> "java.lang";
+	"spoon.support.util" -> "org.eclipse.jdt.internal.compiler.env";
+	"spoon.support.util" -> "java.io";
+	"spoon.support.util" -> "org.eclipse.jdt.internal.compiler.util";
+	"spoon.support.util" -> "org.eclipse.jdt.core.compiler";
+	"spoon.support.util" -> "java.util";
+	"spoon.support.util" -> "spoon.reflect.code";
+	"spoon.support.util" -> "spoon.reflect.declaration";
+	"spoon.support.util" -> "spoon.processing";
+	"spoon.support.util" -> "spoon.template";
+	"spoon.support.util" -> "spoon.reflect.reference";
+	"spoon.support.util" -> "java.lang.reflect";
+	"java.net" [color=grey];
+	"spoon.test.annotation" -> "java.lang";
+	"spoon.test.annotation" -> "spoon.test";
+	"spoon.test.annotation" -> "spoon.reflect.declaration";
+	"spoon.test.annotation" -> "spoon.processing";
+	"spoon.test.annotation" -> "java.util";
+	"spoon.test.annotation" -> "spoon";
+	"spoon.test.annotation" -> "spoon.reflect.factory";
+	"spoon.test.annotation" -> "spoon.compiler";
+	"spoon.test.annotation" -> "java.io";
+	"spoon.test.annotation" -> "spoon.reflect.visitor.filter";
+	"spoon.test.annotation" -> "spoon.reflect.visitor";
+	"spoon.test.annotation" -> "java.lang.annotation";
+	"spoon.test.annotation" -> "spoon.reflect.reference";
+	"spoon.test.trycatch" -> "java.lang";
+	"spoon.test.trycatch" -> "java.io";
+	"spoon.test.trycatch" -> "spoon.test";
+	"spoon.test.trycatch" -> "spoon.reflect.factory";
+	"spoon.test.trycatch" -> "spoon.reflect.code";
+	"spoon.test.trycatch" -> "spoon.reflect.declaration";
+	"spoon.test.trycatch" -> "spoon.processing";
+	"spoon.test.trycatch" -> "spoon.template";
+	"spoon.test.trycatch" -> "spoon.reflect.visitor.filter";
+	"spoon.test.trycatch" -> "spoon.reflect.visitor";
+	"spoon.test.trycatch" -> "java.util";
+	"spoon.test.trycatch" -> "spoon.reflect.reference";
+	"spoon" -> "spoon.reflect.factory";
+	"spoon" -> "java.util";
+	"spoon" -> "com.martiansoftware.jsap";
+	"spoon" -> "org.apache.log4j";
+	"spoon" -> "java.lang";
+	"spoon" -> "com.martiansoftware.jsap.stringparsers";
+	"spoon" -> "java.io";
+	"spoon" -> "spoon.support";
+	"spoon" -> "spoon.compiler";
+	"spoon" -> "spoon.processing";
+	"spoon" -> "spoon.support.compiler.jdt";
+	"spoon" -> "spoon.reflect.visitor";
+	"spoon" -> "spoon.support.compiler";
+	"spoon" -> "org.xml.sax.helpers";
+	"spoon" -> "org.xml.sax";
+	"spoon" -> "spoon.support.processing";
+	"spoon" -> "spoon.support.gui";
+	"spoon" -> "javax.swing";
+	"spoon" -> "java.awt.event";
+	"spoon.test.intercession.insertBefore" -> "java.lang";
+	"spoon.test.intercession.insertBefore" -> "spoon.reflect.factory";
+	"spoon.test.intercession.insertBefore" -> "spoon";
+	"spoon.test.intercession.insertBefore" -> "spoon.compiler";
+	"spoon.test.intercession.insertBefore" -> "java.util";
+	"spoon.test.intercession.insertBefore" -> "spoon.processing";
+	"spoon.test.intercession.insertBefore" -> "spoon.reflect.code";
+	"spoon.test.intercession.insertBefore" -> "spoon.reflect.declaration";
+	"spoon.test.intercession.insertBefore" -> "spoon.template";
+	"spoon.test.intercession.insertBefore" -> "java.io";
+	"spoon.test.intercession.insertBefore" -> "spoon.reflect.visitor.filter";
+	"spoon.test.intercession.insertBefore" -> "spoon.reflect.visitor";
+	"org.xml.sax" [color=grey];
+	"spoon.test.filters" -> "spoon.reflect.factory";
+	"spoon.test.filters" -> "java.lang";
+	"spoon.test.filters" -> "spoon.test";
+	"spoon.test.filters" -> "spoon.reflect.declaration";
+	"spoon.test.filters" -> "spoon.processing";
+	"spoon.test.filters" -> "spoon.reflect.visitor.filter";
+	"spoon.test.filters" -> "spoon.reflect.visitor";
+	"spoon.test.filters" -> "java.util";
+	"spoon.test.filters" -> "spoon.support.reflect.declaration";
+	"spoon.test.filters" -> "java.io";
+	"spoon.test.filters" -> "spoon";
+	"spoon.test.filters" -> "spoon.compiler";
+	"spoon.test.filters" -> "spoon.reflect.code";
+	"spoon.test.filters" -> "spoon.template";
+	"spoon.test.factory" -> "java.lang";
+	"spoon.test.factory" -> "spoon.test";
+	"spoon.test.factory" -> "spoon.reflect.declaration";
+	"spoon.test.factory" -> "spoon.reflect.code";
+	"spoon.test.factory" -> "spoon.processing";
+	"spoon.test.factory" -> "java.util";
+	"spoon.test.factory" -> "spoon.template";
+	"spoon.test.factory" -> "spoon.reflect.factory";
+	"spoon.test.factory" -> "spoon.support.reflect.declaration";
+	"spoon.test.factory" -> "java.io";
+	"spoon.test.factory" -> "spoon.support";
+	"spoon.test.factory" -> "spoon.compiler";
+	"javax.swing" [color=grey];
+	"spoon.test.eval" -> "java.lang";
+	"spoon.test.eval" -> "spoon.test";
+	"spoon.test.eval" -> "spoon.reflect.declaration";
+	"spoon.test.eval" -> "spoon.reflect.code";
+	"spoon.test.eval" -> "spoon.processing";
+	"spoon.test.eval" -> "java.util";
+	"spoon.test.eval" -> "spoon.template";
+	"spoon.test.eval" -> "java.io";
+	"java.io" [color=grey];
+	"spoon.reflect.visitor" -> "java.lang.annotation";
+	"spoon.reflect.visitor" -> "java.lang";
+	"spoon.reflect.visitor" -> "spoon.reflect.declaration";
+	"spoon.reflect.visitor" -> "spoon.processing";
+	"spoon.reflect.visitor" -> "spoon.reflect.code";
+	"spoon.reflect.visitor" -> "spoon.template";
+	"spoon.reflect.visitor" -> "spoon.reflect.reference";
+	"spoon.reflect.visitor" -> "java.util";
+	"spoon.reflect.visitor" -> "spoon.compiler";
+	"spoon.reflect.visitor" -> "spoon.reflect.cu";
+	"spoon.reflect.visitor" -> "spoon.reflect.factory";
+	"spoon.reflect.visitor" -> "spoon.support.reflect.cu";
+	"spoon.reflect.visitor" -> "spoon.support.util";
+	"spoon.reflect.visitor" -> "spoon";
+	"spoon.reflect.visitor" -> "org.apache.log4j";
+	"spoon.reflect.visitor" -> "java.io";
+	"spoon.support.template" -> "java.lang";
+	"spoon.support.template" -> "spoon.template";
+	"spoon.support.template" -> "spoon.reflect.declaration";
+	"spoon.support.template" -> "spoon.processing";
+	"spoon.support.template" -> "spoon.reflect.reference";
+	"spoon.support.template" -> "java.util";
+	"spoon.support.template" -> "spoon.reflect.code";
+	"spoon.support.template" -> "java.lang.reflect";
+	"spoon.support.template" -> "spoon.reflect.factory";
+	"spoon.support.template" -> "spoon.support.util";
+	"spoon.support.template" -> "spoon";
+	"spoon.support.template" -> "org.apache.log4j";
+	"spoon.support.template" -> "spoon.reflect.visitor";
+	"spoon.support.template" -> "java.io";
+	"spoon.support.template" -> "spoon.reflect.visitor.filter";
+	"spoon.test.sourcePosition" -> "java.lang";
+	"spoon.test.sourcePosition" -> "spoon.test";
+	"spoon.test.sourcePosition" -> "spoon.reflect.declaration";
+	"spoon.test.sourcePosition" -> "spoon.processing";
+	"spoon.test.sourcePosition" -> "spoon.reflect.factory";
+	"spoon.test.sourcePosition" -> "spoon.reflect.visitor.filter";
+	"spoon.test.sourcePosition" -> "spoon.reflect.visitor";
+	"spoon.test.sourcePosition" -> "spoon.reflect.code";
+	"spoon.test.sourcePosition" -> "java.util";
+	"spoon.test.sourcePosition" -> "spoon.reflect.cu";
+	"com.martiansoftware.jsap.stringparsers" [color=grey];
+	"spoon.test.visibility" -> "java.lang";
+	"spoon.test.visibility" -> "spoon.test.visibility.packageprotected";
+	"spoon.test.visibility" -> "spoon.test";
+	"spoon.test.visibility" -> "spoon.reflect.factory";
+	"spoon.test.visibility" -> "spoon.reflect.declaration";
+	"spoon.test.visibility" -> "spoon.reflect.code";
+	"spoon.test.visibility" -> "spoon.processing";
+	"spoon.test.visibility" -> "java.util";
+	"spoon.test.visibility" -> "spoon.template";
+	"java.util.zip" [color=grey];
+	"spoon.test.main" -> "java.lang";
+	"spoon.test.main" -> "spoon";
+	"spoon.test.exceptions" -> "java.lang";
+	"spoon.test.exceptions" -> "spoon";
+	"spoon.test.exceptions" -> "spoon.reflect.factory";
+	"spoon.test.exceptions" -> "spoon.compiler";
+	"spoon.test.exceptions" -> "java.util";
+	"spoon.test.exceptions" -> "spoon.processing";
+	"spoon.test.exceptions" -> "spoon.test";
+	"spoon.test.exceptions" -> "spoon.reflect.code";
+	"spoon.test.exceptions" -> "spoon.reflect.declaration";
+	"spoon.test.exceptions" -> "java.io";
+	"java.lang" [color=grey];
+	"java.awt.event" [color=grey];
+	"spoon.test.template" -> "spoon.template";
+	"spoon.test.template" -> "java.lang";
+	"spoon.test.template" -> "spoon.reflect.declaration";
+	"spoon.test.template" -> "spoon.processing";
+	"spoon.test.template" -> "spoon.reflect.reference";
+	"spoon.test.template" -> "spoon";
+	"spoon.test.template" -> "spoon.reflect.factory";
+	"spoon.test.template" -> "spoon.compiler";
+	"spoon.test.template" -> "java.util";
+	"spoon.test.template" -> "spoon.reflect.code";
+	"spoon.test.template" -> "spoon.reflect.visitor.filter";
+	"spoon.test.template" -> "spoon.reflect.visitor";
+	"spoon.test.template" -> "java.io";
+	"spoon.test.strings" -> "java.lang";
+	"spoon.test.strings" -> "java.io";
+	"spoon.test.strings" -> "spoon.test";
+	"spoon.test.strings" -> "spoon.reflect.factory";
+	"spoon.test.strings" -> "spoon.reflect.code";
+	"spoon.test.strings" -> "spoon.reflect.declaration";
+	"spoon.test.strings" -> "spoon.processing";
+	"spoon.test.strings" -> "java.util";
+	"spoon.test.strings" -> "spoon.template";
+	"spoon.test.strings" -> "spoon.reflect.visitor.filter";
+	"spoon.test.strings" -> "spoon.reflect.visitor";
+	"spoon.support.reflect.eval" -> "spoon.reflect.code";
+	"spoon.support.reflect.eval" -> "spoon.reflect.declaration";
+	"spoon.support.reflect.eval" -> "java.lang";
+	"spoon.support.reflect.eval" -> "spoon.processing";
+	"spoon.support.reflect.eval" -> "spoon.template";
+	"spoon.support.reflect.eval" -> "spoon";
+	"spoon.support.reflect.eval" -> "spoon.reflect.eval";
+	"spoon.support.reflect.eval" -> "spoon.reflect.visitor";
+	"spoon.support.reflect.eval" -> "spoon.reflect.factory";
+	"spoon.support.reflect.eval" -> "java.util";
+	"spoon.support.reflect.eval" -> "spoon.reflect.reference";
+	"spoon.support.reflect.eval" -> "spoon.support.util";
+	"spoon.support.reflect.eval" -> "spoon.reflect.visitor.filter";
+	"spoon.support.reflect.eval" -> "org.apache.log4j";
+	"spoon.support.reflect.eval" -> "spoon.compiler";
+	"org.eclipse.jdt.internal.compiler.env" [color=grey];
+	"org.eclipse.jdt.internal.compiler.lookup" [color=grey];
+	"spoon.test.generics" -> "java.lang";
+	"spoon.test.generics" -> "java.util";
+	"spoon.test.generics" -> "java.io";
+	"spoon.test.generics" -> "spoon.test";
+	"spoon.test.generics" -> "spoon.reflect.declaration";
+	"spoon.test.generics" -> "spoon.reflect.code";
+	"spoon.test.generics" -> "spoon.processing";
+	"spoon.test.generics" -> "spoon.reflect.visitor.filter";
+	"spoon.test.generics" -> "spoon.reflect.visitor";
+	"spoon.test.generics" -> "spoon.reflect.reference";
+	"spoon.test.generics" -> "spoon.support";
+	"spoon.test.generics" -> "spoon.compiler";
+	"spoon.test.generics" -> "spoon.template";
+	"spoon.test.generics" -> "spoon.reflect.factory";
+	"spoon.reflect.cu" -> "java.lang";
+	"spoon.reflect.cu" -> "java.io";
+	"spoon.reflect.cu" -> "java.util";
+	"spoon.reflect.cu" -> "spoon.reflect.declaration";
+	"spoon.reflect.cu" -> "spoon.processing";
+	"spoon.reflect.cu" -> "spoon.reflect.reference";
+	"org.eclipse.jdt.internal.compiler.util" [color=grey];
+	"spoon.template" -> "java.lang.annotation";
+	"spoon.template" -> "java.lang";
+	"spoon.template" -> "spoon.support.template";
+	"spoon.template" -> "spoon.reflect.declaration";
+	"spoon.template" -> "spoon.reflect.code";
+	"spoon.template" -> "spoon.processing";
+	"spoon.template" -> "spoon.reflect.factory";
+	"spoon.template" -> "java.util";
+	"spoon.template" -> "spoon.reflect.visitor";
+	"spoon.template" -> "spoon.reflect.cu";
+	"spoon.template" -> "spoon.reflect.reference";
+	"spoon.template" -> "spoon.reflect.visitor.filter";
+	"spoon.template" -> "spoon";
+	"spoon.template" -> "java.lang.reflect";
+	"spoon.template" -> "spoon.support.util";
+	"spoon.template" -> "org.apache.log4j";
+	"spoon.template" -> "java.util.regex";
+	"spoon.template" -> "java.io";
+	"spoon.test.secondaryclasses" -> "javax.swing";
+	"spoon.test.secondaryclasses" -> "java.lang";
+	"spoon.test.secondaryclasses" -> "java.awt.event";
+	"spoon.test.secondaryclasses" -> "spoon.test";
+	"spoon.test.secondaryclasses" -> "spoon.reflect.declaration";
+	"spoon.test.secondaryclasses" -> "spoon.reflect.code";
+	"spoon.test.secondaryclasses" -> "spoon.processing";
+	"spoon.test.secondaryclasses" -> "spoon.template";
+	"spoon.test.secondaryclasses" -> "spoon.reflect.visitor.filter";
+	"spoon.test.secondaryclasses" -> "spoon.reflect.visitor";
+	"spoon.test.secondaryclasses" -> "java.util";
+	"spoon.test.secondaryclasses" -> "spoon.reflect.reference";
+	"spoon.test.secondaryclasses" -> "spoon.reflect.factory";
+	"spoon.test.secondaryclasses" -> "spoon.compiler";
+	"spoon.test.secondaryclasses" -> "java.io";
+	"javax.xml.parsers" [color=grey];
+	"spoon.test.replace" -> "java.lang";
+	"spoon.test.replace" -> "java.io";
+	"spoon.test.replace" -> "spoon.reflect.factory";
+	"spoon.test.replace" -> "spoon";
+	"spoon.test.replace" -> "spoon.compiler";
+	"spoon.test.replace" -> "java.util";
+	"spoon.test.replace" -> "spoon.processing";
+	"spoon.test.replace" -> "spoon.reflect.declaration";
+	"spoon.test.replace" -> "spoon.reflect.code";
+	"spoon.test.replace" -> "spoon.reflect.visitor.filter";
+	"spoon.test.replace" -> "spoon.reflect.visitor";
+	"spoon.test.replace" -> "spoon.template";
+	"spoon.test.replace" -> "spoon.reflect.reference";
+	"org.w3c.dom" [color=grey];
+	"spoon.test.ctCase" -> "java.lang";
+	"spoon.test.ctCase" -> "spoon.reflect.factory";
+	"spoon.test.ctCase" -> "spoon.reflect.visitor.filter";
+	"spoon.test.ctCase" -> "spoon.reflect.visitor";
+	"spoon.test.ctCase" -> "java.util";
+	"spoon.test.ctCase" -> "spoon.test";
+	"spoon.test.ctCase" -> "spoon.reflect.declaration";
+	"spoon.test.ctCase" -> "spoon.processing";
+	"spoon.test.ctCase" -> "spoon.reflect.code";
+	"spoon.test" -> "java.lang";
+	"spoon.test" -> "spoon";
+	"spoon.test" -> "spoon.compiler";
+	"spoon.test" -> "spoon.processing";
+	"spoon.test" -> "java.util";
+	"spoon.test" -> "spoon.reflect.factory";
+	"spoon.test" -> "java.io";
+	"spoon.test" -> "spoon.reflect.declaration";
+	"spoon.test" -> "spoon.support";
+	"java.lang.reflect" [color=grey];
+	"spoon.support.compiler" -> "java.io";
+	"spoon.support.compiler" -> "java.lang";
+	"spoon.support.compiler" -> "spoon.compiler";
+	"spoon.support.compiler" -> "org.apache.log4j";
+	"spoon.support.compiler" -> "java.util";
+	"spoon.support.compiler" -> "spoon";
+	"spoon.support.compiler" -> "spoon.reflect.code";
+	"spoon.support.compiler" -> "spoon.reflect.declaration";
+	"spoon.support.compiler" -> "spoon.processing";
+	"spoon.support.compiler" -> "spoon.template";
+	"spoon.support.compiler" -> "spoon.reflect.factory";
+	"spoon.support.compiler" -> "spoon.reflect.reference";
+	"spoon.support.compiler" -> "spoon.support.reflect.declaration";
+	"spoon.support.compiler" -> "spoon.reflect.visitor";
+	"spoon.support.compiler" -> "spoon.support.compiler.jdt";
+	"spoon.support.compiler" -> "java.util.zip";
+	"javax.swing.table" [color=grey];
+	"spoon.test.subclass.prettyprinter" -> "java.lang";
+	"spoon.test.subclass.prettyprinter" -> "spoon.test.prettyprinter";
+	"spoon.test.prettyprinter" -> "java.lang";
+	"spoon.test.prettyprinter" -> "spoon";
+	"spoon.test.prettyprinter" -> "spoon.compiler";
+	"spoon.test.prettyprinter" -> "spoon.processing";
+	"spoon.test.prettyprinter" -> "java.util";
+	"spoon.test.prettyprinter" -> "spoon.reflect.factory";
+	"spoon.test.prettyprinter" -> "spoon.reflect.declaration";
+	"spoon.test.prettyprinter" -> "spoon.reflect.code";
+	"spoon.test.prettyprinter" -> "spoon.template";
+	"spoon.test.prettyprinter" -> "spoon.reflect.visitor.filter";
+	"spoon.test.prettyprinter" -> "spoon.reflect.visitor";
+	"spoon.test.prettyprinter" -> "spoon.reflect.cu";
+	"spoon.test.prettyprinter" -> "java.security";
+	"spoon.support.processing" -> "spoon.reflect.factory";
+	"spoon.support.processing" -> "spoon";
+	"spoon.support.processing" -> "java.util";
+	"spoon.support.processing" -> "spoon.processing";
+	"spoon.support.processing" -> "java.lang";
+	"spoon.support.processing" -> "org.xml.sax.helpers";
+	"spoon.support.processing" -> "org.xml.sax";
+	"spoon.support.processing" -> "spoon.compiler";
+	"spoon.support.processing" -> "java.io";
+	"spoon.support.processing" -> "spoon.reflect.reference";
+	"spoon.support.processing" -> "java.lang.reflect";
+	"org.eclipse.jdt.core.compiler" [color=grey];
+	"spoon.test.api" -> "java.lang";
+	"spoon.test.api" -> "java.util";
+	"spoon.test.api" -> "spoon";
+	"spoon.test.api" -> "java.io";
+	"spoon.test.api" -> "spoon.support";
+	"spoon.test.api" -> "spoon.processing";
+	"spoon.test.api" -> "spoon.reflect.declaration";
+	"org.xml.sax.helpers" [color=grey];
+	"spoon.support" -> "spoon.reflect.factory";
+	"spoon.support" -> "java.lang";
+	"spoon.support" -> "java.io";
+	"spoon.support" -> "spoon.support.reflect.declaration";
+	"spoon.support" -> "spoon.reflect.declaration";
+	"spoon.support" -> "spoon.processing";
+	"spoon.support" -> "spoon.support.reflect.code";
+	"spoon.support" -> "spoon.reflect.code";
+	"spoon.support" -> "spoon.template";
+	"spoon.support" -> "java.util";
+	"spoon.support" -> "spoon.reflect.reference";
+	"spoon.support" -> "java.lang.reflect";
+	"spoon.support" -> "spoon.support.util";
+	"spoon.support" -> "org.apache.log4j";
+	"spoon.support" -> "spoon.support.reflect.reference";
+	"spoon.support" -> "spoon.support.reflect.cu";
+	"spoon.support" -> "spoon.reflect.cu";
+	"spoon.support" -> "spoon.reflect.visitor";
+	"spoon.support" -> "spoon.compiler";
+	"spoon.support" -> "spoon.support.visitor";
+	"spoon.support" -> "spoon.reflect";
+	"spoon.support" -> "spoon.support.processing";
+	"spoon.support" -> "org.xml.sax";
+	"spoon.support" -> "spoon";
+	"spoon.test.visibility.packageprotected" -> "java.lang";
+	"spoon.support.reflect.cu" -> "spoon.reflect.factory";
+	"spoon.support.reflect.cu" -> "java.util";
+	"spoon.support.reflect.cu" -> "java.io";
+	"spoon.support.reflect.cu" -> "java.lang";
+	"spoon.support.reflect.cu" -> "spoon.processing";
+	"spoon.support.reflect.cu" -> "spoon.reflect.cu";
+	"spoon.support.reflect.cu" -> "spoon.compiler";
+	"spoon.support.reflect.cu" -> "spoon.reflect.declaration";
+	"spoon.support.reflect.cu" -> "spoon.reflect.reference";
+	"java.util" [color=grey];
+	"java.lang.annotation" [color=grey];
+	"spoon.support.gui" -> "java.util";
+	"spoon.support.gui" -> "spoon.reflect.factory";
+	"spoon.support.gui" -> "javax.swing";
+	"spoon.support.gui" -> "javax.swing.tree";
+	"spoon.support.gui" -> "java.lang";
+	"spoon.support.gui" -> "spoon.reflect.visitor";
+	"spoon.support.gui" -> "spoon.reflect.declaration";
+	"spoon.support.gui" -> "spoon.processing";
+	"spoon.support.gui" -> "java.io";
+	"spoon.support.gui" -> "java.awt.event";
+	"spoon.support.gui" -> "java.awt";
+	"spoon.support.gui" -> "spoon.support";
+	"spoon.support.gui" -> "spoon.reflect";
+	"spoon.support.gui" -> "org.apache.log4j";
+	"spoon.support.gui" -> "javax.swing.table";
+	"spoon.support.gui" -> "java.lang.reflect";
+	"spoon.support.gui" -> "spoon.reflect.reference";
+	"spoon.reflect" -> "java.util";
+	"spoon.reflect" -> "java.lang";
+	"spoon.reflect" -> "java.io";
+	"spoon.reflect" -> "spoon.reflect.factory";
+	"spoon.test.initializers" -> "java.lang";
+	"spoon.test.initializers" -> "spoon.test";
+	"spoon.test.initializers" -> "spoon.reflect.declaration";
+	"spoon.test.initializers" -> "spoon.reflect.code";
+	"spoon.test.initializers" -> "spoon.processing";
+	"spoon.test.initializers" -> "spoon.reflect.visitor.filter";
+	"spoon.test.initializers" -> "spoon.reflect.visitor";
+	"spoon.test.initializers" -> "java.util";
+	"spoon.test.initializers" -> "spoon.template";
+	"spoon.test.processing" -> "spoon.processing";
+	"spoon.test.processing" -> "spoon.reflect.declaration";
+	"spoon.test.processing" -> "java.lang";
+	"spoon.test.processing" -> "spoon.reflect.code";
+	"spoon.test.processing" -> "spoon.reflect.reference";
+	"spoon.test.processing" -> "spoon.test.template";
+	"spoon.test.processing" -> "spoon.template";
+	"spoon.test.processing" -> "spoon.test";
+	"spoon.test.processing" -> "java.util";
+	"spoon.test.processing" -> "spoon.reflect.factory";
+	"spoon.test.processing" -> "java.io";
+	"spoon.test.processing" -> "spoon.compiler";
+	"spoon.test.processing" -> "spoon.reflect.cu";
+	"spoon.reflect.visitor.filter" -> "java.lang";
+	"spoon.reflect.visitor.filter" -> "spoon.reflect.visitor";
+	"spoon.reflect.visitor.filter" -> "spoon.reflect.declaration";
+	"spoon.reflect.visitor.filter" -> "spoon.processing";
+	"spoon.reflect.visitor.filter" -> "spoon.reflect.reference";
+	"spoon.reflect.visitor.filter" -> "spoon.reflect.code";
+	"spoon.reflect.visitor.filter" -> "spoon.template";
+	"spoon.reflect.visitor.filter" -> "java.util.regex";
+	"com.martiansoftware.jsap" [color=grey];
+	"spoon.support.reflect.reference" -> "spoon.reflect.reference";
+	"spoon.support.reflect.reference" -> "java.lang";
+	"spoon.support.reflect.reference" -> "spoon.processing";
+	"spoon.support.reflect.reference" -> "java.io";
+	"spoon.support.reflect.reference" -> "java.lang.reflect";
+	"spoon.support.reflect.reference" -> "spoon.reflect.visitor";
+	"spoon.support.reflect.reference" -> "spoon.support.reflect.declaration";
+	"spoon.support.reflect.reference" -> "java.util";
+	"spoon.support.reflect.reference" -> "spoon.reflect.declaration";
+	"spoon.support.reflect.reference" -> "spoon.reflect.code";
+	"spoon.support.reflect.reference" -> "spoon.support.util";
+	"spoon.support.reflect.reference" -> "org.apache.log4j";
+	"spoon.support.reflect.reference" -> "spoon.reflect.factory";
+	"spoon.support.reflect.reference" -> "spoon.support.visitor";
+	"spoon.support.reflect.reference" -> "spoon.compiler";
+	"spoon.support.reflect.reference" -> "java.lang.annotation";
+	"spoon.support.reflect.code" -> "spoon.support.reflect.declaration";
+	"spoon.support.reflect.code" -> "java.io";
+	"spoon.support.reflect.code" -> "spoon.reflect.declaration";
+	"spoon.support.reflect.code" -> "java.lang";
+	"spoon.support.reflect.code" -> "spoon.processing";
+	"spoon.support.reflect.code" -> "spoon.reflect.code";
+	"spoon.support.reflect.code" -> "spoon.template";
+	"spoon.support.reflect.code" -> "spoon.reflect.visitor";
+	"spoon.support.reflect.code" -> "spoon.reflect.reference";
+	"spoon.support.reflect.code" -> "java.util";
+	"spoon.support.reflect.code" -> "spoon.reflect.factory";
+	"spoon.support.reflect.code" -> "spoon.support.reflect.eval";
+	"spoon.support.reflect.code" -> "spoon.reflect.eval";
+	"spoon.support.reflect.code" -> "spoon.support.compiler";
+	"spoon.support.reflect.code" -> "spoon";
+	"spoon.support.reflect.code" -> "spoon.reflect.cu";
+	"spoon.test.enums" -> "java.lang";
+	"spoon.test.enums" -> "spoon.test";
+	"spoon.test.enums" -> "spoon.reflect.declaration";
+	"spoon.test.enums" -> "spoon.reflect.code";
+	"spoon.test.enums" -> "spoon.processing";
+	"spoon.test.enums" -> "java.util";
+	"spoon.test.enums" -> "java.io";
+	"org.eclipse.jdt.internal.compiler" [color=grey];
+	"spoon.test.limits" -> "java.lang";
+	"spoon.test.limits" -> "spoon.test.limits.utils";
+	"spoon.test.limits" -> "java.io";
+	"spoon.reflect.code" -> "java.util";
+	"spoon.reflect.code" -> "spoon.reflect.reference";
+	"spoon.reflect.code" -> "java.lang";
+	"spoon.reflect.code" -> "spoon.processing";
+	"spoon.reflect.code" -> "spoon.reflect.declaration";
+	"spoon.reflect.code" -> "spoon.template";
+	"spoon.reflect.code" -> "spoon.reflect.visitor";
+	"spoon.reflect.code" -> "spoon.support.compiler";
+	"spoon.reflect.code" -> "spoon";
+	"org.eclipse.jdt.internal.compiler.batch" [color=grey];
+	"spoon.support.visitor" -> "spoon.reflect.factory";
+	"spoon.support.visitor" -> "spoon.processing";
+	"spoon.support.visitor" -> "spoon.reflect.visitor";
+	"spoon.support.visitor" -> "spoon.reflect.declaration";
+	"spoon.support.visitor" -> "java.lang";
+	"spoon.support.visitor" -> "spoon.compiler";
+	"spoon.support.visitor" -> "java.util";
+	"spoon.support.visitor" -> "org.apache.log4j";
+	"spoon.support.visitor" -> "spoon.reflect.reference";
+	"spoon.support.visitor" -> "spoon.reflect.cu";
+	"spoon.support.visitor" -> "spoon.reflect.code";
+	"spoon.support.visitor" -> "spoon.template";
+	"spoon.support.visitor" -> "java.io";
+	"org.apache.commons.io" [color=grey];
+	"java.util.regex" [color=grey];
+	"spoon.reflect.factory" -> "spoon.reflect.declaration";
+	"spoon.reflect.factory" -> "java.lang";
+	"spoon.reflect.factory" -> "spoon.processing";
+	"spoon.reflect.factory" -> "spoon.reflect.reference";
+	"spoon.reflect.factory" -> "java.lang.reflect";
+	"spoon.reflect.factory" -> "java.util";
+	"spoon.reflect.factory" -> "java.io";
+	"spoon.reflect.factory" -> "spoon.reflect.code";
+	"spoon.reflect.factory" -> "spoon.template";
+	"spoon.reflect.factory" -> "spoon.reflect.cu";
+	"spoon.reflect.factory" -> "spoon.support.reflect.cu";
+	"spoon.reflect.factory" -> "spoon.reflect.eval";
+	"spoon.reflect.factory" -> "spoon.reflect.eval.observer";
+	"spoon.reflect.factory" -> "spoon.support.reflect.eval";
+	"spoon.reflect.factory" -> "spoon.reflect.visitor";
+	"spoon.reflect.factory" -> "spoon.compiler";
+	"spoon.reflect.factory" -> "spoon.support";
+	"spoon.test.fieldaccesses" -> "java.lang";
+	"spoon.test.fieldaccesses" -> "spoon.test";
+	"spoon.test.fieldaccesses" -> "spoon.reflect.declaration";
+	"spoon.test.fieldaccesses" -> "spoon.processing";
+	"spoon.test.fieldaccesses" -> "spoon.reflect.code";
+	"spoon.test.fieldaccesses" -> "spoon.reflect.visitor.filter";
+	"spoon.test.fieldaccesses" -> "spoon.reflect.visitor";
+	"spoon.test.fieldaccesses" -> "java.util";
+	"spoon.test.fieldaccesses" -> "spoon.template";
+	"spoon.test.fieldaccesses" -> "spoon.reflect.reference";
+	"spoon.test.fieldaccesses" -> "spoon.reflect.factory";
+	"spoon.test.fieldaccesses" -> "spoon.reflect.cu";
+	"java.awt" [color=grey];
+	"spoon.support.reflect.declaration" -> "spoon.support.reflect.cu";
+	"spoon.support.reflect.declaration" -> "spoon.processing";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.cu";
+	"spoon.support.reflect.declaration" -> "java.lang";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.declaration";
+	"spoon.support.reflect.declaration" -> "java.lang.reflect";
+	"spoon.support.reflect.declaration" -> "java.io";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.reference";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.code";
+	"spoon.support.reflect.declaration" -> "spoon.template";
+	"spoon.support.reflect.declaration" -> "java.util";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.factory";
+	"spoon.support.reflect.declaration" -> "org.apache.log4j";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.eval";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.visitor";
+	"spoon.support.reflect.declaration" -> "spoon.support.reflect.eval";
+	"spoon.support.reflect.declaration" -> "spoon.support.reflect.code";
+	"spoon.support.reflect.declaration" -> "spoon.reflect.visitor.filter";
+	"spoon.support.reflect.declaration" -> "spoon";
+	"spoon.support.reflect.declaration" -> "spoon.support.util";
+	"spoon.support.reflect.declaration" -> "spoon.support.visitor";
+	"spoon.support.reflect.declaration" -> "spoon.compiler";
+	"spoon.support.reflect.declaration" -> "spoon.support.compiler";
+	"spoon.compiler" -> "spoon";
+	"spoon.compiler" -> "java.lang";
+	"spoon.compiler" -> "java.io";
+	"spoon.compiler" -> "java.util";
+	"spoon.compiler" -> "spoon.support.compiler";
+	"spoon.compiler" -> "org.apache.log4j";
+	"spoon.compiler" -> "spoon.processing";
+	"spoon.compiler" -> "spoon.reflect.declaration";
+	"spoon.test.snippets" -> "spoon.test";
+	"spoon.test.snippets" -> "spoon.reflect.factory";
+	"spoon.test.snippets" -> "java.lang";
+	"spoon.test.snippets" -> "spoon.reflect.code";
+	"spoon.test.snippets" -> "spoon.reflect.declaration";
+	"spoon.test.snippets" -> "spoon.processing";
+	"spoon.test.snippets" -> "java.util";
+	"spoon.test.snippets" -> "spoon.template";
+	"spoon.test.parent" -> "java.lang";
+	"spoon.test.parent" -> "spoon.reflect.factory";
+	"spoon.test.parent" -> "spoon";
+	"spoon.test.parent" -> "spoon.compiler";
+	"spoon.test.parent" -> "java.util";
+	"spoon.test.parent" -> "spoon.processing";
+	"spoon.test.parent" -> "spoon.reflect.code";
+	"spoon.test.parent" -> "spoon.reflect.declaration";
+	"spoon.test.parent" -> "spoon.template";
+	"spoon.test.parent" -> "java.io";
+	"spoon.test.parent" -> "spoon.reflect.visitor.filter";
+	"spoon.test.parent" -> "spoon.reflect.visitor";
+	"spoon.test.model" -> "java.lang";
+	"spoon.test.model" -> "spoon.test";
+	"spoon.test.model" -> "spoon.reflect.factory";
+	"spoon.test.model" -> "spoon.reflect.code";
+	"spoon.test.model" -> "spoon.reflect.declaration";
+	"spoon.test.model" -> "spoon.processing";
+	"spoon.test.model" -> "java.util";
+	"spoon.test.model" -> "spoon.template";
+	"spoon.test.model" -> "spoon.reflect.visitor.filter";
+	"spoon.test.model" -> "spoon.reflect.visitor";
+	"spoon.reflect.eval" -> "java.util";
+	"spoon.reflect.eval" -> "java.lang";
+	"spoon.reflect.eval" -> "spoon.reflect.reference";
+	"spoon.reflect.eval" -> "spoon.processing";
+	"spoon.reflect.eval" -> "java.io";
+	"spoon.reflect.eval" -> "spoon.reflect.code";
+	"spoon.reflect.eval" -> "spoon.reflect.declaration";
+	"spoon.reflect.eval" -> "spoon.template";
+	"spoon.reflect.eval" -> "java.lang.reflect";
+	"spoon.reflect.eval" -> "spoon.support.util";
+	"spoon.reflect.eval" -> "spoon.reflect.factory";
+	"spoon.reflect.eval" -> "spoon.support.reflect.eval";
+	"spoon.reflect.eval" -> "spoon.reflect.visitor";
+	"spoon.reflect.declaration" -> "java.lang";
+	"spoon.reflect.declaration" -> "spoon";
+	"spoon.reflect.declaration" -> "java.util";
+	"spoon.reflect.declaration" -> "spoon.reflect.reference";
+	"spoon.reflect.declaration" -> "spoon.processing";
+	"spoon.reflect.declaration" -> "spoon.reflect.code";
+	"spoon.reflect.declaration" -> "spoon.template";
+	"spoon.reflect.declaration" -> "spoon.reflect.visitor";
+	"spoon.reflect.declaration" -> "spoon.reflect.cu";
+	"java.security" [color=grey];
+	"unnamed package" -> "java.lang";
+	"spoon.reflect.reference" -> "java.lang";
+	"spoon.reflect.reference" -> "spoon.processing";
+	"spoon.reflect.reference" -> "java.lang.reflect";
+	"spoon.reflect.reference" -> "java.util";
+	"spoon.reflect.reference" -> "spoon.reflect.declaration";
+	"spoon.reflect.reference" -> "spoon.reflect.code";
+	"spoon.reflect.reference" -> "spoon.reflect.visitor";
+	"org.eclipse.jdt.internal.compiler.ast" [color=grey];
+	"org.eclipse.jdt.internal.compiler.impl" [color=grey];
+	"spoon.test.control" -> "java.lang";
+	"spoon.test.control" -> "spoon.test";
+	"spoon.test.control" -> "spoon.reflect.declaration";
+	"spoon.test.control" -> "spoon.processing";
+	"spoon.test.control" -> "spoon.reflect.visitor.filter";
+	"spoon.test.control" -> "spoon.reflect.visitor";
+	"spoon.test.control" -> "java.util";
+	"spoon.test.control" -> "spoon.reflect.code";
+	"spoon.test.control" -> "spoon.template";
+	"org.eclipse.jdt.internal.compiler.parser" [color=grey];
+	"spoon.test.arrays" -> "java.lang";
+	"spoon.test.arrays" -> "spoon.test";
+	"spoon.test.arrays" -> "spoon.reflect.declaration";
+	"spoon.test.arrays" -> "spoon.processing";
+	"spoon.test.arrays" -> "spoon.reflect.reference";
+	"spoon.reflect.eval.observer" -> "java.util";
+	"spoon.reflect.eval.observer" -> "spoon.reflect.eval";
+	"spoon.reflect.eval.observer" -> "java.lang";
+	"spoon.reflect.eval.observer" -> "spoon.support.reflect.eval";
+	"spoon.reflect.eval.observer" -> "spoon.reflect.visitor";
+	"spoon.reflect.eval.observer" -> "spoon.compiler";
+	"spoon.support.compiler.jdt" -> "spoon.compiler";
+	"spoon.support.compiler.jdt" -> "spoon.processing";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler.batch";
+	"spoon.support.compiler.jdt" -> "java.lang";
+	"spoon.support.compiler.jdt" -> "spoon.reflect.factory";
+	"spoon.support.compiler.jdt" -> "java.util";
+	"spoon.support.compiler.jdt" -> "java.io";
+	"spoon.support.compiler.jdt" -> "org.apache.commons.io";
+	"spoon.support.compiler.jdt" -> "org.apache.log4j";
+	"spoon.support.compiler.jdt" -> "java.net";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler.env";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler";
+	"spoon.support.compiler.jdt" -> "spoon.support.compiler";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler.ast";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler.lookup";
+	"spoon.support.compiler.jdt" -> "spoon.reflect.cu";
+	"spoon.support.compiler.jdt" -> "spoon.reflect.visitor";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler.util";
+	"spoon.support.compiler.jdt" -> "spoon";
+	"spoon.support.compiler.jdt" -> "spoon.reflect.declaration";
+	"spoon.support.compiler.jdt" -> "spoon.support";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.core.compiler";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler.impl";
+	"spoon.support.compiler.jdt" -> "spoon.reflect.code";
+	"spoon.support.compiler.jdt" -> "spoon.template";
+	"spoon.support.compiler.jdt" -> "spoon.reflect.reference";
+	"spoon.support.compiler.jdt" -> "spoon.reflect.visitor.filter";
+	"spoon.support.compiler.jdt" -> "org.eclipse.jdt.internal.compiler.parser";
+	"spoon.processing" -> "java.lang";
+	"spoon.processing" -> "java.util";
+	"spoon.processing" -> "java.lang.reflect";
+	"spoon.processing" -> "java.lang.annotation";
+	"spoon.processing" -> "spoon.reflect.declaration";
+	"spoon.processing" -> "spoon.reflect.reference";
+	"spoon.processing" -> "org.apache.log4j";
+	"spoon.processing" -> "spoon.reflect.factory";
+	"spoon.processing" -> "spoon.compiler";
+	"spoon.processing" -> "java.io";
+	"spoon.processing" -> "spoon.support.util";
+	"spoon.processing" -> "org.w3c.dom";
+	"spoon.processing" -> "java.util.regex";
+	"spoon.processing" -> "spoon.support.processing";
+	"spoon.processing" -> "javax.xml.parsers";
+	"spoon.processing" -> "org.xml.sax";
+	"spoon.processing" -> "spoon.reflect.code";
+	"spoon.processing" -> "spoon.reflect";
+	subgraph cluster0 { 
+		rankdir=LR;label="spoon";
+	subgraph cluster1 { 
+		rankdir=LR;label="spoon.test";
+	subgraph cluster2 { 
+		rankdir=LR;label="spoon.test.limits";
+		"spoon.test.limits.utils" [label="utils"]
+	};
+	subgraph cluster3 { 
+		rankdir=LR;label="spoon.test.intercession";
+		"spoon.test.intercession.insertBefore" [label="insertBefore"]
+	};
+		"spoon.test.casts" [label="casts"]
+		"spoon.test.annotation" [label="annotation"]
+		"spoon.test.trycatch" [label="trycatch"]
+		"spoon.test.filters" [label="filters"]
+		"spoon.test.factory" [label="factory"]
+		"spoon.test.eval" [label="eval"]
+		"spoon.test.sourcePosition" [label="sourcePosition"]
+	subgraph cluster4 { 
+		rankdir=LR;label="spoon.test.visibility";
+		"spoon.test.visibility.packageprotected" [label="packageprotected"]
+	};
+		"spoon.test.main" [label="main"]
+		"spoon.test.exceptions" [label="exceptions"]
+		"spoon.test.template" [label="template"]
+		"spoon.test.strings" [label="strings"]
+		"spoon.test.generics" [label="generics"]
+		"spoon.test.secondaryclasses" [label="secondaryclasses"]
+		"spoon.test.replace" [label="replace"]
+		"spoon.test.ctCase" [label="ctCase"]
+	subgraph cluster5 { 
+		rankdir=LR;label="spoon.test.subclass";
+		"spoon.test.subclass.prettyprinter" [label="prettyprinter"]
+	};
+		"spoon.test.prettyprinter" [label="prettyprinter"]
+		"spoon.test.api" [label="api"]
+		"spoon.test.initializers" [label="initializers"]
+		"spoon.test.processing" [label="processing"]
+		"spoon.test.enums" [label="enums"]
+		"spoon.test.fieldaccesses" [label="fieldaccesses"]
+		"spoon.test.snippets" [label="snippets"]
+		"spoon.test.parent" [label="parent"]
+		"spoon.test.model" [label="model"]
+		"spoon.test.control" [label="control"]
+		"spoon.test.arrays" [label="arrays"]
+	};
+	subgraph cluster6 { 
+		rankdir=LR;label="spoon.support";
+		"spoon.support.util" [label="util"]
+		"spoon.support.template" [label="template"]
+	subgraph cluster7 { 
+		rankdir=LR;label="spoon.support.reflect";
+		"spoon.support.reflect.eval" [label="eval"]
+		"spoon.support.reflect.cu" [label="cu"]
+		"spoon.support.reflect.reference" [label="reference"]
+		"spoon.support.reflect.code" [label="code"]
+		"spoon.support.reflect.declaration" [label="declaration"]
+	};
+	subgraph cluster8 { 
+		rankdir=LR;label="spoon.support.compiler";
+		"spoon.support.compiler.jdt" [label="jdt"]
+	};
+		"spoon.support.processing" [label="processing"]
+		"spoon.support.gui" [label="gui"]
+		"spoon.support.visitor" [label="visitor"]
+	};
+	subgraph cluster9 { 
+		rankdir=LR;label="spoon.reflect";
+	subgraph cluster10 { 
+		rankdir=LR;label="spoon.reflect.visitor";
+		"spoon.reflect.visitor.filter" [label="filter"]
+	};
+		"spoon.reflect.cu" [label="cu"]
+		"spoon.reflect.code" [label="code"]
+		"spoon.reflect.factory" [label="factory"]
+	subgraph cluster11 { 
+		rankdir=LR;label="spoon.reflect.eval";
+		"spoon.reflect.eval.observer" [label="observer"]
+	};
+		"spoon.reflect.declaration" [label="declaration"]
+		"spoon.reflect.reference" [label="reference"]
+	};
+		"spoon.template" [label="template"]
+		"spoon.compiler" [label="compiler"]
+		"spoon.processing" [label="processing"]
+	};
+	subgraph cluster12 { 
+		rankdir=LR;label="javax.swing";
+		"javax.swing.tree" [label="tree"]
+		"javax.swing.table" [label="table"]
+	};
+	subgraph cluster13 { 
+		rankdir=LR;label="javax.xml";
+		"javax.xml.parsers" [label="parsers"]
+	};
+	subgraph cluster14 { 
+		rankdir=LR;label="org.apache";
+		"org.apache.log4j" [label="log4j"]
+	subgraph cluster15 { 
+		rankdir=LR;label="org.apache.commons";
+		"org.apache.commons.io" [label="io"]
+	};
+	};
+	subgraph cluster16 { 
+		rankdir=LR;label="org.xml.sax";
+		"org.xml.sax.helpers" [label="helpers"]
+	};
+	subgraph cluster17 { 
+		rankdir=LR;label="org.eclipse.jdt.internal.compiler";
+		"org.eclipse.jdt.internal.compiler.env" [label="env"]
+		"org.eclipse.jdt.internal.compiler.lookup" [label="lookup"]
+		"org.eclipse.jdt.internal.compiler.util" [label="util"]
+		"org.eclipse.jdt.internal.compiler.batch" [label="batch"]
+		"org.eclipse.jdt.internal.compiler.ast" [label="ast"]
+		"org.eclipse.jdt.internal.compiler.impl" [label="impl"]
+		"org.eclipse.jdt.internal.compiler.parser" [label="parser"]
+	};
+	subgraph cluster18 { 
+		rankdir=LR;label="org.eclipse.jdt.core";
+		"org.eclipse.jdt.core.compiler" [label="compiler"]
+	};
+	subgraph cluster19 { 
+		rankdir=LR;label="org.w3c";
+		"org.w3c.dom" [label="dom"]
+	};
+	subgraph cluster20 { 
+		rankdir=LR;label="java";
+		"java.net" [label="net"]
+		"java.io" [label="io"]
+	subgraph cluster21 { 
+		rankdir=LR;label="java.util";
+		"java.util.zip" [label="zip"]
+		"java.util.regex" [label="regex"]
+	};
+	subgraph cluster22 { 
+		rankdir=LR;label="java.lang";
+		"java.lang.reflect" [label="reflect"]
+		"java.lang.annotation" [label="annotation"]
+	};
+	subgraph cluster23 { 
+		rankdir=LR;label="java.awt";
+		"java.awt.event" [label="event"]
+	};
+		"java.security" [label="security"]
+	};
+	subgraph cluster24 { 
+		rankdir=LR;label="com.martiansoftware.jsap";
+		"com.martiansoftware.jsap.stringparsers" [label="stringparsers"]
+	};
+}

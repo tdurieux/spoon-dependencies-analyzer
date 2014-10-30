@@ -1,0 +1,233 @@
+digraph G {
+	node [shape=box]; compound=true; ratio=fill;
+	"java.io.InputStream" [color=grey];
+	"org.jsoup" [color=grey];
+	"java.io.BufferedReader" [color=grey];
+	"durieux.vlille.api.Elements" [color=grey];
+	"java.lang.reflect.Array" [color=grey];
+	"org.w3c.dom.Element" [color=grey];
+	"javax.xml.parsers.ParserConfigurationException" [color=grey];
+	"java.lang.CharSequence" [color=grey];
+	"java.lang.Double" [color=grey];
+	"org.w3c.dom.NamedNodeMap" [color=grey];
+	"org.w3c.dom.Document" [color=grey];
+	"java.lang.Throwable" [color=grey];
+	"durieux.vlille.api.VLilleImpl" -> "java.lang.String";
+	"durieux.vlille.api.VLilleImpl" -> "java.util.Map";
+	"durieux.vlille.api.VLilleImpl" -> "java.lang.Object";
+	"durieux.vlille.api.VLilleImpl" -> "durieux.vlille.api.VLille";
+	"durieux.vlille.api.VLilleImpl" -> "java.util.HashMap";
+	"durieux.vlille.api.VLilleImpl" -> "java.nio.charset.Charset";
+	"durieux.vlille.api.VLilleImpl" -> "durieux.vlille.util.XMLFromUrl";
+	"durieux.vlille.api.VLilleImpl" -> "org.w3c.dom.Document";
+	"durieux.vlille.api.VLilleImpl" -> "org.w3c.dom.NodeList";
+	"durieux.vlille.api.VLilleImpl" -> "org.w3c.dom.Node";
+	"durieux.vlille.api.VLilleImpl" -> "durieux.vlille.api.StationFactory";
+	"durieux.vlille.api.VLilleImpl" -> "durieux.vlille.api.Station";
+	"durieux.vlille.api.VLilleImpl" -> "java.lang.Integer";
+	"durieux.vlille.api.VLilleImpl" -> "java.lang.Override";
+	"durieux.vlille.api.VLilleImpl" -> "org.jsoup";
+	"durieux.vlille.api.VLilleImpl" -> "org.jsoup.nodes.Document";
+	"durieux.vlille.api.VLilleImpl" -> "Elements";
+	"durieux.vlille.api.VLilleImpl" -> "Element";
+	"durieux.vlille.api.VLilleImpl" -> "durieux.vlille.api.Elements";
+	"durieux.vlille.api.VLilleImpl" -> "durieux.vlille.api.Element";
+	"durieux.vlille.api.VLilleImpl" -> "java.lang.CharSequence";
+	"durieux.vlille.api.VLilleImpl" -> "durieux.vlille.api.StationImpl";
+	"durieux.vlille.api.VLilleImpl" -> "java.io.IOException";
+	"java.nio.charset.Charset" [color=grey];
+	"org.xml.sax.SAXException" [color=grey];
+	"java.lang.Object" [color=grey];
+	"java.lang.Integer" [color=grey];
+	"java.io.InputStreamReader" [color=grey];
+	"durieux.vlille.api.StationFactory" -> "java.lang.Object";
+	"durieux.vlille.api.StationFactory" -> "org.w3c.dom.Node";
+	"durieux.vlille.api.StationFactory" -> "java.lang.String";
+	"durieux.vlille.api.StationFactory" -> "org.w3c.dom.NamedNodeMap";
+	"durieux.vlille.api.StationFactory" -> "java.lang.Integer";
+	"durieux.vlille.api.StationFactory" -> "java.lang.Double";
+	"durieux.vlille.api.StationFactory" -> "java.lang.NumberFormatException";
+	"durieux.vlille.api.StationFactory" -> "java.lang.RuntimeException";
+	"durieux.vlille.api.StationFactory" -> "durieux.vlille.api.StationImpl";
+	"durieux.vlille.api.StationFactory" -> "durieux.vlille.api.Station";
+	"java.util.Iterator" [color=grey];
+	"Elements" [color=grey];
+	"java.lang.NumberFormatException" [color=grey];
+	"durieux.vlille.api.StationTest" -> "java.lang.Object";
+	"durieux.vlille.api.StationTest" -> "java.lang.String";
+	"durieux.vlille.api.StationTest" -> "durieux.vlille.api.Test";
+	"durieux.vlille.api.VLille" -> "java.util.Map";
+	"durieux.vlille.api.VLille" -> "java.io.IOException";
+	"java.util.Map" [color=grey];
+	"durieux.vlille.api.StationImpl" -> "java.lang.String";
+	"durieux.vlille.api.StationImpl" -> "java.lang.Object";
+	"durieux.vlille.api.StationImpl" -> "durieux.vlille.api.Station";
+	"durieux.vlille.api.StationImpl" -> "java.lang.Override";
+	"durieux.vlille.util.XMLFromUrlParserTest" -> "java.lang.Object";
+	"durieux.vlille.util.XMLFromUrlParserTest" -> "java.lang.String";
+	"durieux.vlille.util.XMLFromUrlParserTest" -> "durieux.vlille.util.Test";
+	"durieux.vlille.util.XMLFromUrl" -> "java.lang.String";
+	"durieux.vlille.util.XMLFromUrl" -> "java.nio.charset.Charset";
+	"durieux.vlille.util.XMLFromUrl" -> "java.lang.Object";
+	"durieux.vlille.util.XMLFromUrl" -> "java.net.URL";
+	"durieux.vlille.util.XMLFromUrl" -> "javax.xml.parsers.DocumentBuilderFactory";
+	"durieux.vlille.util.XMLFromUrl" -> "javax.xml.parsers.DocumentBuilder";
+	"durieux.vlille.util.XMLFromUrl" -> "java.io.BufferedReader";
+	"durieux.vlille.util.XMLFromUrl" -> "java.io.InputStream";
+	"durieux.vlille.util.XMLFromUrl" -> "java.io.InputStreamReader";
+	"durieux.vlille.util.XMLFromUrl" -> "java.io.StringReader";
+	"durieux.vlille.util.XMLFromUrl" -> "org.xml.sax.InputSource";
+	"durieux.vlille.util.XMLFromUrl" -> "org.w3c.dom.Document";
+	"durieux.vlille.util.XMLFromUrl" -> "org.w3c.dom.Element";
+	"durieux.vlille.util.XMLFromUrl" -> "org.w3c.dom.Node";
+	"durieux.vlille.util.XMLFromUrl" -> "java.net.MalformedURLException";
+	"durieux.vlille.util.XMLFromUrl" -> "durieux.vlille.util.XMLParserException";
+	"durieux.vlille.util.XMLFromUrl" -> "java.lang.RuntimeException";
+	"durieux.vlille.util.XMLFromUrl" -> "javax.xml.parsers.ParserConfigurationException";
+	"durieux.vlille.util.XMLFromUrl" -> "java.io.IOException";
+	"durieux.vlille.util.XMLFromUrl" -> "org.xml.sax.SAXException";
+	"org.xml.sax.InputSource" [color=grey];
+	"java.net.MalformedURLException" [color=grey];
+	"javax.xml.parsers.DocumentBuilderFactory" [color=grey];
+	"java.io.PrintStream" [color=grey];
+	"durieux.vlille.api.StationFactoryTest" -> "java.lang.Object";
+	"durieux.vlille.api.StationFactoryTest" -> "java.lang.String";
+	"durieux.vlille.api.StationFactoryTest" -> "javax.xml.parsers.DocumentBuilderFactory";
+	"durieux.vlille.api.StationFactoryTest" -> "javax.xml.parsers.DocumentBuilder";
+	"durieux.vlille.api.StationFactoryTest" -> "java.io.StringReader";
+	"durieux.vlille.api.StationFactoryTest" -> "java.io.BufferedReader";
+	"durieux.vlille.api.StationFactoryTest" -> "org.xml.sax.InputSource";
+	"durieux.vlille.api.StationFactoryTest" -> "org.w3c.dom.Document";
+	"durieux.vlille.api.StationFactoryTest" -> "org.w3c.dom.Element";
+	"durieux.vlille.api.StationFactoryTest" -> "org.w3c.dom.Node";
+	"durieux.vlille.api.StationFactoryTest" -> "java.io.IOException";
+	"durieux.vlille.api.StationFactoryTest" -> "javax.xml.parsers.ParserConfigurationException";
+	"durieux.vlille.api.StationFactoryTest" -> "org.xml.sax.SAXException";
+	"durieux.vlille.api.StationFactoryTest" -> "org.w3c.dom.NodeList";
+	"durieux.vlille.api.StationFactoryTest" -> "durieux.vlille.api.StationFactory";
+	"durieux.vlille.api.StationFactoryTest" -> "durieux.vlille.api.Station";
+	"durieux.vlille.api.StationFactoryTest" -> "durieux.vlille.api.Test";
+	"durieux.vlille.api.StationFactoryTest" -> "java.lang.Exception";
+	"durieux.vlille.api.StationFactoryTest" -> "java.lang.RuntimeException";
+	"java.util.HashMap" [color=grey];
+	"java.io.IOException" [color=grey];
+	"org.w3c.dom.Node" [color=grey];
+	"org.jsoup.nodes.Document" [color=grey];
+	"java.util.Collection" [color=grey];
+	"javax.xml.parsers.DocumentBuilder" [color=grey];
+	"durieux.vlille.main.Main" -> "java.lang.Object";
+	"durieux.vlille.main.Main" -> "java.lang.reflect.Array";
+	"durieux.vlille.main.Main" -> "durieux.vlille.api.VLilleImpl";
+	"durieux.vlille.main.Main" -> "durieux.vlille.api.VLille";
+	"durieux.vlille.main.Main" -> "java.util.Map";
+	"durieux.vlille.main.Main" -> "java.io.PrintStream";
+	"durieux.vlille.main.Main" -> "java.lang.String";
+	"durieux.vlille.main.Main" -> "java.util.Collection";
+	"durieux.vlille.main.Main" -> "java.util.Iterator";
+	"durieux.vlille.main.Main" -> "durieux.vlille.api.Station";
+	"durieux.vlille.main.Main" -> "java.io.IOException";
+	"java.lang.Override" [color=grey];
+	"durieux.vlille.util.Test" [color=grey];
+	"java.lang.String" [color=grey];
+	"durieux.vlille.util.XMLParserException" -> "java.lang.RuntimeException";
+	"durieux.vlille.util.XMLParserException" -> "java.lang.String";
+	"durieux.vlille.util.XMLParserException" -> "java.lang.Throwable";
+	"org.w3c.dom.NodeList" [color=grey];
+	"durieux.vlille.api.Station" -> "java.lang.String";
+	"durieux.vlille.api.Element" [color=grey];
+	"java.net.URL" [color=grey];
+	"java.lang.Exception" [color=grey];
+	"java.lang.RuntimeException" [color=grey];
+	"durieux.vlille.api.Test" [color=grey];
+	"java.io.StringReader" [color=grey];
+	"Element" [color=grey];
+	subgraph cluster0 { 
+		rankdir=LR;label="java.io";
+		"java.io.InputStream" [label="InputStream"]
+		"java.io.BufferedReader" [label="BufferedReader"]
+		"java.io.InputStreamReader" [label="InputStreamReader"]
+		"java.io.PrintStream" [label="PrintStream"]
+		"java.io.IOException" [label="IOException"]
+		"java.io.StringReader" [label="StringReader"]
+	};
+	subgraph cluster1 { 
+		rankdir=LR;label="java.lang";
+	subgraph cluster2 { 
+		rankdir=LR;label="java.lang.reflect";
+		"java.lang.reflect.Array" [label="Array"]
+	};
+		"java.lang.CharSequence" [label="CharSequence"]
+		"java.lang.Double" [label="Double"]
+		"java.lang.Throwable" [label="Throwable"]
+		"java.lang.Object" [label="Object"]
+		"java.lang.Integer" [label="Integer"]
+		"java.lang.NumberFormatException" [label="NumberFormatException"]
+		"java.lang.Override" [label="Override"]
+		"java.lang.String" [label="String"]
+		"java.lang.Exception" [label="Exception"]
+		"java.lang.RuntimeException" [label="RuntimeException"]
+	};
+	subgraph cluster3 { 
+		rankdir=LR;label="java.nio.charset";
+		"java.nio.charset.Charset" [label="Charset"]
+	};
+	subgraph cluster4 { 
+		rankdir=LR;label="java.util";
+		"java.util.Iterator" [label="Iterator"]
+		"java.util.Map" [label="Map"]
+		"java.util.HashMap" [label="HashMap"]
+		"java.util.Collection" [label="Collection"]
+	};
+	subgraph cluster5 { 
+		rankdir=LR;label="java.net";
+		"java.net.MalformedURLException" [label="MalformedURLException"]
+		"java.net.URL" [label="URL"]
+	};
+	subgraph cluster6 { 
+		rankdir=LR;label="org.jsoup.nodes";
+		"org.jsoup.nodes.Document" [label="Document"]
+	};
+	subgraph cluster7 { 
+		rankdir=LR;label="org.w3c.dom";
+		"org.w3c.dom.Element" [label="Element"]
+		"org.w3c.dom.NamedNodeMap" [label="NamedNodeMap"]
+		"org.w3c.dom.Document" [label="Document"]
+		"org.w3c.dom.Node" [label="Node"]
+		"org.w3c.dom.NodeList" [label="NodeList"]
+	};
+	subgraph cluster8 { 
+		rankdir=LR;label="org.xml.sax";
+		"org.xml.sax.SAXException" [label="SAXException"]
+		"org.xml.sax.InputSource" [label="InputSource"]
+	};
+	subgraph cluster9 { 
+		rankdir=LR;label="durieux.vlille.api";
+		"durieux.vlille.api.Elements" [label="Elements"]
+		"durieux.vlille.api.VLilleImpl" [label="VLilleImpl"]
+		"durieux.vlille.api.StationFactory" [label="StationFactory"]
+		"durieux.vlille.api.StationTest" [label="StationTest"]
+		"durieux.vlille.api.VLille" [label="VLille"]
+		"durieux.vlille.api.StationImpl" [label="StationImpl"]
+		"durieux.vlille.api.StationFactoryTest" [label="StationFactoryTest"]
+		"durieux.vlille.api.Station" [label="Station"]
+		"durieux.vlille.api.Element" [label="Element"]
+		"durieux.vlille.api.Test" [label="Test"]
+	};
+	subgraph cluster10 { 
+		rankdir=LR;label="durieux.vlille.util";
+		"durieux.vlille.util.XMLFromUrlParserTest" [label="XMLFromUrlParserTest"]
+		"durieux.vlille.util.XMLFromUrl" [label="XMLFromUrl"]
+		"durieux.vlille.util.Test" [label="Test"]
+		"durieux.vlille.util.XMLParserException" [label="XMLParserException"]
+	};
+	subgraph cluster11 { 
+		rankdir=LR;label="durieux.vlille.main";
+		"durieux.vlille.main.Main" [label="Main"]
+	};
+	subgraph cluster12 { 
+		rankdir=LR;label="javax.xml.parsers";
+		"javax.xml.parsers.ParserConfigurationException" [label="ParserConfigurationException"]
+		"javax.xml.parsers.DocumentBuilderFactory" [label="DocumentBuilderFactory"]
+		"javax.xml.parsers.DocumentBuilder" [label="DocumentBuilder"]
+	};
+}

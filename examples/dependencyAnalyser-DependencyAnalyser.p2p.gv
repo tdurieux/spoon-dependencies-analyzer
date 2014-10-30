@@ -1,0 +1,157 @@
+digraph G {
+	node [shape=box]; compound=true; ratio=fill;
+	"spoon.support" [color=grey];
+	"javax.swing.text" [color=grey];
+	"org.apache.log4j" [color=grey];
+	"java.util" [color=grey];
+	"github.tdurieux.dependencyAnalyzer.graph.node" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.graph.node" -> "spoon.reflect.declaration";
+	"github.tdurieux.dependencyAnalyzer.graph.node" -> "spoon.reflect.cu";
+	"github.tdurieux.dependencyAnalyzer.graph.node" -> "java.io";
+	"github.tdurieux.dependencyAnalyzer.graph.node" -> "spoon.reflect.reference";
+	"github.tdurieux.dependencyAnalyzer.main" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.main" -> "github.tdurieux.dependencyAnalyzer.gui";
+	"github.tdurieux.dependencyAnalyzer.main" -> "javax.swing";
+	"github.tdurieux.dependencyAnalyzer.main" -> "java.awt";
+	"github.tdurieux.dependencyAnalyzer.main" -> "com.martiansoftware.jsap.stringparsers";
+	"github.tdurieux.dependencyAnalyzer.main" -> "com.martiansoftware.jsap";
+	"github.tdurieux.dependencyAnalyzer.main" -> "java.io";
+	"github.tdurieux.dependencyAnalyzer.main" -> "github.tdurieux.dependencyAnalyzer";
+	"github.tdurieux.dependencyAnalyzer.main" -> "github.tdurieux.dependencyAnalyzer.graph";
+	"github.tdurieux.dependencyAnalyzer.main" -> "github.tdurieux.dependencyAnalyzer.graph.export";
+	"spoon" [color=grey];
+	"com.martiansoftware.jsap" [color=grey];
+	"javax.swing" [color=grey];
+	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep" -> "github.tdurieux.dependencyAnalyzer.graph.node";
+	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep" -> "spoon.reflect.reference";
+	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep" -> "spoon.reflect.declaration";
+	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep" -> "spoon.reflect.cu";
+	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep" -> "java.io";
+	"java.io" [color=grey];
+	"spoon.reflect.code" [color=grey];
+	"com.martiansoftware.jsap.stringparsers" [color=grey];
+	"java.util.regex" [color=grey];
+	"java.lang" [color=grey];
+	"javax.swing.event" [color=grey];
+	"java.awt.event" [color=grey];
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "github.tdurieux.dependencyAnalyzer.graph.node";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon.reflect.reference";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon.reflect.declaration";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "java.util";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon.reflect.cu";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "java.io";
+	"spoon.reflect.factory" [color=grey];
+	"java.awt" [color=grey];
+	"github.tdurieux.dependencyAnalyzer.graph.export" -> "github.tdurieux.dependencyAnalyzer.graph";
+	"github.tdurieux.dependencyAnalyzer.graph.export" -> "github.tdurieux.dependencyAnalyzer";
+	"github.tdurieux.dependencyAnalyzer.graph.export" -> "java.util";
+	"github.tdurieux.dependencyAnalyzer.graph.export" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.graph.export" -> "java.util.regex";
+	"github.tdurieux.dependencyAnalyzer.graph.export" -> "github.tdurieux.dependencyAnalyzer.graph.node";
+	"spoon.compiler" [color=grey];
+	"spoon.reflect.cu" [color=grey];
+	"spoon.reflect.declaration" [color=grey];
+	"github.tdurieux.dependencyAnalyzer.graph" -> "java.util";
+	"github.tdurieux.dependencyAnalyzer.graph" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.graph" -> "github.tdurieux.dependencyAnalyzer.graph.node";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "github.tdurieux.dependencyAnalyzer";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "javax.swing";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "java.awt";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "javax.swing.text";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "javax.swing.event";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "java.awt.event";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "java.io";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "github.tdurieux.dependencyAnalyzer.graph";
+	"github.tdurieux.dependencyAnalyzer.gui" -> "github.tdurieux.dependencyAnalyzer.graph.export";
+	"spoon.support.compiler" [color=grey];
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "github.tdurieux.dependencyAnalyzer.graph";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "github.tdurieux.dependencyAnalyzer.graph.node";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "spoon.processing";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "spoon.reflect.declaration";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "java.util";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "spoon.reflect.reference";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer" -> "spoon.reflect.code";
+	"spoon.reflect.reference" [color=grey];
+	"github.tdurieux.dependencyAnalyzer" -> "java.util";
+	"github.tdurieux.dependencyAnalyzer" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer" -> "spoon.reflect.factory";
+	"github.tdurieux.dependencyAnalyzer" -> "spoon";
+	"github.tdurieux.dependencyAnalyzer" -> "java.io";
+	"github.tdurieux.dependencyAnalyzer" -> "spoon.support.compiler";
+	"github.tdurieux.dependencyAnalyzer" -> "spoon.compiler";
+	"github.tdurieux.dependencyAnalyzer" -> "spoon.processing";
+	"github.tdurieux.dependencyAnalyzer" -> "github.tdurieux.dependencyAnalyzer.graph";
+	"github.tdurieux.dependencyAnalyzer" -> "spoon.support";
+	"github.tdurieux.dependencyAnalyzer" -> "github.tdurieux.dependencyAnalyzer.spoon.analyzer";
+	"github.tdurieux.dependencyAnalyzer" -> "github.tdurieux.dependencyAnalyzer.graph.node.classDep";
+	"github.tdurieux.dependencyAnalyzer" -> "github.tdurieux.dependencyAnalyzer.graph.node";
+	"github.tdurieux.dependencyAnalyzer" -> "github.tdurieux.dependencyAnalyzer.graph.node.packageDep";
+	"github.tdurieux.dependencyAnalyzer" -> "org.apache.log4j";
+	"spoon.processing" [color=grey];
+	subgraph cluster0 { 
+		rankdir=LR;label="spoon";
+	subgraph cluster1 { 
+		rankdir=LR;label="spoon.support";
+		"spoon.support.compiler" [label="compiler"]
+	};
+	subgraph cluster2 { 
+		rankdir=LR;label="spoon.reflect";
+		"spoon.reflect.code" [label="code"]
+		"spoon.reflect.factory" [label="factory"]
+		"spoon.reflect.cu" [label="cu"]
+		"spoon.reflect.declaration" [label="declaration"]
+		"spoon.reflect.reference" [label="reference"]
+	};
+		"spoon.compiler" [label="compiler"]
+		"spoon.processing" [label="processing"]
+	};
+	subgraph cluster3 { 
+		rankdir=LR;label="javax.swing";
+		"javax.swing.text" [label="text"]
+		"javax.swing.event" [label="event"]
+	};
+	subgraph cluster4 { 
+		rankdir=LR;label="org.apache";
+		"org.apache.log4j" [label="log4j"]
+	};
+	subgraph cluster5 { 
+		rankdir=LR;label="java";
+	subgraph cluster6 { 
+		rankdir=LR;label="java.util";
+		"java.util.regex" [label="regex"]
+	};
+		"java.io" [label="io"]
+		"java.lang" [label="lang"]
+	subgraph cluster7 { 
+		rankdir=LR;label="java.awt";
+		"java.awt.event" [label="event"]
+	};
+	};
+	subgraph cluster8 { 
+		rankdir=LR;label="github.tdurieux.dependencyAnalyzer";
+	subgraph cluster9 { 
+		rankdir=LR;label="github.tdurieux.dependencyAnalyzer.graph";
+	subgraph cluster10 { 
+		rankdir=LR;label="github.tdurieux.dependencyAnalyzer.graph.node";
+		"github.tdurieux.dependencyAnalyzer.graph.node.packageDep" [label="packageDep"]
+		"github.tdurieux.dependencyAnalyzer.graph.node.classDep" [label="classDep"]
+	};
+		"github.tdurieux.dependencyAnalyzer.graph.export" [label="export"]
+	};
+		"github.tdurieux.dependencyAnalyzer.main" [label="main"]
+		"github.tdurieux.dependencyAnalyzer.gui" [label="gui"]
+	subgraph cluster11 { 
+		rankdir=LR;label="github.tdurieux.dependencyAnalyzer.spoon";
+		"github.tdurieux.dependencyAnalyzer.spoon.analyzer" [label="analyzer"]
+	};
+	};
+	subgraph cluster12 { 
+		rankdir=LR;label="com.martiansoftware.jsap";
+		"com.martiansoftware.jsap.stringparsers" [label="stringparsers"]
+	};
+}

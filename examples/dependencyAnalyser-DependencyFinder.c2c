@@ -1,0 +1,778 @@
+com.martiansoftware.jsap *
+    FlaggedOption *
+        <-- github.tdurieux.dependencies.main.Main
+    JSAP *
+        <-- github.tdurieux.dependencies.main.Main
+    JSAPException *
+        <-- github.tdurieux.dependencies.main.Main
+    JSAPResult *
+        <-- github.tdurieux.dependencies.main.Main
+    Parameter *
+        <-- github.tdurieux.dependencies.main.Main
+    QualifiedSwitch *
+        <-- github.tdurieux.dependencies.main.Main
+    SimpleJSAP *
+        <-- github.tdurieux.dependencies.main.Main
+    StringParser *
+        <-- github.tdurieux.dependencies.main.Main
+    UnflaggedOption *
+        <-- github.tdurieux.dependencies.main.Main
+com.martiansoftware.jsap.stringparsers *
+    StringStringParser *
+        <-- github.tdurieux.dependencies.main.Main
+github.tdurieux.dependencies
+    AnalyzerConfig
+        --> github.tdurieux.dependencies.AnalyzerConfig$Level
+        --> github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+        <-- github.tdurieux.dependencies.main.Main
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.util.ArrayList *
+        --> java.util.List *
+    AnalyzerConfig$Level
+        <-- github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.AnalyzerConfig$Level[] *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.DependencyAnalizer$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.main.Main
+        --> java.lang.Class *
+        --> java.lang.Enum *
+        --> java.lang.Object *
+        --> java.lang.String *
+    AnalyzerConfig$Level[] *
+        <-- github.tdurieux.dependencies.AnalyzerConfig$Level
+    AnalyzerConfig$OutputFormat
+        <-- github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.AnalyzerConfig$OutputFormat[] *
+        <-- github.tdurieux.dependencies.main.Main
+        <-- github.tdurieux.dependencies.main.Main$1
+        --> java.lang.Class *
+        --> java.lang.Enum *
+        --> java.lang.Object *
+        --> java.lang.String *
+    AnalyzerConfig$OutputFormat[] *
+        <-- github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+    DependencyAnalizer
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.AnalyzerConfig$Level
+        --> github.tdurieux.dependencies.DependencyAnalizer$1
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.node.LocationFactory
+        --> github.tdurieux.dependencies.graph.node.NodeFactory
+        --> github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        --> github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        --> github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+        --> github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+        <-- github.tdurieux.dependencies.main.Main
+        --> github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+        --> java.io.File *
+        --> java.io.PrintStream *
+        --> java.lang.Exception *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.lang.System *
+        --> java.util.ArrayList *
+        --> java.util.Collection *
+        --> java.util.Collections *
+        --> java.util.Enumeration *
+        --> java.util.Iterator *
+        --> java.util.List *
+        --> org.apache.log4j.Level *
+        --> org.apache.log4j.LogManager *
+        --> org.apache.log4j.Logger *
+        --> spoon.Launcher *
+        --> spoon.OutputType *
+        --> spoon.compiler.Environment *
+        --> spoon.compiler.SpoonCompiler *
+        --> spoon.compiler.SpoonResource *
+        --> spoon.processing.ProcessingManager *
+        --> spoon.processing.Processor *
+        --> spoon.reflect.factory.ClassFactory *
+        --> spoon.reflect.factory.Factory *
+        --> spoon.support.QueueProcessingManager *
+        --> spoon.support.compiler.FileSystemFolder *
+    DependencyAnalizer$1
+        --> github.tdurieux.dependencies.AnalyzerConfig$Level
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        --> java.lang.NoSuchFieldError *
+        --> java.lang.Object *
+github.tdurieux.dependencies.graph
+    DependencyGraph
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        --> github.tdurieux.dependencies.graph.node.DependencyLocation
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+        <-- github.tdurieux.dependencies.main.Main
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.lang.StringBuilder *
+        --> java.util.ArrayList *
+        --> java.util.Collection *
+        --> java.util.Collections *
+        --> java.util.HashMap *
+        --> java.util.Iterator *
+        --> java.util.List *
+        --> java.util.Map *
+        --> java.util.Set *
+github.tdurieux.dependencies.graph.export
+    AbstractExport
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.DependencyGraphExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        --> java.lang.CharSequence *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.util.ArrayList *
+        --> java.util.Iterator *
+        --> java.util.List *
+        --> java.util.regex.Matcher *
+        --> java.util.regex.Pattern *
+    DependencyGraphExport
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.main.Main
+        --> java.lang.Object *
+        --> java.lang.String *
+    DotExport
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.AbstractExport
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        <-- github.tdurieux.dependencies.main.Main
+        --> java.lang.CharSequence *
+        --> java.lang.Character *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.lang.StringBuilder *
+        --> java.util.ArrayList *
+        --> java.util.Collection *
+        --> java.util.HashMap *
+        --> java.util.Iterator *
+        --> java.util.List *
+        --> java.util.Map *
+        --> java.util.Set *
+    TxtExport
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.AbstractExport
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+        <-- github.tdurieux.dependencies.main.Main
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.lang.StringBuilder *
+        --> java.util.ArrayList *
+        --> java.util.Collection *
+        --> java.util.Collections *
+        --> java.util.Iterator *
+        --> java.util.List *
+        --> java.util.Map *
+        --> java.util.Set *
+github.tdurieux.dependencies.graph.node
+    AbstractDependencyLocationFacotry
+        --> github.tdurieux.dependencies.graph.node.LocationFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        --> java.lang.Object *
+    AbstractNodeFactory
+        --> github.tdurieux.dependencies.graph.node.NodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+        --> java.io.File *
+        --> java.lang.Object *
+        --> spoon.reflect.cu.SourcePosition *
+        --> spoon.reflect.declaration.CtElement *
+        --> spoon.reflect.declaration.CtPackage *
+        --> spoon.reflect.reference.CtReference *
+    DependencyLocation
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocationImpl
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        <-- github.tdurieux.dependencies.graph.node.LocationFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+        --> java.lang.Object *
+        --> java.lang.String *
+    DependencyLocationImpl
+        --> github.tdurieux.dependencies.graph.node.DependencyLocation
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        --> github.tdurieux.dependencies.graph.node.DependencyNodeImpl
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        --> java.lang.String *
+        --> java.lang.StringBuilder *
+    DependencyNode
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocation
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        <-- github.tdurieux.dependencies.graph.node.DependencyNodeImpl
+        <-- github.tdurieux.dependencies.graph.node.NodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+        --> java.lang.Comparable *
+        --> java.lang.Object *
+        --> java.lang.String *
+    DependencyNode$Type
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocationImpl
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type[] *
+        <-- github.tdurieux.dependencies.graph.node.DependencyNodeImpl
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        --> java.lang.Class *
+        --> java.lang.Enum *
+        --> java.lang.Object *
+        --> java.lang.String *
+    DependencyNode$Type[] *
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode$Type
+    DependencyNodeImpl
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocationImpl
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+        --> java.lang.Object *
+        --> java.lang.String *
+    LocationFactory
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.node.AbstractDependencyLocationFacotry
+        --> github.tdurieux.dependencies.graph.node.DependencyLocation
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+        --> java.lang.Object *
+        --> spoon.reflect.declaration.CtTypedElement *
+    NodeFactory
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+        --> java.lang.Object *
+        --> spoon.reflect.reference.CtTypeReference *
+github.tdurieux.dependencies.graph.node.classDep
+    ClassDependencyFactory
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        --> github.tdurieux.dependencies.graph.node.DependencyNodeImpl
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.util.Set *
+        --> spoon.SpoonException *
+        --> spoon.reflect.declaration.CtSimpleType *
+        --> spoon.reflect.declaration.ModifierKind *
+        --> spoon.reflect.reference.CtReference *
+        --> spoon.reflect.reference.CtTypeReference *
+    ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.node.AbstractDependencyLocationFacotry
+        --> github.tdurieux.dependencies.graph.node.DependencyLocation
+        --> github.tdurieux.dependencies.graph.node.DependencyLocationImpl
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        --> java.io.File *
+        --> java.lang.Class *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.util.Set *
+        --> spoon.reflect.cu.SourcePosition *
+        --> spoon.reflect.declaration.CtElement *
+        --> spoon.reflect.declaration.CtSimpleType *
+        --> spoon.reflect.declaration.CtTypedElement *
+        --> spoon.reflect.declaration.ModifierKind *
+        --> spoon.reflect.reference.CtTypeReference *
+github.tdurieux.dependencies.graph.node.packageDep
+    PackageDependencyFactory
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        --> github.tdurieux.dependencies.graph.node.DependencyNodeImpl
+        --> java.lang.String *
+        --> spoon.reflect.reference.CtPackageReference *
+        --> spoon.reflect.reference.CtReference *
+        --> spoon.reflect.reference.CtTypeReference *
+    PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.node.AbstractDependencyLocationFacotry
+        --> github.tdurieux.dependencies.graph.node.DependencyLocation
+        --> github.tdurieux.dependencies.graph.node.DependencyLocationImpl
+        --> github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        --> java.io.File *
+        --> java.lang.Class *
+        --> java.lang.String *
+        --> spoon.reflect.cu.SourcePosition *
+        --> spoon.reflect.declaration.CtElement *
+        --> spoon.reflect.declaration.CtPackage *
+        --> spoon.reflect.declaration.CtSimpleType *
+        --> spoon.reflect.declaration.CtTypedElement *
+github.tdurieux.dependencies.gui
+    DependencyAnalyzerGui
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.DependencyAnalizer
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+        <-- github.tdurieux.dependencies.main.GUILauncher
+        --> java.awt.Component *
+        --> java.awt.event.ActionListener *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> javax.swing.JButton *
+        --> javax.swing.JCheckBox *
+        --> javax.swing.JComboBox *
+        --> javax.swing.JFrame *
+        --> javax.swing.JScrollPane *
+        --> javax.swing.JTextArea *
+        --> javax.swing.JToolBar *
+        --> javax.swing.event.ChangeListener *
+    DependencyAnalyzerGui$1
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.TxtExport
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        --> java.awt.Component *
+        --> java.awt.event.ActionEvent *
+        --> java.awt.event.ActionListener *
+        --> java.io.File *
+        --> java.lang.Exception *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> javax.swing.JFileChooser *
+        --> javax.swing.JTextArea *
+    DependencyAnalyzerGui$2
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.TxtExport
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        --> java.awt.event.ActionEvent *
+        --> java.awt.event.ActionListener *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> javax.swing.JTextArea *
+    DependencyAnalyzerGui$3
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.AnalyzerConfig$Level
+        --> github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.TxtExport
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        --> java.awt.event.ActionEvent *
+        --> java.awt.event.ActionListener *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> javax.swing.JComboBox *
+        --> javax.swing.JTextArea *
+    DependencyAnalyzerGui$4
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.TxtExport
+        <-> github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> javax.swing.JCheckBox *
+        --> javax.swing.JTextArea *
+        --> javax.swing.event.ChangeEvent *
+        --> javax.swing.event.ChangeListener *
+github.tdurieux.dependencies.main
+    GUILauncher
+        --> github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        --> java.lang.Object *
+        --> java.lang.String *
+    Main
+        --> com.martiansoftware.jsap.FlaggedOption *
+        --> com.martiansoftware.jsap.JSAP *
+        --> com.martiansoftware.jsap.JSAPException *
+        --> com.martiansoftware.jsap.JSAPResult *
+        --> com.martiansoftware.jsap.Parameter *
+        --> com.martiansoftware.jsap.QualifiedSwitch *
+        --> com.martiansoftware.jsap.SimpleJSAP *
+        --> com.martiansoftware.jsap.StringParser *
+        --> com.martiansoftware.jsap.UnflaggedOption *
+        --> com.martiansoftware.jsap.stringparsers.StringStringParser *
+        --> github.tdurieux.dependencies.AnalyzerConfig
+        --> github.tdurieux.dependencies.AnalyzerConfig$Level
+        --> github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+        --> github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.export.DependencyGraphExport
+        --> github.tdurieux.dependencies.graph.export.DotExport
+        --> github.tdurieux.dependencies.graph.export.TxtExport
+        --> github.tdurieux.dependencies.main.Main$1
+        --> java.io.File *
+        --> java.io.FileWriter *
+        --> java.io.PrintStream *
+        --> java.io.Writer *
+        --> java.lang.CharSequence *
+        --> java.lang.Exception *
+        --> java.lang.Object *
+        --> java.lang.String *
+        --> java.lang.StringBuilder *
+        --> java.lang.System *
+    Main$1
+        --> github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+        <-- github.tdurieux.dependencies.main.Main
+        --> java.lang.NoSuchFieldError *
+        --> java.lang.Object *
+github.tdurieux.dependencies.spoon.analyzer
+    DependenciesAnalyzer
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        --> github.tdurieux.dependencies.graph.DependencyGraph
+        --> github.tdurieux.dependencies.graph.node.DependencyLocation
+        --> github.tdurieux.dependencies.graph.node.DependencyNode
+        --> github.tdurieux.dependencies.graph.node.LocationFactory
+        --> github.tdurieux.dependencies.graph.node.NodeFactory
+        --> java.lang.Object *
+        --> java.util.ArrayList *
+        --> java.util.Collection *
+        --> java.util.Iterator *
+        --> java.util.List *
+        --> java.util.Map *
+        --> java.util.Set *
+        --> spoon.processing.AbstractProcessor *
+        --> spoon.reflect.code.CtInvocation *
+        --> spoon.reflect.code.CtLiteral *
+        --> spoon.reflect.declaration.CtAnnotation *
+        --> spoon.reflect.declaration.CtClass *
+        --> spoon.reflect.declaration.CtElement *
+        --> spoon.reflect.declaration.CtMethod *
+        --> spoon.reflect.declaration.CtSimpleType *
+        --> spoon.reflect.declaration.CtType *
+        --> spoon.reflect.declaration.CtTypedElement *
+        --> spoon.reflect.reference.CtExecutableReference *
+        --> spoon.reflect.reference.CtTypeReference *
+java.awt *
+    Component *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+java.awt.event *
+    ActionEvent *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+    ActionListener *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+java.io *
+    File *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.main.Main
+    FileWriter *
+        <-- github.tdurieux.dependencies.main.Main
+    PrintStream *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.main.Main
+    Writer *
+        <-- github.tdurieux.dependencies.main.Main
+java.lang *
+    CharSequence *
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.main.Main
+    Character *
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+    Class *
+        <-- github.tdurieux.dependencies.AnalyzerConfig$Level
+        <-- github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+    Comparable *
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode
+    Enum *
+        <-- github.tdurieux.dependencies.AnalyzerConfig$Level
+        <-- github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode$Type
+    Exception *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.main.Main
+    NoSuchFieldError *
+        <-- github.tdurieux.dependencies.DependencyAnalizer$1
+        <-- github.tdurieux.dependencies.main.Main$1
+    Object *
+        <-- github.tdurieux.dependencies.AnalyzerConfig
+        <-- github.tdurieux.dependencies.AnalyzerConfig$Level
+        <-- github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.DependencyAnalizer$1
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DependencyGraphExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.graph.node.AbstractDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocation
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        <-- github.tdurieux.dependencies.graph.node.DependencyNodeImpl
+        <-- github.tdurieux.dependencies.graph.node.LocationFactory
+        <-- github.tdurieux.dependencies.graph.node.NodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+        <-- github.tdurieux.dependencies.main.GUILauncher
+        <-- github.tdurieux.dependencies.main.Main
+        <-- github.tdurieux.dependencies.main.Main$1
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    String *
+        <-- github.tdurieux.dependencies.AnalyzerConfig
+        <-- github.tdurieux.dependencies.AnalyzerConfig$Level
+        <-- github.tdurieux.dependencies.AnalyzerConfig$OutputFormat
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DependencyGraphExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocation
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocationImpl
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode
+        <-- github.tdurieux.dependencies.graph.node.DependencyNode$Type
+        <-- github.tdurieux.dependencies.graph.node.DependencyNodeImpl
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+        <-- github.tdurieux.dependencies.main.GUILauncher
+        <-- github.tdurieux.dependencies.main.Main
+    StringBuilder *
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.graph.node.DependencyLocationImpl
+        <-- github.tdurieux.dependencies.main.Main
+    System *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.main.Main
+java.util *
+    ArrayList *
+        <-- github.tdurieux.dependencies.AnalyzerConfig
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    Collection *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    Collections *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+    Enumeration *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    HashMap *
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+    Iterator *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    List *
+        <-- github.tdurieux.dependencies.AnalyzerConfig
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    Map *
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    Set *
+        <-- github.tdurieux.dependencies.graph.DependencyGraph
+        <-- github.tdurieux.dependencies.graph.export.DotExport
+        <-- github.tdurieux.dependencies.graph.export.TxtExport
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+java.util.regex *
+    Matcher *
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+    Pattern *
+        <-- github.tdurieux.dependencies.graph.export.AbstractExport
+javax.swing *
+    JButton *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+    JCheckBox *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+    JComboBox *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+    JFileChooser *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+    JFrame *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+    JScrollPane *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+    JTextArea *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$1
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$2
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$3
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+    JToolBar *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+javax.swing.event *
+    ChangeEvent *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+    ChangeListener *
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui
+        <-- github.tdurieux.dependencies.gui.DependencyAnalyzerGui$4
+org.apache.log4j *
+    Level *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    LogManager *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    Logger *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+spoon *
+    Launcher *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    OutputType *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    SpoonException *
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+spoon.compiler *
+    Environment *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    SpoonCompiler *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    SpoonResource *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+spoon.processing *
+    AbstractProcessor *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    ProcessingManager *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    Processor *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+spoon.reflect.code *
+    CtInvocation *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtLiteral *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+spoon.reflect.cu *
+    SourcePosition *
+        <-- github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+spoon.reflect.declaration *
+    CtAnnotation *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtClass *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtElement *
+        <-- github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtMethod *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtPackage *
+        <-- github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+    CtSimpleType *
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtType *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtTypedElement *
+        <-- github.tdurieux.dependencies.graph.node.LocationFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    ModifierKind *
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+spoon.reflect.factory *
+    ClassFactory *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+    Factory *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+spoon.reflect.reference *
+    CtExecutableReference *
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+    CtPackageReference *
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+    CtReference *
+        <-- github.tdurieux.dependencies.graph.node.AbstractNodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+    CtTypeReference *
+        <-- github.tdurieux.dependencies.graph.node.NodeFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyFactory
+        <-- github.tdurieux.dependencies.graph.node.classDep.ClassDependencyLocationFacotry
+        <-- github.tdurieux.dependencies.graph.node.packageDep.PackageDependencyFactory
+        <-- github.tdurieux.dependencies.spoon.analyzer.DependenciesAnalyzer
+spoon.support *
+    QueueProcessingManager *
+        <-- github.tdurieux.dependencies.DependencyAnalizer
+spoon.support.compiler *
+    FileSystemFolder *
+        <-- github.tdurieux.dependencies.DependencyAnalizer

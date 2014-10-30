@@ -1,0 +1,65 @@
+digraph G {
+	node [shape=box]; compound=true; ratio=fill;
+	"java.util" [color=grey];
+	"java.net" [color=grey];
+	"javax.xml.parsers" [color=grey];
+	"durieux.vlille.util" -> "java.lang";
+	"durieux.vlille.util" -> "java.nio.charset";
+	"durieux.vlille.util" -> "java.net";
+	"durieux.vlille.util" -> "javax.xml.parsers";
+	"durieux.vlille.util" -> "java.io";
+	"durieux.vlille.util" -> "org.xml.sax";
+	"durieux.vlille.util" -> "org.w3c.dom";
+	"org.w3c.dom" [color=grey];
+	"org.xml.sax" [color=grey];
+	"java.nio.charset" [color=grey];
+	"java.io" [color=grey];
+	"durieux.vlille.api" -> "java.lang";
+	"durieux.vlille.api" -> "org.w3c.dom";
+	"durieux.vlille.api" -> "javax.xml.parsers";
+	"durieux.vlille.api" -> "java.io";
+	"durieux.vlille.api" -> "org.xml.sax";
+	"durieux.vlille.api" -> "java.util";
+	"durieux.vlille.api" -> "java.nio.charset";
+	"durieux.vlille.api" -> "durieux.vlille.util";
+	"durieux.vlille.api" -> "org.jsoup.nodes";
+	"org.jsoup.nodes" [color=grey];
+	"java.lang" [color=grey];
+	"durieux.vlille.main" -> "java.lang";
+	"durieux.vlille.main" -> "durieux.vlille.api";
+	"durieux.vlille.main" -> "java.util";
+	"durieux.vlille.main" -> "java.io";
+	subgraph cluster0 { 
+		rankdir=LR;label="java";
+		"java.util" [label="util"]
+		"java.net" [label="net"]
+	subgraph cluster1 { 
+		rankdir=LR;label="java.nio";
+		"java.nio.charset" [label="charset"]
+	};
+		"java.io" [label="io"]
+		"java.lang" [label="lang"]
+	};
+	subgraph cluster2 { 
+		rankdir=LR;label="javax.xml";
+		"javax.xml.parsers" [label="parsers"]
+	};
+	subgraph cluster3 { 
+		rankdir=LR;label="durieux.vlille";
+		"durieux.vlille.util" [label="util"]
+		"durieux.vlille.api" [label="api"]
+		"durieux.vlille.main" [label="main"]
+	};
+	subgraph cluster4 { 
+		rankdir=LR;label="org.w3c";
+		"org.w3c.dom" [label="dom"]
+	};
+	subgraph cluster5 { 
+		rankdir=LR;label="org.xml";
+		"org.xml.sax" [label="sax"]
+	};
+	subgraph cluster6 { 
+		rankdir=LR;label="org.jsoup";
+		"org.jsoup.nodes" [label="nodes"]
+	};
+}
