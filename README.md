@@ -1,4 +1,4 @@
-# Extraction du graphe de dépendances avec Spoon
+# Extraction du graphe de dépendances avec Spoon [![Build Status](https://travis-ci.org/tdurieux/spoon-dependencies-analizer.svg)](https://travis-ci.org/tdurieux/spoon-dependencies-analizer)
 
 ```text
 Jéremy Bossut
@@ -80,6 +80,9 @@ L'outil a été réalisé en Java et peut soit être exécuté via une interface
 ```bash
 mvn exec:java
 ```
+
+![depanalyzer](https://cloud.githubusercontent.com/assets/5577568/4861912/a3c49d9c-6107-11e4-8745-cd7f4a0e33e7.gif)
+
 
 #### Ligne de commande
 
