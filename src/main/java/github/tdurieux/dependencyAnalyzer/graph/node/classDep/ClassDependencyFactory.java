@@ -28,6 +28,18 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 			return null;
 		}
 		
+		boolean isExternal = isExternal(element);
+		boolean isInternal = false;
+		boolean isAbstract = false;
+		boolean isAnonymous = element.isAnonymous();
+		boolean isPrimitive = element.isPrimitive();
+		
+		if (element.getDeclaration() != null) {
+			isInternal = !element.getDeclaration().isTopLevel();
+			isAbstract = element.getDeclaration().getModifiers()
+					.contains(ModifierKind.ABSTRACT);
+		}
+
 		Type type = Type.CLASS;
 
 		try {
@@ -36,21 +48,20 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 			} else if (element.getActualClass() != null && element.isInterface()) {
 				type = Type.INTERFACE;
 			}
+			Class<?> elementClass = element.getActualClass();
+			if(elementClass != null) {
+				if(elementClass.isEnum()) {
+					type = Type.ENUM;
+				} else if(elementClass.isAnnotation()) {
+					type = Type.ANNOTATION;
+				}
+				isInternal = elementClass.isMemberClass();
+				isPrimitive = elementClass.isPrimitive();
+			}
 		} catch (SpoonException | NoClassDefFoundError e) {
 			// class cannot be loaded
 			type = Type.CLASS;
 		}
-		boolean isExternal = isExternal(element);
-		boolean isInternal = false;
-		boolean isAbstract = false;
-
-		if (element.getDeclaration() != null) {
-			isInternal = element.getDeclaration().isTopLevel();
-			isAbstract = element.getDeclaration().getModifiers()
-					.contains(ModifierKind.ABSTRACT);
-		}
-		boolean isAnonymous = element.isAnonymous();
-		boolean isPrimitive = element.isPrimitive();
 
 		DependencyNode dependency = new DependencyNodeImpl(
 				element.getQualifiedName(), element.getSimpleName(), type,

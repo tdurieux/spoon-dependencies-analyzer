@@ -15,7 +15,7 @@ public interface DependencyNode extends Comparable<DependencyNode> {
 	 * 
 	 */
 	enum Type {
-		CLASS, PACKAGE, INTERFACE, ENUM, METHOD, PRIMITIVE
+		CLASS, PACKAGE, INTERFACE, ENUM, METHOD, PRIMITIVE, ANNOTATION
 	}
 
 	/**

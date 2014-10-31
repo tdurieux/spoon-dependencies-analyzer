@@ -46,16 +46,21 @@ public class TxtExport extends AbstractExport {
 				continue;
 			}
 			String pack = parent.getQualifiedName();
-			if (parent.getType().equals(DependencyNode.Type.CLASS)
-					|| parent.getType().equals(DependencyNode.Type.INTERFACE)) {
+			if (!parent.getType().equals(DependencyNode.Type.PACKAGE)) {
 				pack = pack.replace("." + parent.getSimpleName(), "");
+				System.out.println(parent.getSimpleName() + " : " + parent.isInternal());
+				if(parent.isInternal()) {
+					pack = pack.replace("$" + parent.getSimpleName(), "");
+					String[] splitted  = pack.split("\\.");
+					pack = pack.replace("." + splitted[splitted.length - 1], "");
+					tab += tab;
+				}
 			}
 			if(!pack.equals(lastPackage)) {
 				content += pack + (parent.isExternal() ? " *" : "") + "\n";
 				lastPackage = pack;
 			}
-			if (parent.getType().equals(DependencyNode.Type.CLASS)
-					|| parent.getType().equals(DependencyNode.Type.INTERFACE)) {
+			if (!parent.getType().equals(DependencyNode.Type.PACKAGE)) {
 				content += tab + parent.getSimpleName() + (parent.isExternal() ? " *" : "") + "\n";
 				tab += tab;
 			}

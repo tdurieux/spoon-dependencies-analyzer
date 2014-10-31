@@ -5,6 +5,7 @@ import spoon.reflect.cu.SourcePosition;
 import spoon.reflect.declaration.CtSimpleType;
 import spoon.reflect.declaration.CtTypedElement;
 import spoon.reflect.declaration.ModifierKind;
+import spoon.reflect.reference.CtTypeReference;
 import github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl;
@@ -34,27 +35,43 @@ public class ClassDependencyLocationFacotry extends
 			parent = parent.getParent(CtSimpleType.class);
 		}
 
+		boolean isExternal = false;
+		boolean isInternal = !parent.isTopLevel();
+		boolean isAbstract = parent.getModifiers().contains(
+				ModifierKind.ABSTRACT);
+		boolean isAnonymous = false;
+		boolean isPrimitive = false;
+
 		Type type = Type.CLASS;
 
 		try {
-			if (parent.getReference() != null && parent.getReference().isPrimitive()) {
-				type = Type.PRIMITIVE;
-			} else if (parent.getReference() != null && parent.getReference().isInterface()) {
-				type = Type.INTERFACE;
+			CtTypeReference<?> reference = parent.getReference();
+			if (reference != null) {
+				if (reference.isPrimitive()) {
+					type = Type.PRIMITIVE;
+				} else if (reference.isInterface()) {
+					type = Type.INTERFACE;
+				}
+				isAnonymous = reference.isAnonymous();
+				isPrimitive = reference.isPrimitive();
+			}
+
+			Class<?> elementClass = parent.getActualClass();
+			if (elementClass != null) {
+				if (elementClass.isEnum()) {
+					type = Type.ENUM;
+				} else if (elementClass.isAnnotation()) {
+					type = Type.ANNOTATION;
+				}
+				isInternal = elementClass.isMemberClass();
+				isPrimitive = elementClass.isPrimitive();
 			}
 		} catch (SpoonException | NoClassDefFoundError e) {
 			// class cannot be loaded
 			type = Type.CLASS;
 		}
-		
-		SourcePosition elementPosition = element.getPosition();
 
-		boolean isExternal = false;
-		boolean isInternal = parent.isTopLevel();
-		boolean isAbstract = parent.getModifiers().contains(
-				ModifierKind.ABSTRACT);
-		boolean isAnonymous = parent.getReference().isAnonymous();
-		boolean isPrimitive = parent.getReference().isPrimitive();
+		SourcePosition elementPosition = element.getPosition();
 
 		DependencyLocation location = new DependencyLocationImpl(
 				parent.getQualifiedName(), parent.getSimpleName(), type,
