@@ -48,7 +48,6 @@ public class TxtExport extends AbstractExport {
 			String pack = parent.getQualifiedName();
 			if (!parent.getType().equals(DependencyNode.Type.PACKAGE)) {
 				pack = pack.replace("." + parent.getSimpleName(), "");
-				System.out.println(parent.getSimpleName() + " : " + parent.isInternal());
 				if(parent.isInternal()) {
 					pack = pack.replace("$" + parent.getSimpleName(), "");
 					String[] splitted  = pack.split("\\.");
