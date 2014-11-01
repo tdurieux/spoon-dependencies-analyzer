@@ -1,5 +1,5 @@
 /**
- * contains all launchers of the projects
+ * contains all launchers of the project
  * @author Thomas Durieux
  *
  */

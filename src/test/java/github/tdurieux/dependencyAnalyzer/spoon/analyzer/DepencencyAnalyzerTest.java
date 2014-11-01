@@ -1,4 +1,4 @@
-package github.tdurieux.dependencies.spoon.analyzer;
+package github.tdurieux.dependencyAnalyzer.spoon.analyzer;
 
 import static org.junit.Assert.*;
 

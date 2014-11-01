@@ -1,5 +1,5 @@
 /**
- * contains all analyzers of the projects
+ * contains all analyzers of the project
  * @author Thomas Durieux
  *
  */
