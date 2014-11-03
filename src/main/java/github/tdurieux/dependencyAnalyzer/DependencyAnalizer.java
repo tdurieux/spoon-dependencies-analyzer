@@ -2,9 +2,9 @@ package github.tdurieux.dependencyAnalyzer;
 
 import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
 import github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory;
-import github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry;
+import github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory;
-import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry;
+import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer;
 
 import java.io.File;
@@ -26,7 +26,7 @@ import spoon.support.QueueProcessingManager;
 import spoon.support.compiler.FileSystemFolder;
 
 /**
- * is the class used to start the analyze
+ * is the class used to start the analysis
  * 
  * @author Thomas Durieux
  * 
@@ -70,7 +70,7 @@ public class DependencyAnalizer {
 	}
 
 	/**
-	 * Execute the analyze
+	 * Execute the analysis
 	 * 
 	 * @return the dependency graph generated
 	 */
@@ -85,13 +85,13 @@ public class DependencyAnalizer {
 		case CLASS:
 			processor = new DependencyAnalyzer(graph,
 					new ClassDependencyFactory(),
-					new ClassDependencyLocationFacotry());
+					new ClassDependencyLocationFactory());
 			break;
 
 		case PACKAGE:
 			processor = new DependencyAnalyzer(graph,
 					new PackageDependencyFactory(),
-					new PackageDependencyLocationFacotry());
+					new PackageDependencyLocationFactory());
 			break;
 		}
 
@@ -104,7 +104,7 @@ public class DependencyAnalizer {
 		// analyze all classes
 		p.process(factory.Class().getAll());
 
-		// generate the ouput
+		// generate the output
 		if (config.isVerbose()) {
 			System.err.println("Create the output");
 		}

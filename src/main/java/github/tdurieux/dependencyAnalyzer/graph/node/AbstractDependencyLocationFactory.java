@@ -6,7 +6,7 @@ package github.tdurieux.dependencyAnalyzer.graph.node;
  * @author Thomas Durieux
  * 
  */
-public abstract class AbstractDependencyLocationFacotry implements
+public abstract class AbstractDependencyLocationFactory implements
 		LocationFactory {
 
 }

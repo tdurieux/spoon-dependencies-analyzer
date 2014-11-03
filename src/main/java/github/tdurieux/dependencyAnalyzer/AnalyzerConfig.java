@@ -12,7 +12,7 @@ import java.util.List;
 public class AnalyzerConfig {
 
 	/**
-	 * The analyze levels available
+	 * Available analysis levels
 	 * 
 	 * @author Thomas Durieux
 	 * 
@@ -22,7 +22,7 @@ public class AnalyzerConfig {
 	}
 
 	/**
-	 * The output format available
+	 * Available output formats
 	 * 
 	 * @author Thomas Durieux
 	 * 

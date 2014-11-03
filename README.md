@@ -14,7 +14,7 @@ Thomas Durieux
   - [Usage](#usage)
   - [Analyse des résultats](#analyse-des-résultats)
   - [Validation des résultats](#validation-des-résultats)
-- [Pistes d'améliorations](#pistes-daméliorations)
+- [Pistes d'amélioration](#pistes-damélioration)
 - [Références](#références)
 
 <!-- /MarkdownTOC -->
@@ -37,15 +37,15 @@ Les graphes de dépendances permettent de visualiser les dépendances d'un proje
 
 L'analyse des dépendances a plusieurs intérêts: 
 elle permet de rapidement comprendre l'architecture du projet,
-d'identifié la complexité d'un projet (nombres de dépendances, nombres de classes, paquets, méthodes) ou 
-encore d'analyser la qualité de l'architecture (bonne découpe du projet en package, interaction entre les paquets, présence dépendances cycliques).
+d'identifier la complexité d'un projet (nombres de dépendances, nombres de classes, paquets, méthodes) ou 
+encore d'analyser la qualité de l'architecture (bonne découpe du projet en packages, interaction entre les paquets, présence de dépendances cycliques).
 
-Spoon sera utilisé comme librairie d'AST pour parcourir le code du projet. Spoon a la particularité d'analyser le code source des applications et offre une API de transformation et de parcourt claire. Spoon utilise le principe de processeur, les processeurs permettent de parcourir le code, certains de ces processeurs permettent de filtrer les types des éléments parcourus.
+Spoon sera utilisé comme librairie d'AST pour parcourir le code du projet. Spoon a la particularité d'analyser le code source des applications et offre une API de transformation et de parcours claire. Spoon utilise le principe de processeur. Les processeurs permettent de parcourir le code, certains de ces processeurs permettent de filtrer les types des éléments parcourus.
 
 ## Approche
 
 Afin de déterminer toutes les dépendances d'un projet, il faut dans un premier temps identifier tous les éléments susceptibles d'ajouter des dépendances au projet.
-Les éléments suivant ont été identifié comme étant du source potentielle de dépendances:
+Les éléments suivants ont été identifiés comme étant source potentielle de dépendances:
 
 - les interfaces implémentées par une classe,
 - la classe parente d'une classe,
@@ -58,22 +58,22 @@ Les éléments suivant ont été identifié comme étant du source potentielle d
 - les classes des méthodes invoquées,
 - les paramètres des invocations de méthodes,
 - les exceptions lancées par les méthodes,
-- le type des constantes utilisés,
+- le type des constantes utilisées,
 - les énumérations utilisées,
 - les annotations,
 - les exceptions interceptées (catch),
 - la déclaration de classes anonymes.
 
-Tous ces éléments (à l'exception des annotations) sont encapsulés par Spoon sous le type: CtTypedElement. Un processeur traitant les CtTypedElement a pu être réalisé. Ce processeur a comme rôle de générer l'arbre de dépendances. Cette arbre a été implémenté sous forme de deux Map. La première Map permet retrouver toutes les localisations où est utilisé une dépendances, exemple: le dépendance java.lang est utilisé par le paquet mypackake.entity dans le fichier mypackake/entity/User.class à la ligne 32, la seconde Map permet lister toutes les dépendances utilisées par un paquet ou une classe (en fonction du niveau d'analyse), exemple: le paquet mypackake.entity utilise java.lang).
+Tous ces éléments (à l'exception des annotations) sont encapsulés par Spoon sous le type: CtTypedElement. Un processeur traitant les CtTypedElement a pu être réalisé. Ce processeur a comme rôle de générer l'arbre de dépendances. Cette arbre a été implémenté sous forme de deux Map. La première Map permet de retrouver toutes les localisations où est utilisée une dépendance. Exemple: la dépendance java.lang est utilisée par le paquet mypackake.entity dans le fichier mypackake/entity/User.class à la ligne 32. La seconde Map permet de lister toutes les dépendances utilisées par un paquet ou une classe (en fonction du niveau d'analyse). Exemple: le paquet mypackake.entity utilise java.lang.
 
-A partir de ce graphe de dépendances, il a été possible de généré plusieurs représentations de ce graphe:
+A partir de ce graphe de dépendances, il a été possible de générer plusieurs représentations de ce graphe:
 
-- le premier format de sorti est celui utilisé par Dependency Finder, ce choix a été fais afin de simplifier la validation de l'approche de ce projet,
-- le second format est le format utilisé par la librairie Graphviz qui permet de générer graphes sous forme d'image (png, jpg, pdf, svg, ...).
+- le premier format de sortie est celui utilisé par Dependency Finder, ce choix a été fait afin de simplifier la validation de l'approche de ce projet,
+- le second format est le format utilisé par la librairie Graphviz qui permet de générer des graphes sous forme d'image (png, jpg, pdf, svg, ...).
 
 ## Réalisation
 
-L'outil a été réalisé en Java et peut être soit via une interface d'utilisateur rudimentaire, soit via un programme en ligne de commandes.
+L'outil a été réalisé en Java et peut être lancé soit via une interface d'utilisateur rudimentaire, soit via un programme en ligne de commandes.
 
 ### Usage
 
@@ -142,45 +142,44 @@ java -jar target/DependencyAnalyzer-0.0.1-SNAPSHOT.jar \
 
 ### Analyse des résultats 
 
-La génération de graphe de dépendances au niveau des paquets est été assez probante et les résultats restent compréhensible. 
+La génération de graphe de dépendances au niveau des paquets est assez probante et les résultats restent compréhensibles. 
 
-Les graphes de dépendances au niveau des classes est difficilement exploitable en état. En effet la quantité d'informations générées rendent la compréhension des graphes particulièrement difficile sur des projets ayant une certaine taille. De plus, la génération d'image à partir de Graphviz peut ne jamais aboutir sur des gros projets (par exemple la génération de l'image du graphe de dépendances du projet Spoon par Graphviz n'a jamais aboutie). 
+Les graphes de dépendances au niveau des classes est difficilement exploitable en état. En effet, la quantité d'informations générées rend la compréhension des graphes particulièrement difficile sur des projets ayant une taille importante. De plus, la génération d'images à partir de Graphviz peut ne jamais aboutir sur des gros projets (par exemple la génération de l'image du graphe de dépendances du projet Spoon par Graphviz n'a jamais abouti). 
 
 Plusieurs solutions optionnelles ont été implémentées: 
-
-- identifier et masquer les classes ne provenant pas du projet analysé (librairies externes, les classes Java, ...).
+- identifier et masquer les classes ne provenant pas du projet analysé (librairies externes, les classes Java, ...),
 - ajout de la possibilité de filtrer les dépendances sur base d'expressions régulières. 
 Ces solutions permettent d'améliorer la lisibilité des résultats mais elles induisent une perte d'informations. 
 
-Une solution solution qui reste à investiguer est de produire une interface qui permet de filtrer dynamiquement la vue du graphe. Plusieurs types d'interfaces est envisageable:
+Une solution solution qui reste à investiguer est de produire une interface qui permet de filtrer dynamiquement la vue du graphe. Plusieurs types d'interface sont envisageables:
 - améliorer l'interface utilisateur actuelle en y ajoutant le support des filtres,
-- créer une page HTML/JavaScript qui permettrait de filtrer dynamiquement les éléments du graphes. Plusieurs librairies JavaScript permettent de faciliter cette réalisation comme par exemple la librairie sigma.js. Cette solution offre l'avantage de pouvoir facilement partager le graphe de dépendances.
+- créer une page HTML/JavaScript qui permettrait de filtrer dynamiquement les éléments du graphe. Plusieurs librairies JavaScript permettent de faciliter cette réalisation comme par exemple la librairie sigma.js. Cette solution offre l'avantage de pouvoir facilement partager le graphe de dépendances.
 
 ### Validation des résultats
 
 Pour valider les résultats obtenus il a été décidé de comparer les résultats à ceux de Dependency Finder. Dependency Finder est un logiciel qui permet d'extraire des graphes de dépendances de code compilé Java.
-Cette validation a été effectuée sur différents projets de taille variables. Les différents projets testés sont:
+Cette validation a été effectuée sur différents projets de taille variable. Les différents projets testés sont:
 
 - ce projet
 - le projet servant aux tests unitaires de ce projet,
 - Spoon,
-- et un projet faisant appel à de nombreuses classes anonymes.
+- un projet faisant appel à de nombreuses classes anonymes.
 
-Les graphes de dépendances au niveau des paquets sont très similaire. 
+Les graphes de dépendances au niveau des paquets sont très similaires. 
 Il y a néanmoins quelques différences:
 
 - ce projet considère les annotations comme des dépendances au contraire de Dependency Finder. 
-- certain élément sont générer à la compilation et ne sont donc pas visible par le ce projet, par exemple les fichier package-info.java qui sont transformés en classe à la compilation. 
-- l'ordre des dépendances est également légèrement différente nous avons fait le choix de séparer les dépendances entrante et sortante, Dependency Finder ne fait qu'un tris alphabétique.
+- certains éléments sont générés à la compilation et ne sont donc pas visibles par ce projet, par exemple les fichier package-info.java qui sont transformés en classe à la compilation. 
+- l'ordre des dépendances est également légèrement différent: nous avons fait le choix de séparer les dépendances entrantes et sortantes. Dependency Finder ne fait qu'un tri alphabétique.
 
 Les quelques différences détectées au niveau des paquets sont également présentes au niveau des classes.
 
-- Dependency Finder considère que tous les héritage, cet outil se limite au héritage des classes, interfaces déclarées dans le projet,
+- Dependency Finder considère tous les héritages. Cet outil se limite aux héritages des classes et interfaces déclarées dans le projet,
 - Dependency Finder renomme les classes anonymes.
 
-## Pistes d'améliorations
+## Pistes d'amélioration
 
-Plusieurs pistent d'amélioration sont envisageables:
+Plusieurs pistes d'amélioration sont envisageables:
 
 - gérer dans les exports la position d'utilisation des dépendances,
 - gérer dans les exports le type de dépendances (classe, interfaces, énumération, annotation,...)

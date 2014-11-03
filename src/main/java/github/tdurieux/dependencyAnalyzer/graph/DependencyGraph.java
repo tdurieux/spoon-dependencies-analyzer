@@ -25,7 +25,7 @@ public class DependencyGraph {
 	}
 
 	/**
-	 * initialize lists in usedNodes and usedByNides maps
+	 * initialize lists in usedNodes and usedByNodes maps
 	 * 
 	 * @param node
 	 * @param location

@@ -3,7 +3,7 @@ package github.tdurieux.dependencyAnalyzer.graph.node;
 import spoon.reflect.declaration.CtTypedElement;
 
 /**
- * is an interface which describe location factories
+ * is an interface which describes location factories
  * 
  * @author Thomas Durieux
  * 
@@ -11,7 +11,7 @@ import spoon.reflect.declaration.CtTypedElement;
 public interface LocationFactory {
 
 	/**
-	 * creates of dependency location from a CtTypedElement
+	 * creates dependency location from a CtTypedElement
 	 * 
 	 * @param element
 	 *            the element

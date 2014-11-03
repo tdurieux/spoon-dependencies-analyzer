@@ -37,7 +37,7 @@ public class DependencyAnalyzerGui extends JFrame {
 
 	public DependencyAnalyzerGui() {
 		// create the window
-		setTitle("Dependency analyser");
+		setTitle("Dependency analyzer");
 		setSize(800, 600); // default size is 0,0
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

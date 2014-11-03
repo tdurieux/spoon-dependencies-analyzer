@@ -4,7 +4,7 @@ import spoon.reflect.cu.SourcePosition;
 import spoon.reflect.declaration.CtPackage;
 import spoon.reflect.declaration.CtSimpleType;
 import spoon.reflect.declaration.CtTypedElement;
-import github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry;
+import github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
@@ -15,8 +15,8 @@ import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
  * @author Thomas Durieux
  * 
  */
-public class PackageDependencyLocationFacotry extends
-		AbstractDependencyLocationFacotry {
+public class PackageDependencyLocationFactory extends
+		AbstractDependencyLocationFactory {
 
 	/*
 	 * (non-Javadoc)
