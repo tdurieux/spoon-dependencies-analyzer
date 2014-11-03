@@ -27,9 +27,9 @@ Thomas Durieux
 
 ## Introduction
 
-Cette article traitera de la génération de graphe de dépendances pour les projets Java à l'aide de la librairie Spoon.
+Cette article traitera de la génération de graphes de dépendances pour les projets Java à l'aide de la librairie Spoon.
 
-Les graphes de dépendances permettent de visualiser les dépendances d'un projet. L'analyse des dépendances peut se faire à plusieurs niveaux en fonction du niveau de précision souhaité:
+Les graphes de dépendances permettent de visualiser les dépendances d'un projet. L'analyse des dépendances peut se faire à plusieurs niveaux en fonction du niveau de précision souhaitée:
 
 - au niveau des paquets,
 - au niveau des classes,
@@ -64,7 +64,11 @@ Les éléments suivants ont été identifiés comme étant source potentielle de
 - les exceptions interceptées (catch),
 - la déclaration de classes anonymes.
 
-Tous ces éléments (à l'exception des annotations) sont encapsulés par Spoon sous le type: CtTypedElement. Un processeur traitant les CtTypedElement a pu être réalisé. Ce processeur a comme rôle de générer l'arbre de dépendances. Cette arbre a été implémenté sous forme de deux Map. La première Map permet de retrouver toutes les localisations où est utilisée une dépendance. Exemple: la dépendance java.lang est utilisée par le paquet mypackake.entity dans le fichier mypackake/entity/User.class à la ligne 32. La seconde Map permet de lister toutes les dépendances utilisées par un paquet ou une classe (en fonction du niveau d'analyse). Exemple: le paquet mypackake.entity utilise java.lang.
+Tous ces éléments (à l'exception des annotations) sont encapsulés par Spoon sous le type: CtTypedElement. Un processeur traitant les CtTypedElement a pu être réalisé. Ce processeur a comme rôle de générer l'arbre de dépendances. Cette arbre a été implémenté sous forme de deux Map:
+- La première Map permet de retrouver toutes les localisations où est utilisée une dépendance. 
+Exemple: la dépendance java.lang est utilisée par le paquet mypackake.entity dans le fichier mypackake/entity/User.class à la ligne 32. 
+- La seconde Map permet de lister toutes les dépendances utilisées par un paquet ou une classe (en fonction du niveau d'analyse). 
+Exemple: le paquet mypackake.entity utilise java.lang.
 
 A partir de ce graphe de dépendances, il a été possible de générer plusieurs représentations de ce graphe:
 
@@ -73,13 +77,13 @@ A partir de ce graphe de dépendances, il a été possible de générer plusieur
 
 ## Réalisation
 
-L'outil a été réalisé en Java et peut être lancé soit via une interface d'utilisateur rudimentaire, soit via un programme en ligne de commandes.
+L'outil a été réalisé en Java et peut être lancé soit via une interface d'utilisateur rudimentaire, soit via un programme en lignes de commande.
 
 ### Usage
 
-#### Interface d'utilisateur
+#### Interface utilisateur
 
-Lancer l'interface d'utilisateur à partir de maven:
+Lancer l'interface utilisateur à partir de maven:
 ```bash
 mvn exec:java
 ```
@@ -87,7 +91,7 @@ mvn exec:java
 ![depanalyzer](https://cloud.githubusercontent.com/assets/5577568/4861912/a3c49d9c-6107-11e4-8745-cd7f4a0e33e7.gif)
 
 
-#### Ligne de commande
+#### Lignes de commande
 
 ```text
 Usage:
