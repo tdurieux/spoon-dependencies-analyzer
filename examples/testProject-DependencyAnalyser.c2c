@@ -1,0 +1,40 @@
+github.tdurieux.testProject.entity
+    User
+        --> github.tdurieux.testProject.entity.User$
+        --> github.tdurieux.testProject.entity.User$Type
+        --> java.io.Serializable *
+        --> java.lang.Class *
+        --> java.lang.Exception *
+        --> java.lang.Integer *
+        --> java.lang.Object *
+        --> java.lang.Override *
+        --> java.lang.Runnable *
+        --> java.lang.RuntimeException *
+        --> java.lang.String *
+        --> java.lang.Thread *
+        <Anonymous>
+                <-- github.tdurieux.testProject.entity.User
+        Type
+                <-- github.tdurieux.testProject.entity.User
+java.io *
+    Serializable *
+        <-- github.tdurieux.testProject.entity.User
+java.lang *
+    Class *
+        <-- github.tdurieux.testProject.entity.User
+    Exception *
+        <-- github.tdurieux.testProject.entity.User
+    Integer *
+        <-- github.tdurieux.testProject.entity.User
+    Object *
+        <-- github.tdurieux.testProject.entity.User
+    Override *
+        <-- github.tdurieux.testProject.entity.User
+    Runnable *
+        <-- github.tdurieux.testProject.entity.User
+    RuntimeException *
+        <-- github.tdurieux.testProject.entity.User
+    String *
+        <-- github.tdurieux.testProject.entity.User
+    Thread *
+        <-- github.tdurieux.testProject.entity.User

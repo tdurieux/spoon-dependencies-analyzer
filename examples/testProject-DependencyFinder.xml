@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE dependencies SYSTEM "http://depfind.sourceforge.net/dtd/dependencies.dtd">
+
+<dependencies>
+    <package confirmed="yes">
+        <name>github.tdurieux.testProject.entity</name>
+        <class confirmed="yes">
+            <name>github.tdurieux.testProject.entity.User</name>
+            <outbound type="class" confirmed="no">java.io.Serializable</outbound>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.User$1(github.tdurieux.testProject.entity.User)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.this$0</inbound>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.User()</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User$Type</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.USER</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.type</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.id</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.isInteger(java.lang.Object)</name>
+                <outbound type="class" confirmed="no">java.lang.Integer</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.name</name>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.print(java.lang.Class)</name>
+                <outbound type="class" confirmed="no">java.lang.Class</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.getSimpleName()</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.serialVersionUID</name>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.thread()</name>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.User$1(github.tdurieux.testProject.entity.User)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Runnable</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Thread.Thread(java.lang.Runnable)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Thread.run()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.throwException()</name>
+                <outbound type="class" confirmed="no">java.lang.Exception</outbound>
+                <outbound type="feature" confirmed="no">java.lang.RuntimeException.RuntimeException(java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.toString()</name>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.id</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.name</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(int)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User.type</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User$Type</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.User()</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>github.tdurieux.testProject.entity.User$1</name>
+            <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <outbound type="class" confirmed="no">java.lang.Runnable</outbound>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$1.User$1(github.tdurieux.testProject.entity.User)</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.this$0</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.thread()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$1.run()</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.this$0</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.print(java.lang.Class)</outbound>
+                <outbound type="class" confirmed="no">java.lang.Class</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Object.getClass()</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$1.this$0</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.User$1(github.tdurieux.testProject.entity.User)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
+            <name>github.tdurieux.testProject.entity.User$Type</name>
+            <outbound type="class" confirmed="no">java.lang.Enum</outbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.User()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.type</inbound>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$Type.ADMIN</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.static {}</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$Type.ENUM$VALUES</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.values()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$Type.USER</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.User()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$Type.User$Type(java.lang.String, int)</name>
+                <outbound type="feature" confirmed="no">java.lang.Enum.Enum(java.lang.String, int)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.static {}</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$Type.static {}</name>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.ADMIN</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.ENUM$VALUES</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.USER</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.User$Type(java.lang.String, int)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$Type.valueOf(java.lang.String)</name>
+                <outbound type="class" confirmed="no">java.lang.Class</outbound>
+                <outbound type="class" confirmed="no">java.lang.Enum</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Enum.valueOf(java.lang.Class, java.lang.String)</outbound>
+                <outbound type="class" confirmed="no">java.lang.String</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.User$Type.values()</name>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.ENUM$VALUES</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="feature" confirmed="no">java.lang.System.arraycopy(java.lang.Object, int, java.lang.Object, int, int)</outbound>
+            </feature>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>java.io</name>
+        <class confirmed="no">
+            <name>java.io.Serializable</name>
+            <inbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User</inbound>
+        </class>
+    </package>
+    <package confirmed="no">
+        <name>java.lang</name>
+        <class confirmed="no">
+            <name>java.lang.Class</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.valueOf(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.print(java.lang.Class)</inbound>
+            <feature confirmed="no">
+                <name>java.lang.Class.getSimpleName()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.print(java.lang.Class)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Enum</name>
+            <inbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User$Type</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.valueOf(java.lang.String)</inbound>
+            <feature confirmed="no">
+                <name>java.lang.Enum.Enum(java.lang.String, int)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.User$Type(java.lang.String, int)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Enum.valueOf(java.lang.Class, java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.valueOf(java.lang.String)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Exception</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.throwException()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Integer</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.isInteger(java.lang.Object)</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Object</name>
+            <inbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User</inbound>
+            <inbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User$1</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.values()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.isInteger(java.lang.Object)</inbound>
+            <feature confirmed="no">
+                <name>java.lang.Object.Object()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.User$1(github.tdurieux.testProject.entity.User)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.User()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Object.getClass()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Runnable</name>
+            <inbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User$1</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.thread()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.RuntimeException</name>
+            <feature confirmed="no">
+                <name>java.lang.RuntimeException.RuntimeException(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.throwException()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.String</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.User$Type(java.lang.String, int)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.static {}</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.valueOf(java.lang.String)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.name</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.print(java.lang.Class)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.throwException()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.StringBuilder</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.StringBuilder(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.append(int)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.append(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.StringBuilder.toString()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.toString()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.System</name>
+            <feature confirmed="no">
+                <name>java.lang.System.arraycopy(java.lang.Object, int, java.lang.Object, int, int)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.values()</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.Thread</name>
+            <feature confirmed="no">
+                <name>java.lang.Thread.Thread(java.lang.Runnable)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.thread()</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Thread.run()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.thread()</inbound>
+            </feature>
+        </class>
+    </package>
+</dependencies>

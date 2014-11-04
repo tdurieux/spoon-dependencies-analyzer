@@ -53,9 +53,7 @@ digraph G {
 	"java.util.Iterator" [color=grey];
 	"Elements" [color=grey];
 	"java.lang.NumberFormatException" [color=grey];
-	"durieux.vlille.api.StationTest" -> "java.lang.Object";
-	"durieux.vlille.api.StationTest" -> "java.lang.String";
-	"durieux.vlille.api.StationTest" -> "durieux.vlille.api.Test";
+	"org.junit.Assert" [color=grey];
 	"durieux.vlille.api.VLille" -> "java.util.Map";
 	"durieux.vlille.api.VLille" -> "java.io.IOException";
 	"java.util.Map" [color=grey];
@@ -63,9 +61,6 @@ digraph G {
 	"durieux.vlille.api.StationImpl" -> "java.lang.Object";
 	"durieux.vlille.api.StationImpl" -> "durieux.vlille.api.Station";
 	"durieux.vlille.api.StationImpl" -> "java.lang.Override";
-	"durieux.vlille.util.XMLFromUrlParserTest" -> "java.lang.Object";
-	"durieux.vlille.util.XMLFromUrlParserTest" -> "java.lang.String";
-	"durieux.vlille.util.XMLFromUrlParserTest" -> "durieux.vlille.util.Test";
 	"durieux.vlille.util.XMLFromUrl" -> "java.lang.String";
 	"durieux.vlille.util.XMLFromUrl" -> "java.nio.charset.Charset";
 	"durieux.vlille.util.XMLFromUrl" -> "java.lang.Object";
@@ -106,7 +101,8 @@ digraph G {
 	"durieux.vlille.api.StationFactoryTest" -> "org.w3c.dom.NodeList";
 	"durieux.vlille.api.StationFactoryTest" -> "durieux.vlille.api.StationFactory";
 	"durieux.vlille.api.StationFactoryTest" -> "durieux.vlille.api.Station";
-	"durieux.vlille.api.StationFactoryTest" -> "durieux.vlille.api.Test";
+	"durieux.vlille.api.StationFactoryTest" -> "org.junit.Assert";
+	"durieux.vlille.api.StationFactoryTest" -> "org.junit.Test";
 	"durieux.vlille.api.StationFactoryTest" -> "java.lang.Exception";
 	"durieux.vlille.api.StationFactoryTest" -> "java.lang.RuntimeException";
 	"java.util.HashMap" [color=grey];
@@ -127,18 +123,17 @@ digraph G {
 	"durieux.vlille.main.Main" -> "durieux.vlille.api.Station";
 	"durieux.vlille.main.Main" -> "java.io.IOException";
 	"java.lang.Override" [color=grey];
-	"durieux.vlille.util.Test" [color=grey];
 	"java.lang.String" [color=grey];
 	"durieux.vlille.util.XMLParserException" -> "java.lang.RuntimeException";
 	"durieux.vlille.util.XMLParserException" -> "java.lang.String";
 	"durieux.vlille.util.XMLParserException" -> "java.lang.Throwable";
 	"org.w3c.dom.NodeList" [color=grey];
 	"durieux.vlille.api.Station" -> "java.lang.String";
+	"org.junit.Test" [color=grey];
 	"durieux.vlille.api.Element" [color=grey];
 	"java.net.URL" [color=grey];
 	"java.lang.Exception" [color=grey];
 	"java.lang.RuntimeException" [color=grey];
-	"durieux.vlille.api.Test" [color=grey];
 	"java.io.StringReader" [color=grey];
 	"Element" [color=grey];
 	subgraph cluster0 { 
@@ -201,30 +196,31 @@ digraph G {
 		"org.xml.sax.InputSource" [label="InputSource"]
 	};
 	subgraph cluster9 { 
+		rankdir=LR;label="org.junit";
+		"org.junit.Assert" [label="Assert"]
+		"org.junit.Test" [label="Test"]
+	};
+	subgraph cluster10 { 
 		rankdir=LR;label="durieux.vlille.api";
 		"durieux.vlille.api.Elements" [label="Elements"]
 		"durieux.vlille.api.VLilleImpl" [label="VLilleImpl"]
 		"durieux.vlille.api.StationFactory" [label="StationFactory"]
-		"durieux.vlille.api.StationTest" [label="StationTest"]
 		"durieux.vlille.api.VLille" [label="VLille"]
 		"durieux.vlille.api.StationImpl" [label="StationImpl"]
 		"durieux.vlille.api.StationFactoryTest" [label="StationFactoryTest"]
 		"durieux.vlille.api.Station" [label="Station"]
 		"durieux.vlille.api.Element" [label="Element"]
-		"durieux.vlille.api.Test" [label="Test"]
-	};
-	subgraph cluster10 { 
-		rankdir=LR;label="durieux.vlille.util";
-		"durieux.vlille.util.XMLFromUrlParserTest" [label="XMLFromUrlParserTest"]
-		"durieux.vlille.util.XMLFromUrl" [label="XMLFromUrl"]
-		"durieux.vlille.util.Test" [label="Test"]
-		"durieux.vlille.util.XMLParserException" [label="XMLParserException"]
 	};
 	subgraph cluster11 { 
+		rankdir=LR;label="durieux.vlille.util";
+		"durieux.vlille.util.XMLFromUrl" [label="XMLFromUrl"]
+		"durieux.vlille.util.XMLParserException" [label="XMLParserException"]
+	};
+	subgraph cluster12 { 
 		rankdir=LR;label="durieux.vlille.main";
 		"durieux.vlille.main.Main" [label="Main"]
 	};
-	subgraph cluster12 { 
+	subgraph cluster13 { 
 		rankdir=LR;label="javax.xml.parsers";
 		"javax.xml.parsers.ParserConfigurationException" [label="ParserConfigurationException"]
 		"javax.xml.parsers.DocumentBuilderFactory" [label="DocumentBuilderFactory"]

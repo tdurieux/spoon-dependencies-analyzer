@@ -2,6 +2,9 @@ digraph G {
 	node [shape=box]; compound=true; ratio=fill;
 	"" [color=grey];
 	"javax.swing.JPopupMenu" [color=grey];
+	"spoon.test.control.Fors" -> "java.lang.Object";
+	"spoon.test.control.Fors" -> "java.lang.String";
+	"spoon.test.control.Fors" -> "java.lang.SuppressWarnings";
 	"spoon.support.reflect.code.CtAssertImpl" -> "spoon.reflect.code.CtExpression";
 	"spoon.support.reflect.code.CtAssertImpl" -> "spoon.reflect.code.CtCodeElement";
 	"spoon.support.reflect.code.CtAssertImpl" -> "spoon.reflect.declaration.CtElement";
@@ -16,9 +19,6 @@ digraph G {
 	"spoon.support.reflect.code.CtAssertImpl" -> "spoon.reflect.code.CtStatement";
 	"spoon.support.reflect.code.CtAssertImpl" -> "spoon.reflect.code.CtAssert";
 	"spoon.support.reflect.code.CtAssertImpl" -> "spoon.reflect.visitor.CtVisitor";
-	"spoon.test.control.Fors" -> "java.lang.Object";
-	"spoon.test.control.Fors" -> "java.lang.String";
-	"spoon.test.control.Fors" -> "java.lang.SuppressWarnings";
 	"org.eclipse.jdt.internal.compiler.ast.Block" [color=grey];
 	"java.lang.UnsupportedOperationException" [color=grey];
 	"spoon.reflect.declaration.CtAnonymousExecutable" -> "spoon.reflect.code.CtBlock";
@@ -178,7 +178,6 @@ digraph G {
 	"spoon.reflect.factory.CodeFactory" -> "spoon.reflect.code.CtCodeSnippetStatement";
 	"spoon.Path" [color=grey];
 	"javax.swing.AbstractButton" [color=grey];
-	"spoon.test.visibility.Test" [color=grey];
 	"spoon.reflect.declaration.CtAnnotation" -> "java.lang.String";
 	"spoon.reflect.declaration.CtAnnotation" -> "T";
 	"spoon.reflect.declaration.CtAnnotation" -> "A";
@@ -194,6 +193,44 @@ digraph G {
 	"spoon.compiler.ModelBuildingException" -> "java.lang.Exception";
 	"java.util.zip.ZipInputStream" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.PrefixExpression" [color=grey];
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.Object";
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.String";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.test.TestUtils";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtSimpleType";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtElement";
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.Comparable";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.processing.FactoryAccessor";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.annotation.AnnotationTest" -> "org.junit.Assert";
+	"spoon.test.annotation.AnnotationTest" -> "java.util.List";
+	"spoon.test.annotation.AnnotationTest" -> "org.junit.Test";
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.Exception";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.Launcher";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.Factory";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.compiler.SpoonResourceHelper";
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.reflect.Array";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.compiler.SpoonCompiler";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.PackageFactory";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.SubFactory";
+	"spoon.test.annotation.AnnotationTest" -> "java.io.Serializable";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtPackage";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtParameter";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtVariable";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtTypedElement";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.visitor.filter.TypeFilter";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.visitor.filter.AbstractFilter";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.visitor.Filter";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtAnnotation";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.test.annotation.Bound";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.TypeFactory";
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.annotation.Target";
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.Class";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.reference.CtTypeReference";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.reference.CtGenericElementReference";
+	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.reference.CtReference";
+	"spoon.test.annotation.AnnotationTest" -> "java.lang.annotation.Retention";
+	"spoon.test.annotation.AnnotationTest" -> "java.util.Map";
 	"spoon.reflect.factory.ConstructorFactory" -> "spoon.reflect.factory.Factory";
 	"spoon.reflect.factory.ConstructorFactory" -> "spoon.reflect.factory.ExecutableFactory";
 	"spoon.reflect.factory.ConstructorFactory" -> "spoon.reflect.factory.SubFactory";
@@ -232,43 +269,6 @@ digraph G {
 	"spoon.reflect.factory.ConstructorFactory" -> "java.util.Arrays";
 	"spoon.reflect.factory.ConstructorFactory" -> "spoon.reflect.reference.CtExecutableReference";
 	"E" [color=grey];
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.Object";
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.String";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.test.TestUtils";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtSimpleType";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtNamedElement";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtElement";
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.Comparable";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.processing.FactoryAccessor";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtModifiable";
-	"spoon.test.annotation.AnnotationTest" -> "java.util.List";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.test.annotation.Test";
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.Exception";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.Launcher";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.Factory";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.compiler.SpoonResourceHelper";
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.reflect.Array";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.compiler.SpoonCompiler";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.PackageFactory";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.SubFactory";
-	"spoon.test.annotation.AnnotationTest" -> "java.io.Serializable";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtPackage";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtParameter";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtVariable";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtTypedElement";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.visitor.filter.TypeFilter";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.visitor.filter.AbstractFilter";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.visitor.Filter";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.declaration.CtAnnotation";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.test.annotation.Bound";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.factory.TypeFactory";
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.annotation.Target";
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.Class";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.reference.CtTypeReference";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.reference.CtGenericElementReference";
-	"spoon.test.annotation.AnnotationTest" -> "spoon.reflect.reference.CtReference";
-	"spoon.test.annotation.AnnotationTest" -> "java.lang.annotation.Retention";
-	"spoon.test.annotation.AnnotationTest" -> "java.util.Map";
 	"spoon.reflect.reference.CtGenericElementReference" -> "spoon.reflect.reference.CtTypeReference";
 	"spoon.reflect.reference.CtGenericElementReference" -> "spoon.reflect.reference.CtReference";
 	"spoon.reflect.reference.CtGenericElementReference" -> "java.lang.Comparable";
@@ -434,7 +434,6 @@ digraph G {
 	"spoon.support.StandardEnvironment" -> "spoon.SpoonException";
 	"spoon.support.StandardEnvironment" -> "java.io.PrintStream";
 	"java.util.regex.Matcher" [color=grey];
-	"spoon.test.fieldaccesses.Test" [color=grey];
 	"org.xml.sax.Attributes" [color=grey];
 	"java.util.StringTokenizer" [color=grey];
 	"spoon.compiler.SpoonFile" -> "java.io.InputStream";
@@ -477,8 +476,17 @@ digraph G {
 	"spoon.reflect.visitor.Child" -> "java.lang.reflect.Array";
 	"spoon.reflect.code.CtInvocation" -> "java.util.List";
 	"org.eclipse.jdt.internal.compiler.ast.NullLiteral" [color=grey];
+	"spoon.test.api.APITest$" -> "spoon.Launcher";
+	"spoon.test.api.APITest$" -> "java.io.File";
+	"spoon.test.api.APITest$" -> "spoon.support.JavaOutputProcessor";
+	"spoon.test.api.APITest$" -> "spoon.processing.AbstractProcessor";
+	"spoon.test.api.APITest$" -> "spoon.processing.Processor";
+	"spoon.test.api.APITest$" -> "spoon.processing.FactoryAccessor";
+	"spoon.test.api.APITest$" -> "spoon.processing.FileGenerator";
+	"spoon.test.api.APITest$" -> "java.lang.Override";
 	"org.eclipse.jdt.core.compiler.CategorizedProblem" [color=grey];
-	"spoon.test.initializers.InstanceInitializers$" [color=grey];
+	"spoon.test.initializers.InstanceInitializers$" -> "java.util.ArrayList";
+	"spoon.test.initializers.InstanceInitializers$" -> "java.lang.Double";
 	"org.eclipse.jdt.internal.compiler.ASTVisitor" [color=grey];
 	"java.awt.GraphicsConfiguration" [color=grey];
 	"spoon.reflect.visitor.CtStackScanner" -> "java.util.Stack";
@@ -555,7 +563,6 @@ digraph G {
 	"spoon.SpoonException" -> "java.lang.String";
 	"spoon.SpoonException" -> "java.lang.Exception";
 	"spoon.SpoonException" -> "java.lang.Throwable";
-	"spoon.test.control.Test" [color=grey];
 	"spoon.support.compiler.SnippetCompilationError" -> "java.util.List";
 	"spoon.support.compiler.SnippetCompilationError" -> "java.lang.String";
 	"spoon.support.compiler.SnippetCompilationError" -> "spoon.SpoonException";
@@ -630,7 +637,8 @@ digraph G {
 	"spoon.test.snippets.SnippetTest" -> "java.lang.Iterable";
 	"spoon.test.snippets.SnippetTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.snippets.SnippetTest" -> "java.util.List";
-	"spoon.test.snippets.SnippetTest" -> "spoon.test.snippets.Test";
+	"spoon.test.snippets.SnippetTest" -> "org.junit.Assert";
+	"spoon.test.snippets.SnippetTest" -> "org.junit.Test";
 	"spoon.test.snippets.SnippetTest" -> "java.lang.Exception";
 	"spoon.reflect.code.CtWhile" -> "spoon.reflect.code.CtExpression";
 	"spoon.reflect.code.CtWhile" -> "spoon.reflect.code.CtCodeElement";
@@ -671,7 +679,11 @@ digraph G {
 	"spoon.test.secondaryclasses.Test" -> "spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf$InternalInterf";
 	"spoon.test.secondaryclasses.Test" -> "spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf$InternalClass";
 	"spoon.test.secondaryclasses.Test" -> "java.lang.Object";
-	"spoon.test.prettyprinter.Validation$" [color=grey];
+	"spoon.test.prettyprinter.Validation$" -> "java.lang.Object";
+	"spoon.test.prettyprinter.Validation$" -> "java.lang.String";
+	"spoon.test.prettyprinter.Validation$" -> "java.lang.System";
+	"spoon.test.prettyprinter.Validation$" -> "java.lang.Boolean";
+	"spoon.test.prettyprinter.Validation$" -> "java.lang.Override";
 	"spoon.reflect.factory.EvalFactory" -> "spoon.reflect.factory.Factory";
 	"spoon.reflect.factory.EvalFactory" -> "spoon.reflect.factory.SubFactory";
 	"spoon.reflect.factory.EvalFactory" -> "spoon.reflect.eval.SymbolicEvaluator";
@@ -758,8 +770,6 @@ digraph G {
 	"spoon.support.reflect.reference.CtTypeParameterReferenceImpl" -> "java.lang.reflect.AnnotatedElement";
 	"spoon.support.reflect.reference.CtTypeParameterReferenceImpl" -> "spoon.reflect.visitor.CtVisitor";
 	"java.lang.NullPointerException" [color=grey];
-	"spoon.test.arrays.Test" [color=grey];
-	"spoon.test.limits.utils.Test" [color=grey];
 	"spoon.support.SerializationModelStreamer" -> "java.lang.Object";
 	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.ModelStreamer";
 	"spoon.support.SerializationModelStreamer" -> "java.io.InputStream";
@@ -767,12 +777,6 @@ digraph G {
 	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.factory.Factory";
 	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.visitor.CtScanner";
 	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.visitor.CtVisitor";
-	"spoon.support.SerializationModelStreamer" -> "spoon.support.SerializationModelStreamer$";
-	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.declaration.CtElement";
-	"spoon.support.SerializationModelStreamer" -> "java.lang.Comparable";
-	"spoon.support.SerializationModelStreamer" -> "spoon.processing.FactoryAccessor";
-	"spoon.support.SerializationModelStreamer" -> "java.lang.Override";
-	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.reference.CtReference";
 	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.factory.PackageFactory";
 	"spoon.support.SerializationModelStreamer" -> "spoon.reflect.factory.SubFactory";
 	"spoon.support.SerializationModelStreamer" -> "java.io.Serializable";
@@ -846,7 +850,6 @@ digraph G {
 	"java.lang.Object" [color=grey];
 	"spoon.test.template.SubClass" -> "spoon.test.template.SuperClass";
 	"javax.swing.JScrollPane" [color=grey];
-	"spoon.test.exceptions.Test" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.MethodDeclaration" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.DoubleLiteral" [color=grey];
 	"spoon.support.reflect.code.CtForImpl" -> "spoon.reflect.code.CtExpression";
@@ -897,6 +900,11 @@ digraph G {
 	"spoon.test.secondaryclasses.Secondary" -> "java.io.Serializable";
 	"spoon.test.secondaryclasses.Secondary" -> "spoon.test.secondaryclasses.I";
 	"spoon.test.secondaryclasses.Secondary" -> "spoon.test.secondaryclasses.K";
+	"spoon.test.secondaryclasses.AnonymousClass$" -> "java.lang.Object";
+	"spoon.test.secondaryclasses.AnonymousClass$" -> "java.awt.event.ActionListener";
+	"spoon.test.secondaryclasses.AnonymousClass$" -> "java.awt.event.ActionEvent";
+	"spoon.test.secondaryclasses.AnonymousClass$" -> "java.lang.String";
+	"spoon.test.secondaryclasses.AnonymousClass$" -> "javax.swing.JOptionPane";
 	"spoon.reflect.eval.observer.SymbolicEvaluationPrinter" -> "spoon.compiler.Environment";
 	"spoon.reflect.eval.observer.SymbolicEvaluationPrinter" -> "java.lang.Object";
 	"spoon.reflect.eval.observer.SymbolicEvaluationPrinter" -> "spoon.reflect.eval.SymbolicEvaluatorObserver";
@@ -967,6 +975,7 @@ digraph G {
 	"spoon.test.strings.StringTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.strings.StringTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.strings.StringTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.strings.StringTest" -> "org.junit.Assert";
 	"spoon.test.strings.StringTest" -> "spoon.reflect.code.CtBinaryOperator";
 	"spoon.test.strings.StringTest" -> "spoon.reflect.code.CtExpression";
 	"spoon.test.strings.StringTest" -> "spoon.reflect.declaration.CtTypedElement";
@@ -977,7 +986,7 @@ digraph G {
 	"spoon.test.strings.StringTest" -> "java.util.List";
 	"spoon.test.strings.StringTest" -> "spoon.reflect.code.BinaryOperatorKind";
 	"spoon.test.strings.StringTest" -> "spoon.reflect.code.CtLiteral";
-	"spoon.test.strings.StringTest" -> "spoon.test.strings.Test";
+	"spoon.test.strings.StringTest" -> "org.junit.Test";
 	"spoon.test.strings.StringTest" -> "java.lang.Exception";
 	"org.eclipse.jdt.internal.compiler.ast.InstanceOfExpression" [color=grey];
 	"org.eclipse.jdt.internal.compiler.lookup.CaptureBinding" [color=grey];
@@ -997,9 +1006,22 @@ digraph G {
 	"spoon.reflect.reference.CtExecutableReference" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.reflect.reference.CtExecutableReference" -> "spoon.reflect.declaration.CtModifiable";
 	"spoon.reflect.reference.CtExecutableReference" -> "spoon.reflect.declaration.CtTypedElement";
-	"spoon.test.processing.Test" [color=grey];
+	"spoon.support.gui.SpoonTreeBuilder$" -> "java.lang.Object";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "javax.swing.tree.DefaultMutableTreeNode";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "java.lang.Comparable";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "java.lang.Class";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "java.lang.String";
+	"spoon.support.gui.SpoonTreeBuilder$" -> "java.lang.Override";
 	"java.lang.Long" [color=grey];
-	"spoon.test.enums.OpCode$" [color=grey];
+	"spoon.test.enums.OpCode$" -> "spoon.test.enums.OpCode";
+	"spoon.test.enums.OpCode$" -> "spoon.test.enums.Performable";
+	"spoon.test.enums.OpCode$" -> "java.util.Stack";
+	"spoon.test.enums.OpCode$" -> "java.lang.reflect.Array";
+	"spoon.test.enums.OpCode$" -> "java.lang.Integer";
 	"org.eclipse.jdt.internal.compiler.ast.ExplicitConstructorCall" [color=grey];
 	"spoon.reflect.eval.SymbolicEvaluationPath" -> "java.util.ArrayList";
 	"spoon.reflect.eval.SymbolicEvaluationPath" -> "java.util.List";
@@ -1018,7 +1040,6 @@ digraph G {
 	"spoon.reflect.eval.SymbolicEvaluationPath" -> "spoon.reflect.eval.SymbolicHeap";
 	"spoon.test.processing.SampleForInsertBefore" -> "java.lang.Object";
 	"spoon.test.processing.SampleForInsertBefore" -> "java.lang.Thread";
-	"spoon.test.processing.SampleForInsertBefore" -> "spoon.test.processing.SampleForInsertBefore$";
 	"spoon.processing.FactoryAccessor" -> "spoon.reflect.factory.Factory";
 	"spoon.support.reflect.eval.VisitorSymbolicEvaluator" -> "java.util.ArrayList";
 	"spoon.support.reflect.eval.VisitorSymbolicEvaluator" -> "java.util.List";
@@ -1160,7 +1181,6 @@ digraph G {
 	"spoon.template.Parameter" -> "spoon.support.template.DefaultParameterMatcher";
 	"spoon.template.Parameter" -> "spoon.support.template.ParameterMatcher";
 	"spoon.template.Parameter" -> "java.lang.Class";
-	"spoon.test.filters.Before" [color=grey];
 	"java.awt.LayoutManager" [color=grey];
 	"spoon.support.reflect.code.CtUnaryOperatorImpl" -> "spoon.reflect.code.UnaryOperatorKind";
 	"spoon.support.reflect.code.CtUnaryOperatorImpl" -> "java.lang.String";
@@ -1181,6 +1201,24 @@ digraph G {
 	"spoon.support.reflect.code.CtUnaryOperatorImpl" -> "spoon.support.reflect.code.CtStatementImpl";
 	"spoon.support.reflect.code.CtUnaryOperatorImpl" -> "spoon.reflect.code.CtStatementList";
 	"spoon.support.reflect.code.CtUnaryOperatorImpl" -> "java.lang.Iterable";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "java.lang.Object";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.visitor.Filter";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.declaration.CtMethod";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.declaration.CtExecutable";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.declaration.CtGenericElement";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "java.lang.Comparable";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "spoon.reflect.declaration.CtTypedElement";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "java.lang.String";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "java.lang.Class";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "java.lang.Exception";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "org.apache.log4j.Logger";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "java.lang.Throwable";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "org.apache.log4j.Category";
+	"spoon.support.compiler.SnippetCompilationHelper$" -> "java.lang.SuppressWarnings";
 	"spoon.reflect.reference.CtReference" -> "java.lang.Class";
 	"spoon.reflect.reference.CtReference" -> "A";
 	"spoon.reflect.reference.CtReference" -> "spoon.reflect.reference.CtTypeReference";
@@ -1208,10 +1246,11 @@ digraph G {
 	"spoon.test.exceptions.ExceptionTest" -> "java.util.List";
 	"spoon.test.exceptions.ExceptionTest" -> "spoon.compiler.SpoonCompiler";
 	"spoon.test.exceptions.ExceptionTest" -> "spoon.processing.FactoryAccessor";
+	"spoon.test.exceptions.ExceptionTest" -> "org.junit.Assert";
 	"spoon.test.exceptions.ExceptionTest" -> "spoon.compiler.ModelBuildingException";
 	"spoon.test.exceptions.ExceptionTest" -> "spoon.SpoonException";
 	"spoon.test.exceptions.ExceptionTest" -> "java.lang.RuntimeException";
-	"spoon.test.exceptions.ExceptionTest" -> "spoon.test.exceptions.Test";
+	"spoon.test.exceptions.ExceptionTest" -> "org.junit.Test";
 	"spoon.test.exceptions.ExceptionTest" -> "java.lang.Exception";
 	"spoon.test.exceptions.ExceptionTest" -> "spoon.test.TestUtils";
 	"spoon.test.exceptions.ExceptionTest" -> "spoon.reflect.factory.CodeFactory";
@@ -1240,9 +1279,6 @@ digraph G {
 	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.processing.FactoryAccessor";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "org.apache.log4j.Logger";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "java.lang.Class";
-	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.support.reflect.declaration.CtElementImpl$";
-	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.visitor.CtScanner";
-	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.visitor.CtVisitor";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "java.util.ArrayList";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "java.util.Collections";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "java.util.List";
@@ -1262,6 +1298,8 @@ digraph G {
 	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.visitor.filter.AbstractFilter";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.visitor.Filter";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.visitor.Query";
+	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.visitor.CtScanner";
+	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.visitor.CtVisitor";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "P";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.reflect.declaration.ParentNotInitializedException";
 	"spoon.support.reflect.declaration.CtElementImpl" -> "spoon.SpoonException";
@@ -1359,7 +1397,6 @@ digraph G {
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.declaration.CtExecutable";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.code.CtCodeSnippetExpression";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.declaration.CtCodeSnippet";
-	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.support.compiler.SnippetCompilationHelper$";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.visitor.Filter";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.visitor.Query";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.visitor.CtScanner";
@@ -1370,16 +1407,12 @@ digraph G {
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.SpoonException";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "java.lang.RuntimeException";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.code.CtCodeSnippetStatement";
-	"spoon.support.compiler.SnippetCompilationHelper" -> "java.lang.Exception";
-	"spoon.support.compiler.SnippetCompilationHelper" -> "org.apache.log4j.Logger";
-	"spoon.support.compiler.SnippetCompilationHelper" -> "java.lang.Throwable";
-	"spoon.support.compiler.SnippetCompilationHelper" -> "org.apache.log4j.Category";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.support.compiler.jdt.JDTSnippetCompiler";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.support.compiler.jdt.JDTBasedSpoonCompiler";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.compiler.SpoonCompiler";
+	"spoon.support.compiler.SnippetCompilationHelper" -> "java.lang.Exception";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.compiler.ModelBuildingException";
 	"spoon.support.compiler.SnippetCompilationHelper" -> "spoon.reflect.declaration.ModifierKind";
-	"spoon.test.template.Test" [color=grey];
 	"spoon.support.processing.XmlProcessorProperties$Loader" -> "java.lang.String";
 	"spoon.support.processing.XmlProcessorProperties$Loader" -> "java.lang.Object";
 	"spoon.support.processing.XmlProcessorProperties$Loader" -> "org.xml.sax.helpers.DefaultHandler";
@@ -1437,13 +1470,15 @@ digraph G {
 	"spoon.test.casts.CastTest" -> "java.lang.Iterable";
 	"spoon.test.casts.CastTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.casts.CastTest" -> "java.util.List";
-	"spoon.test.casts.CastTest" -> "spoon.test.casts.Test";
+	"spoon.test.casts.CastTest" -> "org.junit.Assert";
+	"spoon.test.casts.CastTest" -> "org.junit.Test";
 	"spoon.test.casts.CastTest" -> "spoon.reflect.visitor.filter.NameFilter";
 	"spoon.test.casts.CastTest" -> "spoon.reflect.visitor.Filter";
 	"spoon.test.casts.CastTest" -> "spoon.reflect.code.CtVariableAccess";
 	"spoon.test.casts.CastTest" -> "spoon.reflect.code.CtExpression";
 	"spoon.test.casts.CastTest" -> "spoon.reflect.visitor.filter.TypeFilter";
 	"spoon.test.casts.CastTest" -> "spoon.reflect.visitor.filter.AbstractFilter";
+	"org.junit.Before" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.ParameterizedQualifiedTypeReference" [color=grey];
 	"spoon.support.compiler.FileSystemFolder" -> "java.io.File";
 	"spoon.support.compiler.FileSystemFolder" -> "java.util.List";
@@ -1604,12 +1639,12 @@ digraph G {
 	"spoon.test.ctCase.SwitchCaseTest" -> "spoon.reflect.code.CtCodeElement";
 	"spoon.test.ctCase.SwitchCaseTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.ctCase.SwitchCaseTest" -> "java.lang.Iterable";
+	"spoon.test.ctCase.SwitchCaseTest" -> "org.junit.Assert";
 	"spoon.test.ctCase.SwitchCaseTest" -> "spoon.reflect.factory.CodeFactory";
 	"spoon.test.ctCase.SwitchCaseTest" -> "spoon.reflect.factory.SubFactory";
 	"spoon.test.ctCase.SwitchCaseTest" -> "spoon.reflect.code.CtCodeSnippetStatement";
 	"spoon.test.ctCase.SwitchCaseTest" -> "spoon.reflect.declaration.CtCodeSnippet";
-	"spoon.test.ctCase.SwitchCaseTest" -> "spoon.test.ctCase.Test";
-	"spoon.test.ctCase.Test" [color=grey];
+	"spoon.test.ctCase.SwitchCaseTest" -> "org.junit.Test";
 	"spoon.support.template.Parameters" -> "java.lang.String";
 	"spoon.support.template.Parameters" -> "java.util.HashMap";
 	"spoon.support.template.Parameters" -> "java.util.Map";
@@ -1621,26 +1656,23 @@ digraph G {
 	"spoon.support.template.Parameters" -> "java.lang.Object";
 	"spoon.support.template.Parameters" -> "java.lang.Class";
 	"spoon.support.template.Parameters" -> "java.lang.Number";
-	"spoon.support.template.Parameters" -> "spoon.support.template.Parameters$";
 	"spoon.support.template.Parameters" -> "spoon.template.TemplateParameter";
-	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtSimpleType";
-	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtNamedElement";
-	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtElement";
-	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtModifiable";
-	"spoon.support.template.Parameters" -> "spoon.reflect.code.CtCodeElement";
-	"spoon.support.template.Parameters" -> "T";
 	"spoon.support.template.Parameters" -> "java.lang.SuppressWarnings";
 	"spoon.support.template.Parameters" -> "java.lang.reflect.Field";
 	"spoon.support.template.Parameters" -> "spoon.template.Parameter";
 	"spoon.support.template.Parameters" -> "spoon.reflect.reference.CtFieldReference";
 	"spoon.support.template.Parameters" -> "spoon.reflect.reference.CtVariableReference";
 	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtField";
+	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtModifiable";
 	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtVariable";
 	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtTypedElement";
 	"spoon.support.template.Parameters" -> "spoon.reflect.reference.CtTypeParameterReference";
 	"spoon.support.template.Parameters" -> "spoon.reflect.factory.Factory";
 	"spoon.support.template.Parameters" -> "java.lang.RuntimeException";
 	"spoon.support.template.Parameters" -> "spoon.reflect.code.CtExpression";
+	"spoon.support.template.Parameters" -> "spoon.reflect.code.CtCodeElement";
 	"spoon.support.template.Parameters" -> "spoon.reflect.code.CtArrayAccess";
 	"spoon.support.template.Parameters" -> "spoon.reflect.code.CtTargetedExpression";
 	"spoon.support.template.Parameters" -> "spoon.reflect.code.CtLiteral";
@@ -1657,6 +1689,7 @@ digraph G {
 	"spoon.support.template.Parameters" -> "spoon.reflect.code.CtStatement";
 	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtType";
 	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtGenericElement";
+	"spoon.support.template.Parameters" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.support.template.Parameters" -> "java.util.ArrayList";
 	"spoon.support.template.Parameters" -> "java.util.Collection";
 	"spoon.support.template.Parameters" -> "org.apache.log4j.Logger";
@@ -1805,6 +1838,7 @@ digraph G {
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.initializers.InitializerTest" -> "org.junit.Assert";
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.visitor.filter.NameFilter";
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.visitor.Filter";
 	"spoon.test.initializers.InitializerTest" -> "java.util.List";
@@ -1823,7 +1857,7 @@ digraph G {
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.code.CtBlock";
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.initializers.InitializerTest" -> "java.lang.Iterable";
-	"spoon.test.initializers.InitializerTest" -> "spoon.test.initializers.Test";
+	"spoon.test.initializers.InitializerTest" -> "org.junit.Test";
 	"spoon.test.initializers.InitializerTest" -> "java.lang.Exception";
 	"spoon.test.initializers.InitializerTest" -> "java.util.Set";
 	"spoon.test.initializers.InitializerTest" -> "spoon.reflect.declaration.ModifierKind";
@@ -1934,7 +1968,7 @@ digraph G {
 	"spoon.test.main.MainTest" -> "java.lang.System";
 	"spoon.test.main.MainTest" -> "spoon.Launcher";
 	"spoon.test.main.MainTest" -> "java.lang.reflect.Array";
-	"spoon.test.main.MainTest" -> "spoon.test.main.Test";
+	"spoon.test.main.MainTest" -> "org.junit.Test";
 	"spoon.test.main.MainTest" -> "java.lang.Exception";
 	"spoon.support.template.SubstitutionVisitor$InheritanceSustitutionScanner" -> "spoon.support.template.SubstitutionVisitor";
 	"spoon.support.template.SubstitutionVisitor$InheritanceSustitutionScanner" -> "spoon.reflect.visitor.CtScanner";
@@ -2125,6 +2159,7 @@ digraph G {
 	"spoon.test.template.TemplateTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.template.TemplateTest" -> "spoon.reflect.declaration.CtModifiable";
 	"spoon.test.template.TemplateTest" -> "java.util.Set";
+	"spoon.test.template.TemplateTest" -> "org.junit.Assert";
 	"spoon.test.template.TemplateTest" -> "java.util.Date";
 	"spoon.test.template.TemplateTest" -> "spoon.reflect.reference.CtTypeReference";
 	"spoon.test.template.TemplateTest" -> "spoon.reflect.reference.CtGenericElementReference";
@@ -2151,7 +2186,7 @@ digraph G {
 	"spoon.test.template.TemplateTest" -> "spoon.reflect.visitor.ModelConsistencyChecker";
 	"spoon.test.template.TemplateTest" -> "spoon.reflect.visitor.CtScanner";
 	"spoon.test.template.TemplateTest" -> "spoon.reflect.visitor.CtVisitor";
-	"spoon.test.template.TemplateTest" -> "spoon.test.template.Test";
+	"spoon.test.template.TemplateTest" -> "org.junit.Test";
 	"spoon.test.template.TemplateTest" -> "java.lang.Exception";
 	"spoon.test.template.TemplateTest" -> "spoon.test.template.SuperClass";
 	"spoon.test.template.TemplateTest" -> "spoon.test.template.SuperTemplate";
@@ -2181,6 +2216,7 @@ digraph G {
 	"FileSet" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.ClassLiteralAccess" [color=grey];
 	"org.w3c.dom.NodeList" [color=grey];
+	"org.junit.Test" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.ReturnStatement" [color=grey];
 	"spoon.reflect.eval.SymbolicEvaluationStack" -> "java.util.Stack";
 	"spoon.reflect.eval.SymbolicEvaluationStack" -> "java.lang.Object";
@@ -2281,12 +2317,8 @@ digraph G {
 	"spoon.reflect.code.CtCodeSnippetExpression" -> "E";
 	"spoon.reflect.code.CtCodeSnippetExpression" -> "spoon.SpoonException";
 	"spoon.reflect.code.CtCodeSnippetExpression" -> "java.lang.RuntimeException";
-	"spoon.test.enums.OpCode" -> "spoon.test.enums.Performable";
-	"spoon.test.enums.OpCode" -> "spoon.test.enums.OpCode$";
-	"spoon.test.enums.OpCode" -> "java.util.Stack";
-	"spoon.test.enums.OpCode" -> "java.lang.reflect.Array";
-	"spoon.test.enums.OpCode" -> "java.lang.Integer";
 	"spoon.test.enums.OpCode" -> "";
+	"spoon.test.enums.OpCode" -> "spoon.test.enums.Performable";
 	"org.eclipse.jdt.internal.compiler.ast.ConditionalExpression" [color=grey];
 	"org.eclipse.jdt.internal.compiler.IErrorHandlingPolicy" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.WhileStatement" [color=grey];
@@ -2528,15 +2560,12 @@ digraph G {
 	"spoon.reflect.code.CtStatement" -> "java.lang.RuntimeException";
 	"spoon.reflect.code.CtStatement" -> "spoon.reflect.code.CtStatementList";
 	"spoon.reflect.code.CtStatement" -> "java.lang.Iterable";
-	"spoon.test.prettyprinter.Test" [color=grey];
 	"java.awt.event.ActionListener" [color=grey];
 	"spoon.test.secondaryclasses.PrivateInnerClasses$DataClassComparator" -> "java.lang.Object";
 	"spoon.test.secondaryclasses.PrivateInnerClasses$DataClassComparator" -> "java.util.Comparator";
 	"spoon.test.secondaryclasses.PrivateInnerClasses$DataClassComparator" -> "java.lang.Class";
 	"spoon.test.secondaryclasses.PrivateInnerClasses$DataClassComparator" -> "java.lang.String";
 	"spoon.test.secondaryclasses.PrivateInnerClasses$DataClassComparator" -> "java.lang.Override";
-	"spoon.test.generics.Test" [color=grey];
-	"spoon.test.main.Test" [color=grey];
 	"org.eclipse.jdt.internal.compiler.lookup.VariableBinding" [color=grey];
 	"spoon.support.reflect.declaration.CtUncomparableException" -> "spoon.SpoonException";
 	"spoon.support.reflect.declaration.CtUncomparableException" -> "java.lang.RuntimeException";
@@ -2546,7 +2575,6 @@ digraph G {
 	"spoon.template.TemplateException" -> "java.lang.RuntimeException";
 	"spoon.template.TemplateException" -> "java.lang.String";
 	"spoon.template.TemplateException" -> "java.lang.Throwable";
-	"spoon.test.strings.Test" [color=grey];
 	"java.util.Map" [color=grey];
 	"java.awt.Frame" [color=grey];
 	"spoon.reflect.eval.SymbolicInstance" -> "java.lang.String";
@@ -2682,7 +2710,6 @@ digraph G {
 	"org.eclipse.jdt.internal.compiler.impl.ReferenceContext" [color=grey];
 	"org.eclipse.jdt.internal.compiler.lookup.Binding" [color=grey];
 	"javax.swing.JTree" [color=grey];
-	"spoon.test.filters.Test" [color=grey];
 	"spoon.reflect.factory.Factory" -> "spoon.compiler.Environment";
 	"spoon.reflect.factory.Factory" -> "spoon.reflect.factory.AnnotationFactory";
 	"spoon.reflect.factory.Factory" -> "spoon.reflect.factory.TypeFactory";
@@ -2728,6 +2755,14 @@ digraph G {
 	"spoon.support.reflect.declaration.CtEnumImpl" -> "spoon.reflect.declaration.CtTypedElement";
 	"spoon.support.reflect.declaration.CtEnumImpl" -> "java.util.Collections";
 	"spoon.support.reflect.declaration.CtEnumImpl" -> "spoon.reflect.visitor.CtVisitor";
+	"spoon.support.SerializationModelStreamer$" -> "spoon.reflect.visitor.CtScanner";
+	"spoon.support.SerializationModelStreamer$" -> "spoon.reflect.visitor.CtVisitor";
+	"spoon.support.SerializationModelStreamer$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.SerializationModelStreamer$" -> "java.lang.Comparable";
+	"spoon.support.SerializationModelStreamer$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.SerializationModelStreamer$" -> "spoon.reflect.factory.Factory";
+	"spoon.support.SerializationModelStreamer$" -> "java.lang.Override";
+	"spoon.support.SerializationModelStreamer$" -> "spoon.reflect.reference.CtReference";
 	"java.io.OutputStream" [color=grey];
 	"spoon.support.compiler.jdt.JDTTreeBuilder$ASTPair" -> "spoon.reflect.declaration.CtElement";
 	"spoon.support.compiler.jdt.JDTTreeBuilder$ASTPair" -> "java.lang.Comparable";
@@ -2773,8 +2808,9 @@ digraph G {
 	"spoon.test.intercession.IntercessionTest" -> "java.lang.Iterable";
 	"spoon.test.intercession.IntercessionTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.intercession.IntercessionTest" -> "java.util.List";
+	"spoon.test.intercession.IntercessionTest" -> "org.junit.Assert";
 	"spoon.test.intercession.IntercessionTest" -> "spoon.reflect.factory.CoreFactory";
-	"spoon.test.intercession.IntercessionTest" -> "spoon.test.intercession.Test";
+	"spoon.test.intercession.IntercessionTest" -> "org.junit.Test";
 	"spoon.test.intercession.IntercessionTest" -> "spoon.reflect.code.CtReturn";
 	"spoon.test.intercession.IntercessionTest" -> "spoon.reflect.code.CtCFlowBreak";
 	"spoon.test.intercession.IntercessionTest" -> "spoon.reflect.code.CtIf";
@@ -2801,8 +2837,9 @@ digraph G {
 	"spoon.test.filters.FilterTest" -> "java.util.List";
 	"spoon.test.filters.FilterTest" -> "spoon.reflect.visitor.CtScanner";
 	"spoon.test.filters.FilterTest" -> "spoon.reflect.visitor.CtVisitor";
+	"spoon.test.filters.FilterTest" -> "org.junit.Assert";
 	"spoon.test.filters.FilterTest" -> "java.lang.SuppressWarnings";
-	"spoon.test.filters.FilterTest" -> "spoon.test.filters.Test";
+	"spoon.test.filters.FilterTest" -> "org.junit.Test";
 	"spoon.test.filters.FilterTest" -> "java.lang.Exception";
 	"spoon.test.filters.FilterTest" -> "spoon.reflect.declaration.CtMethod";
 	"spoon.test.filters.FilterTest" -> "spoon.reflect.declaration.CtExecutable";
@@ -2819,7 +2856,7 @@ digraph G {
 	"spoon.test.filters.FilterTest" -> "spoon.Launcher";
 	"spoon.test.filters.FilterTest" -> "spoon.compiler.SpoonResourceHelper";
 	"spoon.test.filters.FilterTest" -> "spoon.compiler.SpoonCompiler";
-	"spoon.test.filters.FilterTest" -> "spoon.test.filters.Before";
+	"spoon.test.filters.FilterTest" -> "org.junit.Before";
 	"spoon.test.filters.FilterTest" -> "spoon.reflect.factory.PackageFactory";
 	"spoon.test.filters.FilterTest" -> "spoon.reflect.factory.SubFactory";
 	"spoon.test.filters.FilterTest" -> "spoon.reflect.declaration.CtPackage";
@@ -2889,35 +2926,63 @@ digraph G {
 	"spoon.reflect.eval.SymbolicEvaluator" -> "spoon.reflect.declaration.CtModifiable";
 	"spoon.reflect.eval.SymbolicEvaluator" -> "java.lang.reflect.Array";
 	"org.eclipse.jdt.internal.compiler.ast.Statement" [color=grey];
-	"org.eclipse.jdt.internal.compiler.ast.MarkerAnnotation" [color=grey];
+	"spoon.test.SampleClass$" -> "java.lang.Thread";
 	"spoon.test.api.APITest" -> "java.lang.Object";
 	"spoon.test.api.APITest" -> "java.util.ArrayList";
 	"spoon.test.api.APITest" -> "java.util.List";
 	"spoon.test.api.APITest" -> "spoon.Launcher";
-	"spoon.test.api.APITest" -> "spoon.test.api.APITest$";
-	"spoon.test.api.APITest" -> "java.io.File";
-	"spoon.test.api.APITest" -> "spoon.support.JavaOutputProcessor";
-	"spoon.test.api.APITest" -> "spoon.processing.AbstractProcessor";
-	"spoon.test.api.APITest" -> "spoon.processing.Processor";
-	"spoon.test.api.APITest" -> "spoon.processing.FactoryAccessor";
-	"spoon.test.api.APITest" -> "spoon.processing.FileGenerator";
-	"spoon.test.api.APITest" -> "spoon.test.api.APITest$$";
-	"spoon.test.api.APITest" -> "java.lang.Override";
-	"spoon.test.api.APITest" -> "spoon.reflect.declaration.CtSimpleType";
-	"spoon.test.api.APITest" -> "spoon.reflect.declaration.CtNamedElement";
-	"spoon.test.api.APITest" -> "spoon.reflect.declaration.CtElement";
-	"spoon.test.api.APITest" -> "java.lang.Comparable";
-	"spoon.test.api.APITest" -> "spoon.reflect.declaration.CtModifiable";
 	"spoon.test.api.APITest" -> "java.lang.String";
 	"spoon.test.api.APITest" -> "java.lang.reflect.Array";
-	"spoon.test.api.APITest" -> "spoon.test.api.Test";
+	"spoon.test.api.APITest" -> "org.junit.Assert";
+	"spoon.test.api.APITest" -> "org.junit.Test";
 	"spoon.test.api.APITest" -> "java.lang.Exception";
+	"org.eclipse.jdt.internal.compiler.ast.MarkerAnnotation" [color=grey];
 	"spoon.test.template.SubTemplate" -> "spoon.test.template.SuperTemplate";
 	"spoon.test.template.SubTemplate" -> "spoon.template.Template";
 	"org.eclipse.jdt.internal.compiler.lookup.BlockScope" [color=grey];
 	"spoon.test.limits.StaticClassAnon" -> "java.lang.Object";
 	"com.martiansoftware.jsap.stringparsers.IntegerStringParser" [color=grey];
-	"spoon.support.reflect.declaration.CtAnnotationImpl$" [color=grey];
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.util.TreeMap";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.lang.String";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.lang.Object";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.lang.reflect.Array";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.util.ArrayList";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.lang.Class";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.support.reflect.declaration.CtElementImpl";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.reflect.factory.Factory";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.io.Serializable";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.lang.Comparable";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.reflect.factory.TypeFactory";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.reflect.factory.SubFactory";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.reflect.reference.CtTypeReference";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.reflect.reference.CtGenericElementReference";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "spoon.reflect.reference.CtReference";
+	"spoon.support.reflect.declaration.CtAnnotationImpl$" -> "java.lang.Override";
+	"spoon.support.gui.SpoonModelTree$" -> "java.lang.Object";
+	"spoon.support.gui.SpoonModelTree$" -> "java.awt.event.ActionListener";
+	"spoon.support.gui.SpoonModelTree$" -> "java.awt.event.ActionEvent";
+	"spoon.support.gui.SpoonModelTree$" -> "javax.swing.JFileChooser";
+	"spoon.support.gui.SpoonModelTree$" -> "spoon.support.gui.SpoonModelTree";
+	"spoon.support.gui.SpoonModelTree$" -> "javax.swing.JFrame";
+	"spoon.support.gui.SpoonModelTree$" -> "java.awt.event.KeyListener";
+	"spoon.support.gui.SpoonModelTree$" -> "java.awt.event.MouseListener";
+	"spoon.support.gui.SpoonModelTree$" -> "java.awt.Component";
+	"spoon.support.gui.SpoonModelTree$" -> "spoon.support.SerializationModelStreamer";
+	"spoon.support.gui.SpoonModelTree$" -> "spoon.reflect.ModelStreamer";
+	"spoon.support.gui.SpoonModelTree$" -> "spoon.reflect.factory.Factory";
+	"spoon.support.gui.SpoonModelTree$" -> "java.io.File";
+	"spoon.support.gui.SpoonModelTree$" -> "java.io.FileOutputStream";
+	"spoon.support.gui.SpoonModelTree$" -> "java.io.OutputStream";
+	"spoon.support.gui.SpoonModelTree$" -> "java.io.IOException";
+	"spoon.support.gui.SpoonModelTree$" -> "org.apache.log4j.Logger";
+	"spoon.support.gui.SpoonModelTree$" -> "java.lang.Throwable";
+	"spoon.support.gui.SpoonModelTree$" -> "java.lang.String";
+	"spoon.support.gui.SpoonModelTree$" -> "org.apache.log4j.Category";
+	"spoon.support.gui.SpoonModelTree$" -> "javax.swing.JTree";
+	"spoon.support.gui.SpoonModelTree$" -> "javax.swing.tree.DefaultMutableTreeNode";
+	"spoon.support.gui.SpoonModelTree$" -> "spoon.support.gui.SpoonObjectFieldsTable";
 	"spoon.test.template.SuperClass" -> "java.lang.Object";
 	"spoon.test.processing.ArrayResizeProcessor" -> "spoon.processing.AbstractProcessor";
 	"spoon.test.processing.ArrayResizeProcessor" -> "spoon.processing.Processor";
@@ -3029,8 +3094,6 @@ digraph G {
 	"spoon.test.initializers.InstanceInitializers" -> "java.lang.Integer";
 	"spoon.test.initializers.InstanceInitializers" -> "java.util.ArrayList";
 	"spoon.test.initializers.InstanceInitializers" -> "java.util.List";
-	"spoon.test.initializers.InstanceInitializers" -> "java.lang.Double";
-	"spoon.test.initializers.InstanceInitializers" -> "spoon.test.initializers.InstanceInitializers$";
 	"spoon.test.initializers.InstanceInitializers" -> "java.lang.Object";
 	"spoon.support.reflect.code.CtDoImpl" -> "spoon.reflect.code.CtExpression";
 	"spoon.support.reflect.code.CtDoImpl" -> "spoon.reflect.code.CtCodeElement";
@@ -3133,6 +3196,7 @@ digraph G {
 	"spoon.test.control.ControlTest" -> "java.lang.Comparable";
 	"spoon.test.control.ControlTest" -> "spoon.processing.FactoryAccessor";
 	"spoon.test.control.ControlTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.control.ControlTest" -> "org.junit.Assert";
 	"spoon.test.control.ControlTest" -> "spoon.reflect.visitor.filter.NameFilter";
 	"spoon.test.control.ControlTest" -> "spoon.reflect.visitor.Filter";
 	"spoon.test.control.ControlTest" -> "java.util.List";
@@ -3148,7 +3212,7 @@ digraph G {
 	"spoon.test.control.ControlTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.control.ControlTest" -> "spoon.reflect.code.CtDo";
 	"spoon.test.control.ControlTest" -> "spoon.reflect.code.CtLoop";
-	"spoon.test.control.ControlTest" -> "spoon.test.control.Test";
+	"spoon.test.control.ControlTest" -> "org.junit.Test";
 	"spoon.test.control.ControlTest" -> "java.lang.Exception";
 	"spoon.test.control.ControlTest" -> "spoon.reflect.code.CtFor";
 	"spoon.test.control.ControlTest" -> "spoon.reflect.visitor.filter.TypeFilter";
@@ -3278,7 +3342,9 @@ digraph G {
 	"spoon.reflect.code.CtBlock" -> "java.lang.Iterable";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterDependency" -> "java.lang.Object";
 	"java.awt.event.ActionEvent" [color=grey];
-	"spoon.test.snippets.Test" [color=grey];
+	"spoon.test.TestUtils$" -> "spoon.Launcher";
+	"spoon.test.TestUtils$" -> "spoon.reflect.factory.Factory";
+	"spoon.test.TestUtils$" -> "java.lang.Override";
 	"org.eclipse.jdt.internal.compiler.ast.FieldReference" [color=grey];
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "java.lang.Object";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "java.lang.String";
@@ -3289,6 +3355,7 @@ digraph G {
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "java.lang.Comparable";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.processing.FactoryAccessor";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.fieldaccesses.FieldAccessTest" -> "org.junit.Assert";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.code.CtLocalVariable";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.code.CtStatement";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.code.CtCodeElement";
@@ -3309,7 +3376,7 @@ digraph G {
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.reference.CtReference";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.reference.CtTypeReference";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.reference.CtGenericElementReference";
-	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.test.fieldaccesses.Test";
+	"spoon.test.fieldaccesses.FieldAccessTest" -> "org.junit.Test";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "java.lang.Exception";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.visitor.filter.NameFilter";
 	"spoon.test.fieldaccesses.FieldAccessTest" -> "spoon.reflect.declaration.CtMethod";
@@ -3356,7 +3423,8 @@ digraph G {
 	"spoon.test.intercession.RemoveTest" -> "java.lang.Iterable";
 	"spoon.test.intercession.RemoveTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.intercession.RemoveTest" -> "java.util.List";
-	"spoon.test.intercession.RemoveTest" -> "spoon.test.intercession.Test";
+	"spoon.test.intercession.RemoveTest" -> "org.junit.Assert";
+	"spoon.test.intercession.RemoveTest" -> "org.junit.Test";
 	"spoon.processing.AbstractProcessor" -> "spoon.reflect.factory.Factory";
 	"spoon.processing.AbstractProcessor" -> "java.util.HashSet";
 	"spoon.processing.AbstractProcessor" -> "java.util.Set";
@@ -3408,6 +3476,7 @@ digraph G {
 	"spoon.test.visibility.VisibilityTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.visibility.VisibilityTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.visibility.VisibilityTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.visibility.VisibilityTest" -> "org.junit.Assert";
 	"spoon.test.visibility.VisibilityTest" -> "java.util.List";
 	"spoon.test.visibility.VisibilityTest" -> "spoon.reflect.declaration.CtMethod";
 	"spoon.test.visibility.VisibilityTest" -> "spoon.reflect.declaration.CtExecutable";
@@ -3416,7 +3485,7 @@ digraph G {
 	"spoon.test.visibility.VisibilityTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.visibility.VisibilityTest" -> "java.lang.Iterable";
 	"spoon.test.visibility.VisibilityTest" -> "spoon.template.TemplateParameter";
-	"spoon.test.visibility.VisibilityTest" -> "spoon.test.visibility.Test";
+	"spoon.test.visibility.VisibilityTest" -> "org.junit.Test";
 	"spoon.test.visibility.VisibilityTest" -> "java.lang.Exception";
 	"spoon.test.enums.Regular" -> "java.lang.reflect.Array";
 	"spoon.test.enums.Regular" -> "java.io.PrintStream";
@@ -3543,21 +3612,8 @@ digraph G {
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.Component";
 	"spoon.support.gui.SpoonModelTree" -> "java.lang.Object";
 	"spoon.support.gui.SpoonModelTree" -> "javax.swing.JMenuItem";
-	"spoon.support.gui.SpoonModelTree" -> "spoon.support.gui.SpoonModelTree$";
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.event.ActionListener";
-	"spoon.support.gui.SpoonModelTree" -> "java.awt.event.ActionEvent";
-	"spoon.support.gui.SpoonModelTree" -> "javax.swing.JFileChooser";
-	"spoon.support.gui.SpoonModelTree" -> "spoon.support.SerializationModelStreamer";
-	"spoon.support.gui.SpoonModelTree" -> "spoon.reflect.ModelStreamer";
-	"spoon.support.gui.SpoonModelTree" -> "java.io.File";
-	"spoon.support.gui.SpoonModelTree" -> "java.io.FileOutputStream";
-	"spoon.support.gui.SpoonModelTree" -> "java.io.OutputStream";
-	"spoon.support.gui.SpoonModelTree" -> "java.io.IOException";
-	"spoon.support.gui.SpoonModelTree" -> "org.apache.log4j.Logger";
-	"spoon.support.gui.SpoonModelTree" -> "java.lang.Throwable";
-	"spoon.support.gui.SpoonModelTree" -> "org.apache.log4j.Category";
 	"spoon.support.gui.SpoonModelTree" -> "javax.swing.AbstractButton";
-	"spoon.support.gui.SpoonModelTree" -> "spoon.support.gui.SpoonObjectFieldsTable";
 	"spoon.support.gui.SpoonModelTree" -> "java.lang.CharSequence";
 	"spoon.support.gui.SpoonModelTree" -> "javax.swing.JOptionPane";
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.Window";
@@ -3566,6 +3622,7 @@ digraph G {
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.DisplayMode";
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.Frame";
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.event.KeyEvent";
+	"spoon.support.gui.SpoonModelTree" -> "spoon.support.gui.SpoonObjectFieldsTable";
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.event.MouseEvent";
 	"spoon.support.gui.SpoonModelTree" -> "java.awt.event.ComponentEvent";
 	"spoon.support.gui.SpoonModelTree" -> "java.lang.reflect.Array";
@@ -3675,6 +3732,7 @@ digraph G {
 	"spoon.test.arrays.ArraysTest" -> "java.lang.Comparable";
 	"spoon.test.arrays.ArraysTest" -> "spoon.processing.FactoryAccessor";
 	"spoon.test.arrays.ArraysTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.arrays.ArraysTest" -> "org.junit.Assert";
 	"spoon.test.arrays.ArraysTest" -> "spoon.reflect.declaration.CtField";
 	"spoon.test.arrays.ArraysTest" -> "spoon.reflect.declaration.CtVariable";
 	"spoon.test.arrays.ArraysTest" -> "spoon.reflect.declaration.CtTypedElement";
@@ -3683,19 +3741,17 @@ digraph G {
 	"spoon.test.arrays.ArraysTest" -> "spoon.reflect.reference.CtReference";
 	"spoon.test.arrays.ArraysTest" -> "spoon.reflect.reference.CtArrayTypeReference";
 	"spoon.test.arrays.ArraysTest" -> "java.lang.Class";
-	"spoon.test.arrays.ArraysTest" -> "spoon.test.arrays.Test";
+	"spoon.test.arrays.ArraysTest" -> "org.junit.Test";
 	"spoon.test.arrays.ArraysTest" -> "java.lang.Exception";
 	"org.eclipse.jdt.internal.compiler.lookup.ParameterizedTypeBinding" [color=grey];
-	"spoon.test.prettyprinter.Validation" -> "java.lang.Object";
-	"spoon.test.prettyprinter.Validation" -> "spoon.test.prettyprinter.Validation$";
-	"spoon.test.prettyprinter.Validation" -> "java.lang.String";
-	"spoon.test.prettyprinter.Validation" -> "java.lang.System";
-	"spoon.test.prettyprinter.Validation" -> "java.lang.Boolean";
-	"spoon.test.prettyprinter.Validation" -> "java.lang.Override";
 	"spoon.test.prettyprinter.Validation" -> "java.security.PrivilegedAction";
 	"spoon.test.prettyprinter.Validation" -> "java.security.AccessController";
+	"spoon.test.prettyprinter.Validation" -> "java.lang.Boolean";
+	"spoon.test.prettyprinter.Validation" -> "java.lang.String";
+	"spoon.test.prettyprinter.Validation" -> "java.lang.System";
 	"spoon.test.prettyprinter.Validation" -> "java.lang.reflect.Array";
 	"spoon.test.prettyprinter.Validation" -> "java.lang.SecurityManager";
+	"spoon.test.prettyprinter.Validation" -> "java.lang.Object";
 	"spoon.test.prettyprinter.Validation" -> "java.lang.Deprecated";
 	"spoon.test.prettyprinter.Validation" -> "java.lang.Character";
 	"spoon.reflect.visitor.filter.RegexFilter" -> "java.util.regex.Pattern";
@@ -3712,6 +3768,16 @@ digraph G {
 	"spoon.reflect.visitor.filter.RegexFilter" -> "java.lang.Class";
 	"spoon.OutputType" -> "java.lang.String";
 	"spoon.OutputType" -> "java.lang.Override";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "java.lang.Object";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "org.eclipse.jdt.internal.compiler.ICompilerRequestor";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "org.eclipse.jdt.internal.compiler.CompilationResult";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "spoon.support.compiler.jdt.JDTBatchCompiler";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "org.eclipse.jdt.internal.compiler.batch.Main";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "spoon.support.compiler.jdt.JDTBasedSpoonCompiler";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "spoon.compiler.SpoonCompiler";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "java.util.List";
+	"spoon.support.compiler.jdt.JDTBatchCompiler$" -> "java.lang.reflect.Array";
 	"spoon.processing.AbstractManualProcessor" -> "spoon.reflect.factory.Factory";
 	"spoon.processing.AbstractManualProcessor" -> "java.lang.Object";
 	"spoon.processing.AbstractManualProcessor" -> "spoon.processing.Processor";
@@ -3748,17 +3814,16 @@ digraph G {
 	"spoon.test.factory.FactoryTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.factory.FactoryTest" -> "spoon.reflect.factory.Factory";
 	"spoon.test.factory.FactoryTest" -> "spoon.reflect.factory.CoreFactory";
-	"spoon.test.factory.FactoryTest" -> "spoon.test.factory.Test";
+	"spoon.test.factory.FactoryTest" -> "org.junit.Assert";
+	"spoon.test.factory.FactoryTest" -> "org.junit.Test";
 	"spoon.test.factory.FactoryTest" -> "java.lang.Exception";
 	"spoon.test.factory.FactoryTest" -> "spoon.support.DefaultCoreFactory";
 	"spoon.test.factory.FactoryTest" -> "java.io.Serializable";
-	"spoon.test.factory.FactoryTest" -> "spoon.test.factory.FactoryTest$";
-	"spoon.test.factory.FactoryTest" -> "MyCtMethod";
-	"spoon.test.factory.FactoryTest" -> "java.lang.Override";
 	"spoon.test.factory.FactoryTest" -> "java.lang.SuppressWarnings";
 	"spoon.test.factory.FactoryTest" -> "spoon.support.StandardEnvironment";
 	"spoon.test.factory.FactoryTest" -> "spoon.compiler.Environment";
 	"spoon.test.factory.FactoryTest" -> "spoon.reflect.factory.FactoryImpl";
+	"spoon.test.factory.FactoryTest" -> "MyCtMethod";
 	"java.io.BufferedReader" [color=grey];
 	"java.lang.SafeVarargs" [color=grey];
 	"spoon.support.reflect.reference.CtParameterReferenceImpl" -> "spoon.reflect.reference.CtExecutableReference";
@@ -3829,7 +3894,6 @@ digraph G {
 	"spoon.reflect.visitor.JavaIdentifiers" -> "java.lang.Character";
 	"spoon.reflect.visitor.JavaIdentifiers" -> "java.lang.Object";
 	"spoon.reflect.visitor.JavaIdentifiers" -> "java.util.StringTokenizer";
-	"spoon.test.sourcePosition.Test" [color=grey];
 	"spoon.reflect.code.CtAssert" -> "spoon.reflect.code.CtExpression";
 	"spoon.reflect.code.CtAssert" -> "spoon.reflect.code.CtCodeElement";
 	"spoon.reflect.code.CtAssert" -> "spoon.reflect.declaration.CtElement";
@@ -3865,8 +3929,9 @@ digraph G {
 	"spoon.test.processing.ProcessingTest" -> "spoon.reflect.factory.SubFactory";
 	"spoon.test.processing.ProcessingTest" -> "spoon.reflect.code.CtCodeSnippetStatement";
 	"spoon.test.processing.ProcessingTest" -> "spoon.reflect.declaration.CtCodeSnippet";
+	"spoon.test.processing.ProcessingTest" -> "org.junit.Assert";
 	"spoon.test.processing.ProcessingTest" -> "spoon.reflect.declaration.CtConstructor";
-	"spoon.test.processing.ProcessingTest" -> "spoon.test.processing.Test";
+	"spoon.test.processing.ProcessingTest" -> "org.junit.Test";
 	"spoon.test.processing.ProcessingTest" -> "java.lang.Exception";
 	"spoon.test.eval.ToEvaluate" -> "java.lang.String";
 	"spoon.test.eval.ToEvaluate" -> "java.lang.Object";
@@ -4062,9 +4127,9 @@ digraph G {
 	"spoon.test.sourcePosition.SourcePositionTest" -> "spoon.reflect.code.CtCodeElement";
 	"spoon.test.sourcePosition.SourcePositionTest" -> "spoon.reflect.declaration.CtType";
 	"spoon.test.sourcePosition.SourcePositionTest" -> "java.util.List";
+	"spoon.test.sourcePosition.SourcePositionTest" -> "org.junit.Assert";
 	"spoon.test.sourcePosition.SourcePositionTest" -> "spoon.reflect.cu.SourcePosition";
-	"spoon.test.sourcePosition.SourcePositionTest" -> "spoon.test.sourcePosition.Test";
-	"spoon.test.model.Test" [color=grey];
+	"spoon.test.sourcePosition.SourcePositionTest" -> "org.junit.Test";
 	"spoon.support.reflect.code.CtWhileImpl" -> "spoon.reflect.code.CtExpression";
 	"spoon.support.reflect.code.CtWhileImpl" -> "spoon.reflect.code.CtCodeElement";
 	"spoon.support.reflect.code.CtWhileImpl" -> "spoon.reflect.declaration.CtElement";
@@ -4083,12 +4148,8 @@ digraph G {
 	"spoon.support.reflect.code.CtWhileImpl" -> "spoon.reflect.visitor.CtVisitor";
 	"spoon.test.secondaryclasses.AnonymousClass" -> "javax.swing.JButton";
 	"spoon.test.secondaryclasses.AnonymousClass" -> "java.lang.Object";
-	"spoon.test.secondaryclasses.AnonymousClass" -> "spoon.test.secondaryclasses.AnonymousClass$";
-	"spoon.test.secondaryclasses.AnonymousClass" -> "java.awt.event.ActionListener";
 	"spoon.test.secondaryclasses.AnonymousClass" -> "spoon.test.secondaryclasses.AnonymousClass$I";
-	"spoon.test.secondaryclasses.AnonymousClass" -> "java.awt.event.ActionEvent";
-	"spoon.test.secondaryclasses.AnonymousClass" -> "java.lang.String";
-	"spoon.test.secondaryclasses.AnonymousClass" -> "javax.swing.JOptionPane";
+	"spoon.test.secondaryclasses.AnonymousClass" -> "java.awt.event.ActionListener";
 	"spoon.test.secondaryclasses.AnonymousClass" -> "javax.swing.AbstractButton";
 	"spoon.support.reflect.code.CtArrayAccessImpl" -> "spoon.reflect.code.CtExpression";
 	"spoon.support.reflect.code.CtArrayAccessImpl" -> "spoon.reflect.code.CtCodeElement";
@@ -4108,6 +4169,7 @@ digraph G {
 	"spoon.test.limits.StaticClassAnon$StaticIntern" -> "java.lang.String";
 	"spoon.test.limits.StaticClassAnon$StaticIntern" -> "java.lang.Object";
 	"spoon.test.limits.StaticClassAnon$StaticIntern" -> "spoon.test.limits.StaticClassAnon";
+	"org.junit.Assert" [color=grey];
 	"spoon.reflect.code.CtCase" -> "spoon.reflect.code.CtExpression";
 	"spoon.reflect.code.CtCase" -> "spoon.reflect.code.CtCodeElement";
 	"spoon.reflect.code.CtCase" -> "spoon.reflect.declaration.CtElement";
@@ -4325,6 +4387,17 @@ digraph G {
 	"spoon.support.reflect.code.CtStatementListImpl" -> "java.util.ArrayList";
 	"spoon.support.reflect.code.CtStatementListImpl" -> "java.lang.Object";
 	"spoon.support.reflect.code.CtStatementListImpl" -> "spoon.reflect.cu.SourcePosition";
+	"spoon.support.template.Parameters$" -> "java.lang.Object";
+	"spoon.support.template.Parameters$" -> "spoon.template.TemplateParameter";
+	"spoon.support.template.Parameters$" -> "java.lang.Number";
+	"spoon.support.template.Parameters$" -> "spoon.reflect.declaration.CtSimpleType";
+	"spoon.support.template.Parameters$" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.support.template.Parameters$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.template.Parameters$" -> "java.lang.Comparable";
+	"spoon.support.template.Parameters$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.template.Parameters$" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.support.template.Parameters$" -> "spoon.reflect.code.CtCodeElement";
+	"spoon.support.template.Parameters$" -> "T";
 	"spoon.support.reflect.declaration.CtTypeParameterImpl" -> "spoon.support.reflect.declaration.CtElementImpl";
 	"spoon.support.reflect.declaration.CtTypeParameterImpl" -> "java.util.List";
 	"spoon.support.reflect.declaration.CtTypeParameterImpl" -> "java.io.Serializable";
@@ -4371,6 +4444,7 @@ digraph G {
 	"spoon.test.model.SwitchCaseTest" -> "spoon.reflect.visitor.filter.AbstractFilter";
 	"spoon.test.model.SwitchCaseTest" -> "spoon.reflect.visitor.Filter";
 	"spoon.test.model.SwitchCaseTest" -> "java.util.List";
+	"spoon.test.model.SwitchCaseTest" -> "org.junit.Assert";
 	"spoon.test.model.SwitchCaseTest" -> "spoon.reflect.code.CtCase";
 	"spoon.test.model.SwitchCaseTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.model.SwitchCaseTest" -> "java.lang.Iterable";
@@ -4378,7 +4452,7 @@ digraph G {
 	"spoon.test.model.SwitchCaseTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.model.SwitchCaseTest" -> "spoon.reflect.code.CtLiteral";
 	"spoon.test.model.SwitchCaseTest" -> "java.util.ArrayList";
-	"spoon.test.model.SwitchCaseTest" -> "spoon.test.model.Test";
+	"spoon.test.model.SwitchCaseTest" -> "org.junit.Test";
 	"org.eclipse.jdt.internal.compiler.lookup.WildcardBinding" [color=grey];
 	"org.eclipse.jdt.internal.compiler.lookup.Scope" [color=grey];
 	"spoon.reflect.visitor.filter.TypeFilter" -> "java.lang.Class";
@@ -4411,23 +4485,16 @@ digraph G {
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Comparable";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.processing.FactoryAccessor";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.TreeMap";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.support.reflect.declaration.CtAnnotationImpl$";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.String";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Object";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.reflect.Array";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.ArrayList";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Class";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.Map";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.support.reflect.declaration.CtElementImpl";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.factory.Factory";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.io.Serializable";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.declaration.CtElement";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.factory.TypeFactory";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.factory.SubFactory";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Override";
-	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.Map";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.declaration.CtAnnotation";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.String";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Object";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.reference.CtFieldReference";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.reference.CtVariableReference";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Class";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Exception";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.declaration.CtField";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.declaration.CtNamedElement";
@@ -4449,11 +4516,15 @@ digraph G {
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.code.CtTargetedAccess";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.code.CtTargetedExpression";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.code.CtVariableAccess";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.factory.Factory";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.factory.EvalFactory";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.factory.SubFactory";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.eval.PartialEvaluator";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.SuppressWarnings";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.Collection";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.ArrayList";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.List";
+	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.reflect.Array";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.Arrays";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.lang.Boolean";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "byte";
@@ -4475,6 +4546,7 @@ digraph G {
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "spoon.reflect.visitor.CtVisitor";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.Map$Entry";
 	"spoon.support.reflect.declaration.CtAnnotationImpl" -> "java.util.Set";
+	"spoon.test.processing.SampleForInsertBefore$" -> "java.lang.Thread";
 	"org.eclipse.jdt.internal.compiler.lookup.LocalVariableBinding" [color=grey];
 	"spoon.Java" [color=grey];
 	"spoon.support.reflect.code.CtInvocationImpl" -> "spoon.support.reflect.declaration.CtElementImpl";
@@ -4662,6 +4734,23 @@ digraph G {
 	"java.lang.Exception" [color=grey];
 	"spoon.processing.Property" -> "java.lang.String";
 	"org.eclipse.jdt.internal.compiler.IProblemFactory" [color=grey];
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "java.lang.Class";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.visitor.filter.TypeFilter";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.visitor.filter.AbstractFilter";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.visitor.Filter";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.code.CtLocalVariable";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.code.CtStatement";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.code.CtCodeElement";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "java.lang.Comparable";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.declaration.CtVariable";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "spoon.reflect.declaration.CtTypedElement";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "java.lang.String";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "java.lang.Object";
+	"spoon.support.compiler.jdt.JDTTreeBuilder$" -> "java.lang.Override";
 	"java.lang.Enum" [color=grey];
 	"spoon.reflect.factory.AnnotationFactory" -> "spoon.reflect.factory.Factory";
 	"spoon.reflect.factory.AnnotationFactory" -> "spoon.reflect.factory.TypeFactory";
@@ -4908,8 +4997,6 @@ digraph G {
 	"spoon.test.TestUtils" -> "spoon.reflect.declaration.CtModifiable";
 	"spoon.test.TestUtils" -> "T";
 	"spoon.test.TestUtils" -> "java.lang.Exception";
-	"spoon.test.TestUtils" -> "spoon.test.TestUtils$";
-	"spoon.test.TestUtils" -> "java.lang.Override";
 	"spoon.test.TestUtils" -> "java.lang.Class";
 	"spoon.test.TestUtils" -> "spoon.support.DefaultCoreFactory";
 	"spoon.test.TestUtils" -> "spoon.reflect.factory.CoreFactory";
@@ -5040,7 +5127,8 @@ digraph G {
 	"spoon.test.model.BlockTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.model.BlockTest" -> "spoon.reflect.factory.CoreFactory";
 	"spoon.test.model.BlockTest" -> "java.util.List";
-	"spoon.test.model.BlockTest" -> "spoon.test.model.Test";
+	"spoon.test.model.BlockTest" -> "org.junit.Assert";
+	"spoon.test.model.BlockTest" -> "org.junit.Test";
 	"spoon.test.model.BlockTest" -> "java.util.ArrayList";
 	"spoon.support.compiler.ZipFolder" -> "java.io.File";
 	"spoon.support.compiler.ZipFolder" -> "java.util.List";
@@ -5094,6 +5182,7 @@ digraph G {
 	"spoon.test.eval.EvalTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.eval.EvalTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.eval.EvalTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.eval.EvalTest" -> "org.junit.Assert";
 	"spoon.test.eval.EvalTest" -> "java.util.List";
 	"spoon.test.eval.EvalTest" -> "spoon.reflect.declaration.CtMethod";
 	"spoon.test.eval.EvalTest" -> "spoon.reflect.declaration.CtExecutable";
@@ -5102,7 +5191,7 @@ digraph G {
 	"spoon.test.eval.EvalTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.eval.EvalTest" -> "java.lang.Iterable";
 	"spoon.test.eval.EvalTest" -> "spoon.template.TemplateParameter";
-	"spoon.test.eval.EvalTest" -> "spoon.test.eval.Test";
+	"spoon.test.eval.EvalTest" -> "org.junit.Test";
 	"spoon.test.eval.EvalTest" -> "java.lang.Exception";
 	"spoon.template.TemplateMatcher" -> "java.util.ArrayList";
 	"spoon.template.TemplateMatcher" -> "java.util.List";
@@ -5126,8 +5215,6 @@ digraph G {
 	"spoon.template.TemplateMatcher" -> "java.lang.RuntimeException";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.visitor.CtScanner";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.visitor.CtVisitor";
-	"spoon.template.TemplateMatcher" -> "spoon.template.TemplateMatcher$";
-	"spoon.template.TemplateMatcher" -> "java.lang.Override";
 	"spoon.template.TemplateMatcher" -> "";
 	"spoon.template.TemplateMatcher" -> "java.lang.Class";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.reference.CtTypeReference";
@@ -5173,7 +5260,6 @@ digraph G {
 	"spoon.template.TemplateMatcher" -> "java.util.regex.Pattern";
 	"spoon.template.TemplateMatcher" -> "java.util.regex.Matcher";
 	"spoon.template.TemplateMatcher" -> "java.io.PrintStream";
-	"spoon.template.TemplateMatcher" -> "spoon.reflect.declaration.CtField";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.factory.ExecutableFactory";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.factory.SubFactory";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.factory.TypeFactory";
@@ -5184,6 +5270,7 @@ digraph G {
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.visitor.Filter";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.visitor.Query";
 	"spoon.template.TemplateMatcher" -> "spoon.support.template.Parameters";
+	"spoon.template.TemplateMatcher" -> "spoon.reflect.declaration.CtField";
 	"spoon.template.TemplateMatcher" -> "java.util.Iterator";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.declaration.ParentNotInitializedException";
 	"spoon.template.TemplateMatcher" -> "spoon.reflect.cu.SourcePosition";
@@ -5274,6 +5361,29 @@ digraph G {
 	"spoon.test.generics.BugCollection" -> "java.util.Map$Entry";
 	"spoon.test.generics.BugCollection" -> "java.lang.Object";
 	"spoon.test.generics.BugCollection" -> "java.util.Iterator";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.visitor.CtScanner";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.visitor.CtVisitor";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.template.TemplateMatcher$" -> "java.lang.Comparable";
+	"spoon.template.TemplateMatcher$" -> "spoon.processing.FactoryAccessor";
+	"spoon.template.TemplateMatcher$" -> "spoon.template.TemplateMatcher";
+	"spoon.template.TemplateMatcher$" -> "java.util.List";
+	"spoon.template.TemplateMatcher$" -> "java.lang.Override";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.declaration.CtField";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.declaration.CtVariable";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.declaration.CtTypedElement";
+	"spoon.template.TemplateMatcher$" -> "spoon.template.Parameter";
+	"spoon.template.TemplateMatcher$" -> "java.lang.Class";
+	"spoon.template.TemplateMatcher$" -> "java.lang.String";
+	"spoon.template.TemplateMatcher$" -> "java.lang.reflect.Array";
+	"spoon.template.TemplateMatcher$" -> "java.lang.Object";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.reference.CtTypeReference";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.reference.CtGenericElementReference";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.reference.CtReference";
+	"spoon.template.TemplateMatcher$" -> "java.util.Collection";
+	"spoon.template.TemplateMatcher$" -> "spoon.reflect.reference.CtTypeParameterReference";
 	"spoon.reflect.factory.FactoryImpl" -> "spoon.reflect.factory.Factory";
 	"spoon.reflect.factory.FactoryImpl" -> "spoon.reflect.factory.AnnotationFactory";
 	"spoon.reflect.factory.FactoryImpl" -> "spoon.reflect.factory.TypeFactory";
@@ -5578,7 +5688,7 @@ digraph G {
 	"spoon.test.parent.ParentTest" -> "java.util.List";
 	"spoon.test.parent.ParentTest" -> "spoon.compiler.SpoonCompiler";
 	"spoon.test.parent.ParentTest" -> "spoon.processing.FactoryAccessor";
-	"spoon.test.parent.ParentTest" -> "spoon.test.parent.Before";
+	"spoon.test.parent.ParentTest" -> "org.junit.Before";
 	"spoon.test.parent.ParentTest" -> "java.lang.Exception";
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.factory.CoreFactory";
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.code.CtLiteral";
@@ -5590,7 +5700,8 @@ digraph G {
 	"spoon.test.parent.ParentTest" -> "spoon.template.TemplateParameter";
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.code.CtBinaryOperator";
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.code.BinaryOperatorKind";
-	"spoon.test.parent.ParentTest" -> "spoon.test.parent.Test";
+	"spoon.test.parent.ParentTest" -> "org.junit.Assert";
+	"spoon.test.parent.ParentTest" -> "org.junit.Test";
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.factory.PackageFactory";
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.factory.SubFactory";
 	"spoon.test.parent.ParentTest" -> "java.io.Serializable";
@@ -5614,7 +5725,6 @@ digraph G {
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.code.CtAssignment";
 	"spoon.test.parent.ParentTest" -> "spoon.reflect.factory.CodeFactory";
 	"spoon.test.parent.ParentTest" -> "java.lang.Integer";
-	"spoon.test.annotation.Test" [color=grey];
 	"spoon.support.visitor.TypeReferenceScanner" -> "java.util.Set";
 	"spoon.support.visitor.TypeReferenceScanner" -> "spoon.reflect.visitor.CtScanner";
 	"spoon.support.visitor.TypeReferenceScanner" -> "spoon.reflect.visitor.CtVisitor";
@@ -5669,9 +5779,7 @@ digraph G {
 	"spoon.reflect.visitor.FragmentDrivenJavaPrettyPrinter" -> "spoon.reflect.cu.SourceCodeFragment";
 	"spoon.reflect.visitor.FragmentDrivenJavaPrettyPrinter" -> "java.lang.UnsupportedOperationException";
 	"spoon.reflect.visitor.FragmentDrivenJavaPrettyPrinter" -> "java.lang.Override";
-	"spoon.test.factory.Test" [color=grey];
 	"javax.swing.JFileChooser" [color=grey];
-	"spoon.test.initializers.Test" [color=grey];
 	"spoon.reflect.cu.Import" -> "java.lang.String";
 	"spoon.reflect.cu.Import" -> "spoon.reflect.reference.CtReference";
 	"spoon.reflect.cu.Import" -> "java.lang.Comparable";
@@ -5718,10 +5826,8 @@ digraph G {
 	"java.util.Arrays" [color=grey];
 	"java.security.PrivilegedAction" [color=grey];
 	"java.lang.Void" [color=grey];
-	"spoon.test.parent.Test" [color=grey];
 	"spoon.test.SampleClass" -> "java.lang.Object";
 	"spoon.test.SampleClass" -> "java.lang.Thread";
-	"spoon.test.SampleClass" -> "spoon.test.SampleClass$";
 	"spoon.support.gui.SpoonObjectFieldsTable$SpoonObjectTableModel" -> "java.util.List";
 	"spoon.support.gui.SpoonObjectFieldsTable$SpoonObjectTableModel" -> "java.lang.Object";
 	"spoon.support.gui.SpoonObjectFieldsTable$SpoonObjectTableModel" -> "javax.swing.table.AbstractTableModel";
@@ -6056,7 +6162,6 @@ digraph G {
 	"spoon.processing.ProblemFixer" -> "java.lang.String";
 	"spoon.processing.ProblemFixer" -> "T";
 	"spoon.processing.ProblemFixer" -> "spoon.reflect.Changes";
-	"spoon.test.api.Test" [color=grey];
 	"org.eclipse.jdt.core.compiler.CompilationProgress" [color=grey];
 	"java.lang.reflect.AnnotatedElement" [color=grey];
 	"spoon.support.reflect.code.CtContinueImpl" -> "spoon.reflect.code.CtStatement";
@@ -6105,6 +6210,7 @@ digraph G {
 	"spoon.test.limits.utils.InternalTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.limits.utils.InternalTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.limits.utils.InternalTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.limits.utils.InternalTest" -> "org.junit.Assert";
 	"spoon.test.limits.utils.InternalTest" -> "spoon.reflect.visitor.filter.TypeFilter";
 	"spoon.test.limits.utils.InternalTest" -> "spoon.reflect.visitor.filter.AbstractFilter";
 	"spoon.test.limits.utils.InternalTest" -> "spoon.reflect.visitor.Filter";
@@ -6113,7 +6219,7 @@ digraph G {
 	"spoon.test.limits.utils.InternalTest" -> "spoon.test.limits.utils.ContainInternalClass$InternalClass";
 	"spoon.test.limits.utils.InternalTest" -> "java.lang.Class";
 	"spoon.test.limits.utils.InternalTest" -> "spoon.test.limits.utils.ContainInternalClass$InternalClass$InsideInternalClass";
-	"spoon.test.limits.utils.InternalTest" -> "spoon.test.limits.utils.Test";
+	"spoon.test.limits.utils.InternalTest" -> "org.junit.Test";
 	"spoon.test.limits.utils.InternalTest" -> "java.lang.Exception";
 	"spoon.test.limits.utils.InternalTest" -> "spoon.reflect.visitor.filter.NameFilter";
 	"spoon.test.enums.EnumsTest" -> "java.lang.Object";
@@ -6131,13 +6237,14 @@ digraph G {
 	"spoon.test.enums.EnumsTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.enums.EnumsTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.enums.EnumsTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.enums.EnumsTest" -> "org.junit.Assert";
 	"spoon.test.enums.EnumsTest" -> "spoon.test.enums.Regular";
 	"spoon.test.enums.EnumsTest" -> "java.lang.reflect.Array";
 	"spoon.test.enums.EnumsTest" -> "java.util.List";
 	"spoon.test.enums.EnumsTest" -> "spoon.reflect.declaration.CtField";
 	"spoon.test.enums.EnumsTest" -> "spoon.reflect.declaration.CtVariable";
 	"spoon.test.enums.EnumsTest" -> "spoon.reflect.declaration.CtTypedElement";
-	"spoon.test.enums.EnumsTest" -> "spoon.test.enums.Test";
+	"spoon.test.enums.EnumsTest" -> "org.junit.Test";
 	"spoon.test.enums.EnumsTest" -> "java.lang.Exception";
 	"spoon.reflect.code.CtSynchronized" -> "spoon.reflect.code.CtBlock";
 	"spoon.reflect.code.CtSynchronized" -> "spoon.reflect.code.CtStatement";
@@ -6275,7 +6382,7 @@ digraph G {
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.compiler.SpoonCompiler";
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.processing.FactoryAccessor";
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.compiler.Environment";
-	"spoon.test.prettyprinter.LinesTest" -> "spoon.test.prettyprinter.Before";
+	"spoon.test.prettyprinter.LinesTest" -> "org.junit.Before";
 	"spoon.test.prettyprinter.LinesTest" -> "java.lang.Exception";
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.reflect.declaration.CtNamedElement";
@@ -6289,7 +6396,17 @@ digraph G {
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.reflect.visitor.PrettyPrinter";
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.reflect.cu.SourcePosition";
 	"spoon.test.prettyprinter.LinesTest" -> "spoon.reflect.cu.CompilationUnit";
-	"spoon.test.prettyprinter.LinesTest" -> "spoon.test.prettyprinter.Test";
+	"spoon.test.prettyprinter.LinesTest" -> "org.junit.Assert";
+	"spoon.test.prettyprinter.LinesTest" -> "org.junit.Test";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "spoon.support.reflect.declaration.CtElementImpl";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "java.io.Serializable";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "java.lang.Comparable";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "spoon.processing.FactoryAccessor";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "spoon.reflect.visitor.CtScanner";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "spoon.reflect.visitor.CtVisitor";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "spoon.reflect.cu.SourcePosition";
+	"spoon.support.reflect.declaration.CtElementImpl$" -> "java.lang.Override";
 	"spoon.test.intercession.insertBefore.InsertBeforeExample" -> "java.lang.Object";
 	"org.eclipse.jdt.internal.compiler.ast.LocalDeclaration" [color=grey];
 	"spoon.support.reflect.code.CtLoopImpl" -> "spoon.reflect.code.CtStatement";
@@ -6347,18 +6464,17 @@ digraph G {
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.visitor.filter.TypeFilter";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.visitor.filter.AbstractFilter";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.visitor.Filter";
-	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.support.compiler.jdt.JDTTreeBuilder$";
-	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "java.lang.Object";
-	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "java.lang.Override";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.visitor.Query";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.visitor.CtScanner";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.cu.SourcePosition";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "org.apache.log4j.Category";
+	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "java.lang.Object";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "org.eclipse.jdt.internal.compiler.ast.AND_AND_Expression";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.code.CtBinaryOperator";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.code.CtExpression";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.template.TemplateParameter";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.code.BinaryOperatorKind";
+	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "java.lang.Override";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "org.eclipse.jdt.internal.compiler.ast.AllocationExpression";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.code.CtNewClass";
 	"spoon.support.compiler.jdt.JDTTreeBuilder" -> "spoon.reflect.code.CtAbstractInvocation";
@@ -6549,6 +6665,7 @@ digraph G {
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.compiler.SpoonResourceHelper";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "java.lang.reflect.Array";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "java.util.List";
+	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "org.junit.Assert";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.compiler.SpoonResource";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.reflect.factory.Factory";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.reflect.factory.TypeFactory";
@@ -6572,7 +6689,7 @@ digraph G {
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.reflect.visitor.Query";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.reflect.visitor.CtScanner";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.reflect.visitor.CtVisitor";
-	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "spoon.test.prettyprinter.Test";
+	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "org.junit.Test";
 	"spoon.test.prettyprinter.DefaultPrettyPrinterTest" -> "java.lang.Exception";
 	"spoon.reflect.eval.SymbolicHeap" -> "java.util.HashMap";
 	"spoon.reflect.eval.SymbolicHeap" -> "java.util.Map";
@@ -6641,7 +6758,6 @@ digraph G {
 	"spoon.support.reflect.declaration.CtClassImpl" -> "spoon.reflect.code.CtStatementList";
 	"spoon.support.reflect.declaration.CtClassImpl" -> "java.lang.Iterable";
 	"spoon.support.reflect.declaration.CtClassImpl" -> "java.lang.UnsupportedOperationException";
-	"spoon.test.intercession.insertBefore.Test" [color=grey];
 	"spoon.reflect.declaration.CtEnum" -> "java.util.List";
 	"spoon.reflect.declaration.CtPackage" -> "java.lang.String";
 	"spoon.reflect.declaration.CtPackage" -> "T";
@@ -6655,11 +6771,25 @@ digraph G {
 	"spoon.reflect.declaration.CtPackage" -> "spoon.reflect.reference.CtReference";
 	"spoon.reflect.declaration.CtPackage" -> "spoon.reflect.declaration.CtSimpleType";
 	"org.eclipse.jdt.internal.compiler.ast.PostfixExpression" [color=grey];
-	"spoon.test.replace.Test" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.ArrayReference" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.AND_AND_Expression" [color=grey];
 	"java.io.FileOutputStream" [color=grey];
-	"spoon.test.limits.utils.ContainInternalClass$" [color=grey];
+	"spoon.test.limits.utils.ContainInternalClass$" -> "java.lang.String";
+	"spoon.test.limits.utils.ContainInternalClass$" -> "java.lang.SuppressWarnings";
+	"spoon.test.limits.utils.ContainInternalClass$" -> "java.lang.Object";
+	"spoon.test.api.APITest$$" -> "spoon.support.JavaOutputProcessor";
+	"spoon.test.api.APITest$$" -> "spoon.processing.AbstractProcessor";
+	"spoon.test.api.APITest$$" -> "spoon.processing.Processor";
+	"spoon.test.api.APITest$$" -> "spoon.processing.FactoryAccessor";
+	"spoon.test.api.APITest$$" -> "spoon.processing.FileGenerator";
+	"spoon.test.api.APITest$$" -> "java.lang.Override";
+	"spoon.test.api.APITest$$" -> "spoon.reflect.declaration.CtSimpleType";
+	"spoon.test.api.APITest$$" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.test.api.APITest$$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.test.api.APITest$$" -> "java.lang.Comparable";
+	"spoon.test.api.APITest$$" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.api.APITest$$" -> "java.util.List";
+	"spoon.test.api.APITest$$" -> "java.lang.Object";
 	"org.eclipse.jdt.internal.compiler.lookup.BaseTypeBinding" [color=grey];
 	"spoon.support.compiler.jdt.CompilationUnitWrapper" -> "spoon.support.compiler.jdt.JDTBasedSpoonCompiler";
 	"spoon.support.compiler.jdt.CompilationUnitWrapper" -> "spoon.compiler.SpoonCompiler";
@@ -6698,11 +6828,11 @@ digraph G {
 	"spoon.support.reflect.cu.ImportImpl" -> "spoon.reflect.reference.CtGenericElementReference";
 	"spoon.support.reflect.cu.ImportImpl" -> "java.lang.Override";
 	"spoon.support.reflect.cu.ImportImpl" -> "java.lang.String";
-	"java.lang.ClassNotFoundException" [color=grey];
 	"spoon.test.strings.Main" -> "java.lang.Object";
 	"spoon.test.strings.Main" -> "java.lang.reflect.Array";
 	"spoon.test.strings.Main" -> "java.io.PrintStream";
 	"spoon.test.strings.Main" -> "java.lang.String";
+	"java.lang.ClassNotFoundException" [color=grey];
 	"org.eclipse.jdt.internal.compiler.lookup.RawTypeBinding" [color=grey];
 	"spoon.processing.AnnotationProcessor" -> "spoon.reflect.declaration.CtAnnotation";
 	"spoon.processing.AnnotationProcessor" -> "spoon.reflect.declaration.CtElement";
@@ -6786,12 +6916,8 @@ digraph G {
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.util.Map";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.core.compiler.CompilationProgress";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.internal.compiler.ICompilerRequestor";
-	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.Object";
-	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "spoon.support.compiler.jdt.JDTBatchCompiler$";
-	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.internal.compiler.CompilationResult";
-	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.util.List";
-	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.reflect.Array";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.Override";
+	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.util.List";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.System";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.internal.compiler.env.INameEnvironment";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.internal.compiler.batch.FileSystem";
@@ -6801,10 +6927,12 @@ digraph G {
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.internal.compiler.IProblemFactory";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "spoon.support.compiler.jdt.TreeBuilderCompiler";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.internal.compiler.Compiler";
+	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.reflect.Array";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.Exception";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.util.ArrayList";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "org.eclipse.jdt.internal.compiler.batch.CompilationUnit";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.String";
+	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "java.lang.Object";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "spoon.support.compiler.jdt.CompilationUnitWrapper";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "spoon.compiler.SpoonFile";
 	"spoon.support.compiler.jdt.JDTBatchCompiler" -> "spoon.compiler.SpoonResource";
@@ -6946,7 +7074,6 @@ digraph G {
 	"spoon.reflect.visitor.filter.NameFilter" -> "java.lang.Class";
 	"spoon.test.generics.ClassThatDefinesANewTypeArgument" -> "java.lang.Object";
 	"spoon.test.generics.ClassThatDefinesANewTypeArgument" -> "T";
-	"spoon.test.prettyprinter.Before" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.LongLiteral" [color=grey];
 	"javax.swing.table.AbstractTableModel" [color=grey];
 	"java.lang.Byte" [color=grey];
@@ -7063,8 +7190,8 @@ digraph G {
 	"spoon.reflect.reference.CtPackageReference" -> "java.lang.Comparable";
 	"spoon.reflect.reference.CtPackageReference" -> "spoon.processing.FactoryAccessor";
 	"spoon.reflect.reference.CtPackageReference" -> "spoon.reflect.declaration.CtModifiable";
-	"spoon.test.intercession.insertBefore.Before" [color=grey];
 	"org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope" [color=grey];
+	"java.lang.annotation.Retention" [color=grey];
 	"spoon.support.compiler.ZipFile" -> "java.lang.reflect.Array";
 	"spoon.support.compiler.ZipFile" -> "java.lang.String";
 	"spoon.support.compiler.ZipFile" -> "spoon.support.compiler.ZipFolder";
@@ -7076,7 +7203,6 @@ digraph G {
 	"spoon.support.compiler.ZipFile" -> "java.io.File";
 	"spoon.support.compiler.ZipFile" -> "java.io.ByteArrayInputStream";
 	"spoon.support.compiler.ZipFile" -> "java.io.InputStream";
-	"java.lang.annotation.Retention" [color=grey];
 	"spoon.support.reflect.eval.VisitorSymbolicEvaluator$BranchingPoint" -> "java.util.List";
 	"spoon.support.reflect.eval.VisitorSymbolicEvaluator$BranchingPoint" -> "spoon.reflect.eval.SymbolicEvaluationStack";
 	"spoon.support.reflect.eval.VisitorSymbolicEvaluator$BranchingPoint" -> "java.util.ArrayList";
@@ -7144,6 +7270,20 @@ digraph G {
 	"spoon.reflect.reference.CtVariableReference" -> "spoon.reflect.reference.CtTypeReference";
 	"spoon.reflect.reference.CtVariableReference" -> "spoon.reflect.reference.CtGenericElementReference";
 	"spoon.reflect.reference.CtVariableReference" -> "spoon.reflect.reference.CtReference";
+	"spoon.test.factory.FactoryTest$" -> "spoon.support.DefaultCoreFactory";
+	"spoon.test.factory.FactoryTest$" -> "java.io.Serializable";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.factory.CoreFactory";
+	"spoon.test.factory.FactoryTest$" -> "MyCtMethod";
+	"spoon.test.factory.FactoryTest$" -> "java.lang.Override";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.declaration.CtMethod";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.declaration.CtExecutable";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.declaration.CtGenericElement";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.declaration.CtElement";
+	"spoon.test.factory.FactoryTest$" -> "java.lang.Comparable";
+	"spoon.test.factory.FactoryTest$" -> "spoon.processing.FactoryAccessor";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.factory.FactoryTest$" -> "spoon.reflect.declaration.CtTypedElement";
 	"spoon.test.secondaryclasses.ClassesTest" -> "java.lang.Object";
 	"spoon.test.secondaryclasses.ClassesTest" -> "java.lang.String";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.test.TestUtils";
@@ -7158,6 +7298,7 @@ digraph G {
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.declaration.CtModifiable";
+	"spoon.test.secondaryclasses.ClassesTest" -> "org.junit.Assert";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.code.CtNewClass";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.code.CtAbstractInvocation";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.code.CtTargetedExpression";
@@ -7181,7 +7322,7 @@ digraph G {
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.factory.TypeFactory";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.factory.SubFactory";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.test.secondaryclasses.AnonymousClass$I";
-	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.test.secondaryclasses.Test";
+	"spoon.test.secondaryclasses.ClassesTest" -> "org.junit.Test";
 	"spoon.test.secondaryclasses.ClassesTest" -> "java.lang.Exception";
 	"spoon.test.secondaryclasses.ClassesTest" -> "java.util.Set";
 	"spoon.test.secondaryclasses.ClassesTest" -> "spoon.reflect.factory.ClassFactory";
@@ -7338,7 +7479,6 @@ digraph G {
 	"spoon.reflect.code.CtReturn" -> "spoon.reflect.declaration.CtTypedElement";
 	"spoon.reflect.code.CtReturn" -> "spoon.template.TemplateParameter";
 	"spoon.reflect.code.CtOperatorAssignment" -> "spoon.reflect.code.BinaryOperatorKind";
-	"spoon.test.casts.Test" [color=grey];
 	"spoon.test.generics.BugCollection$Foo" -> "java.lang.Object";
 	"spoon.test.generics.BugCollection$Foo" -> "java.util.Set";
 	"spoon.test.generics.BugCollection$Foo" -> "java.lang.reflect.Array";
@@ -7503,7 +7643,6 @@ digraph G {
 	"spoon.reflect.visitor.QueryVisitor" -> "T";
 	"spoon.reflect.visitor.QueryVisitor" -> "java.lang.SuppressWarnings";
 	"spoon.reflect.visitor.QueryVisitor" -> "java.lang.Override";
-	"spoon.test.eval.Test" [color=grey];
 	"org.xml.sax.InputSource" [color=grey];
 	"spoon.reflect.eval.observer.SymbolicEvaluationPathsMaker" -> "java.util.ArrayList";
 	"spoon.reflect.eval.observer.SymbolicEvaluationPathsMaker" -> "java.util.Collection";
@@ -7563,7 +7702,7 @@ digraph G {
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "java.util.List";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.compiler.SpoonCompiler";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.processing.FactoryAccessor";
-	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.test.intercession.insertBefore.Before";
+	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "org.junit.Before";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "java.lang.Exception";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.reflect.factory.CodeFactory";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.reflect.factory.SubFactory";
@@ -7587,8 +7726,9 @@ digraph G {
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "java.lang.Iterable";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.template.TemplateParameter";
+	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "org.junit.Assert";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.reflect.factory.CoreFactory";
-	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.test.intercession.insertBefore.Test";
+	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "org.junit.Test";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.reflect.factory.PackageFactory";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "java.io.Serializable";
 	"spoon.test.intercession.insertBefore.InsertBeforeTest" -> "spoon.reflect.declaration.CtPackage";
@@ -7788,15 +7928,11 @@ digraph G {
 	"spoon.support.gui.SpoonTreeBuilder" -> "spoon.reflect.visitor.CtVisitor";
 	"spoon.support.gui.SpoonTreeBuilder" -> "java.lang.String";
 	"spoon.support.gui.SpoonTreeBuilder" -> "java.lang.Object";
-	"spoon.support.gui.SpoonTreeBuilder" -> "spoon.support.gui.SpoonTreeBuilder$";
-	"spoon.support.gui.SpoonTreeBuilder" -> "spoon.reflect.declaration.CtNamedElement";
+	"spoon.support.gui.SpoonTreeBuilder" -> "javax.swing.tree.MutableTreeNode";
 	"spoon.support.gui.SpoonTreeBuilder" -> "spoon.reflect.declaration.CtElement";
 	"spoon.support.gui.SpoonTreeBuilder" -> "java.lang.Comparable";
 	"spoon.support.gui.SpoonTreeBuilder" -> "spoon.processing.FactoryAccessor";
-	"spoon.support.gui.SpoonTreeBuilder" -> "spoon.reflect.declaration.CtModifiable";
-	"spoon.support.gui.SpoonTreeBuilder" -> "java.lang.Class";
 	"spoon.support.gui.SpoonTreeBuilder" -> "java.lang.Override";
-	"spoon.support.gui.SpoonTreeBuilder" -> "javax.swing.tree.MutableTreeNode";
 	"spoon.support.gui.SpoonTreeBuilder" -> "spoon.reflect.reference.CtReference";
 	"org.eclipse.jdt.internal.compiler.ast.MemberValuePair" [color=grey];
 	"spoon.DirectoryScanner" [color=grey];
@@ -7850,11 +7986,8 @@ digraph G {
 	"spoon.support.RuntimeProcessingManager" -> "spoon.reflect.declaration.CtNamedElement";
 	"spoon.support.RuntimeProcessingManager" -> "spoon.reflect.declaration.CtModifiable";
 	"org.apache.log4j.Logger" [color=grey];
-	"spoon.test.limits.utils.ContainInternalClass" -> "java.lang.String";
-	"spoon.test.limits.utils.ContainInternalClass" -> "java.lang.SuppressWarnings";
-	"spoon.test.limits.utils.ContainInternalClass" -> "java.lang.Object";
-	"spoon.test.limits.utils.ContainInternalClass" -> "spoon.test.limits.utils.ContainInternalClass$";
 	"spoon.test.limits.utils.ContainInternalClass" -> "java.lang.Runnable";
+	"spoon.test.limits.utils.ContainInternalClass" -> "java.lang.Object";
 	"spoon.support.reflect.declaration.CtNamedElementImpl" -> "spoon.support.reflect.declaration.CtElementImpl";
 	"spoon.support.reflect.declaration.CtNamedElementImpl" -> "java.util.Set";
 	"spoon.support.reflect.declaration.CtNamedElementImpl" -> "java.io.Serializable";
@@ -7931,11 +8064,12 @@ digraph G {
 	"spoon.test.trycatch.TryCatchTest" -> "spoon.reflect.reference.CtGenericElementReference";
 	"spoon.test.trycatch.TryCatchTest" -> "spoon.reflect.reference.CtReference";
 	"spoon.test.trycatch.TryCatchTest" -> "java.lang.Class";
+	"spoon.test.trycatch.TryCatchTest" -> "org.junit.Assert";
 	"spoon.test.trycatch.TryCatchTest" -> "spoon.reflect.code.CtBlock";
 	"spoon.test.trycatch.TryCatchTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.trycatch.TryCatchTest" -> "java.lang.Iterable";
 	"spoon.test.trycatch.TryCatchTest" -> "java.lang.Exception";
-	"spoon.test.trycatch.TryCatchTest" -> "spoon.test.trycatch.Test";
+	"spoon.test.trycatch.TryCatchTest" -> "org.junit.Test";
 	"spoon.test.trycatch.TryCatchTest" -> "java.lang.Error";
 	"spoon.test.trycatch.TryCatchTest" -> "java.lang.reflect.Array";
 	"spoon.test.trycatch.TryCatchTest" -> "spoon.reflect.declaration.CtMethod";
@@ -7950,7 +8084,7 @@ digraph G {
 	"spoon.test.replace.ReplaceTest" -> "java.util.List";
 	"spoon.test.replace.ReplaceTest" -> "spoon.compiler.SpoonCompiler";
 	"spoon.test.replace.ReplaceTest" -> "spoon.processing.FactoryAccessor";
-	"spoon.test.replace.ReplaceTest" -> "spoon.test.replace.Before";
+	"spoon.test.replace.ReplaceTest" -> "org.junit.Before";
 	"spoon.test.replace.ReplaceTest" -> "java.lang.Exception";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.factory.PackageFactory";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.factory.SubFactory";
@@ -7971,6 +8105,7 @@ digraph G {
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.declaration.CtMethod";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.declaration.CtExecutable";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.declaration.CtTypedElement";
+	"spoon.test.replace.ReplaceTest" -> "org.junit.Assert";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.code.CtBlock";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.code.CtStatementList";
 	"spoon.test.replace.ReplaceTest" -> "java.lang.Iterable";
@@ -7980,7 +8115,7 @@ digraph G {
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.factory.CodeFactory";
 	"spoon.test.replace.ReplaceTest" -> "java.lang.Integer";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.code.CtLiteral";
-	"spoon.test.replace.ReplaceTest" -> "spoon.test.replace.Test";
+	"spoon.test.replace.ReplaceTest" -> "org.junit.Test";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.code.CtLocalVariable";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.declaration.CtVariable";
 	"spoon.test.replace.ReplaceTest" -> "spoon.reflect.visitor.filter.TypeFilter";
@@ -8022,7 +8157,6 @@ digraph G {
 	"org.apache.commons.io.FileUtils" [color=grey];
 	"java.lang.Integer" [color=grey];
 	"java.lang.Short" [color=grey];
-	"spoon.test.parent.Before" [color=grey];
 	"org.eclipse.jdt.internal.compiler.ast.NormalAnnotation" [color=grey];
 	"spoon.support.reflect.code.CtOperatorAssignmentImpl" -> "spoon.reflect.code.BinaryOperatorKind";
 	"spoon.support.reflect.code.CtOperatorAssignmentImpl" -> "spoon.support.reflect.code.CtAssignmentImpl";
@@ -8042,7 +8176,6 @@ digraph G {
 	"spoon.support.reflect.code.CtOperatorAssignmentImpl" -> "spoon.reflect.code.CtOperatorAssignment";
 	"spoon.support.reflect.code.CtOperatorAssignmentImpl" -> "spoon.reflect.visitor.CtVisitor";
 	"spoon.support.reflect.code.CtOperatorAssignmentImpl" -> "java.lang.Override";
-	"spoon.test.trycatch.Test" [color=grey];
 	"spoon.test.strings.StringLiteralTest" -> "java.lang.Object";
 	"spoon.test.strings.StringLiteralTest" -> "java.lang.String";
 	"spoon.test.strings.StringLiteralTest" -> "spoon.test.TestUtils";
@@ -8067,8 +8200,9 @@ digraph G {
 	"spoon.test.strings.StringLiteralTest" -> "spoon.reflect.declaration.CtField";
 	"spoon.test.strings.StringLiteralTest" -> "spoon.reflect.declaration.CtVariable";
 	"spoon.test.strings.StringLiteralTest" -> "spoon.reflect.declaration.CtTypedElement";
+	"spoon.test.strings.StringLiteralTest" -> "org.junit.Assert";
 	"spoon.test.strings.StringLiteralTest" -> "java.lang.SuppressWarnings";
-	"spoon.test.strings.StringLiteralTest" -> "spoon.test.strings.Test";
+	"spoon.test.strings.StringLiteralTest" -> "org.junit.Test";
 	"spoon.reflect.reference.CtArrayTypeReference" -> "java.lang.String";
 	"spoon.reflect.reference.CtArrayTypeReference" -> "spoon.reflect.reference.CtTypeReference";
 	"spoon.reflect.reference.CtArrayTypeReference" -> "spoon.reflect.reference.CtGenericElementReference";
@@ -8076,7 +8210,6 @@ digraph G {
 	"spoon.reflect.reference.CtArrayTypeReference" -> "java.lang.Comparable";
 	"spoon.reflect.reference.CtArrayTypeReference" -> "spoon.processing.FactoryAccessor";
 	"org.eclipse.jdt.internal.compiler.ast.StringLiteral" [color=grey];
-	"spoon.test.intercession.Test" [color=grey];
 	"java.lang.IllegalArgumentException" [color=grey];
 	"java.lang.InstantiationException" [color=grey];
 	"javax.swing.JTable" [color=grey];
@@ -8100,6 +8233,7 @@ digraph G {
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.declaration.CtField";
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.declaration.CtVariable";
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.declaration.CtTypedElement";
+	"spoon.test.generics.GenericsTest" -> "org.junit.Assert";
 	"spoon.test.generics.GenericsTest" -> "java.util.ArrayList";
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.declaration.CtPackage";
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.reference.CtTypeReference";
@@ -8117,7 +8251,7 @@ digraph G {
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.code.CtLocalVariable";
 	"spoon.test.generics.GenericsTest" -> "java.lang.Exception";
 	"spoon.test.generics.GenericsTest" -> "java.lang.Throwable";
-	"spoon.test.generics.GenericsTest" -> "spoon.test.generics.Test";
+	"spoon.test.generics.GenericsTest" -> "org.junit.Test";
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.visitor.filter.TypeFilter";
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.visitor.filter.AbstractFilter";
 	"spoon.test.generics.GenericsTest" -> "spoon.reflect.code.CtExpression";
@@ -8154,7 +8288,7 @@ digraph G {
 	"spoon.test.prettyprinter.PrinterTest" -> "java.util.List";
 	"spoon.test.prettyprinter.PrinterTest" -> "spoon.compiler.SpoonCompiler";
 	"spoon.test.prettyprinter.PrinterTest" -> "spoon.processing.FactoryAccessor";
-	"spoon.test.prettyprinter.PrinterTest" -> "spoon.test.prettyprinter.Before";
+	"spoon.test.prettyprinter.PrinterTest" -> "org.junit.Before";
 	"spoon.test.prettyprinter.PrinterTest" -> "java.lang.Exception";
 	"spoon.test.prettyprinter.PrinterTest" -> "spoon.reflect.declaration.CtSimpleType";
 	"spoon.test.prettyprinter.PrinterTest" -> "spoon.reflect.declaration.CtNamedElement";
@@ -8164,7 +8298,8 @@ digraph G {
 	"spoon.test.prettyprinter.PrinterTest" -> "spoon.reflect.factory.TypeFactory";
 	"spoon.test.prettyprinter.PrinterTest" -> "spoon.reflect.factory.SubFactory";
 	"spoon.test.prettyprinter.PrinterTest" -> "spoon.compiler.Environment";
-	"spoon.test.prettyprinter.PrinterTest" -> "spoon.test.prettyprinter.Test";
+	"spoon.test.prettyprinter.PrinterTest" -> "org.junit.Assert";
+	"spoon.test.prettyprinter.PrinterTest" -> "org.junit.Test";
 	"Foo" -> "java.lang.Object";
 	"java.io.FileInputStream" [color=grey];
 	"java.lang.StringBuffer" [color=grey];
@@ -8302,8 +8437,6 @@ digraph G {
 	"spoon.support.reflect.cu.CtLineElementComparator" -> "spoon.reflect.cu.SourcePosition";
 	"spoon.support.reflect.cu.CtLineElementComparator" -> "java.lang.Integer";
 	"java.net.URL" [color=grey];
-	"spoon.test.enums.Test" [color=grey];
-	"spoon.test.replace.Before" [color=grey];
 	"java.awt.Container" [color=grey];
 	"spoon.reflect.reference.CtLocalVariableReference" -> "spoon.reflect.code.CtLocalVariable";
 	"spoon.reflect.reference.CtLocalVariableReference" -> "spoon.reflect.code.CtStatement";
@@ -8385,8 +8518,241 @@ digraph G {
 	subgraph cluster4 { 
 		rankdir=LR;label="spoon";
 	subgraph cluster5 { 
-		rankdir=LR;label="spoon.support";
+		rankdir=LR;label="spoon.test";
 	subgraph cluster6 { 
+		rankdir=LR;label="spoon.test.control";
+		"spoon.test.control.Fors" [label="Fors"]
+		"spoon.test.control.ControlTest" [label="ControlTest"]
+		"spoon.test.control.DoWhile" [label="DoWhile"]
+		"spoon.test.control.Ifs$Token" [label="Ifs$Token"]
+		"spoon.test.control.Ifs" [label="Ifs"]
+	};
+	subgraph cluster7 { 
+		rankdir=LR;label="spoon.test.annotation";
+		"spoon.test.annotation.AnnotationTest" [label="AnnotationTest"]
+		"spoon.test.annotation.Bound" [label="Bound"]
+		"spoon.test.annotation.Main" [label="Main"]
+		"spoon.test.annotation.AnnotParam" [label="AnnotParam"]
+		"spoon.test.annotation.PersistenceProperty" [label="PersistenceProperty"]
+	};
+	subgraph cluster8 { 
+		rankdir=LR;label="spoon.test.secondaryclasses";
+		"spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf" [label="ClassWithInternalPublicClassOrInterf"]
+		"spoon.test.secondaryclasses.Test" [label="Test"]
+		"spoon.test.secondaryclasses.PrivateInnerClasses" [label="PrivateInnerClasses"]
+		"spoon.test.secondaryclasses.Secondary" [label="Secondary"]
+		"spoon.test.secondaryclasses.AnonymousClass$I" [label="AnonymousClass$I"]
+		"spoon.test.secondaryclasses.AnonymousClass$" [label="AnonymousClass$"]
+		"spoon.test.secondaryclasses.TopLevel" [label="TopLevel"]
+		"spoon.test.secondaryclasses.PrivateInnerClasses$DataClassComparator" [label="PrivateInnerClasses$DataClassComparator"]
+		"spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf$InternalClass" [label="ClassWithInternalPublicClassOrInterf$InternalClass"]
+		"spoon.test.secondaryclasses.AnonymousClass" [label="AnonymousClass"]
+		"spoon.test.secondaryclasses.TopLevel$InnerClass" [label="TopLevel$InnerClass"]
+		"spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf$InternalInterf" [label="ClassWithInternalPublicClassOrInterf$InternalInterf"]
+		"spoon.test.secondaryclasses.K" [label="K"]
+		"spoon.test.secondaryclasses.I" [label="I"]
+		"spoon.test.secondaryclasses.ClassesTest" [label="ClassesTest"]
+	};
+	subgraph cluster9 { 
+		rankdir=LR;label="spoon.test.template";
+		"spoon.test.template.C1" [label="C1"]
+		"spoon.test.template.SubClass" [label="SubClass"]
+		"spoon.test.template.TemplateTest" [label="TemplateTest"]
+		"spoon.test.template.SubTemplate" [label="SubTemplate"]
+		"spoon.test.template.SuperClass" [label="SuperClass"]
+		"spoon.test.template.SuperTemplate" [label="SuperTemplate"]
+		"spoon.test.template.TemplateWithFieldsAndMethods" [label="TemplateWithFieldsAndMethods"]
+		"spoon.test.template.TemplateWithConstructor" [label="TemplateWithConstructor"]
+		"spoon.test.template.ArrayResizeTemplate" [label="ArrayResizeTemplate"]
+	};
+	subgraph cluster10 { 
+		rankdir=LR;label="spoon.test.generics";
+		"spoon.test.generics.GenericConstructor" [label="GenericConstructor"]
+		"spoon.test.generics.ACLass" [label="ACLass"]
+		"spoon.test.generics.SimilarSignatureMethodes" [label="SimilarSignatureMethodes"]
+		"spoon.test.generics.ComparableComparator" [label="ComparableComparator"]
+		"spoon.test.generics.GenericMethodCallWithExtend" [label="GenericMethodCallWithExtend"]
+		"spoon.test.generics.ComparableComparatorBug" [label="ComparableComparatorBug"]
+		"spoon.test.generics.Tree" [label="Tree"]
+		"spoon.test.generics.BugCollection" [label="BugCollection"]
+		"spoon.test.generics.InstanceOfMapEntryGeneric" [label="InstanceOfMapEntryGeneric"]
+		"spoon.test.generics.ClassThatBindsAGenericType" [label="ClassThatBindsAGenericType"]
+		"spoon.test.generics.ClassThatDefinesANewTypeArgument" [label="ClassThatDefinesANewTypeArgument"]
+		"spoon.test.generics.BugCollection$Foo" [label="BugCollection$Foo"]
+		"spoon.test.generics.GenericsTest" [label="GenericsTest"]
+	};
+	subgraph cluster11 { 
+		rankdir=LR;label="spoon.test.api";
+		"spoon.test.api.APITest$" [label="APITest$"]
+		"spoon.test.api.APITest" [label="APITest"]
+		"spoon.test.api.APITest$$" [label="APITest$$"]
+	};
+	subgraph cluster12 { 
+		rankdir=LR;label="spoon.test.initializers";
+		"spoon.test.initializers.InstanceInitializers$" [label="InstanceInitializers$"]
+		"spoon.test.initializers.InternalClassStaticFieldInit$InternalClass" [label="InternalClassStaticFieldInit$InternalClass"]
+		"spoon.test.initializers.InternalClassStaticFieldInit" [label="InternalClassStaticFieldInit"]
+		"spoon.test.initializers.InitializerTest" [label="InitializerTest"]
+		"spoon.test.initializers.InstanceInitializers" [label="InstanceInitializers"]
+	};
+	subgraph cluster13 { 
+		rankdir=LR;label="spoon.test.snippets";
+		"spoon.test.snippets.SnippetTest" [label="SnippetTest"]
+	};
+	subgraph cluster14 { 
+		rankdir=LR;label="spoon.test.parent";
+		"spoon.test.parent.Foo" [label="Foo"]
+		"spoon.test.parent.ParentTest" [label="ParentTest"]
+	};
+	subgraph cluster15 { 
+		rankdir=LR;label="spoon.test.prettyprinter";
+		"spoon.test.prettyprinter.Validation$" [label="Validation$"]
+		"spoon.test.prettyprinter.DefaultPrettyPrinterDependency" [label="DefaultPrettyPrinterDependency"]
+		"spoon.test.prettyprinter.Validation" [label="Validation"]
+		"spoon.test.prettyprinter.LinesTest" [label="LinesTest"]
+		"spoon.test.prettyprinter.DefaultPrettyPrinterTest" [label="DefaultPrettyPrinterTest"]
+		"spoon.test.prettyprinter.PrinterTest" [label="PrinterTest"]
+	};
+	subgraph cluster16 { 
+		rankdir=LR;label="spoon.test.strings";
+		"spoon.test.strings.StringTest" [label="StringTest"]
+		"spoon.test.strings.Main" [label="Main"]
+		"spoon.test.strings.StringLiteralTest" [label="StringLiteralTest"]
+	};
+	subgraph cluster17 { 
+		rankdir=LR;label="spoon.test.enums";
+		"spoon.test.enums.OpCode$" [label="OpCode$"]
+		"spoon.test.enums.OpCode" [label="OpCode"]
+		"spoon.test.enums.Regular" [label="Regular"]
+		"spoon.test.enums.Performable" [label="Performable"]
+		"spoon.test.enums.EnumsTest" [label="EnumsTest"]
+	};
+	subgraph cluster18 { 
+		rankdir=LR;label="spoon.test.processing";
+		"spoon.test.processing.SampleForInsertBefore" [label="SampleForInsertBefore"]
+		"spoon.test.processing.ArrayResizeProcessor" [label="ArrayResizeProcessor"]
+		"spoon.test.processing.ProcessingTest" [label="ProcessingTest"]
+		"spoon.test.processing.SampleForInsertBefore$" [label="SampleForInsertBefore$"]
+		"spoon.test.processing.TestProcessor" [label="TestProcessor"]
+	};
+	subgraph cluster19 { 
+		rankdir=LR;label="spoon.test.fieldaccesses";
+		"spoon.test.fieldaccesses.TargetedAccessPosition" [label="TargetedAccessPosition"]
+		"spoon.test.fieldaccesses.InnerClassThisAccess" [label="InnerClassThisAccess"]
+		"spoon.test.fieldaccesses.FieldAccessTest" [label="FieldAccessTest"]
+		"spoon.test.fieldaccesses.BCUBug20140402" [label="BCUBug20140402"]
+		"spoon.test.fieldaccesses.InnerClassThisAccess$InnerClass" [label="InnerClassThisAccess$InnerClass"]
+		"spoon.test.fieldaccesses.InternalSuperCall" [label="InternalSuperCall"]
+		"spoon.test.fieldaccesses.InnerClassThisAccess$InnerClassForTest" [label="InnerClassThisAccess$InnerClassForTest"]
+		"spoon.test.fieldaccesses.Mouse" [label="Mouse"]
+	};
+	subgraph cluster20 { 
+		rankdir=LR;label="spoon.test.exceptions";
+		"spoon.test.exceptions.ExceptionTest" [label="ExceptionTest"]
+		"spoon.test.exceptions.ClassWithError" [label="ClassWithError"]
+	};
+	subgraph cluster21 { 
+		rankdir=LR;label="spoon.test.factory";
+		"spoon.test.factory.FactoryTest$MyCtMethod" [label="FactoryTest$MyCtMethod"]
+		"spoon.test.factory.FactoryTest" [label="FactoryTest"]
+		"spoon.test.factory.FactoryTest$" [label="FactoryTest$"]
+	};
+	subgraph cluster22 { 
+		rankdir=LR;label="spoon.test.casts";
+		"spoon.test.casts.CastTest" [label="CastTest"]
+	};
+	subgraph cluster23 { 
+		rankdir=LR;label="spoon.test.ctCase";
+		"spoon.test.ctCase.SwitchCaseTest" [label="SwitchCaseTest"]
+		"spoon.test.ctCase.ClassWithSwitchExample" [label="ClassWithSwitchExample"]
+	};
+	subgraph cluster24 { 
+		rankdir=LR;label="spoon.test.main";
+		"spoon.test.main.MainTest" [label="MainTest"]
+	};
+	subgraph cluster25 { 
+		rankdir=LR;label="spoon.test.arrays";
+		"spoon.test.arrays.ArrayClass" [label="ArrayClass"]
+		"spoon.test.arrays.ArraysTest" [label="ArraysTest"]
+	};
+	subgraph cluster26 { 
+		rankdir=LR;label="spoon.test.filters";
+		"spoon.test.filters.Foo" [label="Foo"]
+		"spoon.test.filters.FilterTest" [label="FilterTest"]
+	};
+	subgraph cluster27 { 
+		rankdir=LR;label="spoon.test.intercession";
+		"spoon.test.intercession.IntercessionTest" [label="IntercessionTest"]
+		"spoon.test.intercession.RemoveTest" [label="RemoveTest"]
+	subgraph cluster28 { 
+		rankdir=LR;label="spoon.test.intercession.insertBefore";
+		"spoon.test.intercession.insertBefore.InsertBeforeExample" [label="InsertBeforeExample"]
+		"spoon.test.intercession.insertBefore.InsertBeforeTest" [label="InsertBeforeTest"]
+	};
+	};
+		"spoon.test.SampleClass$" [label="SampleClass$"]
+	subgraph cluster29 { 
+		rankdir=LR;label="spoon.test.limits";
+		"spoon.test.limits.StaticClassAnon" [label="StaticClassAnon"]
+		"spoon.test.limits.StaticFieldAccesOnInstance" [label="StaticFieldAccesOnInstance"]
+		"spoon.test.limits.StaticClassAnon$StaticIntern" [label="StaticClassAnon$StaticIntern"]
+		"spoon.test.limits.MultipleInternalClass" [label="MultipleInternalClass"]
+	subgraph cluster30 { 
+		rankdir=LR;label="spoon.test.limits.utils";
+		"spoon.test.limits.utils.InternalTest" [label="InternalTest"]
+		"spoon.test.limits.utils.ContainInternalClass$InternalClass" [label="ContainInternalClass$InternalClass"]
+		"spoon.test.limits.utils.ContainInternalClass$" [label="ContainInternalClass$"]
+		"spoon.test.limits.utils.ContainInternalClass$InternalClass$InsideInternalClass" [label="ContainInternalClass$InternalClass$InsideInternalClass"]
+		"spoon.test.limits.utils.ContainInternalClass" [label="ContainInternalClass"]
+	};
+		"spoon.test.limits.StaticConstructorAccessOnInstance" [label="StaticConstructorAccessOnInstance"]
+	};
+	subgraph cluster31 { 
+		rankdir=LR;label="spoon.test.visibility";
+	subgraph cluster32 { 
+		rankdir=LR;label="spoon.test.visibility.packageprotected";
+		"spoon.test.visibility.packageprotected.NonAccessibleInterf" [label="NonAccessibleInterf"]
+		"spoon.test.visibility.packageprotected.AccessibleClassFromNonAccessibleInterf" [label="AccessibleClassFromNonAccessibleInterf"]
+	};
+		"spoon.test.visibility.VisibilityTest" [label="VisibilityTest"]
+		"spoon.test.visibility.MethodeWithNonAccessibleTypeArgument" [label="MethodeWithNonAccessibleTypeArgument"]
+	};
+	subgraph cluster33 { 
+		rankdir=LR;label="spoon.test.subclass.prettyprinter";
+		"spoon.test.subclass.prettyprinter.DefaultPrettyPrinterExample" [label="DefaultPrettyPrinterExample"]
+	};
+		"spoon.test.TestUtils$" [label="TestUtils$"]
+	subgraph cluster34 { 
+		rankdir=LR;label="spoon.test.replace";
+		"spoon.test.replace.Bar" [label="Bar"]
+		"spoon.test.replace.Foo" [label="Foo"]
+		"spoon.test.replace.ReplaceTest" [label="ReplaceTest"]
+	};
+	subgraph cluster35 { 
+		rankdir=LR;label="spoon.test.eval";
+		"spoon.test.eval.ToEvaluate" [label="ToEvaluate"]
+		"spoon.test.eval.EvalTest" [label="EvalTest"]
+	};
+	subgraph cluster36 { 
+		rankdir=LR;label="spoon.test.sourcePosition";
+		"spoon.test.sourcePosition.SourcePositionTest" [label="SourcePositionTest"]
+	};
+	subgraph cluster37 { 
+		rankdir=LR;label="spoon.test.model";
+		"spoon.test.model.SwitchCaseTest" [label="SwitchCaseTest"]
+		"spoon.test.model.BlockTest" [label="BlockTest"]
+	};
+		"spoon.test.TestUtils" [label="TestUtils"]
+		"spoon.test.SampleClass" [label="SampleClass"]
+	subgraph cluster38 { 
+		rankdir=LR;label="spoon.test.trycatch";
+		"spoon.test.trycatch.Main" [label="Main"]
+		"spoon.test.trycatch.TryCatchTest" [label="TryCatchTest"]
+	};
+	};
+	subgraph cluster39 { 
+		rankdir=LR;label="spoon.support";
+	subgraph cluster40 { 
 		rankdir=LR;label="spoon.support.reflect.code";
 		"spoon.support.reflect.code.CtAssertImpl" [label="CtAssertImpl"]
 		"spoon.support.reflect.code.CtLiteralImpl" [label="CtLiteralImpl"]
@@ -8430,14 +8796,14 @@ digraph G {
 		"spoon.support.reflect.code.CtAnnotationFieldAccesImpl" [label="CtAnnotationFieldAccesImpl"]
 		"spoon.support.reflect.code.CtOperatorAssignmentImpl" [label="CtOperatorAssignmentImpl"]
 	};
-	subgraph cluster7 { 
+	subgraph cluster41 { 
 		rankdir=LR;label="spoon.support.reflect.cu";
 		"spoon.support.reflect.cu.CompilationUnitImpl" [label="CompilationUnitImpl"]
 		"spoon.support.reflect.cu.SourcePositionImpl" [label="SourcePositionImpl"]
 		"spoon.support.reflect.cu.ImportImpl" [label="ImportImpl"]
 		"spoon.support.reflect.cu.CtLineElementComparator" [label="CtLineElementComparator"]
 	};
-	subgraph cluster8 { 
+	subgraph cluster42 { 
 		rankdir=LR;label="spoon.support.reflect.reference";
 		"spoon.support.reflect.reference.CtExecutableReferenceImpl" [label="CtExecutableReferenceImpl"]
 		"spoon.support.reflect.reference.CtTypeParameterReferenceImpl" [label="CtTypeParameterReferenceImpl"]
@@ -8450,7 +8816,7 @@ digraph G {
 		"spoon.support.reflect.reference.CtFieldReferenceImpl" [label="CtFieldReferenceImpl"]
 		"spoon.support.reflect.reference.CtPackageReferenceImpl" [label="CtPackageReferenceImpl"]
 	};
-	subgraph cluster9 { 
+	subgraph cluster43 { 
 		rankdir=LR;label="spoon.support.reflect.eval";
 		"spoon.support.reflect.eval.VisitorSymbolicEvaluator" [label="VisitorSymbolicEvaluator"]
 		"spoon.support.reflect.eval.SymbolicWrappedException" [label="SymbolicWrappedException"]
@@ -8458,7 +8824,7 @@ digraph G {
 		"spoon.support.reflect.eval.VisitorPartialEvaluator" [label="VisitorPartialEvaluator"]
 		"spoon.support.reflect.eval.ReturnException" [label="ReturnException"]
 	};
-	subgraph cluster10 { 
+	subgraph cluster44 { 
 		rankdir=LR;label="spoon.support.reflect.declaration";
 		"spoon.support.reflect.declaration.CtElementImpl" [label="CtElementImpl"]
 		"spoon.support.reflect.declaration.CtAnnotationImpl$AnnotationInvocationHandler" [label="CtAnnotationImpl$AnnotationInvocationHandler"]
@@ -8486,9 +8852,9 @@ digraph G {
 	};
 		"spoon.support.QueueProcessingManager" [label="QueueProcessingManager"]
 		"spoon.support.StandardEnvironment" [label="StandardEnvironment"]
-	subgraph cluster11 { 
+	subgraph cluster45 { 
 		rankdir=LR;label="spoon.support.compiler";
-	subgraph cluster12 { 
+	subgraph cluster46 { 
 		rankdir=LR;label="spoon.support.compiler.jdt";
 		"spoon.support.compiler.jdt.TreeBuilderRequestor" [label="TreeBuilderRequestor"]
 		"spoon.support.compiler.jdt.JDTTreeBuilder$BuilderContext" [label="JDTTreeBuilder$BuilderContext"]
@@ -8516,7 +8882,7 @@ digraph G {
 		"spoon.support.compiler.FileSystemFile" [label="FileSystemFile"]
 	};
 		"spoon.support.SerializationModelStreamer" [label="SerializationModelStreamer"]
-	subgraph cluster13 { 
+	subgraph cluster47 { 
 		rankdir=LR;label="spoon.support.util";
 		"spoon.support.util.Timer" [label="Timer"]
 		"spoon.support.util.BasicCompilationUnit" [label="BasicCompilationUnit"]
@@ -8525,7 +8891,7 @@ digraph G {
 		"spoon.support.util.NotDirectlyModifiableSet" [label="NotDirectlyModifiableSet"]
 		"spoon.support.util.RtHelper" [label="RtHelper"]
 	};
-	subgraph cluster14 { 
+	subgraph cluster48 { 
 		rankdir=LR;label="spoon.support.gui";
 		"spoon.support.gui.SpoonTreeBuilder$" [label="SpoonTreeBuilder$"]
 		"spoon.support.gui.SpoonModelTree$" [label="SpoonModelTree$"]
@@ -8534,13 +8900,13 @@ digraph G {
 		"spoon.support.gui.SpoonObjectFieldsTable" [label="SpoonObjectFieldsTable"]
 		"spoon.support.gui.SpoonTreeBuilder" [label="SpoonTreeBuilder"]
 	};
-	subgraph cluster15 { 
+	subgraph cluster49 { 
 		rankdir=LR;label="spoon.support.processing";
 		"spoon.support.processing.XmlProcessorProperties$Loader" [label="XmlProcessorProperties$Loader"]
 		"spoon.support.processing.XmlProcessorProperties" [label="XmlProcessorProperties"]
 		"spoon.support.processing.SpoonletXmlHandler" [label="SpoonletXmlHandler"]
 	};
-	subgraph cluster16 { 
+	subgraph cluster50 { 
 		rankdir=LR;label="spoon.support.template";
 		"spoon.support.template.Parameters" [label="Parameters"]
 		"spoon.support.template.SubstitutionVisitor$InheritanceSustitutionScanner" [label="SubstitutionVisitor$InheritanceSustitutionScanner"]
@@ -8552,7 +8918,7 @@ digraph G {
 		"spoon.support.template.ParameterMatcher" [label="ParameterMatcher"]
 	};
 		"spoon.support.SerializationModelStreamer$" [label="SerializationModelStreamer$"]
-	subgraph cluster17 { 
+	subgraph cluster51 { 
 		rankdir=LR;label="spoon.support.visitor";
 		"spoon.support.visitor.SignaturePrinter" [label="SignaturePrinter"]
 		"spoon.support.visitor.TypeReferenceScanner" [label="TypeReferenceScanner"]
@@ -8561,273 +8927,6 @@ digraph G {
 		"spoon.support.JavaOutputProcessor" [label="JavaOutputProcessor"]
 		"spoon.support.DefaultCoreFactory" [label="DefaultCoreFactory"]
 		"spoon.support.RuntimeProcessingManager" [label="RuntimeProcessingManager"]
-	};
-	subgraph cluster18 { 
-		rankdir=LR;label="spoon.test";
-	subgraph cluster19 { 
-		rankdir=LR;label="spoon.test.control";
-		"spoon.test.control.Fors" [label="Fors"]
-		"spoon.test.control.Test" [label="Test"]
-		"spoon.test.control.ControlTest" [label="ControlTest"]
-		"spoon.test.control.DoWhile" [label="DoWhile"]
-		"spoon.test.control.Ifs$Token" [label="Ifs$Token"]
-		"spoon.test.control.Ifs" [label="Ifs"]
-	};
-	subgraph cluster20 { 
-		rankdir=LR;label="spoon.test.visibility";
-		"spoon.test.visibility.Test" [label="Test"]
-	subgraph cluster21 { 
-		rankdir=LR;label="spoon.test.visibility.packageprotected";
-		"spoon.test.visibility.packageprotected.NonAccessibleInterf" [label="NonAccessibleInterf"]
-		"spoon.test.visibility.packageprotected.AccessibleClassFromNonAccessibleInterf" [label="AccessibleClassFromNonAccessibleInterf"]
-	};
-		"spoon.test.visibility.VisibilityTest" [label="VisibilityTest"]
-		"spoon.test.visibility.MethodeWithNonAccessibleTypeArgument" [label="MethodeWithNonAccessibleTypeArgument"]
-	};
-	subgraph cluster22 { 
-		rankdir=LR;label="spoon.test.annotation";
-		"spoon.test.annotation.AnnotationTest" [label="AnnotationTest"]
-		"spoon.test.annotation.Bound" [label="Bound"]
-		"spoon.test.annotation.Main" [label="Main"]
-		"spoon.test.annotation.AnnotParam" [label="AnnotParam"]
-		"spoon.test.annotation.Test" [label="Test"]
-		"spoon.test.annotation.PersistenceProperty" [label="PersistenceProperty"]
-	};
-	subgraph cluster23 { 
-		rankdir=LR;label="spoon.test.secondaryclasses";
-		"spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf" [label="ClassWithInternalPublicClassOrInterf"]
-		"spoon.test.secondaryclasses.Test" [label="Test"]
-		"spoon.test.secondaryclasses.PrivateInnerClasses" [label="PrivateInnerClasses"]
-		"spoon.test.secondaryclasses.Secondary" [label="Secondary"]
-		"spoon.test.secondaryclasses.AnonymousClass$I" [label="AnonymousClass$I"]
-		"spoon.test.secondaryclasses.AnonymousClass$" [label="AnonymousClass$"]
-		"spoon.test.secondaryclasses.TopLevel" [label="TopLevel"]
-		"spoon.test.secondaryclasses.PrivateInnerClasses$DataClassComparator" [label="PrivateInnerClasses$DataClassComparator"]
-		"spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf$InternalClass" [label="ClassWithInternalPublicClassOrInterf$InternalClass"]
-		"spoon.test.secondaryclasses.AnonymousClass" [label="AnonymousClass"]
-		"spoon.test.secondaryclasses.TopLevel$InnerClass" [label="TopLevel$InnerClass"]
-		"spoon.test.secondaryclasses.ClassWithInternalPublicClassOrInterf$InternalInterf" [label="ClassWithInternalPublicClassOrInterf$InternalInterf"]
-		"spoon.test.secondaryclasses.K" [label="K"]
-		"spoon.test.secondaryclasses.I" [label="I"]
-		"spoon.test.secondaryclasses.ClassesTest" [label="ClassesTest"]
-	};
-	subgraph cluster24 { 
-		rankdir=LR;label="spoon.test.template";
-		"spoon.test.template.C1" [label="C1"]
-		"spoon.test.template.SubClass" [label="SubClass"]
-		"spoon.test.template.Test" [label="Test"]
-		"spoon.test.template.TemplateTest" [label="TemplateTest"]
-		"spoon.test.template.SubTemplate" [label="SubTemplate"]
-		"spoon.test.template.SuperClass" [label="SuperClass"]
-		"spoon.test.template.SuperTemplate" [label="SuperTemplate"]
-		"spoon.test.template.TemplateWithFieldsAndMethods" [label="TemplateWithFieldsAndMethods"]
-		"spoon.test.template.TemplateWithConstructor" [label="TemplateWithConstructor"]
-		"spoon.test.template.ArrayResizeTemplate" [label="ArrayResizeTemplate"]
-	};
-	subgraph cluster25 { 
-		rankdir=LR;label="spoon.test.generics";
-		"spoon.test.generics.GenericConstructor" [label="GenericConstructor"]
-		"spoon.test.generics.ACLass" [label="ACLass"]
-		"spoon.test.generics.SimilarSignatureMethodes" [label="SimilarSignatureMethodes"]
-		"spoon.test.generics.ComparableComparator" [label="ComparableComparator"]
-		"spoon.test.generics.GenericMethodCallWithExtend" [label="GenericMethodCallWithExtend"]
-		"spoon.test.generics.ComparableComparatorBug" [label="ComparableComparatorBug"]
-		"spoon.test.generics.Test" [label="Test"]
-		"spoon.test.generics.Tree" [label="Tree"]
-		"spoon.test.generics.BugCollection" [label="BugCollection"]
-		"spoon.test.generics.InstanceOfMapEntryGeneric" [label="InstanceOfMapEntryGeneric"]
-		"spoon.test.generics.ClassThatBindsAGenericType" [label="ClassThatBindsAGenericType"]
-		"spoon.test.generics.ClassThatDefinesANewTypeArgument" [label="ClassThatDefinesANewTypeArgument"]
-		"spoon.test.generics.BugCollection$Foo" [label="BugCollection$Foo"]
-		"spoon.test.generics.GenericsTest" [label="GenericsTest"]
-	};
-	subgraph cluster26 { 
-		rankdir=LR;label="spoon.test.fieldaccesses";
-		"spoon.test.fieldaccesses.Test" [label="Test"]
-		"spoon.test.fieldaccesses.TargetedAccessPosition" [label="TargetedAccessPosition"]
-		"spoon.test.fieldaccesses.InnerClassThisAccess" [label="InnerClassThisAccess"]
-		"spoon.test.fieldaccesses.FieldAccessTest" [label="FieldAccessTest"]
-		"spoon.test.fieldaccesses.BCUBug20140402" [label="BCUBug20140402"]
-		"spoon.test.fieldaccesses.InnerClassThisAccess$InnerClass" [label="InnerClassThisAccess$InnerClass"]
-		"spoon.test.fieldaccesses.InternalSuperCall" [label="InternalSuperCall"]
-		"spoon.test.fieldaccesses.InnerClassThisAccess$InnerClassForTest" [label="InnerClassThisAccess$InnerClassForTest"]
-		"spoon.test.fieldaccesses.Mouse" [label="Mouse"]
-	};
-	subgraph cluster27 { 
-		rankdir=LR;label="spoon.test.api";
-		"spoon.test.api.APITest$" [label="APITest$"]
-		"spoon.test.api.APITest" [label="APITest"]
-		"spoon.test.api.Test" [label="Test"]
-		"spoon.test.api.APITest$$" [label="APITest$$"]
-	};
-	subgraph cluster28 { 
-		rankdir=LR;label="spoon.test.initializers";
-		"spoon.test.initializers.InstanceInitializers$" [label="InstanceInitializers$"]
-		"spoon.test.initializers.InternalClassStaticFieldInit$InternalClass" [label="InternalClassStaticFieldInit$InternalClass"]
-		"spoon.test.initializers.InternalClassStaticFieldInit" [label="InternalClassStaticFieldInit"]
-		"spoon.test.initializers.InitializerTest" [label="InitializerTest"]
-		"spoon.test.initializers.InstanceInitializers" [label="InstanceInitializers"]
-		"spoon.test.initializers.Test" [label="Test"]
-	};
-	subgraph cluster29 { 
-		rankdir=LR;label="spoon.test.snippets";
-		"spoon.test.snippets.SnippetTest" [label="SnippetTest"]
-		"spoon.test.snippets.Test" [label="Test"]
-	};
-	subgraph cluster30 { 
-		rankdir=LR;label="spoon.test.parent";
-		"spoon.test.parent.Foo" [label="Foo"]
-		"spoon.test.parent.ParentTest" [label="ParentTest"]
-		"spoon.test.parent.Test" [label="Test"]
-		"spoon.test.parent.Before" [label="Before"]
-	};
-	subgraph cluster31 { 
-		rankdir=LR;label="spoon.test.prettyprinter";
-		"spoon.test.prettyprinter.Validation$" [label="Validation$"]
-		"spoon.test.prettyprinter.Test" [label="Test"]
-		"spoon.test.prettyprinter.DefaultPrettyPrinterDependency" [label="DefaultPrettyPrinterDependency"]
-		"spoon.test.prettyprinter.Validation" [label="Validation"]
-		"spoon.test.prettyprinter.LinesTest" [label="LinesTest"]
-		"spoon.test.prettyprinter.DefaultPrettyPrinterTest" [label="DefaultPrettyPrinterTest"]
-		"spoon.test.prettyprinter.Before" [label="Before"]
-		"spoon.test.prettyprinter.PrinterTest" [label="PrinterTest"]
-	};
-	subgraph cluster32 { 
-		rankdir=LR;label="spoon.test.arrays";
-		"spoon.test.arrays.Test" [label="Test"]
-		"spoon.test.arrays.ArrayClass" [label="ArrayClass"]
-		"spoon.test.arrays.ArraysTest" [label="ArraysTest"]
-	};
-	subgraph cluster33 { 
-		rankdir=LR;label="spoon.test.limits";
-	subgraph cluster34 { 
-		rankdir=LR;label="spoon.test.limits.utils";
-		"spoon.test.limits.utils.Test" [label="Test"]
-		"spoon.test.limits.utils.InternalTest" [label="InternalTest"]
-		"spoon.test.limits.utils.ContainInternalClass$InternalClass" [label="ContainInternalClass$InternalClass"]
-		"spoon.test.limits.utils.ContainInternalClass$" [label="ContainInternalClass$"]
-		"spoon.test.limits.utils.ContainInternalClass$InternalClass$InsideInternalClass" [label="ContainInternalClass$InternalClass$InsideInternalClass"]
-		"spoon.test.limits.utils.ContainInternalClass" [label="ContainInternalClass"]
-	};
-		"spoon.test.limits.StaticClassAnon" [label="StaticClassAnon"]
-		"spoon.test.limits.StaticFieldAccesOnInstance" [label="StaticFieldAccesOnInstance"]
-		"spoon.test.limits.StaticClassAnon$StaticIntern" [label="StaticClassAnon$StaticIntern"]
-		"spoon.test.limits.MultipleInternalClass" [label="MultipleInternalClass"]
-		"spoon.test.limits.StaticConstructorAccessOnInstance" [label="StaticConstructorAccessOnInstance"]
-	};
-	subgraph cluster35 { 
-		rankdir=LR;label="spoon.test.exceptions";
-		"spoon.test.exceptions.Test" [label="Test"]
-		"spoon.test.exceptions.ExceptionTest" [label="ExceptionTest"]
-		"spoon.test.exceptions.ClassWithError" [label="ClassWithError"]
-	};
-	subgraph cluster36 { 
-		rankdir=LR;label="spoon.test.strings";
-		"spoon.test.strings.StringTest" [label="StringTest"]
-		"spoon.test.strings.Test" [label="Test"]
-		"spoon.test.strings.Main" [label="Main"]
-		"spoon.test.strings.StringLiteralTest" [label="StringLiteralTest"]
-	};
-	subgraph cluster37 { 
-		rankdir=LR;label="spoon.test.processing";
-		"spoon.test.processing.Test" [label="Test"]
-		"spoon.test.processing.SampleForInsertBefore" [label="SampleForInsertBefore"]
-		"spoon.test.processing.ArrayResizeProcessor" [label="ArrayResizeProcessor"]
-		"spoon.test.processing.ProcessingTest" [label="ProcessingTest"]
-		"spoon.test.processing.SampleForInsertBefore$" [label="SampleForInsertBefore$"]
-		"spoon.test.processing.TestProcessor" [label="TestProcessor"]
-	};
-	subgraph cluster38 { 
-		rankdir=LR;label="spoon.test.enums";
-		"spoon.test.enums.OpCode$" [label="OpCode$"]
-		"spoon.test.enums.OpCode" [label="OpCode"]
-		"spoon.test.enums.Regular" [label="Regular"]
-		"spoon.test.enums.Performable" [label="Performable"]
-		"spoon.test.enums.EnumsTest" [label="EnumsTest"]
-		"spoon.test.enums.Test" [label="Test"]
-	};
-	subgraph cluster39 { 
-		rankdir=LR;label="spoon.test.filters";
-		"spoon.test.filters.Before" [label="Before"]
-		"spoon.test.filters.Foo" [label="Foo"]
-		"spoon.test.filters.Test" [label="Test"]
-		"spoon.test.filters.FilterTest" [label="FilterTest"]
-	};
-	subgraph cluster40 { 
-		rankdir=LR;label="spoon.test.factory";
-		"spoon.test.factory.FactoryTest$MyCtMethod" [label="FactoryTest$MyCtMethod"]
-		"spoon.test.factory.FactoryTest" [label="FactoryTest"]
-		"spoon.test.factory.Test" [label="Test"]
-		"spoon.test.factory.FactoryTest$" [label="FactoryTest$"]
-	};
-	subgraph cluster41 { 
-		rankdir=LR;label="spoon.test.casts";
-		"spoon.test.casts.CastTest" [label="CastTest"]
-		"spoon.test.casts.Test" [label="Test"]
-	};
-	subgraph cluster42 { 
-		rankdir=LR;label="spoon.test.ctCase";
-		"spoon.test.ctCase.SwitchCaseTest" [label="SwitchCaseTest"]
-		"spoon.test.ctCase.Test" [label="Test"]
-		"spoon.test.ctCase.ClassWithSwitchExample" [label="ClassWithSwitchExample"]
-	};
-	subgraph cluster43 { 
-		rankdir=LR;label="spoon.test.main";
-		"spoon.test.main.MainTest" [label="MainTest"]
-		"spoon.test.main.Test" [label="Test"]
-	};
-	subgraph cluster44 { 
-		rankdir=LR;label="spoon.test.intercession";
-		"spoon.test.intercession.IntercessionTest" [label="IntercessionTest"]
-		"spoon.test.intercession.RemoveTest" [label="RemoveTest"]
-	subgraph cluster45 { 
-		rankdir=LR;label="spoon.test.intercession.insertBefore";
-		"spoon.test.intercession.insertBefore.InsertBeforeExample" [label="InsertBeforeExample"]
-		"spoon.test.intercession.insertBefore.Test" [label="Test"]
-		"spoon.test.intercession.insertBefore.Before" [label="Before"]
-		"spoon.test.intercession.insertBefore.InsertBeforeTest" [label="InsertBeforeTest"]
-	};
-		"spoon.test.intercession.Test" [label="Test"]
-	};
-		"spoon.test.SampleClass$" [label="SampleClass$"]
-	subgraph cluster46 { 
-		rankdir=LR;label="spoon.test.subclass.prettyprinter";
-		"spoon.test.subclass.prettyprinter.DefaultPrettyPrinterExample" [label="DefaultPrettyPrinterExample"]
-	};
-		"spoon.test.TestUtils$" [label="TestUtils$"]
-	subgraph cluster47 { 
-		rankdir=LR;label="spoon.test.replace";
-		"spoon.test.replace.Bar" [label="Bar"]
-		"spoon.test.replace.Foo" [label="Foo"]
-		"spoon.test.replace.Test" [label="Test"]
-		"spoon.test.replace.ReplaceTest" [label="ReplaceTest"]
-		"spoon.test.replace.Before" [label="Before"]
-	};
-	subgraph cluster48 { 
-		rankdir=LR;label="spoon.test.sourcePosition";
-		"spoon.test.sourcePosition.Test" [label="Test"]
-		"spoon.test.sourcePosition.SourcePositionTest" [label="SourcePositionTest"]
-	};
-	subgraph cluster49 { 
-		rankdir=LR;label="spoon.test.eval";
-		"spoon.test.eval.ToEvaluate" [label="ToEvaluate"]
-		"spoon.test.eval.EvalTest" [label="EvalTest"]
-		"spoon.test.eval.Test" [label="Test"]
-	};
-	subgraph cluster50 { 
-		rankdir=LR;label="spoon.test.model";
-		"spoon.test.model.Test" [label="Test"]
-		"spoon.test.model.SwitchCaseTest" [label="SwitchCaseTest"]
-		"spoon.test.model.BlockTest" [label="BlockTest"]
-	};
-		"spoon.test.TestUtils" [label="TestUtils"]
-		"spoon.test.SampleClass" [label="SampleClass"]
-	subgraph cluster51 { 
-		rankdir=LR;label="spoon.test.trycatch";
-		"spoon.test.trycatch.Main" [label="Main"]
-		"spoon.test.trycatch.TryCatchTest" [label="TryCatchTest"]
-		"spoon.test.trycatch.Test" [label="Test"]
-	};
 	};
 	subgraph cluster52 { 
 		rankdir=LR;label="spoon.reflect";
@@ -9243,20 +9342,26 @@ digraph G {
 		"org.w3c.dom.NodeList" [label="NodeList"]
 	};
 	subgraph cluster77 { 
+		rankdir=LR;label="org.junit";
+		"org.junit.Before" [label="Before"]
+		"org.junit.Test" [label="Test"]
+		"org.junit.Assert" [label="Assert"]
+	};
+	subgraph cluster78 { 
 		rankdir=LR;label="org.apache.log4j";
 		"org.apache.log4j.Category" [label="Category"]
 		"org.apache.log4j.Logger" [label="Logger"]
 	};
-	subgraph cluster78 { 
+	subgraph cluster79 { 
 		rankdir=LR;label="org.apache.commons.io";
 		"org.apache.commons.io.IOUtils" [label="IOUtils"]
 		"org.apache.commons.io.FileUtils" [label="FileUtils"]
 	};
-	subgraph cluster79 { 
+	subgraph cluster80 { 
 		rankdir=LR;label="java.lang";
 		"java.lang.UnsupportedOperationException" [label="UnsupportedOperationException"]
 		"java.lang.IllegalStateException" [label="IllegalStateException"]
-	subgraph cluster80 { 
+	subgraph cluster81 { 
 		rankdir=LR;label="java.lang.annotation";
 		"java.lang.annotation.ElementType" [label="ElementType"]
 		"java.lang.annotation.Annotation" [label="Annotation"]
@@ -9265,7 +9370,7 @@ digraph G {
 	};
 		"java.lang.SecurityManager" [label="SecurityManager"]
 		"java.lang.Thread" [label="Thread"]
-	subgraph cluster81 { 
+	subgraph cluster82 { 
 		rankdir=LR;label="java.lang.reflect";
 		"java.lang.reflect.Proxy" [label="Proxy"]
 		"java.lang.reflect.Array" [label="Array"]
@@ -9320,15 +9425,15 @@ digraph G {
 		"java.lang.InstantiationException" [label="InstantiationException"]
 		"java.lang.StringBuffer" [label="StringBuffer"]
 	};
-	subgraph cluster82 { 
-		rankdir=LR;label="java.util";
 	subgraph cluster83 { 
+		rankdir=LR;label="java.util";
+	subgraph cluster84 { 
 		rankdir=LR;label="java.util.zip";
 		"java.util.zip.ZipInputStream" [label="ZipInputStream"]
 		"java.util.zip.ZipEntry" [label="ZipEntry"]
 	};
 		"java.util.HashMap" [label="HashMap"]
-	subgraph cluster84 { 
+	subgraph cluster85 { 
 		rankdir=LR;label="java.util.regex";
 		"java.util.regex.Matcher" [label="Matcher"]
 		"java.util.regex.Pattern" [label="Pattern"]
@@ -9357,12 +9462,12 @@ digraph G {
 		"java.util.AbstractSet" [label="AbstractSet"]
 		"java.util.Queue" [label="Queue"]
 	};
-	subgraph cluster85 { 
+	subgraph cluster86 { 
 		rankdir=LR;label="java.awt";
 		"java.awt.Window" [label="Window"]
 		"java.awt.GraphicsConfiguration" [label="GraphicsConfiguration"]
 		"java.awt.LayoutManager" [label="LayoutManager"]
-	subgraph cluster86 { 
+	subgraph cluster87 { 
 		rankdir=LR;label="java.awt.event";
 		"java.awt.event.MouseEvent" [label="MouseEvent"]
 		"java.awt.event.ActionListener" [label="ActionListener"]
@@ -9380,12 +9485,12 @@ digraph G {
 		"java.awt.DisplayMode" [label="DisplayMode"]
 		"java.awt.Container" [label="Container"]
 	};
-	subgraph cluster87 { 
+	subgraph cluster88 { 
 		rankdir=LR;label="java.security";
 		"java.security.AccessController" [label="AccessController"]
 		"java.security.PrivilegedAction" [label="PrivilegedAction"]
 	};
-	subgraph cluster88 { 
+	subgraph cluster89 { 
 		rankdir=LR;label="java.io";
 		"java.io.FileNotFoundException" [label="FileNotFoundException"]
 		"java.io.ObjectInputStream" [label="ObjectInputStream"]
@@ -9405,16 +9510,16 @@ digraph G {
 		"java.io.PrintWriter" [label="PrintWriter"]
 		"java.io.FileInputStream" [label="FileInputStream"]
 	};
-	subgraph cluster89 { 
+	subgraph cluster90 { 
 		rankdir=LR;label="java.net";
 		"java.net.URLClassLoader" [label="URLClassLoader"]
 		"java.net.URI" [label="URI"]
 		"java.net.URL" [label="URL"]
 	};
-	subgraph cluster90 { 
+	subgraph cluster91 { 
 		rankdir=LR;label="com.martiansoftware.jsap";
 		"com.martiansoftware.jsap.Parameter" [label="Parameter"]
-	subgraph cluster91 { 
+	subgraph cluster92 { 
 		rankdir=LR;label="com.martiansoftware.jsap.stringparsers";
 		"com.martiansoftware.jsap.stringparsers.IntegerStringParser" [label="IntegerStringParser"]
 		"com.martiansoftware.jsap.stringparsers.FileStringParser" [label="FileStringParser"]

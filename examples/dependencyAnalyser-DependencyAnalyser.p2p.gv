@@ -37,10 +37,10 @@ digraph G {
 	"java.awt.event" [color=grey];
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "github.tdurieux.dependencyAnalyzer.graph.node";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon.reflect.reference";
-	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "java.lang";
-	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon.reflect.declaration";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "java.util";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "spoon.reflect.cu";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep" -> "java.io";
 	"spoon.reflect.factory" [color=grey];

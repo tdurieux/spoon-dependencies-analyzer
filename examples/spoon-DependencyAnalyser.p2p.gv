@@ -5,6 +5,7 @@ digraph G {
 	"spoon.test.limits.utils" -> "spoon.reflect.declaration";
 	"spoon.test.limits.utils" -> "spoon.reflect.code";
 	"spoon.test.limits.utils" -> "spoon.processing";
+	"spoon.test.limits.utils" -> "org.junit";
 	"spoon.test.limits.utils" -> "spoon.reflect.visitor.filter";
 	"spoon.test.limits.utils" -> "spoon.reflect.visitor";
 	"spoon.test.limits.utils" -> "java.util";
@@ -18,6 +19,7 @@ digraph G {
 	"spoon.test.intercession" -> "spoon.processing";
 	"spoon.test.intercession" -> "java.util";
 	"spoon.test.intercession" -> "spoon.template";
+	"spoon.test.intercession" -> "org.junit";
 	"spoon.test.casts" -> "spoon.test";
 	"spoon.test.casts" -> "spoon.reflect.factory";
 	"spoon.test.casts" -> "java.lang";
@@ -26,6 +28,7 @@ digraph G {
 	"spoon.test.casts" -> "spoon.processing";
 	"spoon.test.casts" -> "java.util";
 	"spoon.test.casts" -> "spoon.template";
+	"spoon.test.casts" -> "org.junit";
 	"spoon.test.casts" -> "spoon.reflect.visitor.filter";
 	"spoon.test.casts" -> "spoon.reflect.visitor";
 	"spoon.support.util" -> "java.lang";
@@ -45,6 +48,7 @@ digraph G {
 	"spoon.test.annotation" -> "spoon.test";
 	"spoon.test.annotation" -> "spoon.reflect.declaration";
 	"spoon.test.annotation" -> "spoon.processing";
+	"spoon.test.annotation" -> "org.junit";
 	"spoon.test.annotation" -> "java.util";
 	"spoon.test.annotation" -> "spoon";
 	"spoon.test.annotation" -> "spoon.reflect.factory";
@@ -66,6 +70,7 @@ digraph G {
 	"spoon.test.trycatch" -> "spoon.reflect.visitor";
 	"spoon.test.trycatch" -> "java.util";
 	"spoon.test.trycatch" -> "spoon.reflect.reference";
+	"spoon.test.trycatch" -> "org.junit";
 	"spoon" -> "spoon.reflect.factory";
 	"spoon" -> "java.util";
 	"spoon" -> "com.martiansoftware.jsap";
@@ -91,6 +96,7 @@ digraph G {
 	"spoon.test.intercession.insertBefore" -> "spoon.compiler";
 	"spoon.test.intercession.insertBefore" -> "java.util";
 	"spoon.test.intercession.insertBefore" -> "spoon.processing";
+	"spoon.test.intercession.insertBefore" -> "org.junit";
 	"spoon.test.intercession.insertBefore" -> "spoon.reflect.code";
 	"spoon.test.intercession.insertBefore" -> "spoon.reflect.declaration";
 	"spoon.test.intercession.insertBefore" -> "spoon.template";
@@ -106,6 +112,7 @@ digraph G {
 	"spoon.test.filters" -> "spoon.reflect.visitor.filter";
 	"spoon.test.filters" -> "spoon.reflect.visitor";
 	"spoon.test.filters" -> "java.util";
+	"spoon.test.filters" -> "org.junit";
 	"spoon.test.filters" -> "spoon.support.reflect.declaration";
 	"spoon.test.filters" -> "java.io";
 	"spoon.test.filters" -> "spoon";
@@ -120,6 +127,7 @@ digraph G {
 	"spoon.test.factory" -> "java.util";
 	"spoon.test.factory" -> "spoon.template";
 	"spoon.test.factory" -> "spoon.reflect.factory";
+	"spoon.test.factory" -> "org.junit";
 	"spoon.test.factory" -> "spoon.support.reflect.declaration";
 	"spoon.test.factory" -> "java.io";
 	"spoon.test.factory" -> "spoon.support";
@@ -130,6 +138,7 @@ digraph G {
 	"spoon.test.eval" -> "spoon.reflect.declaration";
 	"spoon.test.eval" -> "spoon.reflect.code";
 	"spoon.test.eval" -> "spoon.processing";
+	"spoon.test.eval" -> "org.junit";
 	"spoon.test.eval" -> "java.util";
 	"spoon.test.eval" -> "spoon.template";
 	"spoon.test.eval" -> "java.io";
@@ -174,6 +183,7 @@ digraph G {
 	"spoon.test.sourcePosition" -> "spoon.reflect.visitor";
 	"spoon.test.sourcePosition" -> "spoon.reflect.code";
 	"spoon.test.sourcePosition" -> "java.util";
+	"spoon.test.sourcePosition" -> "org.junit";
 	"spoon.test.sourcePosition" -> "spoon.reflect.cu";
 	"com.martiansoftware.jsap.stringparsers" [color=grey];
 	"spoon.test.visibility" -> "java.lang";
@@ -183,17 +193,20 @@ digraph G {
 	"spoon.test.visibility" -> "spoon.reflect.declaration";
 	"spoon.test.visibility" -> "spoon.reflect.code";
 	"spoon.test.visibility" -> "spoon.processing";
+	"spoon.test.visibility" -> "org.junit";
 	"spoon.test.visibility" -> "java.util";
 	"spoon.test.visibility" -> "spoon.template";
 	"java.util.zip" [color=grey];
 	"spoon.test.main" -> "java.lang";
 	"spoon.test.main" -> "spoon";
+	"spoon.test.main" -> "org.junit";
 	"spoon.test.exceptions" -> "java.lang";
 	"spoon.test.exceptions" -> "spoon";
 	"spoon.test.exceptions" -> "spoon.reflect.factory";
 	"spoon.test.exceptions" -> "spoon.compiler";
 	"spoon.test.exceptions" -> "java.util";
 	"spoon.test.exceptions" -> "spoon.processing";
+	"spoon.test.exceptions" -> "org.junit";
 	"spoon.test.exceptions" -> "spoon.test";
 	"spoon.test.exceptions" -> "spoon.reflect.code";
 	"spoon.test.exceptions" -> "spoon.reflect.declaration";
@@ -210,6 +223,7 @@ digraph G {
 	"spoon.test.template" -> "spoon.compiler";
 	"spoon.test.template" -> "java.util";
 	"spoon.test.template" -> "spoon.reflect.code";
+	"spoon.test.template" -> "org.junit";
 	"spoon.test.template" -> "spoon.reflect.visitor.filter";
 	"spoon.test.template" -> "spoon.reflect.visitor";
 	"spoon.test.template" -> "java.io";
@@ -221,6 +235,7 @@ digraph G {
 	"spoon.test.strings" -> "spoon.reflect.declaration";
 	"spoon.test.strings" -> "spoon.processing";
 	"spoon.test.strings" -> "java.util";
+	"spoon.test.strings" -> "org.junit";
 	"spoon.test.strings" -> "spoon.template";
 	"spoon.test.strings" -> "spoon.reflect.visitor.filter";
 	"spoon.test.strings" -> "spoon.reflect.visitor";
@@ -250,6 +265,7 @@ digraph G {
 	"spoon.test.generics" -> "spoon.processing";
 	"spoon.test.generics" -> "spoon.reflect.visitor.filter";
 	"spoon.test.generics" -> "spoon.reflect.visitor";
+	"spoon.test.generics" -> "org.junit";
 	"spoon.test.generics" -> "spoon.reflect.reference";
 	"spoon.test.generics" -> "spoon.support";
 	"spoon.test.generics" -> "spoon.compiler";
@@ -287,6 +303,7 @@ digraph G {
 	"spoon.test.secondaryclasses" -> "spoon.reflect.declaration";
 	"spoon.test.secondaryclasses" -> "spoon.reflect.code";
 	"spoon.test.secondaryclasses" -> "spoon.processing";
+	"spoon.test.secondaryclasses" -> "org.junit";
 	"spoon.test.secondaryclasses" -> "spoon.template";
 	"spoon.test.secondaryclasses" -> "spoon.reflect.visitor.filter";
 	"spoon.test.secondaryclasses" -> "spoon.reflect.visitor";
@@ -303,6 +320,7 @@ digraph G {
 	"spoon.test.replace" -> "spoon.compiler";
 	"spoon.test.replace" -> "java.util";
 	"spoon.test.replace" -> "spoon.processing";
+	"spoon.test.replace" -> "org.junit";
 	"spoon.test.replace" -> "spoon.reflect.declaration";
 	"spoon.test.replace" -> "spoon.reflect.code";
 	"spoon.test.replace" -> "spoon.reflect.visitor.filter";
@@ -310,6 +328,7 @@ digraph G {
 	"spoon.test.replace" -> "spoon.template";
 	"spoon.test.replace" -> "spoon.reflect.reference";
 	"org.w3c.dom" [color=grey];
+	"org.junit" [color=grey];
 	"spoon.test.ctCase" -> "java.lang";
 	"spoon.test.ctCase" -> "spoon.reflect.factory";
 	"spoon.test.ctCase" -> "spoon.reflect.visitor.filter";
@@ -319,6 +338,7 @@ digraph G {
 	"spoon.test.ctCase" -> "spoon.reflect.declaration";
 	"spoon.test.ctCase" -> "spoon.processing";
 	"spoon.test.ctCase" -> "spoon.reflect.code";
+	"spoon.test.ctCase" -> "org.junit";
 	"spoon.test" -> "java.lang";
 	"spoon.test" -> "spoon";
 	"spoon.test" -> "spoon.compiler";
@@ -353,6 +373,7 @@ digraph G {
 	"spoon.test.prettyprinter" -> "spoon.compiler";
 	"spoon.test.prettyprinter" -> "spoon.processing";
 	"spoon.test.prettyprinter" -> "java.util";
+	"spoon.test.prettyprinter" -> "org.junit";
 	"spoon.test.prettyprinter" -> "spoon.reflect.factory";
 	"spoon.test.prettyprinter" -> "spoon.reflect.declaration";
 	"spoon.test.prettyprinter" -> "spoon.reflect.code";
@@ -380,6 +401,7 @@ digraph G {
 	"spoon.test.api" -> "spoon.support";
 	"spoon.test.api" -> "spoon.processing";
 	"spoon.test.api" -> "spoon.reflect.declaration";
+	"spoon.test.api" -> "org.junit";
 	"org.xml.sax.helpers" [color=grey];
 	"spoon.support" -> "spoon.reflect.factory";
 	"spoon.support" -> "java.lang";
@@ -443,6 +465,7 @@ digraph G {
 	"spoon.test.initializers" -> "spoon.reflect.declaration";
 	"spoon.test.initializers" -> "spoon.reflect.code";
 	"spoon.test.initializers" -> "spoon.processing";
+	"spoon.test.initializers" -> "org.junit";
 	"spoon.test.initializers" -> "spoon.reflect.visitor.filter";
 	"spoon.test.initializers" -> "spoon.reflect.visitor";
 	"spoon.test.initializers" -> "java.util";
@@ -457,6 +480,7 @@ digraph G {
 	"spoon.test.processing" -> "spoon.test";
 	"spoon.test.processing" -> "java.util";
 	"spoon.test.processing" -> "spoon.reflect.factory";
+	"spoon.test.processing" -> "org.junit";
 	"spoon.test.processing" -> "java.io";
 	"spoon.test.processing" -> "spoon.compiler";
 	"spoon.test.processing" -> "spoon.reflect.cu";
@@ -506,6 +530,7 @@ digraph G {
 	"spoon.test.enums" -> "spoon.reflect.declaration";
 	"spoon.test.enums" -> "spoon.reflect.code";
 	"spoon.test.enums" -> "spoon.processing";
+	"spoon.test.enums" -> "org.junit";
 	"spoon.test.enums" -> "java.util";
 	"spoon.test.enums" -> "java.io";
 	"org.eclipse.jdt.internal.compiler" [color=grey];
@@ -558,6 +583,7 @@ digraph G {
 	"spoon.test.fieldaccesses" -> "spoon.test";
 	"spoon.test.fieldaccesses" -> "spoon.reflect.declaration";
 	"spoon.test.fieldaccesses" -> "spoon.processing";
+	"spoon.test.fieldaccesses" -> "org.junit";
 	"spoon.test.fieldaccesses" -> "spoon.reflect.code";
 	"spoon.test.fieldaccesses" -> "spoon.reflect.visitor.filter";
 	"spoon.test.fieldaccesses" -> "spoon.reflect.visitor";
@@ -606,12 +632,14 @@ digraph G {
 	"spoon.test.snippets" -> "spoon.processing";
 	"spoon.test.snippets" -> "java.util";
 	"spoon.test.snippets" -> "spoon.template";
+	"spoon.test.snippets" -> "org.junit";
 	"spoon.test.parent" -> "java.lang";
 	"spoon.test.parent" -> "spoon.reflect.factory";
 	"spoon.test.parent" -> "spoon";
 	"spoon.test.parent" -> "spoon.compiler";
 	"spoon.test.parent" -> "java.util";
 	"spoon.test.parent" -> "spoon.processing";
+	"spoon.test.parent" -> "org.junit";
 	"spoon.test.parent" -> "spoon.reflect.code";
 	"spoon.test.parent" -> "spoon.reflect.declaration";
 	"spoon.test.parent" -> "spoon.template";
@@ -626,6 +654,7 @@ digraph G {
 	"spoon.test.model" -> "spoon.processing";
 	"spoon.test.model" -> "java.util";
 	"spoon.test.model" -> "spoon.template";
+	"spoon.test.model" -> "org.junit";
 	"spoon.test.model" -> "spoon.reflect.visitor.filter";
 	"spoon.test.model" -> "spoon.reflect.visitor";
 	"spoon.reflect.eval" -> "java.util";
@@ -665,6 +694,7 @@ digraph G {
 	"spoon.test.control" -> "spoon.test";
 	"spoon.test.control" -> "spoon.reflect.declaration";
 	"spoon.test.control" -> "spoon.processing";
+	"spoon.test.control" -> "org.junit";
 	"spoon.test.control" -> "spoon.reflect.visitor.filter";
 	"spoon.test.control" -> "spoon.reflect.visitor";
 	"spoon.test.control" -> "java.util";
@@ -675,6 +705,7 @@ digraph G {
 	"spoon.test.arrays" -> "spoon.test";
 	"spoon.test.arrays" -> "spoon.reflect.declaration";
 	"spoon.test.arrays" -> "spoon.processing";
+	"spoon.test.arrays" -> "org.junit";
 	"spoon.test.arrays" -> "spoon.reflect.reference";
 	"spoon.reflect.eval.observer" -> "java.util";
 	"spoon.reflect.eval.observer" -> "spoon.reflect.eval";
@@ -825,18 +856,20 @@ digraph G {
 		"javax.xml.parsers" [label="parsers"]
 	};
 	subgraph cluster14 { 
+		rankdir=LR;label="org";
+	subgraph cluster15 { 
 		rankdir=LR;label="org.apache";
 		"org.apache.log4j" [label="log4j"]
-	subgraph cluster15 { 
+	subgraph cluster16 { 
 		rankdir=LR;label="org.apache.commons";
 		"org.apache.commons.io" [label="io"]
 	};
 	};
-	subgraph cluster16 { 
+	subgraph cluster17 { 
 		rankdir=LR;label="org.xml.sax";
 		"org.xml.sax.helpers" [label="helpers"]
 	};
-	subgraph cluster17 { 
+	subgraph cluster18 { 
 		rankdir=LR;label="org.eclipse.jdt.internal.compiler";
 		"org.eclipse.jdt.internal.compiler.env" [label="env"]
 		"org.eclipse.jdt.internal.compiler.lookup" [label="lookup"]
@@ -846,35 +879,37 @@ digraph G {
 		"org.eclipse.jdt.internal.compiler.impl" [label="impl"]
 		"org.eclipse.jdt.internal.compiler.parser" [label="parser"]
 	};
-	subgraph cluster18 { 
+	subgraph cluster19 { 
 		rankdir=LR;label="org.eclipse.jdt.core";
 		"org.eclipse.jdt.core.compiler" [label="compiler"]
 	};
-	subgraph cluster19 { 
+	subgraph cluster20 { 
 		rankdir=LR;label="org.w3c";
 		"org.w3c.dom" [label="dom"]
 	};
-	subgraph cluster20 { 
+		"org.junit" [label="junit"]
+	};
+	subgraph cluster21 { 
 		rankdir=LR;label="java";
 		"java.net" [label="net"]
 		"java.io" [label="io"]
-	subgraph cluster21 { 
+	subgraph cluster22 { 
 		rankdir=LR;label="java.util";
 		"java.util.zip" [label="zip"]
 		"java.util.regex" [label="regex"]
 	};
-	subgraph cluster22 { 
+	subgraph cluster23 { 
 		rankdir=LR;label="java.lang";
 		"java.lang.reflect" [label="reflect"]
 		"java.lang.annotation" [label="annotation"]
 	};
-	subgraph cluster23 { 
+	subgraph cluster24 { 
 		rankdir=LR;label="java.awt";
 		"java.awt.event" [label="event"]
 	};
 		"java.security" [label="security"]
 	};
-	subgraph cluster24 { 
+	subgraph cluster25 { 
 		rankdir=LR;label="com.martiansoftware.jsap";
 		"com.martiansoftware.jsap.stringparsers" [label="stringparsers"]
 	};

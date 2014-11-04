@@ -1,0 +1,7 @@
+github.tdurieux.testProject.entity
+    --> java.io *
+    --> java.lang *
+java.io *
+    <-- github.tdurieux.testProject.entity
+java.lang *
+    <-- github.tdurieux.testProject.entity

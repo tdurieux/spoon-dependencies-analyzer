@@ -244,6 +244,37 @@ org.eclipse.jdt.internal.compiler.parser *
 org.eclipse.jdt.internal.compiler.util *
     <-- spoon.support.compiler.jdt
     <-- spoon.support.util
+org.junit *
+    <-- spoon.test.annotation
+    <-- spoon.test.api
+    <-- spoon.test.arrays
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.main
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
 org.w3c.dom *
     <-- spoon.processing
 org.xml.sax *
@@ -255,14 +286,27 @@ org.xml.sax.helpers *
     <-- spoon
     <-- spoon.support.processing
 spoon
-    <-- spoon.compiler
+    --> com.martiansoftware.jsap *
+    --> com.martiansoftware.jsap.stringparsers *
+    --> java.awt.event *
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> javax.swing *
+    --> org.apache.log4j *
+    --> org.xml.sax *
+    --> org.xml.sax.helpers *
+    <-> spoon.compiler
+    --> spoon.processing
     <-- spoon.reflect.code
     <-- spoon.reflect.declaration
-    <-- spoon.reflect.visitor
-    <-- spoon.support
-    <-- spoon.support.compiler
-    <-- spoon.support.compiler.jdt
-    <-- spoon.support.processing
+    --> spoon.reflect.factory
+    <-> spoon.reflect.visitor
+    <-> spoon.support
+    <-> spoon.support.compiler
+    <-> spoon.support.compiler.jdt
+    --> spoon.support.gui
+    <-> spoon.support.processing
     <-- spoon.support.reflect.code
     <-- spoon.support.reflect.declaration
     <-- spoon.support.reflect.eval
@@ -279,33 +323,19 @@ spoon
     <-- spoon.test.prettyprinter
     <-- spoon.test.replace
     <-- spoon.test.template
-    --> com.martiansoftware.jsap *
-    --> com.martiansoftware.jsap.stringparsers *
-    --> java.awt.event *
+spoon.compiler
     --> java.io *
     --> java.lang *
     --> java.util *
-    --> javax.swing *
     --> org.apache.log4j *
-    --> org.xml.sax *
-    --> org.xml.sax.helpers *
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.support
-    --> spoon.support.compiler
-    --> spoon.support.compiler.jdt
-    --> spoon.support.gui
-    --> spoon.support.processing
-spoon.compiler
-    <-- spoon
-    <-- spoon.processing
+    <-> spoon
+    <-> spoon.processing
+    --> spoon.reflect.declaration
     <-- spoon.reflect.eval.observer
     <-- spoon.reflect.factory
     <-- spoon.reflect.visitor
     <-- spoon.support
-    <-- spoon.support.compiler
+    <-> spoon.support.compiler
     <-- spoon.support.compiler.jdt
     <-- spoon.support.processing
     <-- spoon.support.reflect.cu
@@ -326,69 +356,7 @@ spoon.compiler
     <-- spoon.test.replace
     <-- spoon.test.secondaryclasses
     <-- spoon.test.template
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.apache.log4j *
-    --> spoon
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.support.compiler
 spoon.processing
-    <-- spoon
-    <-- spoon.compiler
-    <-- spoon.reflect.code
-    <-- spoon.reflect.cu
-    <-- spoon.reflect.declaration
-    <-- spoon.reflect.eval
-    <-- spoon.reflect.factory
-    <-- spoon.reflect.reference
-    <-- spoon.reflect.visitor
-    <-- spoon.reflect.visitor.filter
-    <-- spoon.support
-    <-- spoon.support.compiler
-    <-- spoon.support.compiler.jdt
-    <-- spoon.support.gui
-    <-- spoon.support.processing
-    <-- spoon.support.reflect.code
-    <-- spoon.support.reflect.cu
-    <-- spoon.support.reflect.declaration
-    <-- spoon.support.reflect.eval
-    <-- spoon.support.reflect.reference
-    <-- spoon.support.template
-    <-- spoon.support.util
-    <-- spoon.support.visitor
-    <-- spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.arrays
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
     --> java.io *
     --> java.lang *
     --> java.lang.annotation *
@@ -399,118 +367,29 @@ spoon.processing
     --> org.apache.log4j *
     --> org.w3c.dom *
     --> org.xml.sax *
-    --> spoon.compiler
+    <-- spoon
+    <-> spoon.compiler
     --> spoon.reflect
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.support.processing
-    --> spoon.support.util
-spoon.reflect
-    <-- spoon.processing
-    <-- spoon.support
-    <-- spoon.support.gui
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> spoon.reflect.factory
-spoon.reflect.code
-    <-- spoon.processing
-    <-- spoon.reflect.declaration
-    <-- spoon.reflect.eval
-    <-- spoon.reflect.factory
-    <-- spoon.reflect.reference
-    <-- spoon.reflect.visitor
-    <-- spoon.reflect.visitor.filter
-    <-- spoon.support
-    <-- spoon.support.compiler
-    <-- spoon.support.compiler.jdt
-    <-- spoon.support.reflect.code
-    <-- spoon.support.reflect.declaration
-    <-- spoon.support.reflect.eval
-    <-- spoon.support.reflect.reference
-    <-- spoon.support.template
-    <-- spoon.support.util
-    <-- spoon.support.visitor
-    <-- spoon.template
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
-    --> java.lang *
-    --> java.util *
-    --> spoon
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.support.compiler
-    --> spoon.template
-spoon.reflect.cu
-    <-- spoon.reflect.declaration
-    <-- spoon.reflect.factory
-    <-- spoon.reflect.visitor
-    <-- spoon.support
-    <-- spoon.support.compiler.jdt
-    <-- spoon.support.reflect.code
-    <-- spoon.support.reflect.cu
-    <-- spoon.support.reflect.declaration
-    <-- spoon.support.visitor
-    <-- spoon.template
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.sourcePosition
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.reflect.reference
-spoon.reflect.declaration
-    <-- spoon.compiler
-    <-- spoon.processing
-    <-- spoon.reflect.code
+    <-> spoon.reflect.code
     <-- spoon.reflect.cu
+    <-> spoon.reflect.declaration
     <-- spoon.reflect.eval
-    <-- spoon.reflect.factory
-    <-- spoon.reflect.reference
+    <-> spoon.reflect.factory
+    <-> spoon.reflect.reference
     <-- spoon.reflect.visitor
     <-- spoon.reflect.visitor.filter
     <-- spoon.support
     <-- spoon.support.compiler
     <-- spoon.support.compiler.jdt
     <-- spoon.support.gui
+    <-> spoon.support.processing
     <-- spoon.support.reflect.code
     <-- spoon.support.reflect.cu
     <-- spoon.support.reflect.declaration
     <-- spoon.support.reflect.eval
     <-- spoon.support.reflect.reference
     <-- spoon.support.template
-    <-- spoon.support.util
+    <-> spoon.support.util
     <-- spoon.support.visitor
     <-- spoon.template
     <-- spoon.test
@@ -543,21 +422,139 @@ spoon.reflect.declaration
     <-- spoon.test.template
     <-- spoon.test.trycatch
     <-- spoon.test.visibility
+spoon.reflect
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    <-- spoon.processing
+    --> spoon.reflect.factory
+    <-- spoon.support
+    <-- spoon.support.gui
+spoon.reflect.code
     --> java.lang *
     --> java.util *
     --> spoon
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.template
-spoon.reflect.eval
-    <-- spoon.reflect.eval.observer
+    <-> spoon.processing
+    <-> spoon.reflect.declaration
+    <-- spoon.reflect.eval
     <-- spoon.reflect.factory
+    <-> spoon.reflect.reference
+    <-> spoon.reflect.visitor
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-> spoon.support.compiler
+    <-- spoon.support.compiler.jdt
     <-- spoon.support.reflect.code
     <-- spoon.support.reflect.declaration
     <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-> spoon.template
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+spoon.reflect.cu
+    --> java.io *
+    --> java.lang *
+    --> java.util *
+    --> spoon.processing
+    <-> spoon.reflect.declaration
+    <-- spoon.reflect.factory
+    --> spoon.reflect.reference
+    <-- spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.visitor
+    <-- spoon.template
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.sourcePosition
+spoon.reflect.declaration
+    --> java.lang *
+    --> java.util *
+    --> spoon
+    <-- spoon.compiler
+    <-> spoon.processing
+    <-> spoon.reflect.code
+    <-> spoon.reflect.cu
+    <-- spoon.reflect.eval
+    <-- spoon.reflect.factory
+    <-> spoon.reflect.reference
+    <-> spoon.reflect.visitor
+    <-- spoon.reflect.visitor.filter
+    <-- spoon.support
+    <-- spoon.support.compiler
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.cu
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-- spoon.support.util
+    <-- spoon.support.visitor
+    <-> spoon.template
+    <-- spoon.test
+    <-- spoon.test.annotation
+    <-- spoon.test.api
+    <-- spoon.test.arrays
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.enums
+    <-- spoon.test.eval
+    <-- spoon.test.exceptions
+    <-- spoon.test.factory
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
+    <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.processing
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.snippets
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+    <-- spoon.test.visibility
+spoon.reflect.eval
     --> java.io *
     --> java.lang *
     --> java.lang.reflect *
@@ -565,39 +562,52 @@ spoon.reflect.eval
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
-    --> spoon.reflect.factory
+    <-- spoon.reflect.eval.observer
+    <-> spoon.reflect.factory
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
-    --> spoon.support.reflect.eval
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.declaration
+    <-> spoon.support.reflect.eval
     --> spoon.support.util
     --> spoon.template
 spoon.reflect.eval.observer
-    <-- spoon.reflect.factory
     --> java.lang *
     --> java.util *
     --> spoon.compiler
     --> spoon.reflect.eval
+    <-- spoon.reflect.factory
     --> spoon.reflect.visitor
     --> spoon.support.reflect.eval
 spoon.reflect.factory
+    --> java.io *
+    --> java.lang *
+    --> java.lang.reflect *
+    --> java.util *
     <-- spoon
-    <-- spoon.processing
+    --> spoon.compiler
+    <-> spoon.processing
     <-- spoon.reflect
-    <-- spoon.reflect.eval
-    <-- spoon.reflect.visitor
-    <-- spoon.support
+    --> spoon.reflect.code
+    --> spoon.reflect.cu
+    --> spoon.reflect.declaration
+    <-> spoon.reflect.eval
+    --> spoon.reflect.eval.observer
+    --> spoon.reflect.reference
+    <-> spoon.reflect.visitor
+    <-> spoon.support
     <-- spoon.support.compiler
     <-- spoon.support.compiler.jdt
     <-- spoon.support.gui
     <-- spoon.support.processing
     <-- spoon.support.reflect.code
-    <-- spoon.support.reflect.cu
+    <-> spoon.support.reflect.cu
     <-- spoon.support.reflect.declaration
-    <-- spoon.support.reflect.eval
+    <-> spoon.support.reflect.eval
     <-- spoon.support.reflect.reference
     <-- spoon.support.template
     <-- spoon.support.visitor
-    <-- spoon.template
+    <-> spoon.template
     <-- spoon.test
     <-- spoon.test.annotation
     <-- spoon.test.casts
@@ -621,31 +631,17 @@ spoon.reflect.factory
     <-- spoon.test.template
     <-- spoon.test.trycatch
     <-- spoon.test.visibility
-    --> java.io *
+spoon.reflect.reference
     --> java.lang *
     --> java.lang.reflect *
     --> java.util *
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
-    --> spoon.reflect.declaration
-    --> spoon.reflect.eval
-    --> spoon.reflect.eval.observer
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.support
-    --> spoon.support.reflect.cu
-    --> spoon.support.reflect.eval
-    --> spoon.template
-spoon.reflect.reference
-    <-- spoon.processing
-    <-- spoon.reflect.code
+    <-> spoon.processing
+    <-> spoon.reflect.code
     <-- spoon.reflect.cu
-    <-- spoon.reflect.declaration
+    <-> spoon.reflect.declaration
     <-- spoon.reflect.eval
     <-- spoon.reflect.factory
-    <-- spoon.reflect.visitor
+    <-> spoon.reflect.visitor
     <-- spoon.reflect.visitor.filter
     <-- spoon.support
     <-- spoon.support.compiler
@@ -670,74 +666,36 @@ spoon.reflect.reference
     <-- spoon.test.secondaryclasses
     <-- spoon.test.template
     <-- spoon.test.trycatch
-    --> java.lang *
-    --> java.lang.reflect *
-    --> java.util *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.visitor
 spoon.reflect.visitor
-    <-- spoon
-    <-- spoon.reflect.code
-    <-- spoon.reflect.declaration
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.util *
+    --> org.apache.log4j *
+    <-> spoon
+    --> spoon.compiler
+    --> spoon.processing
+    <-> spoon.reflect.code
+    --> spoon.reflect.cu
+    <-> spoon.reflect.declaration
     <-- spoon.reflect.eval
     <-- spoon.reflect.eval.observer
-    <-- spoon.reflect.factory
-    <-- spoon.reflect.reference
+    <-> spoon.reflect.factory
+    <-> spoon.reflect.reference
     <-- spoon.reflect.visitor.filter
     <-- spoon.support
     <-- spoon.support.compiler
     <-- spoon.support.compiler.jdt
     <-- spoon.support.gui
     <-- spoon.support.reflect.code
+    --> spoon.support.reflect.cu
     <-- spoon.support.reflect.declaration
     <-- spoon.support.reflect.eval
     <-- spoon.support.reflect.reference
     <-- spoon.support.template
-    <-- spoon.support.visitor
-    <-- spoon.template
-    <-- spoon.test.annotation
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    --> java.io *
-    --> java.lang *
-    --> java.lang.annotation *
-    --> java.util *
-    --> org.apache.log4j *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.support.reflect.cu
     --> spoon.support.util
-    --> spoon.template
-spoon.reflect.visitor.filter
-    <-- spoon.support.compiler.jdt
-    <-- spoon.support.reflect.declaration
-    <-- spoon.support.reflect.eval
-    <-- spoon.support.template
-    <-- spoon.template
+    <-- spoon.support.visitor
+    <-> spoon.template
     <-- spoon.test.annotation
     <-- spoon.test.casts
     <-- spoon.test.control
@@ -757,6 +715,7 @@ spoon.reflect.visitor.filter
     <-- spoon.test.strings
     <-- spoon.test.template
     <-- spoon.test.trycatch
+spoon.reflect.visitor.filter
     --> java.lang *
     --> java.util.regex *
     --> spoon.processing
@@ -764,32 +723,49 @@ spoon.reflect.visitor.filter
     --> spoon.reflect.declaration
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
-    --> spoon.template
-spoon.support
-    <-- spoon
-    <-- spoon.reflect.factory
     <-- spoon.support.compiler.jdt
-    <-- spoon.support.gui
-    <-- spoon.test
-    <-- spoon.test.api
-    <-- spoon.test.factory
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
+    <-- spoon.support.template
+    <-> spoon.template
+    <-- spoon.test.annotation
+    <-- spoon.test.casts
+    <-- spoon.test.control
+    <-- spoon.test.ctCase
+    <-- spoon.test.fieldaccesses
+    <-- spoon.test.filters
     <-- spoon.test.generics
+    <-- spoon.test.initializers
+    <-- spoon.test.intercession.insertBefore
+    <-- spoon.test.limits.utils
+    <-- spoon.test.model
+    <-- spoon.test.parent
+    <-- spoon.test.prettyprinter
+    <-- spoon.test.replace
+    <-- spoon.test.secondaryclasses
+    <-- spoon.test.sourcePosition
+    <-- spoon.test.strings
+    <-- spoon.test.template
+    <-- spoon.test.trycatch
+spoon.support
     --> java.io *
     --> java.lang *
     --> java.lang.reflect *
     --> java.util *
     --> org.apache.log4j *
     --> org.xml.sax *
-    --> spoon
+    <-> spoon
     --> spoon.compiler
     --> spoon.processing
     --> spoon.reflect
     --> spoon.reflect.code
     --> spoon.reflect.cu
     --> spoon.reflect.declaration
-    --> spoon.reflect.factory
+    <-> spoon.reflect.factory
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
+    <-- spoon.support.compiler.jdt
+    <-- spoon.support.gui
     --> spoon.support.processing
     --> spoon.support.reflect.code
     --> spoon.support.reflect.cu
@@ -798,32 +774,29 @@ spoon.support
     --> spoon.support.util
     --> spoon.support.visitor
     --> spoon.template
+    <-- spoon.test
+    <-- spoon.test.api
+    <-- spoon.test.factory
+    <-- spoon.test.generics
 spoon.support.compiler
-    <-- spoon
-    <-- spoon.compiler
-    <-- spoon.reflect.code
-    <-- spoon.support.compiler.jdt
-    <-- spoon.support.reflect.code
-    <-- spoon.support.reflect.declaration
     --> java.io *
     --> java.lang *
     --> java.util *
     --> java.util.zip *
     --> org.apache.log4j *
-    --> spoon
-    --> spoon.compiler
+    <-> spoon
+    <-> spoon.compiler
     --> spoon.processing
-    --> spoon.reflect.code
+    <-> spoon.reflect.code
     --> spoon.reflect.declaration
     --> spoon.reflect.factory
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
-    --> spoon.support.compiler.jdt
-    --> spoon.support.reflect.declaration
+    <-> spoon.support.compiler.jdt
+    <-- spoon.support.reflect.code
+    <-> spoon.support.reflect.declaration
     --> spoon.template
 spoon.support.compiler.jdt
-    <-- spoon
-    <-- spoon.support.compiler
     --> java.io *
     --> java.lang *
     --> java.net *
@@ -839,7 +812,7 @@ spoon.support.compiler.jdt
     --> org.eclipse.jdt.internal.compiler.lookup *
     --> org.eclipse.jdt.internal.compiler.parser *
     --> org.eclipse.jdt.internal.compiler.util *
-    --> spoon
+    <-> spoon
     --> spoon.compiler
     --> spoon.processing
     --> spoon.reflect.code
@@ -850,10 +823,9 @@ spoon.support.compiler.jdt
     --> spoon.reflect.visitor
     --> spoon.reflect.visitor.filter
     --> spoon.support
-    --> spoon.support.compiler
+    <-> spoon.support.compiler
     --> spoon.template
 spoon.support.gui
-    <-- spoon
     --> java.awt *
     --> java.awt.event *
     --> java.io *
@@ -864,6 +836,7 @@ spoon.support.gui
     --> javax.swing.table *
     --> javax.swing.tree *
     --> org.apache.log4j *
+    <-- spoon
     --> spoon.processing
     --> spoon.reflect
     --> spoon.reflect.declaration
@@ -872,23 +845,19 @@ spoon.support.gui
     --> spoon.reflect.visitor
     --> spoon.support
 spoon.support.processing
-    <-- spoon
-    <-- spoon.processing
-    <-- spoon.support
     --> java.io *
     --> java.lang *
     --> java.lang.reflect *
     --> java.util *
     --> org.xml.sax *
     --> org.xml.sax.helpers *
-    --> spoon
+    <-> spoon
     --> spoon.compiler
-    --> spoon.processing
+    <-> spoon.processing
     --> spoon.reflect.factory
     --> spoon.reflect.reference
-spoon.support.reflect.code
     <-- spoon.support
-    <-- spoon.support.reflect.declaration
+spoon.support.reflect.code
     --> java.io *
     --> java.lang *
     --> java.util *
@@ -901,15 +870,12 @@ spoon.support.reflect.code
     --> spoon.reflect.factory
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
+    <-- spoon.support
     --> spoon.support.compiler
-    --> spoon.support.reflect.declaration
+    <-> spoon.support.reflect.declaration
     --> spoon.support.reflect.eval
     --> spoon.template
 spoon.support.reflect.cu
-    <-- spoon.reflect.factory
-    <-- spoon.reflect.visitor
-    <-- spoon.support
-    <-- spoon.support.reflect.declaration
     --> java.io *
     --> java.lang *
     --> java.util *
@@ -917,15 +883,12 @@ spoon.support.reflect.cu
     --> spoon.processing
     --> spoon.reflect.cu
     --> spoon.reflect.declaration
-    --> spoon.reflect.factory
+    <-> spoon.reflect.factory
     --> spoon.reflect.reference
-spoon.support.reflect.declaration
+    <-- spoon.reflect.visitor
     <-- spoon.support
-    <-- spoon.support.compiler
-    <-- spoon.support.reflect.code
-    <-- spoon.support.reflect.reference
-    <-- spoon.test.factory
-    <-- spoon.test.filters
+    <-- spoon.support.reflect.declaration
+spoon.support.reflect.declaration
     --> java.io *
     --> java.lang *
     --> java.lang.reflect *
@@ -942,19 +905,18 @@ spoon.support.reflect.declaration
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
     --> spoon.reflect.visitor.filter
-    --> spoon.support.compiler
-    --> spoon.support.reflect.code
+    <-- spoon.support
+    <-> spoon.support.compiler
+    <-> spoon.support.reflect.code
     --> spoon.support.reflect.cu
     --> spoon.support.reflect.eval
+    <-- spoon.support.reflect.reference
     --> spoon.support.util
     --> spoon.support.visitor
     --> spoon.template
+    <-- spoon.test.factory
+    <-- spoon.test.filters
 spoon.support.reflect.eval
-    <-- spoon.reflect.eval
-    <-- spoon.reflect.eval.observer
-    <-- spoon.reflect.factory
-    <-- spoon.support.reflect.code
-    <-- spoon.support.reflect.declaration
     --> java.lang *
     --> java.util *
     --> org.apache.log4j *
@@ -963,15 +925,17 @@ spoon.support.reflect.eval
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
-    --> spoon.reflect.eval
-    --> spoon.reflect.factory
+    <-> spoon.reflect.eval
+    <-- spoon.reflect.eval.observer
+    <-> spoon.reflect.factory
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
     --> spoon.reflect.visitor.filter
+    <-- spoon.support.reflect.code
+    <-- spoon.support.reflect.declaration
     --> spoon.support.util
     --> spoon.template
 spoon.support.reflect.reference
-    <-- spoon.support
     --> java.io *
     --> java.lang *
     --> java.lang.annotation *
@@ -985,11 +949,11 @@ spoon.support.reflect.reference
     --> spoon.reflect.factory
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
+    <-- spoon.support
     --> spoon.support.reflect.declaration
     --> spoon.support.util
     --> spoon.support.visitor
 spoon.support.template
-    <-- spoon.template
     --> java.io *
     --> java.lang *
     --> java.lang.reflect *
@@ -1004,17 +968,8 @@ spoon.support.template
     --> spoon.reflect.visitor
     --> spoon.reflect.visitor.filter
     --> spoon.support.util
-    --> spoon.template
+    <-> spoon.template
 spoon.support.util
-    <-- spoon.processing
-    <-- spoon.reflect.eval
-    <-- spoon.reflect.visitor
-    <-- spoon.support
-    <-- spoon.support.reflect.declaration
-    <-- spoon.support.reflect.eval
-    <-- spoon.support.reflect.reference
-    <-- spoon.support.template
-    <-- spoon.template
     --> java.io *
     --> java.lang *
     --> java.lang.reflect *
@@ -1022,15 +977,19 @@ spoon.support.util
     --> org.eclipse.jdt.core.compiler *
     --> org.eclipse.jdt.internal.compiler.env *
     --> org.eclipse.jdt.internal.compiler.util *
-    --> spoon.processing
+    <-> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
+    <-- spoon.reflect.eval
     --> spoon.reflect.reference
-    --> spoon.template
-spoon.support.visitor
+    <-- spoon.reflect.visitor
     <-- spoon.support
     <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.eval
     <-- spoon.support.reflect.reference
+    <-- spoon.support.template
+    <-> spoon.template
+spoon.support.visitor
     --> java.io *
     --> java.lang *
     --> java.util *
@@ -1043,22 +1002,36 @@ spoon.support.visitor
     --> spoon.reflect.factory
     --> spoon.reflect.reference
     --> spoon.reflect.visitor
+    <-- spoon.support
+    <-- spoon.support.reflect.declaration
+    <-- spoon.support.reflect.reference
     --> spoon.template
 spoon.template
-    <-- spoon.reflect.code
-    <-- spoon.reflect.declaration
+    --> java.io *
+    --> java.lang *
+    --> java.lang.annotation *
+    --> java.lang.reflect *
+    --> java.util *
+    --> java.util.regex *
+    --> org.apache.log4j *
+    --> spoon
+    --> spoon.processing
+    <-> spoon.reflect.code
+    --> spoon.reflect.cu
+    <-> spoon.reflect.declaration
     <-- spoon.reflect.eval
-    <-- spoon.reflect.factory
-    <-- spoon.reflect.visitor
-    <-- spoon.reflect.visitor.filter
+    <-> spoon.reflect.factory
+    --> spoon.reflect.reference
+    <-> spoon.reflect.visitor
+    <-> spoon.reflect.visitor.filter
     <-- spoon.support
     <-- spoon.support.compiler
     <-- spoon.support.compiler.jdt
     <-- spoon.support.reflect.code
     <-- spoon.support.reflect.declaration
     <-- spoon.support.reflect.eval
-    <-- spoon.support.template
-    <-- spoon.support.util
+    <-> spoon.support.template
+    <-> spoon.support.util
     <-- spoon.support.visitor
     <-- spoon.test.casts
     <-- spoon.test.control
@@ -1081,25 +1054,16 @@ spoon.template
     <-- spoon.test.template
     <-- spoon.test.trycatch
     <-- spoon.test.visibility
+spoon.test
     --> java.io *
     --> java.lang *
-    --> java.lang.annotation *
-    --> java.lang.reflect *
     --> java.util *
-    --> java.util.regex *
-    --> org.apache.log4j *
     --> spoon
+    --> spoon.compiler
     --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
     --> spoon.reflect.declaration
     --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.support.template
-    --> spoon.support.util
-spoon.test
+    --> spoon.support
     <-- spoon.test.annotation
     <-- spoon.test.arrays
     <-- spoon.test.casts
@@ -1123,20 +1087,12 @@ spoon.test
     <-- spoon.test.strings
     <-- spoon.test.trycatch
     <-- spoon.test.visibility
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.support
 spoon.test.annotation
     --> java.io *
     --> java.lang *
     --> java.lang.annotation *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1150,12 +1106,14 @@ spoon.test.api
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.processing
     --> spoon.reflect.declaration
     --> spoon.support
 spoon.test.arrays
     --> java.lang *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.declaration
     --> spoon.reflect.reference
@@ -1163,6 +1121,7 @@ spoon.test.arrays
 spoon.test.casts
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1174,6 +1133,7 @@ spoon.test.casts
 spoon.test.control
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1184,6 +1144,7 @@ spoon.test.control
 spoon.test.ctCase
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1195,6 +1156,7 @@ spoon.test.enums
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1203,6 +1165,7 @@ spoon.test.eval
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1212,6 +1175,7 @@ spoon.test.exceptions
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1223,6 +1187,7 @@ spoon.test.factory
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.compiler
     --> spoon.processing
     --> spoon.reflect.code
@@ -1235,6 +1200,7 @@ spoon.test.factory
 spoon.test.fieldaccesses
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.cu
@@ -1249,6 +1215,7 @@ spoon.test.filters
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1264,6 +1231,7 @@ spoon.test.generics
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.compiler
     --> spoon.processing
     --> spoon.reflect.code
@@ -1278,6 +1246,7 @@ spoon.test.generics
 spoon.test.initializers
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1288,6 +1257,7 @@ spoon.test.initializers
 spoon.test.intercession
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1298,6 +1268,7 @@ spoon.test.intercession.insertBefore
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1312,21 +1283,24 @@ spoon.test.limits
     --> java.lang *
     --> spoon.test.limits.utils
 spoon.test.limits.utils
-    <-- spoon.test.limits
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
     --> spoon.reflect.visitor
     --> spoon.reflect.visitor.filter
     --> spoon.test
+    <-- spoon.test.limits
 spoon.test.main
     --> java.lang *
+    --> org.junit *
     --> spoon
 spoon.test.model
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1339,6 +1313,7 @@ spoon.test.parent
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1349,10 +1324,10 @@ spoon.test.parent
     --> spoon.reflect.visitor.filter
     --> spoon.template
 spoon.test.prettyprinter
-    <-- spoon.test.subclass.prettyprinter
     --> java.lang *
     --> java.security *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1363,10 +1338,12 @@ spoon.test.prettyprinter
     --> spoon.reflect.visitor
     --> spoon.reflect.visitor.filter
     --> spoon.template
+    <-- spoon.test.subclass.prettyprinter
 spoon.test.processing
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.compiler
     --> spoon.processing
     --> spoon.reflect.code
@@ -1381,6 +1358,7 @@ spoon.test.replace
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1397,6 +1375,7 @@ spoon.test.secondaryclasses
     --> java.lang *
     --> java.util *
     --> javax.swing *
+    --> org.junit *
     --> spoon.compiler
     --> spoon.processing
     --> spoon.reflect.code
@@ -1410,6 +1389,7 @@ spoon.test.secondaryclasses
 spoon.test.snippets
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1419,6 +1399,7 @@ spoon.test.snippets
 spoon.test.sourcePosition
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.cu
@@ -1431,6 +1412,7 @@ spoon.test.strings
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1443,10 +1425,10 @@ spoon.test.subclass.prettyprinter
     --> java.lang *
     --> spoon.test.prettyprinter
 spoon.test.template
-    <-- spoon.test.processing
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon
     --> spoon.compiler
     --> spoon.processing
@@ -1457,10 +1439,12 @@ spoon.test.template
     --> spoon.reflect.visitor
     --> spoon.reflect.visitor.filter
     --> spoon.template
+    <-- spoon.test.processing
 spoon.test.trycatch
     --> java.io *
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1473,6 +1457,7 @@ spoon.test.trycatch
 spoon.test.visibility
     --> java.lang *
     --> java.util *
+    --> org.junit *
     --> spoon.processing
     --> spoon.reflect.code
     --> spoon.reflect.declaration
@@ -1481,8 +1466,8 @@ spoon.test.visibility
     --> spoon.test
     --> spoon.test.visibility.packageprotected
 spoon.test.visibility.packageprotected
-    <-- spoon.test.visibility
     --> java.lang *
+    <-- spoon.test.visibility
 unnamed package
     --> java.lang *
 

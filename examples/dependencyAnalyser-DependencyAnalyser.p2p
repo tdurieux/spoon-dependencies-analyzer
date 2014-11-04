@@ -3,13 +3,13 @@ com.martiansoftware.jsap *
 com.martiansoftware.jsap.stringparsers *
     <-- github.tdurieux.dependencyAnalyzer.main
 github.tdurieux.dependencyAnalyzer
-    <-- github.tdurieux.dependencyAnalyzer.graph.export
-    <-- github.tdurieux.dependencyAnalyzer.gui
-    <-- github.tdurieux.dependencyAnalyzer.main
     --> github.tdurieux.dependencyAnalyzer.graph
+    <-- github.tdurieux.dependencyAnalyzer.graph.export
     --> github.tdurieux.dependencyAnalyzer.graph.node
     --> github.tdurieux.dependencyAnalyzer.graph.node.classDep
     --> github.tdurieux.dependencyAnalyzer.graph.node.packageDep
+    <-- github.tdurieux.dependencyAnalyzer.gui
+    <-- github.tdurieux.dependencyAnalyzer.main
     --> github.tdurieux.dependencyAnalyzer.spoon.analyzer
     --> java.io *
     --> java.lang *
@@ -24,18 +24,18 @@ github.tdurieux.dependencyAnalyzer
 github.tdurieux.dependencyAnalyzer.graph
     <-- github.tdurieux.dependencyAnalyzer
     <-- github.tdurieux.dependencyAnalyzer.graph.export
+    --> github.tdurieux.dependencyAnalyzer.graph.node
     <-- github.tdurieux.dependencyAnalyzer.gui
     <-- github.tdurieux.dependencyAnalyzer.main
     <-- github.tdurieux.dependencyAnalyzer.spoon.analyzer
-    --> github.tdurieux.dependencyAnalyzer.graph.node
     --> java.lang *
     --> java.util *
 github.tdurieux.dependencyAnalyzer.graph.export
-    <-- github.tdurieux.dependencyAnalyzer.gui
-    <-- github.tdurieux.dependencyAnalyzer.main
     --> github.tdurieux.dependencyAnalyzer
     --> github.tdurieux.dependencyAnalyzer.graph
     --> github.tdurieux.dependencyAnalyzer.graph.node
+    <-- github.tdurieux.dependencyAnalyzer.gui
+    <-- github.tdurieux.dependencyAnalyzer.main
     --> java.lang *
     --> java.util *
     --> java.util.regex *
@@ -70,10 +70,10 @@ github.tdurieux.dependencyAnalyzer.graph.node.packageDep
     --> spoon.reflect.declaration *
     --> spoon.reflect.reference *
 github.tdurieux.dependencyAnalyzer.gui
-    <-- github.tdurieux.dependencyAnalyzer.main
     --> github.tdurieux.dependencyAnalyzer
     --> github.tdurieux.dependencyAnalyzer.graph
     --> github.tdurieux.dependencyAnalyzer.graph.export
+    <-- github.tdurieux.dependencyAnalyzer.main
     --> java.awt *
     --> java.awt.event *
     --> java.io *
