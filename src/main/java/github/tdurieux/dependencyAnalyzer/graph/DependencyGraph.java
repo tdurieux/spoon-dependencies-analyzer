@@ -1,5 +1,7 @@
 package github.tdurieux.dependencyAnalyzer.graph;
 
+import github.tdurieux.dependencyAnalyzer.AnalyzerConfig;
+import github.tdurieux.dependencyAnalyzer.graph.export.TxtExport;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
 
@@ -125,37 +127,9 @@ public class DependencyGraph {
 
 	@Override
 	public String toString() {
-		String content = "";
-		List<DependencyNode> list = new ArrayList<DependencyNode>(
-				this.usedNodes.keySet());
-		Collections.sort(list);
-		for (DependencyNode pack : list) {
-			if (pack == null) {
-				continue;
-			}
-			content += pack.getQualifiedName()
-					+ (pack.isExternal() ? " *" : "") + "\n";
-			if (usedByNodes.containsKey(pack)) {
-				List<DependencyNode> dep = new ArrayList<DependencyNode>(
-						usedByNodes.get(pack).keySet());
-				Collections.sort(dep);
-				for (DependencyNode nodeDep : dep) {
-					if (nodeDep == null)
-						continue;
-					content += "    <-- " + nodeDep.getQualifiedName()
-							+ (nodeDep.isExternal() ? " *" : "") + "\n";
-				}
-			}
-
-			List<DependencyNode> depList = usedNodes.get(pack);
-			Collections.sort(depList);
-			for (DependencyNode dependencyNode : depList) {
-				if (dependencyNode == null)
-					continue;
-				content += "    --> " + dependencyNode.getQualifiedName()
-						+ (dependencyNode.isExternal() ? " *" : "") + "\n";
-			}
-		}
-		return content;
+		AnalyzerConfig config = new AnalyzerConfig();
+		config.setLevel(AnalyzerConfig.Level.CLASS);
+		config.setOutputFormat(AnalyzerConfig.OutputFormat.TXT);
+		return new TxtExport(this, config).generate();
 	}
 }

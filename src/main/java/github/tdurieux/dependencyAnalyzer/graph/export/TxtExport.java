@@ -30,6 +30,9 @@ public class TxtExport extends AbstractExport {
 	@Override
 	public String generate() {
 		String content = "";
+		if(this.graph == null || this.config == null) {
+			return content;
+		}
 		Map<DependencyNode, List<DependencyNode>> usedNodes = this.graph
 				.getUsedNodes();
 		Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> usedByNodes = this.graph
@@ -46,7 +49,7 @@ public class TxtExport extends AbstractExport {
 				continue;
 			}
 			String pack = parent.getQualifiedName();
-			if(pack.equals(parent.getSimpleName())) {
+			if(pack.equals(parent.getSimpleName()) && !parent.getType().equals(DependencyNode.Type.PACKAGE)) {
 				pack = "<UnknowPackage>";
 			}
 			if (!parent.getType().equals(DependencyNode.Type.PACKAGE)) {

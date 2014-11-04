@@ -32,6 +32,9 @@ public class DotExport extends AbstractExport {
 		List<String> starts = new ArrayList<String>();
 
 		String content = "digraph G {\n\tnode [shape=box]; compound=true; ratio=fill;\n";
+		if(this.graph == null || this.config == null) {
+			return content + "}";
+		}
 		Map<DependencyNode, List<DependencyNode>> nodes = graph.getUsedNodes();
 		for (DependencyNode parent : nodes.keySet()) {
 			if (isToIgnore(parent)) {

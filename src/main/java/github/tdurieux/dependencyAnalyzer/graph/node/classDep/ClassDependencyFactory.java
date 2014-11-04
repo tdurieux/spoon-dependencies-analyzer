@@ -3,6 +3,7 @@ package github.tdurieux.dependencyAnalyzer.graph.node.classDep;
 import spoon.SpoonException;
 import spoon.reflect.declaration.CtAnnotationType;
 import spoon.reflect.declaration.CtEnum;
+import spoon.reflect.declaration.CtInterface;
 import spoon.reflect.declaration.CtSimpleType;
 import spoon.reflect.declaration.ModifierKind;
 import spoon.reflect.reference.CtTypeReference;
@@ -43,9 +44,6 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 		if (element.isPrimitive()) {
 			type = Type.PRIMITIVE;
 		}
-		if (element.isInterface()) {
-			type = Type.INTERFACE;
-		}
 
 		if (element.getDeclaration() != null) {
 			CtSimpleType<?> declarationType = element.getDeclaration();
@@ -57,6 +55,8 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 				type = Type.ENUM;
 			} else if (declarationType instanceof CtAnnotationType<?>) {
 				type = Type.ANNOTATION;
+			} else if (declarationType instanceof CtInterface<?>) {
+				type = Type.INTERFACE;
 			}
 		} else {
 
@@ -67,6 +67,8 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 						type = Type.ENUM;
 					} else if (elementClass.isAnnotation()) {
 						type = Type.ANNOTATION;
+					} else if (elementClass.isInterface()) {
+						type = Type.INTERFACE;
 					}
 					isInternal = elementClass.isMemberClass();
 					isPrimitive = elementClass.isPrimitive();
