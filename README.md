@@ -28,6 +28,13 @@ Les graphes de dépendances permettent de visualiser les dépendances d'un proje
 - au niveau des classes,
 - et au niveau des méthodes (non traité).
 
+#### Dépendances au niveau des paquets
+![dépendances au niveau des paquets](https://cloud.githubusercontent.com/assets/5577568/4902556/144b3eec-643a-11e4-99f2-eeee8df01569.png)
+
+#### Dépendances au niveau des classses
+![dépendances au niveau des classses](https://cloud.githubusercontent.com/assets/5577568/4902558/16a15a32-643a-11e4-9a7e-c2010373e2e1.png)
+
+
 L'analyse des dépendances a plusieurs intérêts: 
 elle permet de rapidement comprendre l'architecture du projet,
 d'identifier la complexité d'un projet (nombres de dépendances, nombres de classes, paquets, méthodes) ou 
