@@ -66,7 +66,7 @@ Enumerations		     	|
 Classes anonymes	     	|
 Constantes	     		|
 
-Tous ces éléments (à l'exception des annotations) sont encapsulés par Spoon sous le type: CtTypedElement. Un processeur traitant les CtTypedElement a pu être réalisé. Ce processeur a comme rôle de générer l'arbre de dépendances.
+Tous ces éléments (à l'exception des annotations) sont encapsulés par Spoon sous le type: CtTypedElement. Un processeur traitant les CtTypedElement a été réalisé. Ce processeur a comme rôle de générer l'arbre de dépendances.
 
 A partir de ce graphe de dépendances, il est possible de générer deux représentations. Le premier format de sortie est celui utilisé par Dependency Finder. Le second format est le format utilisé par la librairie Graphviz qui permet de générer des graphes sous forme d'image (png, jpg, pdf, svg, ...).
 
@@ -78,7 +78,8 @@ Les graphes de dépendances au niveau des classes sont plus difficilement exploi
 
 Afin d'améliorer la lisibilité des résultats, plusieurs solutions optionnelles ont été implémentées: 
 - identifier et masquer les classes ne provenant pas du projet analysé (librairies externes, les classes Java, ...),
-- ajout de la possibilité de filtrer les dépendances sur base d'expressions régulières. 
+- ajout de la possibilité de filtrer les dépendances sur base d'expressions régulières.
+
 Ces solutions induisent en contrepartie une perte d'informations. 
 
 Une solution qui reste à investiguer est de produire une interface qui permet de filtrer dynamiquement la vue du graphe. Plusieurs types d'interface sont envisageables:
@@ -102,7 +103,7 @@ Les quelques différences détectées au niveau des paquets sont également pré
 - les classes internes ne sont pas considérées comme des dépendances dans les classes parentes.
 
 ![image](https://cloud.githubusercontent.com/assets/5577568/4906881/a42b8d9c-645c-11e4-8a98-ab6cbbb02786.png)
-Différences entre le graphe de dépendances de Dependency Finder (à gauche) et le graphe de dépendances de Dependency Analyzer (à droit).
+Différences entre le graphe de dépendances de Dependency Finder (à gauche) et le graphe de dépendances de Dependency Analyzer (à droite).
 
 ## Pistes d'amélioration
 
@@ -191,7 +192,7 @@ java -jar target/DependencyAnalyzer-0.0.1-SNAPSHOT.jar \
 
 Les tests se basent sur un projet exemple qui contient les sources potentielles de dépendances précédemment indentifiées. Ils vérifient la présence de dépendances, le type de la dépendance (classe, interface, enum,...) et que les dépendances externes du projet soient effectivement détectées comme telles. 
 
-La génération des représentations textuelles de graphe de dépendances a également été testée en vérifiant le texte générer en fonction du graphe et des différentes options disponibles (ignorer les dépendances externes, ignorer des éléments en fonction expressions régulières). 
+La génération des représentations textuelles de graphe de dépendances a également été testée en vérifiant le texte généré en fonction du graphe et des différentes options disponibles (ignorer les dépendances externes, ignorer des éléments en fonction d'expressions régulières). 
 
 Ces tests sont répartis en 4 classes contenant en tout 22 tests et couvrant 89% du code. 
 
