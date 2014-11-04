@@ -13,6 +13,10 @@ Thomas Durieux
 - [Validation des résultats](#validation-des-résultats)
 - [Pistes d'amélioration](#pistes-damélioration)
 - [Usage](#usage)
+  - [Dépendances](#dépendances)
+  - [Interface utilisateur](#interface-utilisateur)
+  - [Lignes de commande](#lignes-de-commande)
+- [Tests](#tests)
 - [Références](#références)
 
 <!-- /MarkdownTOC -->
@@ -97,6 +101,9 @@ Les quelques différences détectées au niveau des paquets sont également pré
 - les classes anonymes sont numérotées à la compilation et apparaissent donc différemment dans Dependency Finder alors que cet outil les nomme \<Anonymous\>,
 - les classes internes ne sont pas considérées comme des dépendances dans les classes parentes.
 
+![image](https://cloud.githubusercontent.com/assets/5577568/4906881/a42b8d9c-645c-11e4-8a98-ab6cbbb02786.png)
+Différences entre le graphe de dépendances de Dependency Finder (à gauche) et le graphe de dépendances de Dependency Analyzer (à droit).
+
 ## Pistes d'amélioration
 
 Plusieurs pistes d'amélioration sont envisageables:
@@ -180,9 +187,13 @@ java -jar target/DependencyAnalyzer-0.0.1-SNAPSHOT.jar \
     --level class;
 ```
 
-### Tests
+## Tests
 
-Les tests se basent sur un projet exemple qui contient les sources potentielles de dépendances précédemment indentifiées. Ils vérifient la présence de dépendances, le type de la dépendance (classe, interface, enum,...) et que les dépendances externes du projet sont effectivement détectées comme telles. Ces tests sont répartis en 2 classes contenant en tout 33 asserts. 
+Les tests se basent sur un projet exemple qui contient les sources potentielles de dépendances précédemment indentifiées. Ils vérifient la présence de dépendances, le type de la dépendance (classe, interface, enum,...) et que les dépendances externes du projet soient effectivement détectées comme telles. 
+
+La génération des représentations textuelles de graphe de dépendances a également été testée en vérifiant le texte générer en fonction du graphe et des différentes options disponibles (ignorer les dépendances externes, ignorer des éléments en fonction expressions régulières). 
+
+Ces tests sont répartis en 4 classes contenant en tout 22 tests et couvrant 89% du code. 
 
 ## Références
 
