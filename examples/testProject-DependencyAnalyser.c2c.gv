@@ -1,0 +1,63 @@
+digraph G {
+	node [shape=box]; compound=true; ratio=fill;
+	"java.lang.Runnable" [color=grey];
+	"java.lang.Object" [color=grey];
+	"java.lang.Boolean" [color=grey];
+	"java.lang.Override" [color=grey];
+	"java.lang.Thread" [color=grey];
+	"java.lang.Integer" [color=grey];
+	"java.lang.String" [color=grey];
+	"github.tdurieux.testProject.entity.User" -> "java.lang.String";
+	"github.tdurieux.testProject.entity.User" -> "github.tdurieux.testProject.entity.User$Type";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Object";
+	"github.tdurieux.testProject.entity.User" -> "java.io.Serializable";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Integer";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Boolean";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Class";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Override";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Runnable";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Thread";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.NullPointerException";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.RuntimeException";
+	"github.tdurieux.testProject.entity.User" -> "java.lang.Exception";
+	"github.tdurieux.testProject.entity.Administrator" -> "github.tdurieux.testProject.entity.User$Type";
+	"github.tdurieux.testProject.entity.Administrator" -> "github.tdurieux.testProject.entity.User";
+	"github.tdurieux.testProject.entity.Administrator" -> "java.io.Serializable";
+	"java.lang.RuntimeException" [color=grey];
+	"java.lang.Exception" [color=grey];
+	"java.lang.Class" [color=grey];
+	"java.lang.NullPointerException" [color=grey];
+	"java.io.Serializable" [color=grey];
+	"github.tdurieux.testProject.entity.User$" -> "java.lang.Object";
+	"github.tdurieux.testProject.entity.User$" -> "java.lang.Runnable";
+	"github.tdurieux.testProject.entity.User$" -> "java.lang.Class";
+	"github.tdurieux.testProject.entity.User$" -> "github.tdurieux.testProject.entity.User";
+	"github.tdurieux.testProject.entity.User$" -> "java.lang.String";
+	"github.tdurieux.testProject.entity.User$" -> "java.io.Serializable";
+	"github.tdurieux.testProject.entity.User$" -> "java.lang.Override";
+	subgraph cluster0 { 
+		rankdir=LR;label="github.tdurieux.testProject.entity";
+		"github.tdurieux.testProject.entity.User$Type" [label="User$Type"]
+		"github.tdurieux.testProject.entity.User" [label="User"]
+		"github.tdurieux.testProject.entity.Administrator" [label="Administrator"]
+		"github.tdurieux.testProject.entity.User$" [label="User$"]
+	};
+	subgraph cluster1 { 
+		rankdir=LR;label="java.lang";
+		"java.lang.Runnable" [label="Runnable"]
+		"java.lang.Object" [label="Object"]
+		"java.lang.Boolean" [label="Boolean"]
+		"java.lang.Override" [label="Override"]
+		"java.lang.Thread" [label="Thread"]
+		"java.lang.Integer" [label="Integer"]
+		"java.lang.String" [label="String"]
+		"java.lang.RuntimeException" [label="RuntimeException"]
+		"java.lang.Exception" [label="Exception"]
+		"java.lang.Class" [label="Class"]
+		"java.lang.NullPointerException" [label="NullPointerException"]
+	};
+	subgraph cluster2 { 
+		rankdir=LR;label="java.io";
+		"java.io.Serializable" [label="Serializable"]
+	};
+}

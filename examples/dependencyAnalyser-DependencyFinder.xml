@@ -113,17 +113,20 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.DependencyAnalizer(java.lang.String, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.config</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.config</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.DotExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.TxtExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.stateChanged(javax.swing.event.ChangeEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.DependencyAnalyzerGui()</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$000(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$0(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.config</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
@@ -141,6 +144,7 @@
                 <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
                 <outbound type="feature" confirmed="no">java.util.ArrayList.ArrayList()</outbound>
                 <outbound type="class" confirmed="no">java.util.List</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.DependencyAnalyzerGui()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             </feature>
@@ -262,6 +266,7 @@
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig.setLevel(github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.level</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             </feature>
@@ -275,6 +280,7 @@
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig.setOutputFormat(github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.outputFormat</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="yes">
@@ -303,15 +309,11 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.getLevel()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.level</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.setLevel(github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
-            <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.$VALUES</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.static {}</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</inbound>
-            </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.AnalyzerConfig$Level(java.lang.String, int)</name>
                 <outbound type="feature" confirmed="no">java.lang.Enum.Enum(java.lang.String, int)</outbound>
@@ -321,28 +323,34 @@
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.CLASS</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.static {}</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.ENUM$VALUES</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.PACKAGE</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.static {}</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.AnalyzerConfig()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="no">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.ordinal()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.static {}</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.$VALUES</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.AnalyzerConfig$Level(java.lang.String, int)</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.CLASS</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.ENUM$VALUES</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.PACKAGE</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
             </feature>
@@ -355,19 +363,10 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.$VALUES</outbound>
-                <outbound type="class" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level[]</outbound>
-                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level[].clone()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.ENUM$VALUES</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</inbound>
-            </feature>
-        </class>
-        <class confirmed="no">
-            <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level[]</name>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</inbound>
-            <feature confirmed="no">
-                <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level[].clone()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</inbound>
+                <outbound type="feature" confirmed="no">java.lang.System.arraycopy(java.lang.Object, int, java.lang.Object, int, int)</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</inbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -377,14 +376,10 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.getOutputFormat()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.outputFormat</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.setOutputFormat(github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
-            <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.$VALUES</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.static {}</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</inbound>
-            </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.AnalyzerConfig$OutputFormat(java.lang.String, int)</name>
                 <outbound type="feature" confirmed="no">java.lang.Enum.Enum(java.lang.String, int)</outbound>
@@ -394,26 +389,32 @@
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.DOT</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.static {}</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.ENUM$VALUES</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.TXT</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.static {}</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.AnalyzerConfig()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="no">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.ordinal()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.static {}</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.$VALUES</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.AnalyzerConfig$OutputFormat(java.lang.String, int)</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.DOT</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.ENUM$VALUES</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.TXT</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
             </feature>
@@ -426,19 +427,10 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.$VALUES</outbound>
-                <outbound type="class" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat[]</outbound>
-                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat[].clone()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.ENUM$VALUES</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</inbound>
-            </feature>
-        </class>
-        <class confirmed="no">
-            <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat[]</name>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</inbound>
-            <feature confirmed="no">
-                <name>github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat[].clone()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</inbound>
+                <outbound type="feature" confirmed="no">java.lang.System.arraycopy(java.lang.Object, int, java.lang.Object, int, int)</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</inbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -448,9 +440,24 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.stateChanged(javax.swing.event.ChangeEvent)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$100(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$102(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$1(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$2(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.dependencyAnalizer</inbound>
+            <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.CLASS</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.PACKAGE</outbound>
+                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.ordinal()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level</outbound>
+                <outbound type="class" confirmed="no">java.lang.NoSuchFieldError</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
+            </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.DependencyAnalizer.DependencyAnalizer(java.lang.String, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig</outbound>
@@ -529,7 +536,7 @@
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.ordinal()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.getLevel()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.isVerbose()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.$SwitchMap$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.config</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.factory</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph</outbound>
@@ -537,9 +544,9 @@
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.ClassDependencyFactory()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.ClassDependencyLocationFacotry()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.ClassDependencyLocationFactory()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory.PackageDependencyFactory()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.PackageDependencyLocationFacotry()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.PackageDependencyLocationFactory()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.DependencyAnalyzer(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory, github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory)</outbound>
                 <outbound type="class" confirmed="no">java.io.PrintStream</outbound>
                 <outbound type="feature" confirmed="no">java.io.PrintStream.println(java.lang.String)</outbound>
@@ -560,25 +567,6 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.stateChanged(javax.swing.event.ChangeEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
-            </feature>
-        </class>
-        <class confirmed="yes">
-            <name>github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1</name>
-            <outbound type="class" confirmed="no">java.lang.Object</outbound>
-            <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.$SwitchMap$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
-            </feature>
-            <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</name>
-                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.CLASS</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.PACKAGE</outbound>
-                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.ordinal()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.$SwitchMap$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level</outbound>
-                <outbound type="class" confirmed="no">java.lang.NoSuchFieldError</outbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -644,6 +632,7 @@
                 <outbound type="feature" confirmed="no">java.util.HashMap.HashMap(java.util.Map)</outbound>
                 <outbound type="class" confirmed="no">java.util.Map</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedNodes()</name>
@@ -677,30 +666,17 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.usedByNodes</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.usedNodes</outbound>
-                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.getQualifiedName()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.isExternal()</outbound>
-                <outbound type="class" confirmed="no">java.lang.Object</outbound>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig</outbound>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.CLASS</outbound>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.TXT</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.AnalyzerConfig()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.setLevel(github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.setOutputFormat(github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.TxtExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
-                <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
-                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
-                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
-                <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
-                <outbound type="feature" confirmed="no">java.util.ArrayList.ArrayList(java.util.Collection)</outbound>
-                <outbound type="class" confirmed="no">java.util.Collection</outbound>
-                <outbound type="feature" confirmed="no">java.util.Collections.sort(java.util.List)</outbound>
-                <outbound type="class" confirmed="no">java.util.Iterator</outbound>
-                <outbound type="feature" confirmed="no">java.util.Iterator.hasNext()</outbound>
-                <outbound type="feature" confirmed="no">java.util.Iterator.next()</outbound>
-                <outbound type="class" confirmed="no">java.util.List</outbound>
-                <outbound type="feature" confirmed="no">java.util.List.iterator()</outbound>
-                <outbound type="class" confirmed="no">java.util.Map</outbound>
-                <outbound type="feature" confirmed="no">java.util.Map.containsKey(java.lang.Object)</outbound>
-                <outbound type="feature" confirmed="no">java.util.Map.get(java.lang.Object)</outbound>
-                <outbound type="feature" confirmed="no">java.util.Map.keySet()</outbound>
-                <outbound type="class" confirmed="no">java.util.Set</outbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.usedByNodes</name>
@@ -709,7 +685,6 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedByNodes()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.usedNodes</name>
@@ -718,7 +693,6 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedNodes()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -818,6 +792,10 @@
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.i</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
+            <feature confirmed="no">
+                <name>github.tdurieux.dependencyAnalyzer.graph.export.DotExport.config</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
+            </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</name>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.i</outbound>
@@ -825,8 +803,9 @@
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.replace(java.lang.CharSequence, java.lang.CharSequence)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.String.valueOf(java.lang.Object)</outbound>
                 <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
-                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(int)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
@@ -842,8 +821,10 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedNodes()</outbound>
+                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.config</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.graph</outbound>
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</outbound>
@@ -855,8 +836,9 @@
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.charAt(int)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.split(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.String.valueOf(java.lang.Object)</outbound>
                 <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
-                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
                 <outbound type="feature" confirmed="no">java.util.ArrayList.ArrayList()</outbound>
@@ -902,38 +884,48 @@
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.stateChanged(javax.swing.event.ChangeEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
+            <feature confirmed="no">
+                <name>github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.config</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
+            </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedByNodes()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedNodes()</outbound>
+                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.config</outbound>
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.graph</outbound>
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.CLASS</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.INTERFACE</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.PACKAGE</outbound>
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.equals(java.lang.Object)</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.getQualifiedName()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.getSimpleName()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.getType()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.isAnonymous()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.isExternal()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.isInternal()</outbound>
                 <outbound type="class" confirmed="no">java.lang.CharSequence</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.equals(java.lang.Object)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.replace(java.lang.CharSequence, java.lang.CharSequence)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.String.split(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.valueOf(java.lang.Object)</outbound>
                 <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
+                <outbound type="feature" confirmed="no">java.util.ArrayList.ArrayList()</outbound>
                 <outbound type="feature" confirmed="no">java.util.ArrayList.ArrayList(java.util.Collection)</outbound>
                 <outbound type="class" confirmed="no">java.util.Collection</outbound>
                 <outbound type="feature" confirmed="no">java.util.Collections.sort(java.util.List)</outbound>
@@ -941,12 +933,16 @@
                 <outbound type="feature" confirmed="no">java.util.Iterator.hasNext()</outbound>
                 <outbound type="feature" confirmed="no">java.util.Iterator.next()</outbound>
                 <outbound type="class" confirmed="no">java.util.List</outbound>
+                <outbound type="feature" confirmed="no">java.util.List.add(java.lang.Object)</outbound>
+                <outbound type="feature" confirmed="no">java.util.List.addAll(java.util.Collection)</outbound>
+                <outbound type="feature" confirmed="no">java.util.List.contains(java.lang.Object)</outbound>
                 <outbound type="feature" confirmed="no">java.util.List.iterator()</outbound>
                 <outbound type="class" confirmed="no">java.util.Map</outbound>
                 <outbound type="feature" confirmed="no">java.util.Map.containsKey(java.lang.Object)</outbound>
                 <outbound type="feature" confirmed="no">java.util.Map.get(java.lang.Object)</outbound>
                 <outbound type="feature" confirmed="no">java.util.Map.keySet()</outbound>
                 <outbound type="class" confirmed="no">java.util.Set</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
@@ -969,16 +965,16 @@
     <package confirmed="yes">
         <name>github.tdurieux.dependencyAnalyzer.graph.node</name>
         <class confirmed="yes">
-            <name>github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry</name>
+            <name>github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory</name>
             <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory</outbound>
             <outbound type="class" confirmed="no">java.lang.Object</outbound>
-            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry</inbound>
-            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry</inbound>
+            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory</inbound>
+            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory</inbound>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry.AbstractDependencyLocationFacotry()</name>
+                <name>github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory.AbstractDependencyLocationFactory()</name>
                 <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.ClassDependencyLocationFacotry()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.PackageDependencyLocationFacotry()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.ClassDependencyLocationFactory()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.PackageDependencyLocationFactory()</inbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -1019,8 +1015,8 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.process(spoon.reflect.declaration.CtTypedElement)</inbound>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation.getFile()</name>
@@ -1045,8 +1041,8 @@
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.DependencyNodeImpl(java.lang.String, java.lang.String, github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type, boolean, boolean, boolean, boolean, boolean)</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.file</name>
@@ -1079,9 +1075,11 @@
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.file</outbound>
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.getQualifiedName()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.line</outbound>
+                <outbound type="class" confirmed="no">java.lang.Object</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
+                <outbound type="feature" confirmed="no">java.lang.String.valueOf(java.lang.Object)</outbound>
                 <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
-                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(int)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
@@ -1093,7 +1091,6 @@
             <outbound type="class" confirmed="no">java.lang.Object</outbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
@@ -1110,7 +1107,6 @@
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.getQualifiedName()</name>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.compareTo(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
@@ -1132,16 +1128,17 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.isAnonymous()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.isExternal()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.isInternal()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -1154,20 +1151,20 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.getType()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.type</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.$VALUES</name>
+                <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ANNOTATION</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.values()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.CLASS</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.DependencyNode$Type(java.lang.String, int)</name>
@@ -1178,13 +1175,19 @@
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ENUM</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ENUM$VALUES</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.values()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.INTERFACE</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.METHOD</name>
@@ -1192,15 +1195,16 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.PACKAGE</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.PRIMITIVE</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.equals(java.lang.Object)</name>
@@ -1208,10 +1212,11 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.static {}</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.$VALUES</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ANNOTATION</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.CLASS</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.DependencyNode$Type(java.lang.String, int)</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ENUM</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ENUM$VALUES</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.INTERFACE</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.METHOD</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.PACKAGE</outbound>
@@ -1227,18 +1232,9 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.values()</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.$VALUES</outbound>
-                <outbound type="class" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type[]</outbound>
-                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type[].clone()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ENUM$VALUES</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
-            </feature>
-        </class>
-        <class confirmed="no">
-            <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type[]</name>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.values()</inbound>
-            <feature confirmed="no">
-                <name>github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type[].clone()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.values()</inbound>
+                <outbound type="feature" confirmed="no">java.lang.System.arraycopy(java.lang.Object, int, java.lang.Object, int, int)</outbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -1385,7 +1381,7 @@
             <name>github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory</name>
             <outbound type="class" confirmed="no">java.lang.Object</outbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
-            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry</inbound>
+            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.DependencyAnalyzer(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory, github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.DependencyAnalyzer(github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory, github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.locationFactory</inbound>
@@ -1432,18 +1428,28 @@
                 <name>github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ANNOTATION</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.CLASS</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ENUM</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.INTERFACE</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.PRIMITIVE</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.DependencyNodeImpl(java.lang.String, java.lang.String, github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type, boolean, boolean, boolean, boolean, boolean)</outbound>
                 <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.isExternal(spoon.reflect.reference.CtReference)</outbound>
                 <outbound type="class" confirmed="no">java.lang.Class</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isAnnotation()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isEnum()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isInterface()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isMemberClass()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isPrimitive()</outbound>
                 <outbound type="class" confirmed="no">java.lang.NoClassDefFoundError</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="class" confirmed="no">java.util.Set</outbound>
                 <outbound type="feature" confirmed="no">java.util.Set.contains(java.lang.Object)</outbound>
                 <outbound type="class" confirmed="no">spoon.SpoonException</outbound>
+                <outbound type="class" confirmed="no">spoon.reflect.declaration.CtAnnotationType</outbound>
+                <outbound type="class" confirmed="no">spoon.reflect.declaration.CtEnum</outbound>
+                <outbound type="class" confirmed="no">spoon.reflect.declaration.CtInterface</outbound>
                 <outbound type="class" confirmed="no">spoon.reflect.declaration.CtSimpleType</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.getModifiers()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.isTopLevel()</outbound>
@@ -1456,7 +1462,6 @@
                 <outbound type="feature" confirmed="no">spoon.reflect.reference.CtTypeReference.getQualifiedName()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.reference.CtTypeReference.getSimpleName()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.reference.CtTypeReference.isAnonymous()</outbound>
-                <outbound type="feature" confirmed="no">spoon.reflect.reference.CtTypeReference.isInterface()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.reference.CtTypeReference.isPrimitive()</outbound>
             </feature>
             <feature confirmed="no">
@@ -1465,28 +1470,33 @@
             </feature>
         </class>
         <class confirmed="yes">
-            <name>github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry</name>
-            <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry</outbound>
+            <name>github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory</name>
+            <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory</outbound>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.ClassDependencyLocationFacotry()</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry.AbstractDependencyLocationFacotry()</outbound>
+                <name>github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.ClassDependencyLocationFactory()</name>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory.AbstractDependencyLocationFactory()</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
             </feature>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</name>
+                <name>github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.DependencyLocationImpl(java.lang.String, java.lang.String, github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type, boolean, boolean, boolean, boolean, boolean, java.lang.String, int)</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ANNOTATION</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.CLASS</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.ENUM</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.INTERFACE</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.PRIMITIVE</outbound>
                 <outbound type="class" confirmed="no">java.io.File</outbound>
                 <outbound type="feature" confirmed="no">java.io.File.getAbsolutePath()</outbound>
                 <outbound type="class" confirmed="no">java.lang.Class</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isAnnotation()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isEnum()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isMemberClass()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Class.isPrimitive()</outbound>
                 <outbound type="class" confirmed="no">java.lang.NoClassDefFoundError</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
-                <outbound type="feature" confirmed="no">java.lang.String.isEmpty()</outbound>
                 <outbound type="class" confirmed="no">java.util.Set</outbound>
                 <outbound type="feature" confirmed="no">java.util.Set.contains(java.lang.Object)</outbound>
                 <outbound type="class" confirmed="no">spoon.SpoonException</outbound>
@@ -1495,8 +1505,8 @@
                 <outbound type="feature" confirmed="no">spoon.reflect.cu.SourcePosition.getLine()</outbound>
                 <outbound type="class" confirmed="no">spoon.reflect.declaration.CtElement</outbound>
                 <outbound type="class" confirmed="no">spoon.reflect.declaration.CtSimpleType</outbound>
+                <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.getActualClass()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.getModifiers()</outbound>
-                <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.getParent(java.lang.Class)</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.getQualifiedName()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.getReference()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtSimpleType.getSimpleName()</outbound>
@@ -1548,15 +1558,15 @@
             </feature>
         </class>
         <class confirmed="yes">
-            <name>github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry</name>
-            <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry</outbound>
+            <name>github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory</name>
+            <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory</outbound>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.PackageDependencyLocationFacotry()</name>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry.AbstractDependencyLocationFacotry()</outbound>
+                <name>github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.PackageDependencyLocationFactory()</name>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory.AbstractDependencyLocationFactory()</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
             </feature>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</name>
+                <name>github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.DependencyLocationImpl(java.lang.String, java.lang.String, github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type, boolean, boolean, boolean, boolean, boolean, java.lang.String, int)</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type</outbound>
@@ -1644,7 +1654,7 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.GUILauncher.main(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$000(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</name>
+                <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$0(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.config</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
@@ -1653,19 +1663,19 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.stateChanged(javax.swing.event.ChangeEvent)</inbound>
             </feature>
             <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$100(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</name>
+                <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$1(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.dependencyAnalizer</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$2(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.dependencyAnalizer</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.stateChanged(javax.swing.event.ChangeEvent)</inbound>
-            </feature>
-            <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$102(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</name>
-                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.dependencyAnalizer</outbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.add(java.awt.Component, java.lang.Object)</name>
@@ -1675,13 +1685,13 @@
                 <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.config</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.DependencyAnalyzerGui()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$000(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$0(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.dependencyAnalizer</name>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer</outbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$100(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$102(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$1(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$2(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.serialVersionUID</name>
@@ -1734,9 +1744,9 @@
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.this$0</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.val$jtGraph</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$000(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$100(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$102(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$0(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$1(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, github.tdurieux.dependencyAnalyzer.DependencyAnalizer)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$2(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
                 <outbound type="class" confirmed="no">java.awt.Component</outbound>
                 <outbound type="class" confirmed="no">java.awt.event.ActionEvent</outbound>
                 <outbound type="class" confirmed="no">java.io.File</outbound>
@@ -1792,8 +1802,8 @@
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.this$0</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.val$jtGraph</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$000(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$100(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$0(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$2(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
                 <outbound type="class" confirmed="no">java.awt.event.ActionEvent</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="class" confirmed="no">javax.swing.JTextArea</outbound>
@@ -1843,8 +1853,8 @@
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.this$0</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.val$jcLevels</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.val$jtGraph</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$000(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$100(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$0(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$2(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
                 <outbound type="class" confirmed="no">java.awt.event.ActionEvent</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
@@ -1901,8 +1911,8 @@
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.this$0</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.val$jchExternalDep</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$4.val$jtGraph</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$000(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$100(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$0(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui.access$2(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui)</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="class" confirmed="no">javax.swing.JCheckBox</outbound>
                 <outbound type="feature" confirmed="no">javax.swing.JCheckBox.isSelected()</outbound>
@@ -1954,6 +1964,21 @@
             <name>github.tdurieux.dependencyAnalyzer.main.Main</name>
             <outbound type="class" confirmed="no">java.lang.Object</outbound>
             <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</inbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.DOT</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.TXT</outbound>
+                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.ordinal()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat</outbound>
+                <outbound type="class" confirmed="no">java.lang.NoSuchFieldError</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
+            </feature>
+            <feature confirmed="yes">
                 <name>github.tdurieux.dependencyAnalyzer.main.Main.Main()</name>
                 <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
             </feature>
@@ -2003,7 +2028,7 @@
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.equals(java.lang.Object)</outbound>
                 <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
-                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder()</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(java.lang.String)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
                 <outbound type="feature" confirmed="no">java.lang.System.err</outbound>
@@ -2022,10 +2047,11 @@
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.DependencyAnalizer(java.lang.String, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</outbound>
                 <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedByNodes()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DependencyGraphExport.generate()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.DotExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.TxtExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.$SwitchMap$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</outbound>
                 <outbound type="class" confirmed="no">java.io.File</outbound>
                 <outbound type="feature" confirmed="no">java.io.File.File(java.lang.String)</outbound>
@@ -2042,27 +2068,16 @@
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
                 <outbound type="class" confirmed="no">java.lang.String</outbound>
                 <outbound type="feature" confirmed="no">java.lang.String.equals(java.lang.Object)</outbound>
+                <outbound type="class" confirmed="no">java.lang.StringBuilder</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.StringBuilder(java.lang.String)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.append(int)</outbound>
+                <outbound type="feature" confirmed="no">java.lang.StringBuilder.toString()</outbound>
                 <outbound type="feature" confirmed="no">java.lang.System.err</outbound>
                 <outbound type="feature" confirmed="no">java.lang.System.out</outbound>
-            </feature>
-        </class>
-        <class confirmed="yes">
-            <name>github.tdurieux.dependencyAnalyzer.main.Main$1</name>
-            <outbound type="class" confirmed="no">java.lang.Object</outbound>
-            <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.main.Main$1.$SwitchMap$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
-            </feature>
-            <feature confirmed="yes">
-                <name>github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</name>
-                <outbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.DOT</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.TXT</outbound>
-                <outbound type="feature" confirmed="no">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.ordinal()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</outbound>
-                <outbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.$SwitchMap$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat</outbound>
-                <outbound type="class" confirmed="no">java.lang.NoSuchFieldError</outbound>
+                <outbound type="class" confirmed="no">java.util.Map</outbound>
+                <outbound type="feature" confirmed="no">java.util.Map.keySet()</outbound>
+                <outbound type="class" confirmed="no">java.util.Set</outbound>
+                <outbound type="feature" confirmed="no">java.util.Set.size()</outbound>
             </feature>
         </class>
         <class confirmed="yes">
@@ -2132,8 +2147,8 @@
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtTypedElement.getAnnotations()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.declaration.CtTypedElement.getType()</outbound>
                 <outbound type="class" confirmed="no">spoon.reflect.reference.CtExecutableReference</outbound>
+                <outbound type="feature" confirmed="no">spoon.reflect.reference.CtExecutableReference.getActualTypeArguments()</outbound>
                 <outbound type="feature" confirmed="no">spoon.reflect.reference.CtExecutableReference.getDeclaringType()</outbound>
-                <outbound type="feature" confirmed="no">spoon.reflect.reference.CtExecutableReference.getParameterTypes()</outbound>
                 <outbound type="class" confirmed="no">spoon.reflect.reference.CtTypeReference</outbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.process(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
@@ -2252,8 +2267,8 @@
             <name>java.io.File</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.DependencyAnalizer(java.lang.String, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.isExternal(spoon.reflect.declaration.CtElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             <feature confirmed="no">
@@ -2264,8 +2279,8 @@
             </feature>
             <feature confirmed="no">
                 <name>java.io.File.getAbsolutePath()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
             </feature>
             <feature confirmed="no">
@@ -2335,8 +2350,32 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.valueOf(java.lang.String)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.valueOf(java.lang.String)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <feature confirmed="no">
+                <name>java.lang.Class.isAnnotation()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Class.isEnum()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Class.isInterface()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Class.isMemberClass()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.lang.Class.isPrimitive()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            </feature>
         </class>
         <class confirmed="no">
             <name>java.lang.Comparable</name>
@@ -2376,12 +2415,12 @@
         <class confirmed="no">
             <name>java.lang.NoClassDefFoundError</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
         </class>
         <class confirmed="no">
             <name>java.lang.NoSuchFieldError</name>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1.static {}</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1.static {}</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$Level()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.$SWITCH_TABLE$github$tdurieux$dependencyAnalyzer$AnalyzerConfig$OutputFormat()</inbound>
         </class>
         <class confirmed="no">
             <name>java.lang.Object</name>
@@ -2390,14 +2429,12 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig.addIgnoreRegex(java.lang.String)</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer</inbound>
-            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer$1</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.DependencyAnalizer(java.lang.String, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.disableLog()</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.isToIgnore(java.lang.String)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
@@ -2406,9 +2443,10 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.package-info</inbound>
-            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry</inbound>
+            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.toString()</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.values()</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl</inbound>
@@ -2417,7 +2455,7 @@
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.package-info</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.package-info</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.package-info</inbound>
@@ -2431,7 +2469,6 @@
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.package-info</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.GUILauncher</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main</inbound>
-            <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main$1</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             <inbound type="class" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.package-info</inbound>
@@ -2446,7 +2483,7 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.DependencyAnalizer(java.lang.String, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.DependencyGraph()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFacotry.AbstractDependencyLocationFacotry()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory.AbstractDependencyLocationFactory()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.AbstractNodeFactory()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.DependencyNodeImpl(java.lang.String, java.lang.String, github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type, boolean, boolean, boolean, boolean, boolean)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.DependencyAnalyzerGui$1(github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui, javax.swing.JTextArea)</inbound>
@@ -2507,9 +2544,9 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.simpleName</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$1.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$2.actionPerformed(java.awt.event.ActionEvent)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$3.actionPerformed(java.awt.event.ActionEvent)</inbound>
@@ -2542,8 +2579,7 @@
             </feature>
             <feature confirmed="no">
                 <name>java.lang.String.isEmpty()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.lang.String.replace(java.lang.CharSequence, java.lang.CharSequence)</name>
@@ -2553,40 +2589,41 @@
             <feature confirmed="no">
                 <name>java.lang.String.split(java.lang.String)</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.lang.String.valueOf(java.lang.Object)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.toString()</inbound>
             </feature>
         </class>
         <class confirmed="no">
             <name>java.lang.StringBuilder</name>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
-            <feature confirmed="no">
-                <name>java.lang.StringBuilder.StringBuilder()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.toString()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
-            </feature>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             <feature confirmed="no">
                 <name>java.lang.StringBuilder.StringBuilder(java.lang.String)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.toString()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.lang.StringBuilder.append(int)</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.toString()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.lang.StringBuilder.append(java.lang.String)</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
@@ -2595,16 +2632,22 @@
             </feature>
             <feature confirmed="no">
                 <name>java.lang.StringBuilder.toString()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.argsParser(java.lang.String[])</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
         </class>
         <class confirmed="no">
             <name>java.lang.System</name>
+            <feature confirmed="no">
+                <name>java.lang.System.arraycopy(java.lang.Object, int, java.lang.Object, int, int)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level.values()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat.values()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type.values()</inbound>
+            </feature>
             <feature confirmed="no">
                 <name>java.lang.System.err</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
@@ -2633,12 +2676,12 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.util.ArrayList.ArrayList(java.util.Collection)</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.process(spoon.reflect.declaration.CtTypedElement)</inbound>
@@ -2655,7 +2698,6 @@
         <class confirmed="no">
             <name>java.util.Collection</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
@@ -2674,7 +2716,6 @@
             </feature>
             <feature confirmed="no">
                 <name>java.util.Collections.sort(java.util.List)</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             </feature>
         </class>
@@ -2699,7 +2740,6 @@
         <class confirmed="no">
             <name>java.util.Iterator</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.disableLog()</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
@@ -2711,7 +2751,6 @@
             <feature confirmed="no">
                 <name>java.util.Iterator.hasNext()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.disableLog()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
@@ -2724,7 +2763,6 @@
             <feature confirmed="no">
                 <name>java.util.Iterator.next()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.disableLog()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
@@ -2744,7 +2782,6 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.DependencyAnalizer(java.lang.String, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.run()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.ignoreRegex</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
@@ -2761,11 +2798,13 @@
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.util.List.addAll(java.util.Collection)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.process(spoon.reflect.declaration.CtTypedElement)</inbound>
@@ -2774,11 +2813,11 @@
                 <name>java.util.List.contains(java.lang.Object)</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.util.List.iterator()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.DependencyAnalizer.disableLog()</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.AbstractExport(github.tdurieux.dependencyAnalyzer.graph.DependencyGraph, github.tdurieux.dependencyAnalyzer.AnalyzerConfig)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport.isToIgnore(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
@@ -2799,17 +2838,16 @@
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedByNodes()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.getUsedNodes()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.usedByNodes</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.usedNodes</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
             <feature confirmed="no">
                 <name>java.util.Map.containsKey(java.lang.Object)</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
@@ -2818,16 +2856,15 @@
                 <name>java.util.Map.get(java.lang.Object)</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.addDependencyNode(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.initializeListsInMaps(github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode, github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.createSubGraphs(java.util.Map, java.lang.String)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.util.Map.keySet()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.util.Map.put(java.lang.Object, java.lang.Object)</name>
@@ -2845,23 +2882,27 @@
         </class>
         <class confirmed="no">
             <name>java.util.Set</name>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.DependencyGraph.toString()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.TxtExport.generate()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
             <feature confirmed="no">
                 <name>java.util.Set.contains(java.lang.Object)</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>java.util.Set.iterator()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.export.DotExport.generate()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
+            </feature>
+            <feature confirmed="no">
+                <name>java.util.Set.size()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.main.Main.main(java.lang.String[])</inbound>
             </feature>
         </class>
     </package>
@@ -3115,7 +3156,7 @@
         <class confirmed="no">
             <name>spoon.SpoonException</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
         </class>
     </package>
     <package confirmed="no">
@@ -3191,18 +3232,18 @@
         <class confirmed="no">
             <name>spoon.reflect.cu.SourcePosition</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.isExternal(spoon.reflect.declaration.CtElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <feature confirmed="no">
                 <name>spoon.reflect.cu.SourcePosition.getFile()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.isExternal(spoon.reflect.declaration.CtElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.cu.SourcePosition.getLine()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
         </class>
     </package>
@@ -3221,6 +3262,10 @@
             </feature>
         </class>
         <class confirmed="no">
+            <name>spoon.reflect.declaration.CtAnnotationType</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+        </class>
+        <class confirmed="no">
             <name>spoon.reflect.declaration.CtClass</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
             <feature confirmed="no">
@@ -3232,13 +3277,21 @@
             <name>spoon.reflect.declaration.CtElement</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.isExternal(spoon.reflect.declaration.CtElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.isExternal(spoon.reflect.reference.CtReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.process(spoon.reflect.declaration.CtElement)</inbound>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtElement.getPosition()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.isExternal(spoon.reflect.declaration.CtElement)</inbound>
             </feature>
+        </class>
+        <class confirmed="no">
+            <name>spoon.reflect.declaration.CtEnum</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
+        </class>
+        <class confirmed="no">
+            <name>spoon.reflect.declaration.CtInterface</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
         </class>
         <class confirmed="no">
             <name>spoon.reflect.declaration.CtMethod</name>
@@ -3251,57 +3304,60 @@
         <class confirmed="no">
             <name>spoon.reflect.declaration.CtPackage</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory.isExternal(spoon.reflect.declaration.CtElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtPackage.getQualifiedName()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtPackage.getSimpleName()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
         </class>
         <class confirmed="no">
             <name>spoon.reflect.declaration.CtSimpleType</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
+            <feature confirmed="no">
+                <name>spoon.reflect.declaration.CtSimpleType.getActualClass()</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.getModifiers()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.getPackage()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.getParent()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.getParent(java.lang.Class)</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.getQualifiedName()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.getReference()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.getSimpleName()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtSimpleType.isTopLevel()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
         </class>
         <class confirmed="no">
@@ -3315,8 +3371,8 @@
         <class confirmed="no">
             <name>spoon.reflect.declaration.CtTypedElement</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.process(spoon.reflect.declaration.CtElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.process(spoon.reflect.declaration.CtTypedElement)</inbound>
@@ -3326,13 +3382,13 @@
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtTypedElement.getParent(java.lang.Class)</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtTypedElement.getPosition()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.CtTypedElement.getType()</name>
@@ -3342,11 +3398,11 @@
         <class confirmed="no">
             <name>spoon.reflect.declaration.ModifierKind</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <feature confirmed="no">
                 <name>spoon.reflect.declaration.ModifierKind.ABSTRACT</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
         </class>
     </package>
@@ -3381,11 +3437,11 @@
             <name>spoon.reflect.reference.CtExecutableReference</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
             <feature confirmed="no">
-                <name>spoon.reflect.reference.CtExecutableReference.getDeclaringType()</name>
+                <name>spoon.reflect.reference.CtExecutableReference.getActualTypeArguments()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
-                <name>spoon.reflect.reference.CtExecutableReference.getParameterTypes()</name>
+                <name>spoon.reflect.reference.CtExecutableReference.getDeclaringType()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
         </class>
@@ -3411,7 +3467,7 @@
             <name>spoon.reflect.reference.CtTypeReference</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.declaration.CtTypedElement)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer.getDependencies(spoon.reflect.reference.CtTypeReference)</inbound>
@@ -3440,17 +3496,16 @@
             <feature confirmed="no">
                 <name>spoon.reflect.reference.CtTypeReference.isAnonymous()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.reference.CtTypeReference.isInterface()</name>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
             </feature>
             <feature confirmed="no">
                 <name>spoon.reflect.reference.CtTypeReference.isPrimitive()</name>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
-                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFacotry.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory.createDependencyLocation(spoon.reflect.declaration.CtTypedElement)</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory.createDependencyNode(spoon.reflect.reference.CtTypeReference)</inbound>
             </feature>
         </class>

@@ -1,0 +1,16 @@
+digraph G {
+	node [shape=box]; compound=true; ratio=fill;
+	"java.io" [color=grey];
+	"github.tdurieux.testProject.entity" -> "java.io";
+	"github.tdurieux.testProject.entity" -> "java.lang";
+	"java.lang" [color=grey];
+	subgraph cluster0 { 
+		rankdir=LR;label="java";
+		"java.io" [label="io"]
+		"java.lang" [label="lang"]
+	};
+	subgraph cluster1 { 
+		rankdir=LR;label="github.tdurieux.testProject";
+		"github.tdurieux.testProject.entity" [label="entity"]
+	};
+}

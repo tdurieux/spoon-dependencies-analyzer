@@ -3,7 +3,7 @@ com.martiansoftware.jsap *
 com.martiansoftware.jsap.stringparsers *
     <-- github.tdurieux.dependencyAnalyzer.main
 github.tdurieux.dependencyAnalyzer
-    --> github.tdurieux.dependencyAnalyzer.graph
+    <-> github.tdurieux.dependencyAnalyzer.graph
     <-- github.tdurieux.dependencyAnalyzer.graph.export
     --> github.tdurieux.dependencyAnalyzer.graph.node
     --> github.tdurieux.dependencyAnalyzer.graph.node.classDep
@@ -22,8 +22,8 @@ github.tdurieux.dependencyAnalyzer
     --> spoon.support *
     --> spoon.support.compiler *
 github.tdurieux.dependencyAnalyzer.graph
-    <-- github.tdurieux.dependencyAnalyzer
-    <-- github.tdurieux.dependencyAnalyzer.graph.export
+    <-> github.tdurieux.dependencyAnalyzer
+    <-> github.tdurieux.dependencyAnalyzer.graph.export
     --> github.tdurieux.dependencyAnalyzer.graph.node
     <-- github.tdurieux.dependencyAnalyzer.gui
     <-- github.tdurieux.dependencyAnalyzer.main
@@ -32,7 +32,7 @@ github.tdurieux.dependencyAnalyzer.graph
     --> java.util *
 github.tdurieux.dependencyAnalyzer.graph.export
     --> github.tdurieux.dependencyAnalyzer
-    --> github.tdurieux.dependencyAnalyzer.graph
+    <-> github.tdurieux.dependencyAnalyzer.graph
     --> github.tdurieux.dependencyAnalyzer.graph.node
     <-- github.tdurieux.dependencyAnalyzer.gui
     <-- github.tdurieux.dependencyAnalyzer.main
@@ -91,6 +91,7 @@ github.tdurieux.dependencyAnalyzer.main
     --> java.awt *
     --> java.io *
     --> java.lang *
+    --> java.util *
     --> javax.swing *
 github.tdurieux.dependencyAnalyzer.spoon.analyzer
     <-- github.tdurieux.dependencyAnalyzer
@@ -129,6 +130,7 @@ java.util *
     <-- github.tdurieux.dependencyAnalyzer.graph
     <-- github.tdurieux.dependencyAnalyzer.graph.export
     <-- github.tdurieux.dependencyAnalyzer.graph.node.classDep
+    <-- github.tdurieux.dependencyAnalyzer.main
     <-- github.tdurieux.dependencyAnalyzer.spoon.analyzer
 java.util.regex *
     <-- github.tdurieux.dependencyAnalyzer.graph.export
@@ -171,4 +173,3 @@ spoon.support *
     <-- github.tdurieux.dependencyAnalyzer
 spoon.support.compiler *
     <-- github.tdurieux.dependencyAnalyzer
-

@@ -7,7 +7,6 @@ java.awt *
 java.awt.event *
     <-- spoon
     <-- spoon.support.gui
-    <-- spoon.test.secondaryclasses
 java.io *
     <-- spoon
     <-- spoon.compiler
@@ -30,24 +29,6 @@ java.io *
     <-- spoon.support.util
     <-- spoon.support.visitor
     <-- spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits
-    <-- spoon.test.parent
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
 java.lang *
     <-- spoon
     <-- spoon.compiler
@@ -76,47 +57,11 @@ java.lang *
     <-- spoon.support.util
     <-- spoon.support.visitor
     <-- spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.arrays
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits
-    <-- spoon.test.limits.utils
-    <-- spoon.test.main
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.subclass.prettyprinter
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
-    <-- spoon.test.visibility.packageprotected
-    <-- unnamed package
 java.lang.annotation *
     <-- spoon.processing
     <-- spoon.reflect.visitor
     <-- spoon.support.reflect.reference
     <-- spoon.template
-    <-- spoon.test.annotation
 java.lang.reflect *
     <-- spoon.processing
     <-- spoon.reflect.eval
@@ -132,8 +77,6 @@ java.lang.reflect *
     <-- spoon.template
 java.net *
     <-- spoon.support.compiler.jdt
-java.security *
-    <-- spoon.test.prettyprinter
 java.util *
     <-- spoon
     <-- spoon.compiler
@@ -161,35 +104,6 @@ java.util *
     <-- spoon.support.util
     <-- spoon.support.visitor
     <-- spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
 java.util.regex *
     <-- spoon.processing
     <-- spoon.reflect.visitor.filter
@@ -199,7 +113,6 @@ java.util.zip *
 javax.swing *
     <-- spoon
     <-- spoon.support.gui
-    <-- spoon.test.secondaryclasses
 javax.swing.table *
     <-- spoon.support.gui
 javax.swing.tree *
@@ -244,37 +157,6 @@ org.eclipse.jdt.internal.compiler.parser *
 org.eclipse.jdt.internal.compiler.util *
     <-- spoon.support.compiler.jdt
     <-- spoon.support.util
-org.junit *
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.arrays
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.main
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
 org.w3c.dom *
     <-- spoon.processing
 org.xml.sax *
@@ -312,17 +194,6 @@ spoon
     <-- spoon.support.reflect.eval
     <-- spoon.support.template
     <-- spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.exceptions
-    <-- spoon.test.filters
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.main
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.replace
-    <-- spoon.test.template
 spoon.compiler
     --> java.io *
     --> java.lang *
@@ -343,19 +214,6 @@ spoon.compiler
     <-- spoon.support.reflect.eval
     <-- spoon.support.reflect.reference
     <-- spoon.support.visitor
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.template
 spoon.processing
     --> java.io *
     --> java.lang *
@@ -392,36 +250,6 @@ spoon.processing
     <-> spoon.support.util
     <-- spoon.support.visitor
     <-- spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.arrays
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
 spoon.reflect
     --> java.io *
     --> java.lang *
@@ -452,32 +280,6 @@ spoon.reflect.code
     <-- spoon.support.util
     <-- spoon.support.visitor
     <-> spoon.template
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
 spoon.reflect.cu
     --> java.io *
     --> java.lang *
@@ -494,10 +296,6 @@ spoon.reflect.cu
     <-- spoon.support.reflect.declaration
     <-- spoon.support.visitor
     <-- spoon.template
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.sourcePosition
 spoon.reflect.declaration
     --> java.lang *
     --> java.util *
@@ -524,36 +322,6 @@ spoon.reflect.declaration
     <-- spoon.support.util
     <-- spoon.support.visitor
     <-> spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.api
-    <-- spoon.test.arrays
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
 spoon.reflect.eval
     --> java.io *
     --> java.lang *
@@ -608,29 +376,6 @@ spoon.reflect.factory
     <-- spoon.support.template
     <-- spoon.support.visitor
     <-> spoon.template
-    <-- spoon.test
-    <-- spoon.test.annotation
-    <-- spoon.test.casts
-    <-- spoon.test.ctCase
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
 spoon.reflect.reference
     --> java.lang *
     --> java.lang.reflect *
@@ -657,15 +402,6 @@ spoon.reflect.reference
     <-- spoon.support.util
     <-- spoon.support.visitor
     <-- spoon.template
-    <-- spoon.test.annotation
-    <-- spoon.test.arrays
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.generics
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
 spoon.reflect.visitor
     --> java.io *
     --> java.lang *
@@ -696,25 +432,6 @@ spoon.reflect.visitor
     --> spoon.support.util
     <-- spoon.support.visitor
     <-> spoon.template
-    <-- spoon.test.annotation
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
 spoon.reflect.visitor.filter
     --> java.lang *
     --> java.util.regex *
@@ -728,25 +445,6 @@ spoon.reflect.visitor.filter
     <-- spoon.support.reflect.eval
     <-- spoon.support.template
     <-> spoon.template
-    <-- spoon.test.annotation
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
 spoon.support
     --> java.io *
     --> java.lang *
@@ -774,10 +472,6 @@ spoon.support
     --> spoon.support.util
     --> spoon.support.visitor
     --> spoon.template
-    <-- spoon.test
-    <-- spoon.test.api
-    <-- spoon.test.factory
-    <-- spoon.test.generics
 spoon.support.compiler
     --> java.io *
     --> java.lang *
@@ -914,8 +608,6 @@ spoon.support.reflect.declaration
     --> spoon.support.util
     --> spoon.support.visitor
     --> spoon.template
-    <-- spoon.test.factory
-    <-- spoon.test.filters
 spoon.support.reflect.eval
     --> java.lang *
     --> java.util *
@@ -1033,441 +725,3 @@ spoon.template
     <-> spoon.support.template
     <-> spoon.support.util
     <-- spoon.support.visitor
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.eval
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.intercession.insertBefore
-    <-- spoon.test.model
-    <-- spoon.test.parent
-    <-- spoon.test.prettyprinter
-    <-- spoon.test.processing
-    <-- spoon.test.replace
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.strings
-    <-- spoon.test.template
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
-spoon.test
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.support
-    <-- spoon.test.annotation
-    <-- spoon.test.arrays
-    <-- spoon.test.casts
-    <-- spoon.test.control
-    <-- spoon.test.ctCase
-    <-- spoon.test.enums
-    <-- spoon.test.eval
-    <-- spoon.test.exceptions
-    <-- spoon.test.factory
-    <-- spoon.test.fieldaccesses
-    <-- spoon.test.filters
-    <-- spoon.test.generics
-    <-- spoon.test.initializers
-    <-- spoon.test.intercession
-    <-- spoon.test.limits.utils
-    <-- spoon.test.model
-    <-- spoon.test.processing
-    <-- spoon.test.secondaryclasses
-    <-- spoon.test.snippets
-    <-- spoon.test.sourcePosition
-    <-- spoon.test.strings
-    <-- spoon.test.trycatch
-    <-- spoon.test.visibility
-spoon.test.annotation
-    --> java.io *
-    --> java.lang *
-    --> java.lang.annotation *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.test
-spoon.test.api
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.support
-spoon.test.arrays
-    --> java.lang *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.declaration
-    --> spoon.reflect.reference
-    --> spoon.test
-spoon.test.casts
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.control
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.ctCase
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.test
-spoon.test.enums
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.test
-spoon.test.eval
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.template
-    --> spoon.test
-spoon.test.exceptions
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.test
-spoon.test.factory
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.support
-    --> spoon.support.reflect.declaration
-    --> spoon.template
-    --> spoon.test
-spoon.test.fieldaccesses
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.filters
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.support.reflect.declaration
-    --> spoon.template
-    --> spoon.test
-spoon.test.generics
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.support
-    --> spoon.template
-    --> spoon.test
-spoon.test.initializers
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.intercession
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.template
-    --> spoon.test
-spoon.test.intercession.insertBefore
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-spoon.test.limits
-    --> java.io *
-    --> java.lang *
-    --> spoon.test.limits.utils
-spoon.test.limits.utils
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.test
-    <-- spoon.test.limits
-spoon.test.main
-    --> java.lang *
-    --> org.junit *
-    --> spoon
-spoon.test.model
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.parent
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-spoon.test.prettyprinter
-    --> java.lang *
-    --> java.security *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    <-- spoon.test.subclass.prettyprinter
-spoon.test.processing
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.template
-    --> spoon.test
-    --> spoon.test.template
-spoon.test.replace
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-spoon.test.secondaryclasses
-    --> java.awt.event *
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> javax.swing *
-    --> org.junit *
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.snippets
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.template
-    --> spoon.test
-spoon.test.sourcePosition
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.cu
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.test
-spoon.test.strings
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.subclass.prettyprinter
-    --> java.lang *
-    --> spoon.test.prettyprinter
-spoon.test.template
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon
-    --> spoon.compiler
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    <-- spoon.test.processing
-spoon.test.trycatch
-    --> java.io *
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.reflect.reference
-    --> spoon.reflect.visitor
-    --> spoon.reflect.visitor.filter
-    --> spoon.template
-    --> spoon.test
-spoon.test.visibility
-    --> java.lang *
-    --> java.util *
-    --> org.junit *
-    --> spoon.processing
-    --> spoon.reflect.code
-    --> spoon.reflect.declaration
-    --> spoon.reflect.factory
-    --> spoon.template
-    --> spoon.test
-    --> spoon.test.visibility.packageprotected
-spoon.test.visibility.packageprotected
-    --> java.lang *
-    <-- spoon.test.visibility
-unnamed package
-    --> java.lang *
-

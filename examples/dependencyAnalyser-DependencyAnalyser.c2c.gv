@@ -5,13 +5,12 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.reflect.declaration.CtTypedElement";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.reflect.declaration.CtSimpleType";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.reflect.declaration.CtElement";
-	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "java.lang.Class";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.reflect.declaration.CtModifiable";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "java.util.Set";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.reflect.declaration.ModifierKind";
-	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "java.lang.Object";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.reflect.reference.CtTypeReference";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "java.lang.Class";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.SpoonException";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "java.lang.NoClassDefFoundError";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory" -> "spoon.reflect.cu.SourcePosition";
@@ -32,9 +31,7 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "github.tdurieux.dependencyAnalyzer.graph.export.DependencyGraphExport";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.util.Map";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.lang.String";
-	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.lang.Object";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.util.List";
-	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.lang.CharSequence";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.util.HashMap";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.util.ArrayList";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode";
@@ -43,12 +40,12 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.lang.reflect.Array";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.lang.Character";
 	"github.tdurieux.dependencyAnalyzer.graph.export.DotExport" -> "java.lang.Override";
-	"java.lang.CharSequence" [color=grey];
 	"spoon.reflect.factory.TypeFactory" [color=grey];
 	"java.lang.Throwable" [color=grey];
 	"java.lang.Class" [color=grey];
 	"spoon.reflect.declaration.CtTypedElement" [color=grey];
 	"java.io.FileWriter" [color=grey];
+	"spoon.reflect.declaration.CtInterface" [color=grey];
 	"github.tdurieux.dependencyAnalyzer.graph.export.DependencyGraphExport" -> "java.lang.String";
 	"java.lang.Object" [color=grey];
 	"spoon.reflect.declaration.CtNamedElement" [color=grey];
@@ -74,6 +71,7 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory" -> "java.io.File";
 	"github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory" -> "spoon.reflect.reference.CtReference";
 	"java.util.Enumeration" [color=grey];
+	"spoon.reflect.reference.CtGenericElementReference" [color=grey];
 	"java.awt.Window" [color=grey];
 	"github.tdurieux.dependencyAnalyzer.AnalyzerConfig" -> "java.util.ArrayList";
 	"github.tdurieux.dependencyAnalyzer.AnalyzerConfig" -> "java.util.List";
@@ -92,7 +90,6 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "spoon.reflect.declaration.CtTypedElement";
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "spoon.reflect.declaration.CtSimpleType";
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "spoon.reflect.declaration.CtElement";
-	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "java.lang.Class";
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "spoon.reflect.declaration.CtNamedElement";
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "java.lang.String";
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "spoon.reflect.declaration.CtPackage";
@@ -105,6 +102,7 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "java.lang.Comparable";
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation";
 	"github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory" -> "java.lang.Override";
+	"spoon.reflect.declaration.CtEnum" [color=grey];
 	"java.util.Set" [color=grey];
 	"spoon.reflect.declaration.CtPackage" [color=grey];
 	"spoon.reflect.reference.CtTypeReference" [color=grey];
@@ -147,8 +145,9 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.io.File";
 	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.io.FileWriter";
 	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.io.Writer";
-	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.lang.CharSequence";
 	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.io.OutputStreamWriter";
+	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.util.Map";
+	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.util.Set";
 	"github.tdurieux.dependencyAnalyzer.main.Main" -> "java.lang.Exception";
 	"java.util.regex.Matcher" [color=grey];
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "java.lang.Object";
@@ -157,7 +156,6 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "javax.swing.JFileChooser";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "java.lang.String";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "java.io.File";
-	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "java.awt.Component";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "github.tdurieux.dependencyAnalyzer.AnalyzerConfig";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "github.tdurieux.dependencyAnalyzer.DependencyAnalizer";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui$" -> "github.tdurieux.dependencyAnalyzer.graph.DependencyGraph";
@@ -177,10 +175,8 @@ digraph G {
 	"org.apache.log4j.Logger" [color=grey];
 	"spoon.reflect.code.CtAbstractInvocation" [color=grey];
 	"spoon.reflect.reference.CtExecutableReference" [color=grey];
-	"spoon.compiler.SpoonResource" [color=grey];
 	"javax.swing.JFrame" [color=grey];
 	"java.lang.System" [color=grey];
-	"spoon.processing.Processor" [color=grey];
 	"java.awt.Component" [color=grey];
 	"java.lang.Comparable" [color=grey];
 	"javax.swing.event.ChangeListener" [color=grey];
@@ -192,16 +188,15 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.lang.String";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.awt.Frame";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.awt.Window";
-	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.awt.Component";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.JTextArea";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.text.JTextComponent";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.JScrollPane";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.awt.Container";
-	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.lang.Object";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.JToolBar";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.JButton";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.awt.event.ActionListener";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.AbstractButton";
+	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.awt.Component";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "java.lang.reflect.Array";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.JComboBox";
 	"github.tdurieux.dependencyAnalyzer.gui.DependencyAnalyzerGui" -> "javax.swing.JCheckBox";
@@ -217,14 +212,18 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.util.HashMap";
 	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.lang.String";
 	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.lang.reflect.Array";
-	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.util.Set";
-	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.util.ArrayList";
-	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.util.List";
-	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.util.Collections";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.AnalyzerConfig";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.AnalyzerConfig$Level";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.AnalyzerConfig$OutputFormat";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.graph.export.TxtExport";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.graph.export.DependencyGraphExport";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.lang.Override";
 	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode";
 	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.lang.Comparable";
-	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.lang.Override";
 	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.util.List";
+	"github.tdurieux.dependencyAnalyzer.graph.DependencyGraph" -> "java.util.ArrayList";
 	"com.martiansoftware.jsap.QualifiedSwitch" [color=grey];
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.lang.String";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "github.tdurieux.dependencyAnalyzer.AnalyzerConfig";
@@ -233,13 +232,11 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.Launcher";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.io.File";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.support.compiler.FileSystemFolder";
-	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.compiler.SpoonResource";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.compiler.SpoonCompiler";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.util.ArrayList";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.processing.FactoryAccessor";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.compiler.Environment";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.OutputType";
-	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.util.List";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "github.tdurieux.dependencyAnalyzer.graph.DependencyGraph";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.support.QueueProcessingManager";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.processing.ProcessingManager";
@@ -254,11 +251,10 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory";
-	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.processing.Processor";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.io.PrintStream";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.reflect.factory.ClassFactory";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "spoon.reflect.factory.TypeFactory";
-	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.util.Collection";
+	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.util.List";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "org.apache.log4j.LogManager";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.util.Enumeration";
 	"github.tdurieux.dependencyAnalyzer.DependencyAnalizer" -> "java.util.Collections";
@@ -293,17 +289,19 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.reference.CtTypeReference";
-	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.reference.CtReference";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.declaration.CtSimpleType";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.declaration.CtModifiable";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "java.util.Set";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.declaration.ModifierKind";
-	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "java.lang.Object";
-	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.declaration.CtEnum";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.declaration.CtAnnotationType";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.declaration.CtInterface";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "java.lang.Class";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.SpoonException";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "java.lang.NoClassDefFoundError";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "java.lang.String";
+	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "spoon.reflect.reference.CtReference";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode";
 	"github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory" -> "java.lang.Comparable";
@@ -321,10 +319,10 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport" -> "java.util.regex.Pattern";
 	"github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode";
 	"github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport" -> "java.lang.Comparable";
-	"github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport" -> "java.lang.CharSequence";
 	"github.tdurieux.dependencyAnalyzer.graph.export.AbstractExport" -> "java.util.regex.Matcher";
 	"spoon.support.compiler.FileSystemFolder" [color=grey];
 	"javax.swing.event.ChangeEvent" [color=grey];
+	"spoon.reflect.declaration.CtAnnotationType" [color=grey];
 	"spoon.reflect.declaration.CtExecutable" [color=grey];
 	"spoon.reflect.declaration.CtType" [color=grey];
 	"java.util.Collection" [color=grey];
@@ -353,10 +351,7 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "java.lang.Comparable";
 	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode$Type";
 	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "java.lang.Enum";
-	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "java.lang.Object";
-	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "java.lang.CharSequence";
 	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "java.lang.reflect.Array";
-	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "java.util.Collection";
 	"github.tdurieux.dependencyAnalyzer.graph.export.TxtExport" -> "java.lang.Override";
 	"github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory" -> "spoon.reflect.declaration.CtTypedElement";
 	"github.tdurieux.dependencyAnalyzer.graph.node.LocationFactory" -> "github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation";
@@ -391,6 +386,7 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer" -> "spoon.reflect.code.CtInvocation";
 	"github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer" -> "spoon.reflect.code.CtAbstractInvocation";
 	"github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer" -> "spoon.reflect.reference.CtExecutableReference";
+	"github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer" -> "spoon.reflect.reference.CtGenericElementReference";
 	"github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer" -> "spoon.reflect.declaration.CtMethod";
 	"github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer" -> "spoon.reflect.declaration.CtExecutable";
 	"github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer" -> "java.util.Set";
@@ -466,7 +462,6 @@ digraph G {
 		rankdir=LR;label="java.lang.reflect";
 		"java.lang.reflect.Array" [label="Array"]
 	};
-		"java.lang.CharSequence" [label="CharSequence"]
 		"java.lang.Throwable" [label="Throwable"]
 		"java.lang.Class" [label="Class"]
 		"java.lang.Object" [label="Object"]
@@ -530,13 +525,16 @@ digraph G {
 	subgraph cluster19 { 
 		rankdir=LR;label="spoon.reflect.declaration";
 		"spoon.reflect.declaration.CtTypedElement" [label="CtTypedElement"]
+		"spoon.reflect.declaration.CtInterface" [label="CtInterface"]
 		"spoon.reflect.declaration.CtNamedElement" [label="CtNamedElement"]
 		"spoon.reflect.declaration.CtSimpleType" [label="CtSimpleType"]
 		"spoon.reflect.declaration.CtAnnotation" [label="CtAnnotation"]
 		"spoon.reflect.declaration.CtModifiable" [label="CtModifiable"]
+		"spoon.reflect.declaration.CtEnum" [label="CtEnum"]
 		"spoon.reflect.declaration.CtPackage" [label="CtPackage"]
 		"spoon.reflect.declaration.ModifierKind" [label="ModifierKind"]
 		"spoon.reflect.declaration.CtClass" [label="CtClass"]
+		"spoon.reflect.declaration.CtAnnotationType" [label="CtAnnotationType"]
 		"spoon.reflect.declaration.CtExecutable" [label="CtExecutable"]
 		"spoon.reflect.declaration.CtType" [label="CtType"]
 		"spoon.reflect.declaration.CtElement" [label="CtElement"]
@@ -544,6 +542,7 @@ digraph G {
 	};
 	subgraph cluster20 { 
 		rankdir=LR;label="spoon.reflect.reference";
+		"spoon.reflect.reference.CtGenericElementReference" [label="CtGenericElementReference"]
 		"spoon.reflect.reference.CtTypeReference" [label="CtTypeReference"]
 		"spoon.reflect.reference.CtExecutableReference" [label="CtExecutableReference"]
 		"spoon.reflect.reference.CtReference" [label="CtReference"]
@@ -566,12 +565,10 @@ digraph G {
 	subgraph cluster24 { 
 		rankdir=LR;label="spoon.compiler";
 		"spoon.compiler.Environment" [label="Environment"]
-		"spoon.compiler.SpoonResource" [label="SpoonResource"]
 		"spoon.compiler.SpoonCompiler" [label="SpoonCompiler"]
 	};
 	subgraph cluster25 { 
 		rankdir=LR;label="spoon.processing";
-		"spoon.processing.Processor" [label="Processor"]
 		"spoon.processing.FactoryAccessor" [label="FactoryAccessor"]
 		"spoon.processing.AbstractProcessor" [label="AbstractProcessor"]
 		"spoon.processing.ProcessingManager" [label="ProcessingManager"]

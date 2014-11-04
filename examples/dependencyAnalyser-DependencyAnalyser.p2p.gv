@@ -19,6 +19,7 @@ digraph G {
 	"github.tdurieux.dependencyAnalyzer.main" -> "github.tdurieux.dependencyAnalyzer";
 	"github.tdurieux.dependencyAnalyzer.main" -> "github.tdurieux.dependencyAnalyzer.graph";
 	"github.tdurieux.dependencyAnalyzer.main" -> "github.tdurieux.dependencyAnalyzer.graph.export";
+	"github.tdurieux.dependencyAnalyzer.main" -> "java.util";
 	"spoon" [color=grey];
 	"com.martiansoftware.jsap" [color=grey];
 	"javax.swing" [color=grey];
@@ -56,6 +57,8 @@ digraph G {
 	"spoon.reflect.declaration" [color=grey];
 	"github.tdurieux.dependencyAnalyzer.graph" -> "java.util";
 	"github.tdurieux.dependencyAnalyzer.graph" -> "java.lang";
+	"github.tdurieux.dependencyAnalyzer.graph" -> "github.tdurieux.dependencyAnalyzer";
+	"github.tdurieux.dependencyAnalyzer.graph" -> "github.tdurieux.dependencyAnalyzer.graph.export";
 	"github.tdurieux.dependencyAnalyzer.graph" -> "github.tdurieux.dependencyAnalyzer.graph.node";
 	"github.tdurieux.dependencyAnalyzer.gui" -> "github.tdurieux.dependencyAnalyzer";
 	"github.tdurieux.dependencyAnalyzer.gui" -> "javax.swing";

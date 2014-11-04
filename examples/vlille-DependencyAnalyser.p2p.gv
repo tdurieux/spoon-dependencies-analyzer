@@ -10,22 +10,18 @@ digraph G {
 	"durieux.vlille.util" -> "java.io";
 	"durieux.vlille.util" -> "org.xml.sax";
 	"durieux.vlille.util" -> "org.w3c.dom";
-	"org.junit" [color=grey];
 	"org.w3c.dom" [color=grey];
 	"org.xml.sax" [color=grey];
 	"java.nio.charset" [color=grey];
 	"java.io" [color=grey];
-	"org.jsoup.nodes" [color=grey];
 	"durieux.vlille.api" -> "java.lang";
 	"durieux.vlille.api" -> "org.w3c.dom";
-	"durieux.vlille.api" -> "javax.xml.parsers";
-	"durieux.vlille.api" -> "java.io";
-	"durieux.vlille.api" -> "org.xml.sax";
-	"durieux.vlille.api" -> "org.junit";
 	"durieux.vlille.api" -> "java.util";
 	"durieux.vlille.api" -> "java.nio.charset";
 	"durieux.vlille.api" -> "durieux.vlille.util";
 	"durieux.vlille.api" -> "org.jsoup.nodes";
+	"durieux.vlille.api" -> "java.io";
+	"org.jsoup.nodes" [color=grey];
 	"java.lang" [color=grey];
 	"durieux.vlille.main" -> "java.lang";
 	"durieux.vlille.main" -> "durieux.vlille.api";
@@ -53,19 +49,15 @@ digraph G {
 		"durieux.vlille.main" [label="main"]
 	};
 	subgraph cluster4 { 
-		rankdir=LR;label="org";
-		"org.junit" [label="junit"]
-	subgraph cluster5 { 
 		rankdir=LR;label="org.w3c";
 		"org.w3c.dom" [label="dom"]
 	};
-	subgraph cluster6 { 
+	subgraph cluster5 { 
 		rankdir=LR;label="org.xml";
 		"org.xml.sax" [label="sax"]
 	};
-	subgraph cluster7 { 
+	subgraph cluster6 { 
 		rankdir=LR;label="org.jsoup";
 		"org.jsoup.nodes" [label="nodes"]
-	};
 	};
 }

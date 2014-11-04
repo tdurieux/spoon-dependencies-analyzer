@@ -6,9 +6,29 @@
     <package confirmed="yes">
         <name>github.tdurieux.testProject.entity</name>
         <class confirmed="yes">
+            <name>github.tdurieux.testProject.entity.Administrator</name>
+            <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User</outbound>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.Administrator.Administrator()</name>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.Administrator.type</outbound>
+                <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User$Type</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.USER</outbound>
+                <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.User()</outbound>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.Administrator.serialVersionUID</name>
+            </feature>
+            <feature confirmed="yes">
+                <name>github.tdurieux.testProject.entity.Administrator.type</name>
+                <outbound type="class" confirmed="yes">github.tdurieux.testProject.entity.User$Type</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.Administrator.Administrator()</inbound>
+            </feature>
+        </class>
+        <class confirmed="yes">
             <name>github.tdurieux.testProject.entity.User</name>
             <outbound type="class" confirmed="no">java.io.Serializable</outbound>
             <outbound type="class" confirmed="no">java.lang.Object</outbound>
+            <inbound type="class" confirmed="yes">github.tdurieux.testProject.entity.Administrator</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.User$1(github.tdurieux.testProject.entity.User)</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.this$0</inbound>
@@ -18,6 +38,7 @@
                 <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.USER</outbound>
                 <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.type</outbound>
                 <outbound type="feature" confirmed="no">java.lang.Object.Object()</outbound>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.Administrator.Administrator()</inbound>
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.testProject.entity.User.id</name>
@@ -25,6 +46,8 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.testProject.entity.User.isInteger(java.lang.Object)</name>
+                <outbound type="class" confirmed="no">java.lang.Boolean</outbound>
+                <outbound type="feature" confirmed="no">java.lang.Boolean.valueOf(boolean)</outbound>
                 <outbound type="class" confirmed="no">java.lang.Integer</outbound>
                 <outbound type="class" confirmed="no">java.lang.Object</outbound>
             </feature>
@@ -46,6 +69,7 @@
             <feature confirmed="yes">
                 <name>github.tdurieux.testProject.entity.User.thread()</name>
                 <outbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.User$1(github.tdurieux.testProject.entity.User)</outbound>
+                <outbound type="class" confirmed="no">java.lang.NullPointerException</outbound>
                 <outbound type="class" confirmed="no">java.lang.Runnable</outbound>
                 <outbound type="feature" confirmed="no">java.lang.Thread.Thread(java.lang.Runnable)</outbound>
                 <outbound type="feature" confirmed="no">java.lang.Thread.run()</outbound>
@@ -103,6 +127,8 @@
         <class confirmed="yes">
             <name>github.tdurieux.testProject.entity.User$Type</name>
             <outbound type="class" confirmed="no">java.lang.Enum</outbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.Administrator.Administrator()</inbound>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.Administrator.type</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.User()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.type</inbound>
             <feature confirmed="yes">
@@ -116,6 +142,7 @@
             </feature>
             <feature confirmed="yes">
                 <name>github.tdurieux.testProject.entity.User$Type.USER</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.Administrator.Administrator()</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.static {}</inbound>
                 <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.User()</inbound>
             </feature>
@@ -158,6 +185,14 @@
     <package confirmed="no">
         <name>java.lang</name>
         <class confirmed="no">
+            <name>java.lang.Boolean</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.isInteger(java.lang.Object)</inbound>
+            <feature confirmed="no">
+                <name>java.lang.Boolean.valueOf(boolean)</name>
+                <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.isInteger(java.lang.Object)</inbound>
+            </feature>
+        </class>
+        <class confirmed="no">
             <name>java.lang.Class</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$1.run()</inbound>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User$Type.valueOf(java.lang.String)</inbound>
@@ -187,6 +222,10 @@
         <class confirmed="no">
             <name>java.lang.Integer</name>
             <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.isInteger(java.lang.Object)</inbound>
+        </class>
+        <class confirmed="no">
+            <name>java.lang.NullPointerException</name>
+            <inbound type="feature" confirmed="yes">github.tdurieux.testProject.entity.User.thread()</inbound>
         </class>
         <class confirmed="no">
             <name>java.lang.Object</name>

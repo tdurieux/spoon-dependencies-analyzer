@@ -5,11 +5,8 @@ durieux.vlille.api
     --> java.lang *
     --> java.nio.charset *
     --> java.util *
-    --> javax.xml.parsers *
     --> org.jsoup.nodes *
-    --> org.junit *
     --> org.w3c.dom *
-    --> org.xml.sax *
 durieux.vlille.main
     --> durieux.vlille.api
     --> java.io *
@@ -41,16 +38,11 @@ java.util *
     <-- durieux.vlille.api
     <-- durieux.vlille.main
 javax.xml.parsers *
-    <-- durieux.vlille.api
     <-- durieux.vlille.util
 org.jsoup.nodes *
-    <-- durieux.vlille.api
-org.junit *
     <-- durieux.vlille.api
 org.w3c.dom *
     <-- durieux.vlille.api
     <-- durieux.vlille.util
 org.xml.sax *
-    <-- durieux.vlille.api
     <-- durieux.vlille.util
-

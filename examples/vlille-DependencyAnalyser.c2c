@@ -1,7 +1,6 @@
-Element *
+<UnknowPackage> *
     Element *
         <-- durieux.vlille.api.VLilleImpl
-Elements *
     Elements *
         <-- durieux.vlille.api.VLilleImpl
 durieux.vlille.api *
@@ -11,14 +10,12 @@ durieux.vlille.api *
         <-- durieux.vlille.api.VLilleImpl
     Station
         <-- durieux.vlille.api.StationFactory
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.api.StationImpl
         <-- durieux.vlille.api.VLilleImpl
         <-- durieux.vlille.main.Main
         --> java.lang.String *
     StationFactory
         --> durieux.vlille.api.Station
-        <-- durieux.vlille.api.StationFactoryTest
         --> durieux.vlille.api.StationImpl
         <-- durieux.vlille.api.VLilleImpl
         --> java.lang.Double *
@@ -29,27 +26,6 @@ durieux.vlille.api *
         --> java.lang.String *
         --> org.w3c.dom.NamedNodeMap *
         --> org.w3c.dom.Node *
-    StationFactoryTest
-        --> durieux.vlille.api.Station
-        --> durieux.vlille.api.StationFactory
-        --> java.io.BufferedReader *
-        --> java.io.IOException *
-        --> java.io.StringReader *
-        --> java.lang.Exception *
-        --> java.lang.Object *
-        --> java.lang.RuntimeException *
-        --> java.lang.String *
-        --> javax.xml.parsers.DocumentBuilder *
-        --> javax.xml.parsers.DocumentBuilderFactory *
-        --> javax.xml.parsers.ParserConfigurationException *
-        --> org.junit.Assert *
-        --> org.junit.Test *
-        --> org.w3c.dom.Document *
-        --> org.w3c.dom.Element *
-        --> org.w3c.dom.Node *
-        --> org.w3c.dom.NodeList *
-        --> org.xml.sax.InputSource *
-        --> org.xml.sax.SAXException *
     StationImpl
         --> durieux.vlille.api.Station
         <-- durieux.vlille.api.StationFactory
@@ -74,7 +50,6 @@ durieux.vlille.api *
         <-- durieux.vlille.main.Main
         --> durieux.vlille.util.XMLFromUrl
         --> java.io.IOException *
-        --> java.lang.CharSequence *
         --> java.lang.Integer *
         --> java.lang.Object *
         --> java.lang.Override *
@@ -130,10 +105,8 @@ durieux.vlille.util
         --> java.lang.Throwable *
 java.io *
     BufferedReader *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
     IOException *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.api.VLille
         <-- durieux.vlille.api.VLilleImpl
         <-- durieux.vlille.main.Main
@@ -145,15 +118,10 @@ java.io *
     PrintStream *
         <-- durieux.vlille.main.Main
     StringReader *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
 java.lang *
-    CharSequence *
-        <-- durieux.vlille.api.VLilleImpl
     Double *
         <-- durieux.vlille.api.StationFactory
-    Exception *
-        <-- durieux.vlille.api.StationFactoryTest
     Integer *
         <-- durieux.vlille.api.StationFactory
         <-- durieux.vlille.api.VLilleImpl
@@ -161,7 +129,6 @@ java.lang *
         <-- durieux.vlille.api.StationFactory
     Object *
         <-- durieux.vlille.api.StationFactory
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.api.StationImpl
         <-- durieux.vlille.api.VLilleImpl
         <-- durieux.vlille.main.Main
@@ -171,13 +138,11 @@ java.lang *
         <-- durieux.vlille.api.VLilleImpl
     RuntimeException *
         <-- durieux.vlille.api.StationFactory
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
         <-- durieux.vlille.util.XMLParserException
     String *
         <-- durieux.vlille.api.Station
         <-- durieux.vlille.api.StationFactory
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.api.StationImpl
         <-- durieux.vlille.api.VLilleImpl
         <-- durieux.vlille.main.Main
@@ -210,48 +175,33 @@ java.util *
         <-- durieux.vlille.main.Main
 javax.xml.parsers *
     DocumentBuilder *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
     DocumentBuilderFactory *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
     ParserConfigurationException *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
-org.jsoup *
+<UnknowPackage> *
     org.jsoup *
         <-- durieux.vlille.api.VLilleImpl
 org.jsoup.nodes *
     Document *
         <-- durieux.vlille.api.VLilleImpl
-org.junit *
-    Assert *
-        <-- durieux.vlille.api.StationFactoryTest
-    Test *
-        <-- durieux.vlille.api.StationFactoryTest
 org.w3c.dom *
     Document *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.api.VLilleImpl
         <-- durieux.vlille.util.XMLFromUrl
     Element *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
     NamedNodeMap *
         <-- durieux.vlille.api.StationFactory
     Node *
         <-- durieux.vlille.api.StationFactory
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.api.VLilleImpl
         <-- durieux.vlille.util.XMLFromUrl
     NodeList *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.api.VLilleImpl
 org.xml.sax *
     InputSource *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
     SAXException *
-        <-- durieux.vlille.api.StationFactoryTest
         <-- durieux.vlille.util.XMLFromUrl
-
