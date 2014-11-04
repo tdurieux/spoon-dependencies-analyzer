@@ -18,7 +18,7 @@ public class User implements Serializable {
 		return object.getSimpleName();
 	}
 	
-	public void thread() {
+	public void thread() throws NullPointerException {
 		new Thread(new Runnable() {
 			
 			@Override
@@ -32,7 +32,7 @@ public class User implements Serializable {
 		throw new RuntimeException("");
 	}
 
-	public boolean isInteger(Object o) {
+	public Boolean isInteger(Object o) {
 		if (o instanceof Integer) {
 			return true;
 		}
