@@ -61,14 +61,14 @@ A partir de ce graphe de dépendances, il est possible de générer deux représ
 
 ## Analyse des résultats 
 
-La génération de graphe de dépendances au niveau des paquets est assez probante et les résultats restent compréhensibles. 
+Lors de l'analyse du projet Spoon, cet outil détecte 57 dépendances au niveau des paquets et 635 dépendances au niveau des classes tandis que Dependency Finder en détecte 4 de plus dans les deux cas. La différence s'explique par le fait que Dependency Finder analyse le code compilé alors que Dependency Analyzer analyse le code source. Le format de sortie par défaut étant celui de Dependency Finder, les résultats sont tout aussi lisibles.
 
-Les graphes de dépendances au niveau des classes est difficilement exploitable en état. En effet, la quantité d'informations générées rend la compréhension des graphes particulièrement difficile sur des projets ayant une taille importante. De plus, la génération d'images à partir de Graphviz peut ne jamais aboutir sur des gros projets (par exemple la génération de l'image du graphe de dépendances du projet Spoon par Graphviz n'a jamais abouti). 
+Les graphes de dépendances au niveau des classes sont plus difficilement exploitables à cause de la quantité importante d'informations générées par un projet non trivial. Le temps d'exécution de Dependency Analyzer peut être relativement long (1'15'' pour analyser Spoon). De plus, la génération d'images à partir de Graphviz peut ne jamais aboutir sur des gros projets (par exemple la génération de l'image du graphe de dépendances du projet Spoon par Graphviz n'a jamais abouti). 
 
-Plusieurs solutions optionnelles ont été implémentées: 
+Afin d'améliorer la lisibilité des résultats, plusieurs solutions optionnelles ont été implémentées: 
 - identifier et masquer les classes ne provenant pas du projet analysé (librairies externes, les classes Java, ...),
 - ajout de la possibilité de filtrer les dépendances sur base d'expressions régulières. 
-Ces solutions permettent d'améliorer la lisibilité des résultats mais elles induisent une perte d'informations. 
+Ces solutions induisent en contrepartie une perte d'informations. 
 
 Une solution qui reste à investiguer est de produire une interface qui permet de filtrer dynamiquement la vue du graphe. Plusieurs types d'interface sont envisageables:
 - améliorer l'interface utilisateur actuelle en y ajoutant le support des filtres,
@@ -87,7 +87,7 @@ Il y a néanmoins quelques différences:
 Les quelques différences détectées au niveau des paquets sont également présentes au niveau des classes.
 
 - Dependency Finder considère tous les héritages. Cet outil se limite aux héritages des classes et interfaces déclarées dans le projet,
-- les classes anonymes sont nommées à la compilation et apparaissent donc différemment dans Dependency Finder.
+- les classes anonymes sont numérotées à la compilation et apparaissent donc différemment dans Dependency Finder alors que cet outil les nomme <Anonymous>,
 - les classes internes ne sont pas considérées comme des dépendances dans les classes parentes.
 
 ## Pistes d'amélioration
