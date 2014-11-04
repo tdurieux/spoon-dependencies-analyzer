@@ -83,18 +83,18 @@ Une solution qui reste à investiguer est de produire une interface qui permet d
 
 ## Validation des résultats
 
-La validation a été effectuée sur différents projets de taille variable. Les différents projets testés sont ce projet, le projet servant aux tests unitaires de ce projet, Spoon, un projet faisant appel à de nombreuses classes anonymes.
+La validation a été effectuée sur différents projets de taille variable. Les différents projets testés sont ce projet, le projet servant aux tests unitaires de ce projet, Spoon, un projet faisant appel à de nombreuses classes anonymes. Les résultats de ces analyses se trouvent dans le dossier examples et sont de la forme *NomDuProjetTesté-OutilUtilisé.NiveauDeDependances\[.extension\]* où *OutilUtilisé* est DependencyFinder ou DependencyAnalyzer et *NiveauDeDependances* est p2p pour les packages et c2c pour les classes.
 
 Les graphes de dépendances au niveau des paquets sont très similaires. 
 Il y a néanmoins quelques différences:
 
 - ce projet considère les annotations comme des dépendances au contraire de Dependency Finder,
-- certains éléments sont générés à la compilation et ne sont donc pas visibles par ce projet. Par exemple, les fichiers package-info.java sont transformés en classe à la compilation et sont donc détectés par Dependency Finder.
+- certains éléments sont générés à la compilation et ne sont donc pas visibles par ce projet: les fichiers package-info.java sont transformés en classes à la compilation et sont donc détectés par Dependency Finder, les énumerations sont également transformées à la compilation en classes héritant de la classe Enum de Java ce qui ajoute une dépendance non visible par l'analyse du code source.
 
 Les quelques différences détectées au niveau des paquets sont également présentes au niveau des classes.
 
 - Dependency Finder considère tous les héritages. Cet outil se limite aux héritages des classes et interfaces déclarées dans le projet,
-- les classes anonymes sont numérotées à la compilation et apparaissent donc différemment dans Dependency Finder alors que cet outil les nomme <Anonymous>,
+- les classes anonymes sont numérotées à la compilation et apparaissent donc différemment dans Dependency Finder alors que cet outil les nomme \<Anonymous\>,
 - les classes internes ne sont pas considérées comme des dépendances dans les classes parentes.
 
 ## Pistes d'amélioration
@@ -167,7 +167,7 @@ Get the dependency graph of a project
         Regex to ignore element, sepearated by a ','.
 ```
 
-### Exemple
+#### Exemple
 
 ```Bash
 mvn package
@@ -179,6 +179,10 @@ java -jar target/DependencyAnalyzer-0.0.1-SNAPSHOT.jar \
     --format dot \
     --level class;
 ```
+
+### Tests
+
+Les tests se basent sur un projet exemple qui contient les sources potentielles de dépendances précédemment indentifiées. Ils vérifient la présence de dépendances, le type de la dépendance (classe, interface, enum,...) et que les dépendances externes du projet sont effectivement détectées comme telles. Ces tests sont répartis en 2 classes contenant en tout 33 asserts. 
 
 ## Références
 
