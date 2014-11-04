@@ -31,7 +31,7 @@ Les graphes de dépendances permettent de visualiser les dépendances d'un proje
 L'analyse des dépendances a plusieurs intérêts: 
 elle permet de rapidement comprendre l'architecture du projet,
 d'identifier la complexité d'un projet (nombres de dépendances, nombres de classes, paquets, méthodes) ou 
-encore d'analyser la qualité de l'architecture (bonne découpe du projet en packages, interaction entre les paquets, présence de dépendances cycliques). Elle permet également d'éviter le "morning-after syndrome" décrit par Uncle Bob Martin. [^1]
+encore d'analyser la qualité de l'architecture (bonne découpe du projet en packages, interaction entre les paquets, présence de dépendances cycliques). Elle permet également d'éviter le ["morning-after syndrome"] [1] décrit par Uncle Bob Martin.
 
 Spoon est utilisé comme librairie d'AST pour parcourir le code du projet. Spoon a la particularité d'analyser le code source des applications et offre une API de transformation et de parcours claire. Spoon utilise le principe de processeur. Les processeurs permettent de parcourir le code, certains de ces processeurs permettent de filtrer les types des éléments parcourus. Afin de valider ce projet, les résultats sont comparés avec ceux de Dependency Finder. Dependency Finder est un logiciel qui permet d'extraire des graphes de dépendances à partir de code compilé Java.
 
@@ -76,26 +76,19 @@ Une solution qui reste à investiguer est de produire une interface qui permet d
 
 ## Validation des résultats
 
-La validation a été effectuée sur différents projets de taille variable. Les différents projets testés sont:
-
-- ce projet
-- le projet servant aux tests unitaires de ce projet,
-- Spoon,
-- un projet faisant appel à de nombreuses classes anonymes.
+La validation a été effectuée sur différents projets de taille variable. Les différents projets testés sont ce projet, le projet servant aux tests unitaires de ce projet, Spoon, un projet faisant appel à de nombreuses classes anonymes.
 
 Les graphes de dépendances au niveau des paquets sont très similaires. 
 Il y a néanmoins quelques différences:
 
-- ce projet considère les annotations comme des dépendances au contraire de Dependency Finder. 
-- certains éléments sont générés à la compilation et ne sont donc pas visibles par ce projet, par exemple les fichiers package-info.java qui sont transformés en classe à la compilation. 
-- l'ordre des dépendances est également légèrement différent: nous avons fait le choix de séparer les dépendances entrantes et sortantes. Dependency Finder ne fait qu'un tri alphabétique.
+- ce projet considère les annotations comme des dépendances au contraire de Dependency Finder,
+- certains éléments sont générés à la compilation et ne sont donc pas visibles par ce projet. Par exemple, les fichiers package-info.java sont transformés en classe à la compilation et sont donc détectés par Dependency Finder.
 
 Les quelques différences détectées au niveau des paquets sont également présentes au niveau des classes.
 
 - Dependency Finder considère tous les héritages. Cet outil se limite aux héritages des classes et interfaces déclarées dans le projet,
-- Dependency Finder renomme les classes anonymes.
-
-TODO: classes internes ne sont pas considérées comme des dépendances dans les classes parentes.
+- les classes anonymes sont nommées à la compilation et apparaissent donc différemment dans Dependency Finder.
+- les classes internes ne sont pas considérées comme des dépendances dans les classes parentes.
 
 ## Pistes d'amélioration
 
@@ -187,4 +180,4 @@ java -jar target/DependencyAnalyzer-0.0.1-SNAPSHOT.jar \
 - Graphviz: [http://www.graphviz.org/](http://www.graphviz.org/)
 - Sigma.js: [https://github.com/jacomyal/sigma.js](https://github.com/jacomyal/sigma.js)
 
-[^1]: More Reasons For Testing: Prevent The Morning-After Syndrome, March 11th, 2010, [http://adam.kahtava.com/journal/2010/03/11/more-reasons-for-testing-prevent-the-morning-after-syndrome/](http://adam.kahtava.com/journal/2010/03/11/more-reasons-for-testing-prevent-the-morning-after-syndrome/)
+[1]: http://adam.kahtava.com/journal/2010/03/11/more-reasons-for-testing-prevent-the-morning-after-syndrome/ "More Reasons For Testing: Prevent The Morning-After Syndrome, March 11th, 2010"
