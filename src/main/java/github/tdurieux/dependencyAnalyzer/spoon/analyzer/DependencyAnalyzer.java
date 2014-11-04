@@ -65,7 +65,6 @@ public class DependencyAnalyzer extends AbstractProcessor<CtTypedElement<?>> {
 			}
 			DependencyNode node = nodeFacotry
 					.createDependencyNode(ctTypeReference);
-
 			getDependencyGraph().addDependencyNode(node, dependencyLocation);
 		}
 

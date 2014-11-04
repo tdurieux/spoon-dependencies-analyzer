@@ -94,7 +94,6 @@ public class DependencyGraph {
 		}
 
 		initializeListsInMaps(node, location);
-		initializeListsInMaps(node, location);
 
 		if (!usedNodes.get(location).contains(node)) {
 			this.usedNodes.get(location).add(node);

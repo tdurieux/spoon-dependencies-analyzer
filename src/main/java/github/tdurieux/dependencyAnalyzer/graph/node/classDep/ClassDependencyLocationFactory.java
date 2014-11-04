@@ -30,11 +30,6 @@ public class ClassDependencyLocationFactory extends
 		// get the class where the element is used
 		CtSimpleType<?> parent = element.getParent(CtSimpleType.class);
 
-		// manage anonymous class
-		while (parent.getSimpleName().isEmpty()) {
-			parent = parent.getParent(CtSimpleType.class);
-		}
-
 		boolean isExternal = false;
 		boolean isInternal = !parent.isTopLevel();
 		boolean isAbstract = parent.getModifiers().contains(
@@ -70,7 +65,7 @@ public class ClassDependencyLocationFactory extends
 			// class cannot be loaded
 			type = Type.CLASS;
 		}
-
+		
 		SourcePosition elementPosition = element.getPosition();
 
 		DependencyLocation location = new DependencyLocationImpl(

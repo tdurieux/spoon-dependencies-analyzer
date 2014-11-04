@@ -1,7 +1,6 @@
 package github.tdurieux.dependencyAnalyzer.graph.node.classDep;
 
 import spoon.SpoonException;
-import spoon.reflect.declaration.CtAnnotation;
 import spoon.reflect.declaration.CtAnnotationType;
 import spoon.reflect.declaration.CtEnum;
 import spoon.reflect.declaration.CtSimpleType;

@@ -46,44 +46,69 @@ public class TxtExport extends AbstractExport {
 				continue;
 			}
 			String pack = parent.getQualifiedName();
+			if(pack.equals(parent.getSimpleName())) {
+				pack = "<UnknowPackage>";
+			}
 			if (!parent.getType().equals(DependencyNode.Type.PACKAGE)) {
-				pack = pack.replace("." + parent.getSimpleName(), "");
+				if (!parent.isAnonymous()) {
+					pack = pack.replace("." + parent.getSimpleName(), "");
+				}
 				if(parent.isInternal()) {
 					pack = pack.replace("$" + parent.getSimpleName(), "");
-					String[] splitted  = pack.split("\\.");
+					String[] splitted = pack.split("\\.");
 					pack = pack.replace("." + splitted[splitted.length - 1], "");
 					tab += tab;
 				}
 			}
-			if(!pack.equals(lastPackage)) {
+			if (!pack.equals(lastPackage)) {
 				content += pack + (parent.isExternal() ? " *" : "") + "\n";
 				lastPackage = pack;
 			}
+			
 			if (!parent.getType().equals(DependencyNode.Type.PACKAGE)) {
-				content += tab + parent.getSimpleName() + (parent.isExternal() ? " *" : "") + "\n";
-				tab += tab;
-			}
-			if (usedByNodes.containsKey(parent)) {
-				List<DependencyNode> list = new ArrayList<DependencyNode>(
-						usedByNodes.get(parent).keySet());
-				Collections.sort(list);
-				for (DependencyNode nodeDep : list) {
-					if (isToIgnore(nodeDep)) {
-						continue;
-					}
-					content += tab + "<-- " + nodeDep.getQualifiedName()
-							+ (nodeDep.isExternal() ? " *" : "") + "\n";
+				String name = parent.getSimpleName();
+				if (parent.isAnonymous()) {
+					name = "<Anonymous>";
 				}
+				content += tab + name + (parent.isExternal() ? " *" : "") + "\n";
+				tab += tab;
 			}
 
 			List<DependencyNode> depList = usedNodes.get(parent);
-			Collections.sort(depList);
+			List<DependencyNode> depUsedList = new ArrayList<DependencyNode>();
+			if (usedByNodes.containsKey(parent)) {
+				depUsedList.addAll(usedByNodes.get(parent).keySet());
+			}
+			List<DependencyNode> dependencies = new ArrayList<DependencyNode>();
 			for (DependencyNode dependencyNode : depList) {
+				if (!dependencies.contains(dependencyNode)) {
+					dependencies.add(dependencyNode);
+				}
+			}
+			for (DependencyNode dependencyNode : depUsedList) {
+				if (!dependencies.contains(dependencyNode)) {
+					dependencies.add(dependencyNode);
+				}
+			}
+
+			Collections.sort(dependencies);
+			for (DependencyNode dependencyNode : dependencies) {
 				if (isToIgnore(dependencyNode)) {
 					continue;
 				}
-				content += tab + "--> " + dependencyNode.getQualifiedName()
-						+ (dependencyNode.isExternal() ? " *" : "") + "\n";
+				if (depList.contains(dependencyNode)
+						&& depUsedList.contains(dependencyNode)) {
+					content += tab + "<-> "
+							+ dependencyNode.getQualifiedName()
+							+ (dependencyNode.isExternal() ? " *" : "") + "\n";
+				} else if (depList.contains(dependencyNode)) {
+					content += tab + "--> " + dependencyNode.getQualifiedName()
+							+ (dependencyNode.isExternal() ? " *" : "") + "\n";
+				} else if (depUsedList.contains(dependencyNode)) {
+					content += tab + "<-- " + dependencyNode.getQualifiedName()
+							+ (dependencyNode.isExternal() ? " *" : "") + "\n";
+				}
+
 			}
 		}
 		return content;
