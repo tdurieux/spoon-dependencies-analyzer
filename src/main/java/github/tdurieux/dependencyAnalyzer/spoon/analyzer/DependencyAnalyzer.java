@@ -158,7 +158,7 @@ public class DependencyAnalyzer extends AbstractProcessor<CtTypedElement<?>> {
 
 			// parameters
 			List<CtTypeReference<?>> parameters = invocation.getExecutable()
-					.getParameterTypes();
+					.getActualTypeArguments();
 			listDependencies.addAll(parameters);
 		}
 
