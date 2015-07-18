@@ -1,13 +1,10 @@
 package github.tdurieux.dependencyAnalyzer.graph.export;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import github.tdurieux.dependencyAnalyzer.AnalyzerConfig;
 import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
+
+import java.util.*;
 
 /**
  * exports the dependency graph to Graphviz format
@@ -28,15 +25,18 @@ public class DotExport extends AbstractExport {
 	 */
 	@Override
 	public String generate() {
-		Map<String, List<String>> map = new HashMap<String, List<String>>();
-		List<String> starts = new ArrayList<String>();
+		Map<String, List<String>> map = new HashMap<>();
+		List<String> starts = new ArrayList<>();
 
 		String content = "digraph G {\n\tnode [shape=box]; compound=true; ratio=fill;\n";
 		if(this.graph == null || this.config == null) {
 			return content + "}";
 		}
 		Map<DependencyNode, List<DependencyNode>> nodes = graph.getUsedNodes();
-		for (DependencyNode parent : nodes.keySet()) {
+        List<DependencyNode> listUsedNodes = new ArrayList<>( nodes.keySet());
+        Collections.sort(listUsedNodes);
+
+		for (DependencyNode parent : listUsedNodes) {
 			if (isToIgnore(parent)) {
 				continue;
 			}
@@ -66,7 +66,9 @@ public class DotExport extends AbstractExport {
 				content += "\t\"" + parent.getQualifiedName()
 						+ "\" [color=grey];\n";
 			}
-			for (DependencyNode child : nodes.get(parent)) {
+            final List<DependencyNode> dependencies = nodes.get(parent);
+            Collections.sort(dependencies);
+			for (DependencyNode child : dependencies) {
 				if (isToIgnore(child)) {
 					continue;
 				}
@@ -90,12 +92,12 @@ public class DotExport extends AbstractExport {
 
 	private String createSubGraphs(Map<String, List<String>> map, String current) {
 		String content = "";
-		List<String> childs = map.get(current);
-		if (childs == null) {
+		List<String> child = map.get(current);
+		if (child == null) {
 			return content;
 		}
 		boolean subgraph = false;
-		for (String string : childs) {
+		for (String string : child) {
 			if (!map.containsKey(string)) {
 				subgraph = true;
 				break;
@@ -109,12 +111,12 @@ public class DotExport extends AbstractExport {
 			return content;
 		}
 
-		for (String child : childs) {
-			if (map.containsKey(child)) {
-				content += createSubGraphs(map, child);
+		for (String ch : child) {
+			if (map.containsKey(ch)) {
+				content += createSubGraphs(map, ch);
 			} else {
-				content += "\t\t\"" + child + "\" [label=\""
-						+ child.replace(current + ".", "") + "\"]\n";
+				content += "\t\t\"" + ch + "\" [label=\""
+						+ ch.replace(current + ".", "") + "\"]\n";
 			}
 		}
 		if (subgraph) {

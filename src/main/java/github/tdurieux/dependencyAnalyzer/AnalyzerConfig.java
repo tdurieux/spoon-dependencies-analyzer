@@ -31,9 +31,9 @@ public class AnalyzerConfig {
 		DOT, TXT
 	}
 
-	private List<String> ignoreRegex = new ArrayList<>();
+	private final List<String> ignoreRegex = new ArrayList<>();
 
-	private boolean ignoreExternalDependences = false;
+	private boolean ignoreExternalDependencies = false;
 
 	private String classPath;
 
@@ -47,12 +47,12 @@ public class AnalyzerConfig {
 
 	private String projectPath;
 
-	public boolean isIgnoreExternalDependences() {
-		return ignoreExternalDependences;
+	public boolean isIgnoreExternalDependencies() {
+		return ignoreExternalDependencies;
 	}
 
-	public void setIgnoreExternalDependences(boolean ignoreExternalDependences) {
-		this.ignoreExternalDependences = ignoreExternalDependences;
+	public void setIgnoreExternalDependencies(boolean ignoreExternalDependencies) {
+		this.ignoreExternalDependencies = ignoreExternalDependencies;
 	}
 
 	public void addIgnoreRegex(String ignoreRegex) {

@@ -9,21 +9,21 @@ package github.tdurieux.dependencyAnalyzer.graph.node;
  */
 public class DependencyNodeImpl implements DependencyNode {
 
-	private String simpleName;
+	private final String simpleName;
 
-	private String qualifiedName;
+	private final String qualifiedName;
 
-	private Type type;
+	private final Type type;
 
-	private boolean isExternal;
+	private final boolean isExternal;
 
-	private boolean isInternal;
+	private final boolean isInternal;
 
-	private boolean isAbstract;
+	private final boolean isAbstract;
 
-	private boolean isAnonymous;
+	private final boolean isAnonymous;
 
-	private boolean isPrimitive;
+	private final boolean isPrimitive;
 
 	public DependencyNodeImpl(String qualifiedName, String simpleName,
 			Type type, boolean isExternal, boolean isInternal,
@@ -132,7 +132,9 @@ public class DependencyNodeImpl implements DependencyNode {
 		return this.qualifiedName;
 	}
 
+    @Override
 	public int compareTo(DependencyNode o) {
+        if(o == null) return -1;
 		return this.qualifiedName.compareTo(o.getQualifiedName());
 	}
 

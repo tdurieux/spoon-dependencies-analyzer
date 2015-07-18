@@ -1,9 +1,10 @@
 package github.tdurieux.dependencyAnalyzer.main;
 
+import com.martiansoftware.jsap.*;
 import github.tdurieux.dependencyAnalyzer.AnalyzerConfig;
-import github.tdurieux.dependencyAnalyzer.DependencyAnalizer;
 import github.tdurieux.dependencyAnalyzer.AnalyzerConfig.Level;
 import github.tdurieux.dependencyAnalyzer.AnalyzerConfig.OutputFormat;
+import github.tdurieux.dependencyAnalyzer.DependencyAnalyzer;
 import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
 import github.tdurieux.dependencyAnalyzer.graph.export.DependencyGraphExport;
 import github.tdurieux.dependencyAnalyzer.graph.export.DotExport;
@@ -11,15 +12,6 @@ import github.tdurieux.dependencyAnalyzer.graph.export.TxtExport;
 
 import java.io.File;
 import java.io.FileWriter;
-
-import com.martiansoftware.jsap.FlaggedOption;
-import com.martiansoftware.jsap.JSAP;
-import com.martiansoftware.jsap.JSAPException;
-import com.martiansoftware.jsap.JSAPResult;
-import com.martiansoftware.jsap.Parameter;
-import com.martiansoftware.jsap.QualifiedSwitch;
-import com.martiansoftware.jsap.SimpleJSAP;
-import com.martiansoftware.jsap.UnflaggedOption;
 
 /**
  * is the launcher of the project
@@ -31,10 +23,10 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		AnalyzerConfig config = argsParser(args);
 
-		DependencyAnalizer dependenciesAnalizer = new DependencyAnalizer(
+		DependencyAnalyzer dependenciesAnalyzer = new DependencyAnalyzer(
 				config.getProjectPath(), config);
 
-		DependencyGraph graph = dependenciesAnalizer.run();
+		DependencyGraph graph = dependenciesAnalyzer.run();
 		DependencyGraphExport export = null;
 		switch (config.getOutputFormat()) {
 		case DOT:
@@ -73,27 +65,27 @@ public class Main {
 								JSAP.NOT_GREEDY, "The path to the project"),
 						new UnflaggedOption("classpath", JSAP.STRING_PARSER,
 								JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED,
-								JSAP.NOT_GREEDY, "The claspath of the project"),
+								JSAP.NOT_GREEDY, "The classpath of the project"),
 						new FlaggedOption("level", JSAP.STRING_PARSER,
 								"package", JSAP.NOT_REQUIRED, 'l', "level",
-								"The level of dependency analyzis (package, class, method)."),
+								"The level of dependency analysis (package, class, method)."),
 						new FlaggedOption("format", JSAP.STRING_PARSER, "txt",
 								JSAP.NOT_REQUIRED, 'f', "format",
-								"The ouput format of the script (txt, dot)."),
+								"The output format of the script (txt, dot)."),
 						new FlaggedOption("output", JSAP.STRING_PARSER,
 								JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'o', "out",
-								"The ouput file of the script (txt, dot)."),
+								"The output file of the script (txt, dot)."),
 						new QualifiedSwitch("ignore-external",
 								JSAP.STRING_PARSER, JSAP.NO_DEFAULT,
 								JSAP.NOT_REQUIRED, 'j', "ignore-external",
-								"Ignore external depencencies."),
+								"Ignore external dependencies."),
 						new QualifiedSwitch("verbose", JSAP.STRING_PARSER,
 								JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'v',
 								"verbose", "Requests verbose output."),
 						new FlaggedOption("ignore", JSAP.STRING_PARSER,
 								JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'i',
 								"ignore",
-								"Regex to ignore element, sepearated by a ','.")
+								"Regex to ignore element, separated by a ','.")
 								.setList(true).setListSeparator(',') });
 
 		JSAPResult config = jsap.parse(args);
@@ -112,8 +104,8 @@ public class Main {
 		AnalyzerConfig analyzerConfig = new AnalyzerConfig();
 		analyzerConfig.setProjectPath(config.getString("project"));
 		analyzerConfig.setClassPath(config.getString("classpath"));
-		analyzerConfig.setIgnoreExternalDependences(config
-				.getBoolean("ignore-external"));
+		analyzerConfig.setIgnoreExternalDependencies(config
+                                                             .getBoolean("ignore-external"));
 		if (config.getStringArray("ignore") != null) {
 			for (String ignoreRegex : config.getStringArray("ignore")) {
 				analyzerConfig.addIgnoreRegex(ignoreRegex);

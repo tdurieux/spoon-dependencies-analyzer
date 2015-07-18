@@ -1,16 +1,12 @@
 package github.tdurieux.dependencyAnalyzer.graph.node.classDep;
 
-import spoon.SpoonException;
-import spoon.reflect.declaration.CtAnnotationType;
-import spoon.reflect.declaration.CtEnum;
-import spoon.reflect.declaration.CtInterface;
-import spoon.reflect.declaration.CtSimpleType;
-import spoon.reflect.declaration.ModifierKind;
-import spoon.reflect.reference.CtTypeReference;
 import github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
-import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.Type;
+import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl;
+import spoon.SpoonException;
+import spoon.reflect.declaration.*;
+import spoon.reflect.reference.CtTypeReference;
 
 /**
  * is a factory class used to create class dependency node at class level.
@@ -46,7 +42,7 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 		}
 
 		if (element.getDeclaration() != null) {
-			CtSimpleType<?> declarationType = element.getDeclaration();
+			CtType<?> declarationType = element.getDeclaration();
 			isInternal = !declarationType.isTopLevel();
 			isAbstract = declarationType.getModifiers().contains(
 					ModifierKind.ABSTRACT);
@@ -78,11 +74,9 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 			}
 		}
 		
-		DependencyNode dependency = new DependencyNodeImpl(
+		return new DependencyNodeImpl(
 				element.getQualifiedName(), element.getSimpleName(), type,
 				isExternal, isInternal, isAbstract, isAnonymous, isPrimitive);
-
-		return dependency;
 	}
 
 }

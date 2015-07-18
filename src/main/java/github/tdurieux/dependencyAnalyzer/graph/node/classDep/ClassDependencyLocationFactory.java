@@ -1,15 +1,15 @@
 package github.tdurieux.dependencyAnalyzer.graph.node.classDep;
 
-import spoon.SpoonException;
-import spoon.reflect.cu.SourcePosition;
-import spoon.reflect.declaration.CtSimpleType;
-import spoon.reflect.declaration.CtTypedElement;
-import spoon.reflect.declaration.ModifierKind;
-import spoon.reflect.reference.CtTypeReference;
 import github.tdurieux.dependencyAnalyzer.graph.node.AbstractDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocationImpl;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode.Type;
+import spoon.SpoonException;
+import spoon.reflect.cu.SourcePosition;
+import spoon.reflect.declaration.CtType;
+import spoon.reflect.declaration.CtTypedElement;
+import spoon.reflect.declaration.ModifierKind;
+import spoon.reflect.reference.CtTypeReference;
 
 /**
  * is a factory class used to create DependencyLocation at class level
@@ -28,7 +28,7 @@ public class ClassDependencyLocationFactory extends
 	@Override
 	public DependencyLocation createDependencyLocation(CtTypedElement<?> element) {
 		// get the class where the element is used
-		CtSimpleType<?> parent = element.getParent(CtSimpleType.class);
+		CtType<?> parent = element.getParent(CtType.class);
 
 		boolean isExternal = false;
 		boolean isInternal = !parent.isTopLevel();
@@ -65,14 +65,28 @@ public class ClassDependencyLocationFactory extends
 			// class cannot be loaded
 			type = Type.CLASS;
 		}
+
+        if(isAnonymous) {
+            isInternal = true;
+        }
 		
 		SourcePosition elementPosition = element.getPosition();
+        //isExternal = elementPosition == null;
+        DependencyLocation location;
+        if(elementPosition != null) {
+            location = new DependencyLocationImpl(
+                parent.getQualifiedName(), parent.getSimpleName(), type,
+                isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
+                elementPosition.getFile().getAbsolutePath(),
+                elementPosition.getLine());
+        } else {
+            location = new DependencyLocationImpl(
+                parent.getQualifiedName(), parent.getSimpleName(), type,
+                isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
+                null,
+                -1);
+        }
 
-		DependencyLocation location = new DependencyLocationImpl(
-				parent.getQualifiedName(), parent.getSimpleName(), type,
-				isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
-				elementPosition.getFile().getAbsolutePath(),
-				elementPosition.getLine());
 
 		return location;
 	}

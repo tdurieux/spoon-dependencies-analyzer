@@ -1,10 +1,5 @@
 package github.tdurieux.dependencyAnalyzer.spoon.analyzer;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
@@ -13,13 +8,13 @@ import github.tdurieux.dependencyAnalyzer.graph.node.NodeFactory;
 import spoon.processing.AbstractProcessor;
 import spoon.reflect.code.CtInvocation;
 import spoon.reflect.code.CtLiteral;
-import spoon.reflect.declaration.CtAnnotation;
-import spoon.reflect.declaration.CtClass;
-import spoon.reflect.declaration.CtMethod;
-import spoon.reflect.declaration.CtSimpleType;
-import spoon.reflect.declaration.CtType;
-import spoon.reflect.declaration.CtTypedElement;
+import spoon.reflect.declaration.*;
 import spoon.reflect.reference.CtTypeReference;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Spoon processor used to analyze project dependencies.
@@ -27,24 +22,22 @@ import spoon.reflect.reference.CtTypeReference;
  * @author Thomas Durieux
  * 
  */
-public class DependencyAnalyzer extends AbstractProcessor<CtTypedElement<?>> {
+public class DependencyAnalyzerProcessor extends AbstractProcessor<CtTypedElement<?>> {
 
-	private DependencyGraph dependencyGraph;
-	private NodeFactory nodeFacotry;
-	private LocationFactory locationFactory;
+	private final DependencyGraph dependencyGraph;
+	private final NodeFactory nodeFactory;
+	private final LocationFactory locationFactory;
 
-	protected boolean versbose = false;
-
-	public DependencyAnalyzer(DependencyGraph dependencyGraph,
-			NodeFactory nodeFacotry, LocationFactory locationFactory) {
+	public DependencyAnalyzerProcessor(DependencyGraph dependencyGraph,
+                                       NodeFactory nodeFactory, LocationFactory locationFactory) {
 		this.dependencyGraph = dependencyGraph;
-		this.nodeFacotry = nodeFacotry;
+		this.nodeFactory = nodeFactory;
 		this.locationFactory = locationFactory;
 	}
 
-	public DependencyAnalyzer(NodeFactory nodeFacotry,
-			LocationFactory locationFactory) {
-		this(new DependencyGraph(), nodeFacotry, locationFactory);
+	public DependencyAnalyzerProcessor(NodeFactory nodeFactory,
+                                       LocationFactory locationFactory) {
+		this(new DependencyGraph(), nodeFactory, locationFactory);
 	}
 
 	@Override
@@ -52,10 +45,9 @@ public class DependencyAnalyzer extends AbstractProcessor<CtTypedElement<?>> {
 		DependencyLocation dependencyLocation = locationFactory
 				.createDependencyLocation(element);
 
-		List<CtTypeReference<?>> listDependencies = getDependencies(element);
+		Set<CtTypeReference<?>> listDependencies = getDependencies(element);
 
-		for (CtTypeReference<?> ctTypeReference : new ArrayList<CtTypeReference<?>>(
-				listDependencies)) {
+		for (CtTypeReference<?> ctTypeReference : new HashSet<>(listDependencies)) {
 			listDependencies.addAll(getDependencies(ctTypeReference));
 		}
 
@@ -63,7 +55,7 @@ public class DependencyAnalyzer extends AbstractProcessor<CtTypedElement<?>> {
 			if (ctTypeReference == null) {
 				continue;
 			}
-			DependencyNode node = nodeFacotry
+			DependencyNode node = nodeFactory
 					.createDependencyNode(ctTypeReference);
 			getDependencyGraph().addDependencyNode(node, dependencyLocation);
 		}
@@ -76,36 +68,36 @@ public class DependencyAnalyzer extends AbstractProcessor<CtTypedElement<?>> {
 	 * @param ctTypeReference
 	 * @return all dependencies added by ctTypeReference
 	 */
-	protected List<CtTypeReference<?>> getDependencies(
+	protected Set<CtTypeReference<?>> getDependencies(
 			CtTypeReference<?> ctTypeReference) {
 
-		List<CtTypeReference<?>> listDependencies = new ArrayList<CtTypeReference<?>>();
+		Set<CtTypeReference<?>> listDependencies = new HashSet<>();
 
 		if (ctTypeReference == null) {
 			return listDependencies;
 		}
 
-		CtSimpleType<?> ctSimpleType = ctTypeReference.getDeclaration();
+		CtType<?> ctType = ctTypeReference.getDeclaration();
+        if(ctType == null) {
+            return listDependencies;
+        }
 
-		if (ctSimpleType instanceof CtClass<?>) {
-			CtClass<?> tmp = (CtClass<?>) ctSimpleType;
-			// super class
-			CtTypeReference<?> superclass = tmp.getSuperclass();
-			if (superclass != null) {
-				listDependencies.add(superclass);
-				listDependencies.addAll(getDependencies(superclass));
-			}
-		}
+        if (ctType instanceof CtClass<?>) {
+            CtClass<?> tmp = (CtClass<?>) ctType;
+            // super class
+            CtTypeReference<?> superclass = tmp.getSuperclass();
+            if (superclass != null) {
+                listDependencies.add(superclass);
+                listDependencies.addAll(getDependencies(superclass));
+            }
+        }
+        // interfaces
+        Set<CtTypeReference<?>> interfaces = ctType.getSuperInterfaces();
+        for (CtTypeReference<?> interfaceType : interfaces) {
+            listDependencies.add(interfaceType);
+            listDependencies.addAll(getDependencies(interfaceType));
+        }
 
-		if (ctSimpleType instanceof CtType<?>) {
-			CtType<?> tmp = (CtType<?>) ctSimpleType;
-			// interfaces
-			Set<CtTypeReference<?>> interfaces = tmp.getSuperInterfaces();
-			for (CtTypeReference<?> interfaceType : interfaces) {
-				listDependencies.add(interfaceType);
-				listDependencies.addAll(getDependencies(interfaceType));
-			}
-		}
 		return listDependencies;
 	}
 
@@ -115,8 +107,8 @@ public class DependencyAnalyzer extends AbstractProcessor<CtTypedElement<?>> {
 	 * @param element
 	 * @return all dependencies added by element
 	 */
-	private List<CtTypeReference<?>> getDependencies(CtTypedElement<?> element) {
-		List<CtTypeReference<?>> listDependencies = new ArrayList<CtTypeReference<?>>();
+	private Set<CtTypeReference<?>> getDependencies(CtTypedElement<?> element) {
+		Set<CtTypeReference<?>> listDependencies = new HashSet<>();
 
 		// annotations
 		List<CtAnnotation<?>> annotations = element.getAnnotations();

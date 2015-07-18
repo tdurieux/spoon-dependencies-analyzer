@@ -17,9 +17,9 @@ import java.util.regex.Pattern;
  */
 public abstract class AbstractExport implements DependencyGraphExport {
 
-	protected DependencyGraph graph;
-	protected AnalyzerConfig config;
-	protected List<Pattern> ignoreRegex;
+	protected final DependencyGraph graph;
+	protected final AnalyzerConfig config;
+	protected final List<Pattern> ignoreRegex;
 
 	public AbstractExport(DependencyGraph graph, AnalyzerConfig config) {
 		this.graph = graph;
@@ -41,7 +41,7 @@ public abstract class AbstractExport implements DependencyGraphExport {
 		if (child == null) {
 			return true;
 		}
-		if (child.isExternal() && this.config.isIgnoreExternalDependences()) {
+		if (child.isExternal() && this.config.isIgnoreExternalDependencies()) {
 			return true;
 		}
 		for (Pattern pattern : ignoreRegex) {

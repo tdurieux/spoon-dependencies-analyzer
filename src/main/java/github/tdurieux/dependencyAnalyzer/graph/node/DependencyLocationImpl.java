@@ -9,9 +9,9 @@ package github.tdurieux.dependencyAnalyzer.graph.node;
 public class DependencyLocationImpl extends DependencyNodeImpl implements
 		DependencyLocation {
 
-	private String file;
+	private final String file;
 
-	private int line;
+	private final int line;
 
 	public DependencyLocationImpl(String qualifiedName, String simpleName,
 			Type type, boolean isExternal, boolean isInternal,

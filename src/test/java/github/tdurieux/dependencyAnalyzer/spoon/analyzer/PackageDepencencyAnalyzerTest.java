@@ -1,33 +1,32 @@
 package github.tdurieux.dependencyAnalyzer.spoon.analyzer;
 
-import static org.junit.Assert.*;
-
-import java.util.List;
-import java.util.Map;
-
 import github.tdurieux.dependencyAnalyzer.AnalyzerConfig;
 import github.tdurieux.dependencyAnalyzer.AnalyzerConfig.Level;
-import github.tdurieux.dependencyAnalyzer.DependencyAnalizer;
+import github.tdurieux.dependencyAnalyzer.DependencyAnalyzer;
 import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl;
-
 import org.junit.Test;
+
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.Assert.assertTrue;
 
 public class PackageDepencencyAnalyzerTest {
 
-	private DependencyAnalizer dependencyAnalizer;
+	private DependencyAnalyzer dependencyAnalyzer;
 	private DependencyGraph graph;
 
 	public PackageDepencencyAnalyzerTest() throws Exception {
 		AnalyzerConfig config = new AnalyzerConfig();
 		config.setLevel(Level.PACKAGE);
 
-		this.dependencyAnalizer = new DependencyAnalizer(
+		this.dependencyAnalyzer = new DependencyAnalyzer(
 				"src/testProject/java", config);
 
-		this.graph = dependencyAnalizer.run();
+		this.graph = dependencyAnalyzer.run();
 	}
 
 	@Test
@@ -40,9 +39,9 @@ public class PackageDepencencyAnalyzerTest {
 		DependencyNode fakeIo = createFakeDependencyNode("java.io");
 		DependencyNode fakeLang = createFakeDependencyNode("java.lang");
 
-		assertTrue(nodes.keySet().contains(fakeIo));
-		assertTrue(nodes.keySet().contains(fakeLang));
-		assertTrue(nodes.keySet().contains(fakeEntity));
+		assertTrue("Contains the dependency java.io", nodes.keySet().contains(fakeIo));
+        assertTrue("Contains the dependency java.lang", nodes.keySet().contains(fakeLang));
+        assertTrue("Contains the dependency testProject.entity", nodes.keySet().contains(fakeEntity));
 		
 		nodes.get(fakeIo).containsKey(fakeEntity);
 		

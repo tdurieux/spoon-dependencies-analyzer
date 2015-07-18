@@ -5,25 +5,17 @@ import github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFac
 import github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory;
-import github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzer;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
+import github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzerProcessor;
 import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
 import spoon.Launcher;
-import spoon.OutputType;
-import spoon.compiler.SpoonCompiler;
-import spoon.compiler.SpoonResource;
 import spoon.processing.ProcessingManager;
 import spoon.reflect.factory.Factory;
 import spoon.support.QueueProcessingManager;
-import spoon.support.compiler.FileSystemFolder;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * is the class used to start the analysis
@@ -31,42 +23,28 @@ import spoon.support.compiler.FileSystemFolder;
  * @author Thomas Durieux
  * 
  */
-public class DependencyAnalizer {
+public class DependencyAnalyzer {
 
-	private String projectPath;
-	private AnalyzerConfig config;
-	private Factory factory;
+	private final AnalyzerConfig config;
+	private final Factory factory;
 
-	public DependencyAnalizer(String projectPath, AnalyzerConfig config)
-			throws Exception {
+	public DependencyAnalyzer(String projectPath, AnalyzerConfig config) {
 		super();
-		this.projectPath = projectPath;
 		this.config = config;
 
 		// create spoon
 		Launcher spoon = new Launcher();
-		this.factory = spoon.getFactory();
+		spoon.addInputResource(projectPath);
+        factory = spoon.getFactory();
 
-		FileSystemFolder projectFileSystem = new FileSystemFolder(new File(
-				this.projectPath));
-		spoon.addInputResource(projectFileSystem);
-		SpoonCompiler compiler = spoon.createCompiler(factory);
+        //factory.getEnvironment().setAutoImports(true);
+        factory.getEnvironment().setNoClasspath(true);
 
-		ArrayList<SpoonResource> resource = new ArrayList<SpoonResource>();
-		resource.add(projectFileSystem);
-
-		String classpath = config.getClassPath();
-
-		//compiler.getFactory().getEnvironment().setAutoImports(true);
-		compiler.getFactory().getEnvironment().setNoClasspath(true);
+        spoon.buildModel();
 
 		// disable spoon logs
 		disableLog();
 
-		// spoon the project
-		spoon.run(compiler, null, false, OutputType.NO_OUTPUT, new File(
-				"spooned"), new ArrayList<String>(), false, null, true,
-				classpath, null, resource, new ArrayList<SpoonResource>());
 	}
 
 	/**
@@ -80,16 +58,16 @@ public class DependencyAnalizer {
 		// create the processor
 		ProcessingManager p = new QueueProcessingManager(factory);
 
-		DependencyAnalyzer processor = null;
+		DependencyAnalyzerProcessor processor = null;
 		switch (config.getLevel()) {
 		case CLASS:
-			processor = new DependencyAnalyzer(graph,
+			processor = new DependencyAnalyzerProcessor(graph,
 					new ClassDependencyFactory(),
 					new ClassDependencyLocationFactory());
 			break;
 
 		case PACKAGE:
-			processor = new DependencyAnalyzer(graph,
+			processor = new DependencyAnalyzerProcessor(graph,
 					new PackageDependencyFactory(),
 					new PackageDependencyLocationFactory());
 			break;
@@ -98,7 +76,7 @@ public class DependencyAnalizer {
 		p.addProcessor(processor);
 
 		if (config.isVerbose()) {
-			System.err.println("Analize the project");
+			System.err.println("Analyze the project");
 		}
 
 		// analyze all classes

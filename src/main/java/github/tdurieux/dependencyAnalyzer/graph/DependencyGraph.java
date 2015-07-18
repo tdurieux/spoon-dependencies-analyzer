@@ -6,7 +6,6 @@ import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,12 +17,12 @@ import java.util.Map;
  * 
  */
 public class DependencyGraph {
-	private Map<DependencyNode, List<DependencyNode>> usedNodes;
-	private Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> usedByNodes;
+	private final Map<DependencyNode, List<DependencyNode>> usedNodes;
+	private final Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> usedByNodes;
 
 	public DependencyGraph() {
-		usedNodes = new HashMap<DependencyNode, List<DependencyNode>>();
-		usedByNodes = new HashMap<DependencyNode, Map<DependencyNode, List<DependencyLocation>>>();
+		usedNodes = new HashMap<>();
+		usedByNodes = new HashMap<>();
 	}
 
 	/**

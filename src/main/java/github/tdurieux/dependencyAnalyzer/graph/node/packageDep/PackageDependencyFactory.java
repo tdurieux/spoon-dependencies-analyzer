@@ -1,10 +1,10 @@
 package github.tdurieux.dependencyAnalyzer.graph.node.packageDep;
 
-import spoon.reflect.reference.CtPackageReference;
-import spoon.reflect.reference.CtTypeReference;
 import github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl;
+import spoon.reflect.reference.CtPackageReference;
+import spoon.reflect.reference.CtTypeReference;
 
 /**
  * is a factory class used to create class dependency node at package level.
@@ -38,12 +38,10 @@ public class PackageDependencyFactory extends AbstractNodeFactory {
 		boolean isAnonymous = false;
 		boolean isPrimitive = false;
 
-		DependencyNode dependency = new DependencyNodeImpl(
+		return new DependencyNodeImpl(
 				elementPackage.getSimpleName(), elementPackage.getSimpleName(),
 				DependencyNode.Type.PACKAGE, isExternal, isInternal,
 				isAbstract, isAnonymous, isPrimitive);
-
-		return dependency;
 	}
 
 }

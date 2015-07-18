@@ -1,34 +1,33 @@
 package github.tdurieux.dependencyAnalyzer.spoon.analyzer;
 
-import static org.junit.Assert.*;
+import github.tdurieux.dependencyAnalyzer.*;
+import github.tdurieux.dependencyAnalyzer.AnalyzerConfig.Level;
+import github.tdurieux.dependencyAnalyzer.DependencyAnalyzer;
+import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
+import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
+import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
+import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import github.tdurieux.dependencyAnalyzer.AnalyzerConfig;
-import github.tdurieux.dependencyAnalyzer.AnalyzerConfig.Level;
-import github.tdurieux.dependencyAnalyzer.DependencyAnalizer;
-import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
-import github.tdurieux.dependencyAnalyzer.graph.node.DependencyLocation;
-import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
-import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl;
-
-import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class ClassDepencencyAnalyzerTest {
 	
-	private DependencyAnalizer dependencyAnalizer;
+	private github.tdurieux.dependencyAnalyzer.DependencyAnalyzer dependencyAnalyzer;
 	private DependencyGraph graph;
 
 	public ClassDepencencyAnalyzerTest() throws Exception {
 		AnalyzerConfig config = new AnalyzerConfig();
 		config.setLevel(Level.CLASS);
 
-		this.dependencyAnalizer = new DependencyAnalizer(
+		this.dependencyAnalyzer = new DependencyAnalyzer(
 				"src/testProject/java", config);
 
-		this.graph = dependencyAnalizer.run();
+		this.graph = dependencyAnalyzer.run();
 	}
 	
 	@Test
@@ -62,7 +61,7 @@ public class ClassDepencencyAnalyzerTest {
 		Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
 				.getUsedByNodes();
 		
-		ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
+		ArrayList<DependencyNode> keys = new ArrayList<>(nodes.keySet());
 
 		assertTrue(keys.contains(createFakeDependencyNode("java.io.Serializable")));
 		DependencyNode object = keys.get(keys.indexOf(createFakeDependencyNode("java.io.Serializable")));
