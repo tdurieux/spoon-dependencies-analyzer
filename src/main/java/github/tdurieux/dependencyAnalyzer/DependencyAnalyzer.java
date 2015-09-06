@@ -19,22 +19,21 @@ import java.util.List;
 
 /**
  * is the class used to start the analysis
- * 
+ *
  * @author Thomas Durieux
- * 
  */
 public class DependencyAnalyzer {
 
-	private final AnalyzerConfig config;
-	private final Factory factory;
+    private final AnalyzerConfig config;
+    private final Factory factory;
 
-	public DependencyAnalyzer(String projectPath, AnalyzerConfig config) {
-		super();
-		this.config = config;
+    public DependencyAnalyzer(String projectPath, AnalyzerConfig config) {
+        super();
+        this.config = config;
 
-		// create spoon
-		Launcher spoon = new Launcher();
-		spoon.addInputResource(projectPath);
+        // create spoon
+        Launcher spoon = new Launcher();
+        spoon.addInputResource(projectPath);
         factory = spoon.getFactory();
 
         //factory.getEnvironment().setAutoImports(true);
@@ -42,64 +41,64 @@ public class DependencyAnalyzer {
 
         spoon.buildModel();
 
-		// disable spoon logs
-		disableLog();
+        // disable spoon logs
+        disableLog();
 
-	}
+    }
 
-	/**
-	 * Execute the analysis
-	 * 
-	 * @return the dependency graph generated
-	 */
-	public DependencyGraph run() {
-		DependencyGraph graph = new DependencyGraph();
+    /**
+     * Execute the analysis
+     *
+     * @return the dependency graph generated
+     */
+    public DependencyGraph run() {
+        DependencyGraph graph = new DependencyGraph();
 
-		// create the processor
-		ProcessingManager p = new QueueProcessingManager(factory);
+        // create the processor
+        ProcessingManager p = new QueueProcessingManager(factory);
 
-		DependencyAnalyzerProcessor processor = null;
-		switch (config.getLevel()) {
-		case CLASS:
-			processor = new DependencyAnalyzerProcessor(graph,
-					new ClassDependencyFactory(),
-					new ClassDependencyLocationFactory());
-			break;
+        DependencyAnalyzerProcessor processor = null;
+        switch (config.getLevel()) {
+            case CLASS:
+                processor = new DependencyAnalyzerProcessor(graph,
+                                                                   new ClassDependencyFactory(),
+                                                                   new ClassDependencyLocationFactory());
+                break;
 
-		case PACKAGE:
-			processor = new DependencyAnalyzerProcessor(graph,
-					new PackageDependencyFactory(),
-					new PackageDependencyLocationFactory());
-			break;
-		}
+            case PACKAGE:
+                processor = new DependencyAnalyzerProcessor(graph,
+                                                                   new PackageDependencyFactory(),
+                                                                   new PackageDependencyLocationFactory());
+                break;
+        }
 
-		p.addProcessor(processor);
+        p.addProcessor(processor);
 
-		if (config.isVerbose()) {
-			System.err.println("Analyze the project");
-		}
+        if (config.isVerbose()) {
+            System.err.println("Analyze the project");
+        }
 
-		// analyze all classes
-		p.process(factory.Class().getAll());
+        // analyze all classes
+        p.process(factory.Class().getAll());
 
-		// generate the output
-		if (config.isVerbose()) {
-			System.err.println("Create the output");
-		}
-		return graph;
+        // generate the output
+        if (config.isVerbose()) {
+            System.err.println("Create the output");
+        }
+        return graph;
 
-	}
+    }
 
-	/**
-	 * Disable spoon logs
-	 */
-	private static void disableLog() {
-		List<Logger> loggers = Collections.<Logger> list(LogManager
-				.getCurrentLoggers());
-		loggers.add(LogManager.getRootLogger());
-		for (Logger logger : loggers) {
-			logger.setLevel(Level.OFF);
-		}
-	}
+    /**
+     * Disable spoon logs
+     */
+    private static void disableLog() {
+        List<Logger> loggers = Collections.<Logger>list(LogManager
+                                                                .getCurrentLoggers());
+        loggers.add(LogManager.getRootLogger());
+        for (Logger logger : loggers) {
+            logger.setLevel(Level.OFF);
+        }
+    }
 
 }

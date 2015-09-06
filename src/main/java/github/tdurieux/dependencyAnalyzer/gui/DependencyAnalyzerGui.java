@@ -15,70 +15,69 @@ import java.awt.event.ActionListener;
 
 /**
  * is a basic UI for the project
- * 
+ *
  * @author Thomas Durieux
- * 
  */
 public class DependencyAnalyzerGui extends JFrame {
 
-	private static final long serialVersionUID = -7301931419288014369L;
+    private static final long serialVersionUID = -7301931419288014369L;
 
-	private DependencyAnalyzer dependencyAnalyzer;
+    private DependencyAnalyzer dependencyAnalyzer;
 
-	private final AnalyzerConfig config = new AnalyzerConfig();
+    private final AnalyzerConfig config = new AnalyzerConfig();
 
-	public DependencyAnalyzerGui() {
-		// create the window
-		setTitle("Dependency analyzer");
-		setSize(800, 600); // default size is 0,0
+    public DependencyAnalyzerGui() {
+        // create the window
+        setTitle("Dependency analyzer");
+        setSize(800, 600); // default size is 0,0
 
-		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setLocationRelativeTo(null);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
 
-		final JTextArea jtGraph = new JTextArea();
-		jtGraph.setEditable(false);
+        final JTextArea jtGraph = new JTextArea();
+        jtGraph.setEditable(false);
 
-		JScrollPane scrollPane = new JScrollPane(jtGraph,
-				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
-				JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        JScrollPane scrollPane = new JScrollPane(jtGraph,
+                                                        JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+                                                        JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
-		add(scrollPane, BorderLayout.CENTER);
+        add(scrollPane, BorderLayout.CENTER);
 
-		JToolBar toolbar = new JToolBar();
-		toolbar.setFloatable(false);
+        JToolBar toolbar = new JToolBar();
+        toolbar.setFloatable(false);
 
-		JButton jbOpenProject = new JButton("Open project");
-		jbOpenProject.addActionListener(new ActionListener() {
+        JButton jbOpenProject = new JButton("Open project");
+        jbOpenProject.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				JFileChooser chooser = new JFileChooser();
-				chooser.setCurrentDirectory(new java.io.File("."));
-				chooser.setDialogTitle("chooserTitle");
-				chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-				chooser.setAcceptAllFileFilterUsed(false);
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                chooser.setCurrentDirectory(new java.io.File("."));
+                chooser.setDialogTitle("chooserTitle");
+                chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                chooser.setAcceptAllFileFilterUsed(false);
 
-				if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-					config.setProjectPath(chooser.getSelectedFile()
-							.getAbsolutePath());
-					try {
-						dependencyAnalyzer = new DependencyAnalyzer(config
-								.getProjectPath(), config);
+                if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                    config.setProjectPath(chooser.getSelectedFile()
+                                                  .getAbsolutePath());
+                    try {
+                        dependencyAnalyzer = new DependencyAnalyzer(config
+                                                                            .getProjectPath(), config);
 
-						DependencyGraph graph = dependencyAnalyzer.run();
-						TxtExport txtExport = new TxtExport(graph, config);
-						jtGraph.setText(txtExport.generate());
-					} catch (Exception e1) {
-						e1.printStackTrace();
-					}
-				}
+                        DependencyGraph graph = dependencyAnalyzer.run();
+                        TxtExport txtExport = new TxtExport(graph, config);
+                        jtGraph.setText(txtExport.generate());
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
+                }
 
-			}
-		});
-		toolbar.add(jbOpenProject);
+            }
+        });
+        toolbar.add(jbOpenProject);
 
-		JButton jbAnalyze = new JButton("Analyze");
-		jbAnalyze.addActionListener(new ActionListener() {
+        JButton jbAnalyze = new JButton("Analyze");
+        jbAnalyze.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (dependencyAnalyzer != null) {
@@ -88,49 +87,49 @@ public class DependencyAnalyzerGui extends JFrame {
                 }
             }
         });
-		toolbar.add(jbAnalyze);
+        toolbar.add(jbAnalyze);
 
-		String[] levels = { "Package", "Class" };
+        String[] levels = {"Package", "Class"};
 
-		final JComboBox<String> jcLevels = new JComboBox<>(levels);
-		jcLevels.setSelectedIndex(0);
-		jcLevels.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String level = (String) jcLevels.getSelectedItem();
-				if (level.equals("Package")) {
-					config.setLevel(Level.PACKAGE);
-				} else if (level.equals("Class")) {
-					config.setLevel(Level.CLASS);
-				}
+        final JComboBox<String> jcLevels = new JComboBox<>(levels);
+        jcLevels.setSelectedIndex(0);
+        jcLevels.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String level = (String) jcLevels.getSelectedItem();
+                if (level.equals("Package")) {
+                    config.setLevel(Level.PACKAGE);
+                } else if (level.equals("Class")) {
+                    config.setLevel(Level.CLASS);
+                }
 
-				if (dependencyAnalyzer != null) {
-					DependencyGraph graph = dependencyAnalyzer.run();
-					TxtExport txtExport = new TxtExport(graph, config);
-					jtGraph.setText(txtExport.generate());
-				}
-			}
-		});
+                if (dependencyAnalyzer != null) {
+                    DependencyGraph graph = dependencyAnalyzer.run();
+                    TxtExport txtExport = new TxtExport(graph, config);
+                    jtGraph.setText(txtExport.generate());
+                }
+            }
+        });
 
-		toolbar.add(jcLevels);
+        toolbar.add(jcLevels);
 
-		final JCheckBox jchExternalDep = new JCheckBox(
-				"Ignore external dependencies");
-		jchExternalDep.addChangeListener(new ChangeListener() {
+        final JCheckBox jchExternalDep = new JCheckBox(
+                                                              "Ignore external dependencies");
+        jchExternalDep.addChangeListener(new ChangeListener() {
 
-			@Override
-			public void stateChanged(ChangeEvent e) {
-				config.setIgnoreExternalDependencies(jchExternalDep.isSelected());
-				if (dependencyAnalyzer != null) {
-					DependencyGraph graph = dependencyAnalyzer.run();
-					TxtExport txtExport = new TxtExport(graph, config);
-					jtGraph.setText(txtExport.generate());
-				}
-			}
-		});
-		toolbar.add(jchExternalDep);
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                config.setIgnoreExternalDependencies(jchExternalDep.isSelected());
+                if (dependencyAnalyzer != null) {
+                    DependencyGraph graph = dependencyAnalyzer.run();
+                    TxtExport txtExport = new TxtExport(graph, config);
+                    jtGraph.setText(txtExport.generate());
+                }
+            }
+        });
+        toolbar.add(jchExternalDep);
 
-		add(toolbar, BorderLayout.NORTH);
+        add(toolbar, BorderLayout.NORTH);
 
-	}
+    }
 }

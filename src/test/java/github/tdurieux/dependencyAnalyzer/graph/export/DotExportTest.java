@@ -11,41 +11,41 @@ import static org.junit.Assert.assertFalse;
 
 public class DotExportTest {
 
-	private DependencyAnalyzer dependencyAnalyzer;
-	private DependencyGraph graph;
-	private AnalyzerConfig config;
+    private DependencyAnalyzer dependencyAnalyzer;
+    private DependencyGraph graph;
+    private AnalyzerConfig config;
 
-	public DotExportTest() throws Exception {
-		this.config = new AnalyzerConfig();
-		config.setLevel(Level.CLASS);
-		config.setOutputFormat(AnalyzerConfig.OutputFormat.DOT);
+    public DotExportTest() throws Exception {
+        this.config = new AnalyzerConfig();
+        config.setLevel(Level.CLASS);
+        config.setOutputFormat(AnalyzerConfig.OutputFormat.DOT);
 
-		this.dependencyAnalyzer = new DependencyAnalyzer(
-				"src/testProject/java", config);
+        this.dependencyAnalyzer = new DependencyAnalyzer(
+                                                                "src/testProject/java", config);
 
-		this.graph = dependencyAnalyzer.run();
-	}
+        this.graph = dependencyAnalyzer.run();
+    }
 
-	@Test
-	public void testNullGraph() {
-		DependencyGraphExport export = new DotExport(null, config);
-		String result = export.generate();
-		assertEquals("The result must be empty", "digraph G {\n\tnode [shape=box]; compound=true; ratio=fill;\n}", result);
-	}
+    @Test
+    public void testNullGraph() {
+        DependencyGraphExport export = new DotExport(null, config);
+        String result = export.generate();
+        assertEquals("The result must be empty", "digraph G {\n\tnode [shape=box]; compound=true; ratio=fill;\n}", result);
+    }
 
-	@Test
-	public void testEmtpyGraph() {
-		DependencyGraphExport export = new DotExport(new DependencyGraph(),
-				config);
-		String result = export.generate();
-		assertEquals("The result must be empty", "digraph G {\n\tnode [shape=box]; compound=true; ratio=fill;\n}", result);
-	}
+    @Test
+    public void testEmtpyGraph() {
+        DependencyGraphExport export = new DotExport(new DependencyGraph(),
+                                                            config);
+        String result = export.generate();
+        assertEquals("The result must be empty", "digraph G {\n\tnode [shape=box]; compound=true; ratio=fill;\n}", result);
+    }
 
-	@Test
-	public void testGraphExport() {
-		DependencyGraphExport export = new DotExport(graph, config);
-		String result = export.generate();
-		String expected = "digraph G {\n" +
+    @Test
+    public void testGraphExport() {
+        DependencyGraphExport export = new DotExport(graph, config);
+        String result = export.generate();
+        String expected = "digraph G {\n" +
                                   "\tnode [shape=box]; compound=true; ratio=fill;\n" +
                                   "\t\"github.tdurieux.testProject.entity.Administrator\" -> \"github.tdurieux.testProject.entity.User\";\n" +
                                   "\t\"github.tdurieux.testProject.entity.Administrator\" -> \"github.tdurieux.testProject.entity.User$Type\";\n" +
@@ -108,24 +108,24 @@ public class DotExportTest {
                                   "\t\t\"java.lang.Thread\" [label=\"Thread\"]\n" +
                                   "\t};\n" +
                                   "}";
-		assertEquals(expected, result);
-	}
-	
-	@Test
-	public void testIgnoreElement() {
-		config.addIgnoreRegex("entity");
-		DependencyGraphExport export = new DotExport(new DependencyGraph(),
-				config);
-		String result = export.generate();
-		assertFalse("The result must not contains enity", result.contains("entity"));
-	}
-	
-	@Test
-	public void testIgnoreExternalElement() {
-		config.setIgnoreExternalDependencies(true);
-		DependencyGraphExport export = new DotExport(new DependencyGraph(),
-				config);
-		String result = export.generate();
-		assertFalse("The result must not contains enity", result.contains("*"));
-	}
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testIgnoreElement() {
+        config.addIgnoreRegex("entity");
+        DependencyGraphExport export = new DotExport(new DependencyGraph(),
+                                                            config);
+        String result = export.generate();
+        assertFalse("The result must not contains enity", result.contains("entity"));
+    }
+
+    @Test
+    public void testIgnoreExternalElement() {
+        config.setIgnoreExternalDependencies(true);
+        DependencyGraphExport export = new DotExport(new DependencyGraph(),
+                                                            config);
+        String result = export.generate();
+        assertFalse("The result must not contains enity", result.contains("*"));
+    }
 }

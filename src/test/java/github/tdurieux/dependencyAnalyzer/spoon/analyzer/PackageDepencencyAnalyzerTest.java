@@ -16,47 +16,47 @@ import static org.junit.Assert.assertTrue;
 
 public class PackageDepencencyAnalyzerTest {
 
-	private DependencyAnalyzer dependencyAnalyzer;
-	private DependencyGraph graph;
+    private DependencyAnalyzer dependencyAnalyzer;
+    private DependencyGraph graph;
 
-	public PackageDepencencyAnalyzerTest() throws Exception {
-		AnalyzerConfig config = new AnalyzerConfig();
-		config.setLevel(Level.PACKAGE);
+    public PackageDepencencyAnalyzerTest() throws Exception {
+        AnalyzerConfig config = new AnalyzerConfig();
+        config.setLevel(Level.PACKAGE);
 
-		this.dependencyAnalyzer = new DependencyAnalyzer(
-				"src/testProject/java", config);
+        this.dependencyAnalyzer = new DependencyAnalyzer(
+                                                                "src/testProject/java", config);
 
-		this.graph = dependencyAnalyzer.run();
-	}
+        this.graph = dependencyAnalyzer.run();
+    }
 
-	@Test
-	public void DependencyGraphAtLevelPackageTest() {
+    @Test
+    public void DependencyGraphAtLevelPackageTest() {
 
-		Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-				.getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
+                                                                                           .getUsedByNodes();
 
-		DependencyNode fakeEntity = createFakeDependencyNode("github.tdurieux.testProject.entity");
-		DependencyNode fakeIo = createFakeDependencyNode("java.io");
-		DependencyNode fakeLang = createFakeDependencyNode("java.lang");
+        DependencyNode fakeEntity = createFakeDependencyNode("github.tdurieux.testProject.entity");
+        DependencyNode fakeIo = createFakeDependencyNode("java.io");
+        DependencyNode fakeLang = createFakeDependencyNode("java.lang");
 
-		assertTrue("Contains the dependency java.io", nodes.keySet().contains(fakeIo));
+        assertTrue("Contains the dependency java.io", nodes.keySet().contains(fakeIo));
         assertTrue("Contains the dependency java.lang", nodes.keySet().contains(fakeLang));
         assertTrue("Contains the dependency testProject.entity", nodes.keySet().contains(fakeEntity));
-		
-		nodes.get(fakeIo).containsKey(fakeEntity);
-		
-		nodes.get(fakeLang).containsKey(fakeEntity);
-	}
 
-	private DependencyNode createFakeDependencyNode(String qualifiedName) {
-		boolean isExternal = false;
-		boolean isInternal = false;
-		boolean isAbstract = false;
-		boolean isAnonymous = false;
-		boolean isPrimitive = false;
+        nodes.get(fakeIo).containsKey(fakeEntity);
 
-		return new DependencyNodeImpl(qualifiedName, qualifiedName,
-				DependencyNode.Type.PACKAGE, isExternal, isInternal,
-				isAbstract, isAnonymous, isPrimitive);
-	}
+        nodes.get(fakeLang).containsKey(fakeEntity);
+    }
+
+    private DependencyNode createFakeDependencyNode(String qualifiedName) {
+        boolean isExternal = false;
+        boolean isInternal = false;
+        boolean isAbstract = false;
+        boolean isAnonymous = false;
+        boolean isPrimitive = false;
+
+        return new DependencyNodeImpl(qualifiedName, qualifiedName,
+                                             DependencyNode.Type.PACKAGE, isExternal, isInternal,
+                                             isAbstract, isAnonymous, isPrimitive);
+    }
 }
