@@ -150,10 +150,18 @@ public class DependencyAnalyzerGui extends JFrame {
     public void showOnScreen(int screen) {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice[] gd = ge.getScreenDevices();
-        if (screen > -1 && screen < gd.length) {
-            setLocation(gd[screen].getDefaultConfiguration().getBounds().x, getY());
-        } else if (gd.length > 0) {
-            setLocation(gd[0].getDefaultConfiguration().getBounds().x, getY());
+        if (gd.length > 0) {
+            if(screen >= gd.length) {
+                screen = 0;
+            }
+            DisplayMode mode = gd[screen].getDisplayMode();
+            int screenWidth = mode.getWidth();
+            int screenHeight = mode.getHeight();
+            int x = gd[screen].getDefaultConfiguration().getBounds().x;
+            int y = gd[screen].getDefaultConfiguration().getBounds().y;
+            x += (screenWidth - getWidth())/2;
+            y += (screenHeight - getHeight())/2;
+            setLocation(x, y);
         } else {
             throw new RuntimeException("No Screens Found");
         }
