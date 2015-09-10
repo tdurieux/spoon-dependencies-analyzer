@@ -40,15 +40,15 @@ public class DependencyGraph {
         }
         if (!this.usedByNodes.containsKey(node)) {
             this.usedByNodes.put(node,
-                                        new HashMap<DependencyNode, List<DependencyLocation>>());
+                    new HashMap<DependencyNode, List<DependencyLocation>>());
         }
         if (!this.usedByNodes.containsKey(location)) {
             this.usedByNodes.put(location,
-                                        new HashMap<DependencyNode, List<DependencyLocation>>());
+                    new HashMap<DependencyNode, List<DependencyLocation>>());
         }
         if (!this.usedByNodes.get(node).containsKey(location)) {
             this.usedByNodes.get(node).put(location,
-                                                  new ArrayList<DependencyLocation>());
+                    new ArrayList<DependencyLocation>());
         }
     }
 
@@ -60,7 +60,7 @@ public class DependencyGraph {
      */
     private boolean isToIgnore(String name) {
         String[] toIgnore = {"int", "double", "boolean", "void", "?", "float",
-                                    "long", "char", "<nulltype>"};
+                "long", "char", "<nulltype>"};
         for (String ignore : toIgnore) {
             if (name.equals(ignore)) {
                 return true;
@@ -86,7 +86,7 @@ public class DependencyGraph {
             return;
         }
         if (isToIgnore(node.getQualifiedName())
-                    || isToIgnore(location.getQualifiedName())) {
+                || isToIgnore(location.getQualifiedName())) {
             return;
         }
 
@@ -108,7 +108,7 @@ public class DependencyGraph {
      */
     public Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> getUsedByNodes() {
         return new HashMap<DependencyNode, Map<DependencyNode, List<DependencyLocation>>>(
-                                                                                                 this.usedByNodes);
+                this.usedByNodes);
     }
 
     /**

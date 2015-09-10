@@ -8,4 +8,8 @@ public class Administrator extends User {
 
     private Type type = Type.USER;
 
+    public Administrator() {
+        super();
+    }
+
 }

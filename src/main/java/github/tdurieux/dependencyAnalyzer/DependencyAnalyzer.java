@@ -3,6 +3,8 @@ package github.tdurieux.dependencyAnalyzer;
 import github.tdurieux.dependencyAnalyzer.graph.DependencyGraph;
 import github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.classDep.ClassDependencyLocationFactory;
+import github.tdurieux.dependencyAnalyzer.graph.node.methodDep.MethodDependencyFactory;
+import github.tdurieux.dependencyAnalyzer.graph.node.methodDep.MethodDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzerProcessor;
@@ -27,6 +29,19 @@ public class DependencyAnalyzer {
     private final AnalyzerConfig config;
     private final Factory factory;
 
+    public DependencyAnalyzer(Factory factory, AnalyzerConfig config) {
+        super();
+        this.config = config;
+
+        this.factory = factory;
+
+        //factory.getEnvironment().setAutoImports(true);
+        factory.getEnvironment().setNoClasspath(true);
+
+        // disable spoon logs
+        disableLog();
+    }
+
     public DependencyAnalyzer(String projectPath, AnalyzerConfig config) {
         super();
         this.config = config;
@@ -43,7 +58,10 @@ public class DependencyAnalyzer {
 
         // disable spoon logs
         disableLog();
+    }
 
+    public DependencyGraph run() {
+        return run(factory);
     }
 
     /**
@@ -51,7 +69,7 @@ public class DependencyAnalyzer {
      *
      * @return the dependency graph generated
      */
-    public DependencyGraph run() {
+    public DependencyGraph run(Factory factory) {
         DependencyGraph graph = new DependencyGraph();
 
         // create the processor
@@ -60,15 +78,18 @@ public class DependencyAnalyzer {
         DependencyAnalyzerProcessor processor = null;
         switch (config.getLevel()) {
             case CLASS:
-                processor = new DependencyAnalyzerProcessor(graph,
-                                                                   new ClassDependencyFactory(),
-                                                                   new ClassDependencyLocationFactory());
+                processor = new DependencyAnalyzerProcessor(graph, new ClassDependencyFactory(),
+                        new ClassDependencyLocationFactory());
                 break;
 
             case PACKAGE:
+                processor = new DependencyAnalyzerProcessor(graph, new PackageDependencyFactory(),
+                        new PackageDependencyLocationFactory());
+                break;
+            case METHOD:
                 processor = new DependencyAnalyzerProcessor(graph,
-                                                                   new PackageDependencyFactory(),
-                                                                   new PackageDependencyLocationFactory());
+                        new MethodDependencyFactory(),
+                        new MethodDependencyLocationFactory());
                 break;
         }
 
@@ -93,8 +114,7 @@ public class DependencyAnalyzer {
      * Disable spoon logs
      */
     private static void disableLog() {
-        List<Logger> loggers = Collections.<Logger>list(LogManager
-                                                                .getCurrentLoggers());
+        List<Logger> loggers = Collections.<Logger>list(LogManager.getCurrentLoggers());
         loggers.add(LogManager.getRootLogger());
         for (Logger logger : loggers) {
             logger.setLevel(Level.OFF);

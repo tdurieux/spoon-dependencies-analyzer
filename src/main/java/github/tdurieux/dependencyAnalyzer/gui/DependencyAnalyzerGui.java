@@ -9,9 +9,11 @@ import github.tdurieux.dependencyAnalyzer.graph.export.TxtExport;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.text.DefaultCaret;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 /**
  * is a basic UI for the project
@@ -24,7 +26,7 @@ public class DependencyAnalyzerGui extends JFrame {
 
     private DependencyAnalyzer dependencyAnalyzer;
 
-    private final AnalyzerConfig config = new AnalyzerConfig();
+    private final AnalyzerConfig config = AnalyzerConfig.INSTANCE;
 
     public DependencyAnalyzerGui() {
         // create the window
@@ -33,36 +35,47 @@ public class DependencyAnalyzerGui extends JFrame {
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        showOnScreen(1);
 
         final JTextArea jtGraph = new JTextArea();
         jtGraph.setEditable(false);
+        DefaultCaret caret = (DefaultCaret) jtGraph.getCaret();
+        caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
 
-        JScrollPane scrollPane = new JScrollPane(jtGraph,
-                                                        JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
-                                                        JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        final JScrollPane scrollPane = new JScrollPane(jtGraph,
+                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+                JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
         add(scrollPane, BorderLayout.CENTER);
 
         JToolBar toolbar = new JToolBar();
         toolbar.setFloatable(false);
 
+        final String[] lastDirectory = {"."};
         JButton jbOpenProject = new JButton("Open project");
         jbOpenProject.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFileChooser chooser = new JFileChooser();
-                chooser.setCurrentDirectory(new java.io.File("."));
-                chooser.setDialogTitle("chooserTitle");
+                JFileChooser chooser = new JFileChooser() {
+                    protected JDialog createDialog(Component parent) throws HeadlessException {
+                        JDialog dialog = super.createDialog(parent);
+                        Point p = calculateCenter(dialog);
+                        dialog.setLocation(p.x, p.y);
+                        return dialog;
+                    }
+                };
+                chooser.setLocation(calculateCenter(chooser));
+                chooser.setCurrentDirectory(new File(lastDirectory[0]));
+                chooser.setDialogTitle("Select the source directory");
                 chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
                 chooser.setAcceptAllFileFilterUsed(false);
 
                 if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                    config.setProjectPath(chooser.getSelectedFile()
-                                                  .getAbsolutePath());
+                    lastDirectory[0] = chooser.getSelectedFile().getAbsolutePath();
+                    config.setProjectPath(chooser.getSelectedFile().getAbsolutePath());
                     try {
-                        dependencyAnalyzer = new DependencyAnalyzer(config
-                                                                            .getProjectPath(), config);
+                        dependencyAnalyzer = new DependencyAnalyzer(config.getProjectPath(), config);
 
                         DependencyGraph graph = dependencyAnalyzer.run();
                         TxtExport txtExport = new TxtExport(graph, config);
@@ -71,7 +84,6 @@ public class DependencyAnalyzerGui extends JFrame {
                         e1.printStackTrace();
                     }
                 }
-
             }
         });
         toolbar.add(jbOpenProject);
@@ -89,7 +101,7 @@ public class DependencyAnalyzerGui extends JFrame {
         });
         toolbar.add(jbAnalyze);
 
-        String[] levels = {"Package", "Class"};
+        String[] levels = {"Package", "Class", "Method"};
 
         final JComboBox<String> jcLevels = new JComboBox<>(levels);
         jcLevels.setSelectedIndex(0);
@@ -101,6 +113,8 @@ public class DependencyAnalyzerGui extends JFrame {
                     config.setLevel(Level.PACKAGE);
                 } else if (level.equals("Class")) {
                     config.setLevel(Level.CLASS);
+                } else if (level.equals("Method")) {
+                    config.setLevel(Level.METHOD);
                 }
 
                 if (dependencyAnalyzer != null) {
@@ -114,7 +128,7 @@ public class DependencyAnalyzerGui extends JFrame {
         toolbar.add(jcLevels);
 
         final JCheckBox jchExternalDep = new JCheckBox(
-                                                              "Ignore external dependencies");
+                "Ignore external dependencies");
         jchExternalDep.addChangeListener(new ChangeListener() {
 
             @Override
@@ -131,5 +145,30 @@ public class DependencyAnalyzerGui extends JFrame {
 
         add(toolbar, BorderLayout.NORTH);
 
+    }
+
+    public void showOnScreen(int screen) {
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[] gd = ge.getScreenDevices();
+        if (screen > -1 && screen < gd.length) {
+            setLocation(gd[screen].getDefaultConfiguration().getBounds().x, getY());
+        } else if (gd.length > 0) {
+            setLocation(gd[0].getDefaultConfiguration().getBounds().x, getY());
+        } else {
+            throw new RuntimeException("No Screens Found");
+        }
+    }
+
+    public static Point calculateCenter(Container popupFrame) {
+        KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+        Window windowFrame = kfm.getFocusedWindow();
+        Point frameTopLeft = windowFrame.getLocation();
+        Dimension frameSize = windowFrame.getSize();
+        Dimension popSize = popupFrame.getSize();
+
+        int x = (int) (frameTopLeft.getX() + (frameSize.width / 2) - (popSize.width / 2));
+        int y = (int) (frameTopLeft.getY() + (frameSize.height / 2) - (popSize.height / 2));
+        Point center = new Point(x, y);
+        return center;
     }
 }

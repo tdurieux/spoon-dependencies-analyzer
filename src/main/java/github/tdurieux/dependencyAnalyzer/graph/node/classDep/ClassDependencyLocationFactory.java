@@ -32,7 +32,7 @@ public class ClassDependencyLocationFactory extends
         boolean isExternal = false;
         boolean isInternal = !parent.isTopLevel();
         boolean isAbstract = parent.getModifiers().contains(
-                                                                   ModifierKind.ABSTRACT);
+                ModifierKind.ABSTRACT);
         boolean isAnonymous = false;
         boolean isPrimitive = false;
 
@@ -74,16 +74,16 @@ public class ClassDependencyLocationFactory extends
         DependencyLocation location;
         if (elementPosition != null) {
             location = new DependencyLocationImpl(
-                                                         parent.getQualifiedName(), parent.getSimpleName(), type,
-                                                         isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
-                                                         elementPosition.getFile().getAbsolutePath(),
-                                                         elementPosition.getLine());
+                    parent.getQualifiedName(), parent.getSimpleName(), type,
+                    isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
+                    elementPosition.getFile().getAbsolutePath(),
+                    elementPosition.getLine());
         } else {
             location = new DependencyLocationImpl(
-                                                         parent.getQualifiedName(), parent.getSimpleName(), type,
-                                                         isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
-                                                         null,
-                                                         -1);
+                    parent.getQualifiedName(), parent.getSimpleName(), type,
+                    isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
+                    null,
+                    -1);
         }
 
 

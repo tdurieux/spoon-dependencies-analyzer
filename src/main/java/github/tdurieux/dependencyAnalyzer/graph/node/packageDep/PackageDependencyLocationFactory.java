@@ -49,18 +49,18 @@ public class PackageDependencyLocationFactory extends
         DependencyLocation location;
         if (elementPosition != null) {
             location = new DependencyLocationImpl(
-                                                         elementPackage.getQualifiedName(),
-                                                         elementPackage.getSimpleName(), DependencyNode.Type.PACKAGE,
-                                                         isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
-                                                         elementPosition.getFile().getAbsolutePath(),
-                                                         elementPosition.getLine());
+                    elementPackage.getQualifiedName(),
+                    elementPackage.getSimpleName(), DependencyNode.Type.PACKAGE,
+                    isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
+                    elementPosition.getFile().getAbsolutePath(),
+                    elementPosition.getLine());
         } else {
             location = new DependencyLocationImpl(
-                                                         elementPackage.getQualifiedName(),
-                                                         elementPackage.getSimpleName(), DependencyNode.Type.PACKAGE,
-                                                         isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
-                                                         null,
-                                                         -1);
+                    elementPackage.getQualifiedName(),
+                    elementPackage.getSimpleName(), DependencyNode.Type.PACKAGE,
+                    isExternal, isInternal, isAbstract, isAnonymous, isPrimitive,
+                    null,
+                    -1);
         }
 
         return location;

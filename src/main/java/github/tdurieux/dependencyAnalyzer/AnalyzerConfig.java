@@ -10,13 +10,15 @@ import java.util.List;
  */
 public class AnalyzerConfig {
 
+    public static AnalyzerConfig INSTANCE = new AnalyzerConfig();
+
     /**
      * Available analysis levels
      *
      * @author Thomas Durieux
      */
     public enum Level {
-        PACKAGE, CLASS
+        PACKAGE, CLASS, METHOD
     }
 
     /**

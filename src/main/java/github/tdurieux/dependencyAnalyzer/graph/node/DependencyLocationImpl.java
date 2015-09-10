@@ -18,7 +18,7 @@ public class DependencyLocationImpl extends DependencyNodeImpl implements
                                   String file, int line) {
 
         super(qualifiedName, simpleName, type, isExternal, isInternal,
-                     isAbstract, isAnonymous, isPrimitive);
+                isAbstract, isAnonymous, isPrimitive);
         this.file = file;
         this.line = line;
     }

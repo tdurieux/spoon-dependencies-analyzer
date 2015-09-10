@@ -118,7 +118,7 @@ public class DependencyNodeImpl implements DependencyNode {
             return false;
         }
         return this.getQualifiedName().equals(
-                                                     ((DependencyNode) obj).getQualifiedName());
+                ((DependencyNode) obj).getQualifiedName());
     }
 
     @Override

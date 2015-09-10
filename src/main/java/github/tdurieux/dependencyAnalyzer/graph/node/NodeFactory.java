@@ -1,5 +1,6 @@
 package github.tdurieux.dependencyAnalyzer.graph.node;
 
+import spoon.reflect.reference.CtExecutableReference;
 import spoon.reflect.reference.CtTypeReference;
 
 /**
@@ -16,4 +17,12 @@ public interface NodeFactory {
      * @return a DependencyNode
      */
     DependencyNode createDependencyNode(CtTypeReference<?> element);
+
+    /**
+     * creates  dependency node from a CtMethod
+     *
+     * @param element
+     * @return a DependencyNode
+     */
+    DependencyNode createDependencyNode(CtExecutableReference<?> element);
 }

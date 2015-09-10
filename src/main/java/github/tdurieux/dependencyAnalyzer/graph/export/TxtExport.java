@@ -17,6 +17,8 @@ import java.util.Map;
  */
 public class TxtExport extends AbstractExport {
 
+    private static String TAB = "    ";
+
     public TxtExport(DependencyGraph graph, AnalyzerConfig config) {
         super(graph, config);
     }
@@ -32,18 +34,15 @@ public class TxtExport extends AbstractExport {
         if (this.graph == null || this.config == null) {
             return content;
         }
-        Map<DependencyNode, List<DependencyNode>> usedNodes = this.graph
-                                                                      .getUsedNodes();
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> usedByNodes = this.graph
-                                                                                                 .getUsedByNodes();
+        Map<DependencyNode, List<DependencyNode>> usedNodes = this.graph.getUsedNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> usedByNodes = this.graph.getUsedByNodes();
 
-        List<DependencyNode> listUsedNodes = new ArrayList<>(
-                                                                    usedNodes.keySet());
+        List<DependencyNode> listUsedNodes = new ArrayList<>(usedNodes.keySet());
         Collections.sort(listUsedNodes);
 
         String lastPackage = "";
         for (DependencyNode parent : listUsedNodes) {
-            String tab = "    ";
+            String tab = TAB;
             if (isToIgnore(parent)) {
                 continue;
             }
@@ -51,15 +50,27 @@ public class TxtExport extends AbstractExport {
             if (pack.equals(parent.getSimpleName()) && !parent.getType().equals(DependencyNode.Type.PACKAGE)) {
                 pack = "<UnknownPackage>";
             }
+            if (parent.getType().equals(DependencyNode.Type.METHOD) ||
+                    parent.getType().equals(DependencyNode.Type.CONSTRUCTOR)) {
+                if (!parent.isAnonymous()) {
+                    pack = pack.replace("::" + parent.getSimpleName(), "");
+                }
+            }
             if (!parent.getType().equals(DependencyNode.Type.PACKAGE)) {
                 if (!parent.isAnonymous()) {
                     pack = pack.replace("." + parent.getSimpleName(), "");
                 }
                 if (parent.isInternal()) {
-                    pack = pack.replace("$" + parent.getSimpleName(), "");
+                    if (pack.contains("$")) {
+                        pack = pack.replace("$" + parent.getSimpleName(), "");
+                        if (parent.getType().equals(DependencyNode.Type.METHOD) ||
+                                parent.getType().equals(DependencyNode.Type.CONSTRUCTOR)) {
+                            tab += TAB;
+                        }
+                    }
                     String[] splited = pack.split("\\.");
                     pack = pack.replace("." + splited[splited.length - 1], "");
-                    tab += tab;
+                    tab += TAB;
                 }
             }
 
@@ -74,7 +85,7 @@ public class TxtExport extends AbstractExport {
                     name = "$" + name;
                 }
                 content += tab + name + (parent.isExternal() ? " *" : "") + "\n";
-                tab += tab;
+                tab += TAB;
             }
 
             List<DependencyNode> depList = usedNodes.get(parent);
@@ -95,22 +106,36 @@ public class TxtExport extends AbstractExport {
             }
 
             Collections.sort(dependencies);
+            String lastDependencyNodeName = "<not_valid>";
             for (DependencyNode dependencyNode : dependencies) {
                 if (isToIgnore(dependencyNode)) {
                     continue;
                 }
+                String arrow = "<->";
                 if (depList.contains(dependencyNode)
-                            && depUsedList.contains(dependencyNode)) {
-                    content += tab + "<-> "
-                                       + dependencyNode.getQualifiedName()
-                                       + (dependencyNode.isExternal() ? " *" : "") + "\n";
+                        && depUsedList.contains(dependencyNode)) {
+                    arrow = "<->";
                 } else if (depList.contains(dependencyNode)) {
-                    content += tab + "--> " + dependencyNode.getQualifiedName()
-                                       + (dependencyNode.isExternal() ? " *" : "") + "\n";
+                    arrow = "-->";
                 } else if (depUsedList.contains(dependencyNode)) {
-                    content += tab + "<-- " + dependencyNode.getQualifiedName()
-                                       + (dependencyNode.isExternal() ? " *" : "") + "\n";
+                    arrow = "<--";
                 }
+                if (dependencyNode.getQualifiedName().startsWith(lastDependencyNodeName)) {
+                    String qualifiedName = dependencyNode.getQualifiedName().replace(lastDependencyNodeName, "");
+                    if (qualifiedName.startsWith("::")) {
+                        qualifiedName = qualifiedName.substring(2);
+                    } else if (qualifiedName.startsWith(".")) {
+                        qualifiedName = qualifiedName.substring(1);
+                    }
+                    content += tab + arrow + TAB + " "
+                            + qualifiedName;
+                } else {
+                    content += tab + arrow + " "
+                            + dependencyNode.getQualifiedName();
+                    lastDependencyNodeName = dependencyNode.getQualifiedName();
+                }
+                content += (dependencyNode.isExternal() ? " *" : "") + "\n";
+
 
             }
         }

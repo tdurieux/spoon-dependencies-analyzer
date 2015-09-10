@@ -23,7 +23,7 @@ public class Main {
         AnalyzerConfig config = argsParser(args);
 
         DependencyAnalyzer dependenciesAnalyzer = new DependencyAnalyzer(
-                                                                                config.getProjectPath(), config);
+                config.getProjectPath(), config);
 
         DependencyGraph graph = dependenciesAnalyzer.run();
         DependencyGraphExport export = null;
@@ -55,37 +55,38 @@ public class Main {
 
     private static AnalyzerConfig argsParser(String[] args)
             throws JSAPException {
+        Parameter[] parameters = {
+                new UnflaggedOption("project", JSAP.STRING_PARSER,
+                        JSAP.NO_DEFAULT, JSAP.REQUIRED,
+                        JSAP.NOT_GREEDY, "The path to the project"),
+                new UnflaggedOption("classpath", JSAP.STRING_PARSER,
+                        JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED,
+                        JSAP.NOT_GREEDY, "The classpath of the project"),
+                new FlaggedOption("level", JSAP.STRING_PARSER,
+                        "package", JSAP.NOT_REQUIRED, 'l', "level",
+                        "The level of dependency analysis (package, class, method)."),
+                new FlaggedOption("format", JSAP.STRING_PARSER, "txt",
+                        JSAP.NOT_REQUIRED, 'f', "format",
+                        "The output format of the script (txt, dot)."),
+                new FlaggedOption("output", JSAP.STRING_PARSER,
+                        JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'o', "out",
+                        "The output file of the script (txt, dot)."),
+                new QualifiedSwitch("ignore-external",
+                        JSAP.STRING_PARSER, JSAP.NO_DEFAULT,
+                        JSAP.NOT_REQUIRED, 'j', "ignore-external",
+                        "Ignore external dependencies."),
+                new QualifiedSwitch("verbose", JSAP.STRING_PARSER,
+                        JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'v',
+                        "verbose", "Requests verbose output."),
+                new FlaggedOption("ignore", JSAP.STRING_PARSER,
+                        JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'i',
+                        "ignore",
+                        "Regex to ignore element, separated by a ','.")
+                        .setList(true).setListSeparator(',')};
         SimpleJSAP jsap = new SimpleJSAP(
-                                                "DependencyGraph",
-                                                "Get the dependency graph of a project",
-                                                new Parameter[]{
-                                                                       new UnflaggedOption("project", JSAP.STRING_PARSER,
-                                                                                                  JSAP.NO_DEFAULT, JSAP.REQUIRED,
-                                                                                                  JSAP.NOT_GREEDY, "The path to the project"),
-                                                                       new UnflaggedOption("classpath", JSAP.STRING_PARSER,
-                                                                                                  JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED,
-                                                                                                  JSAP.NOT_GREEDY, "The classpath of the project"),
-                                                                       new FlaggedOption("level", JSAP.STRING_PARSER,
-                                                                                                "package", JSAP.NOT_REQUIRED, 'l', "level",
-                                                                                                "The level of dependency analysis (package, class, method)."),
-                                                                       new FlaggedOption("format", JSAP.STRING_PARSER, "txt",
-                                                                                                JSAP.NOT_REQUIRED, 'f', "format",
-                                                                                                "The output format of the script (txt, dot)."),
-                                                                       new FlaggedOption("output", JSAP.STRING_PARSER,
-                                                                                                JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'o', "out",
-                                                                                                "The output file of the script (txt, dot)."),
-                                                                       new QualifiedSwitch("ignore-external",
-                                                                                                  JSAP.STRING_PARSER, JSAP.NO_DEFAULT,
-                                                                                                  JSAP.NOT_REQUIRED, 'j', "ignore-external",
-                                                                                                  "Ignore external dependencies."),
-                                                                       new QualifiedSwitch("verbose", JSAP.STRING_PARSER,
-                                                                                                  JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'v',
-                                                                                                  "verbose", "Requests verbose output."),
-                                                                       new FlaggedOption("ignore", JSAP.STRING_PARSER,
-                                                                                                JSAP.NO_DEFAULT, JSAP.NOT_REQUIRED, 'i',
-                                                                                                "ignore",
-                                                                                                "Regex to ignore element, separated by a ','.")
-                                                                               .setList(true).setListSeparator(',')});
+                "DependencyGraph",
+                "Get the dependency graph of a project",
+                parameters);
 
         JSAPResult config = jsap.parse(args);
 
@@ -100,11 +101,11 @@ public class Main {
             System.exit(1);
         }
 
-        AnalyzerConfig analyzerConfig = new AnalyzerConfig();
+        AnalyzerConfig analyzerConfig = AnalyzerConfig.INSTANCE;
         analyzerConfig.setProjectPath(config.getString("project"));
         analyzerConfig.setClassPath(config.getString("classpath"));
         analyzerConfig.setIgnoreExternalDependencies(config
-                                                             .getBoolean("ignore-external"));
+                .getBoolean("ignore-external"));
         if (config.getStringArray("ignore") != null) {
             for (String ignoreRegex : config.getStringArray("ignore")) {
                 analyzerConfig.addIgnoreRegex(ignoreRegex);

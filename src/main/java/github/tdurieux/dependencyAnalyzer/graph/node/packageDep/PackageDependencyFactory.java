@@ -3,6 +3,7 @@ package github.tdurieux.dependencyAnalyzer.graph.node.packageDep;
 import github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNodeImpl;
+import spoon.reflect.reference.CtExecutableReference;
 import spoon.reflect.reference.CtPackageReference;
 import spoon.reflect.reference.CtTypeReference;
 
@@ -38,9 +39,14 @@ public class PackageDependencyFactory extends AbstractNodeFactory {
         boolean isPrimitive = false;
 
         return new DependencyNodeImpl(
-                                             elementPackage.getSimpleName(), elementPackage.getSimpleName(),
-                                             DependencyNode.Type.PACKAGE, isExternal, isInternal,
-                                             isAbstract, isAnonymous, isPrimitive);
+                elementPackage.getSimpleName(), elementPackage.getSimpleName(),
+                DependencyNode.Type.PACKAGE, isExternal, isInternal,
+                isAbstract, isAnonymous, isPrimitive);
+    }
+
+    @Override
+    public DependencyNode createDependencyNode(CtExecutableReference<?> element) {
+        return null;
     }
 
 }

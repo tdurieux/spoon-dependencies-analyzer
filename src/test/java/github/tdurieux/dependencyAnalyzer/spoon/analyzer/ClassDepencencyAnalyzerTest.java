@@ -21,19 +21,17 @@ public class ClassDepencencyAnalyzerTest {
     private DependencyGraph graph;
 
     public ClassDepencencyAnalyzerTest() throws Exception {
-        AnalyzerConfig config = new AnalyzerConfig();
+        AnalyzerConfig config = AnalyzerConfig.INSTANCE;
         config.setLevel(Level.CLASS);
 
-        this.dependencyAnalyzer = new DependencyAnalyzer(
-                                                                "src/testProject/java", config);
+        this.dependencyAnalyzer = new DependencyAnalyzer("src/testProject/java", config);
 
         this.graph = dependencyAnalyzer.run();
     }
 
     @Test
     public void detectsThrowExceptionTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -45,8 +43,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsThrowsExceptionTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -58,8 +55,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsInterfaceTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<>(nodes.keySet());
 
@@ -71,8 +67,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsMethodParamtersOnCallTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -84,8 +79,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsMethodReturnsTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -97,8 +91,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsDeclaredMethodReturnsTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -110,8 +103,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsAnnotationTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -123,8 +115,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsEnumTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -136,8 +127,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsConstantTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -149,8 +139,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void detectsSupperClassTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -171,8 +160,7 @@ public class ClassDepencencyAnalyzerTest {
 
     @Test
     public void DependencyGraphAtLevelClassTest() {
-        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+        Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph.getUsedByNodes();
 
         ArrayList<DependencyNode> keys = new ArrayList<DependencyNode>(nodes.keySet());
 
@@ -195,7 +183,7 @@ public class ClassDepencencyAnalyzerTest {
         boolean isPrimitive = false;
 
         return new DependencyNodeImpl(qualifiedName, qualifiedName,
-                                             DependencyNode.Type.CLASS, isExternal, isInternal,
-                                             isAbstract, isAnonymous, isPrimitive);
+                DependencyNode.Type.CLASS, isExternal, isInternal,
+                isAbstract, isAnonymous, isPrimitive);
     }
 }

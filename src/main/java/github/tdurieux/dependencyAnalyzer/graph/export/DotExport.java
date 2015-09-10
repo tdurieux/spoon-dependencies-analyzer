@@ -49,7 +49,7 @@ public class DotExport extends AbstractExport {
 
             for (int i = 1; i < test.length; i++) {
                 if (i == test.length - 1
-                            && Character.isUpperCase(test[i].charAt(0))) {
+                        && Character.isUpperCase(test[i].charAt(0))) {
                     map.get(concat).add(concat + "." + test[i]);
                     continue;
                 }
@@ -63,7 +63,7 @@ public class DotExport extends AbstractExport {
             }
             if (parent.isExternal()) {
                 content += "\t\"" + parent.getQualifiedName()
-                                   + "\" [color=grey];\n";
+                        + "\" [color=grey];\n";
             }
             final List<DependencyNode> dependencies = nodes.get(parent);
             Collections.sort(dependencies);
@@ -72,7 +72,7 @@ public class DotExport extends AbstractExport {
                     continue;
                 }
                 content += "\t\"" + parent.getQualifiedName() + "\" -> \""
-                                   + child.getQualifiedName() + "\";\n";
+                        + child.getQualifiedName() + "\";\n";
             }
         }
         List<String> keys = new ArrayList<String>(map.keySet());
@@ -104,7 +104,7 @@ public class DotExport extends AbstractExport {
         }
         if (subgraph) {
             content += "\tsubgraph cluster" + i++
-                               + " { \n\t\trankdir=LR;label=\"" + current + "\";\n";
+                    + " { \n\t\trankdir=LR;label=\"" + current + "\";\n";
         } else if (!map.containsKey(current)) {
             content += "\t\t\"" + current + "\";\n";
             return content;
@@ -115,7 +115,7 @@ public class DotExport extends AbstractExport {
                 content += createSubGraphs(map, ch);
             } else {
                 content += "\t\t\"" + ch + "\" [label=\""
-                                   + ch.replace(current + ".", "") + "\"]\n";
+                        + ch.replace(current + ".", "") + "\"]\n";
             }
         }
         if (subgraph) {

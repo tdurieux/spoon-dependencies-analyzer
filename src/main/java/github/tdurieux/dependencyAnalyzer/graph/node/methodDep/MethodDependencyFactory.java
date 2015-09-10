@@ -1,4 +1,4 @@
-package github.tdurieux.dependencyAnalyzer.graph.node.classDep;
+package github.tdurieux.dependencyAnalyzer.graph.node.methodDep;
 
 import github.tdurieux.dependencyAnalyzer.graph.node.AbstractNodeFactory;
 import github.tdurieux.dependencyAnalyzer.graph.node.DependencyNode;
@@ -9,12 +9,14 @@ import spoon.reflect.declaration.*;
 import spoon.reflect.reference.CtExecutableReference;
 import spoon.reflect.reference.CtTypeReference;
 
+import java.util.List;
+
 /**
- * is a factory class used to create class dependency node at class level.
+ * is a factory class used to create class dependency node at method level.
  *
  * @author Thomas Durieux
  */
-public class ClassDependencyFactory extends AbstractNodeFactory {
+public class MethodDependencyFactory extends AbstractNodeFactory {
 
     /*
      * (non-Javadoc)
@@ -81,7 +83,48 @@ public class ClassDependencyFactory extends AbstractNodeFactory {
 
     @Override
     public DependencyNode createDependencyNode(CtExecutableReference<?> element) {
-        return null;
+        if (element == null) {
+            return null;
+        }
+
+        boolean isExternal = isExternal(element);
+        boolean isInternal = true;
+        boolean isAbstract = false;
+        if (element instanceof CtMethod) {
+            isAbstract = ((CtMethod) element).getModifiers().contains(
+                    ModifierKind.ABSTRACT);
+        }
+        boolean isAnonymous = false;
+        boolean isPrimitive = false;
+
+
+        Type type = Type.METHOD;
+        return new DependencyNodeImpl(
+                getSignature(element), getMethodSignature(element), type,
+                isExternal, isInternal, isAbstract, isAnonymous, isPrimitive);
+    }
+
+    private String getSignature(CtExecutableReference ctExecutable) {
+        String output = ctExecutable.getDeclaringType().getQualifiedName();
+        output += "::" + getMethodSignature(ctExecutable);
+        return output;
+    }
+
+    private String getMethodSignature(CtExecutableReference ctExecutable) {
+        String output = ctExecutable.getSimpleName();
+        if (output.equals("<init>")) {
+            output = ctExecutable.getDeclaringType().getSimpleName();
+        }
+        output += "(";
+        List<CtTypeReference> parameters = ctExecutable.getParameters();
+        for (int i = 0; i < parameters.size(); i++) {
+            CtTypeReference ctParameter = parameters.get(i);
+            output += ctParameter.getQualifiedName();
+            if (i < parameters.size() - 1) {
+                output += ", ";
+            }
+        }
+        return output + ")";
     }
 
 }

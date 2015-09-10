@@ -20,11 +20,10 @@ public class PackageDepencencyAnalyzerTest {
     private DependencyGraph graph;
 
     public PackageDepencencyAnalyzerTest() throws Exception {
-        AnalyzerConfig config = new AnalyzerConfig();
+        AnalyzerConfig config = AnalyzerConfig.INSTANCE;
         config.setLevel(Level.PACKAGE);
 
-        this.dependencyAnalyzer = new DependencyAnalyzer(
-                                                                "src/testProject/java", config);
+        this.dependencyAnalyzer = new DependencyAnalyzer("src/testProject/java", config);
 
         this.graph = dependencyAnalyzer.run();
     }
@@ -33,7 +32,7 @@ public class PackageDepencencyAnalyzerTest {
     public void DependencyGraphAtLevelPackageTest() {
 
         Map<DependencyNode, Map<DependencyNode, List<DependencyLocation>>> nodes = graph
-                                                                                           .getUsedByNodes();
+                .getUsedByNodes();
 
         DependencyNode fakeEntity = createFakeDependencyNode("github.tdurieux.testProject.entity");
         DependencyNode fakeIo = createFakeDependencyNode("java.io");
@@ -56,7 +55,7 @@ public class PackageDepencencyAnalyzerTest {
         boolean isPrimitive = false;
 
         return new DependencyNodeImpl(qualifiedName, qualifiedName,
-                                             DependencyNode.Type.PACKAGE, isExternal, isInternal,
-                                             isAbstract, isAnonymous, isPrimitive);
+                DependencyNode.Type.PACKAGE, isExternal, isInternal,
+                isAbstract, isAnonymous, isPrimitive);
     }
 }
