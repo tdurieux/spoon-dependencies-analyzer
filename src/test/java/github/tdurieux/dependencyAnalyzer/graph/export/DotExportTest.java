@@ -69,9 +69,11 @@ public class DotExportTest {
                 "\t\"github.tdurieux.testProject.entity.User$1\" -> \"java.lang.Override\";\n" +
                 "\t\"github.tdurieux.testProject.entity.User$1\" -> \"java.lang.Runnable\";\n" +
                 "\t\"github.tdurieux.testProject.entity.User$1\" -> \"java.lang.String\";\n" +
+                "\t\"github.tdurieux.testProject.entity.User$Type\" -> \"java.lang.Enum\";\n" +
                 "\t\"java.io.Serializable\" [color=grey];\n" +
                 "\t\"java.lang.Boolean\" [color=grey];\n" +
                 "\t\"java.lang.Class\" [color=grey];\n" +
+                "\t\"java.lang.Enum\" [color=grey];\n" +
                 "\t\"java.lang.Exception\" [color=grey];\n" +
                 "\t\"java.lang.Integer\" [color=grey];\n" +
                 "\t\"java.lang.NullPointerException\" [color=grey];\n" +
@@ -96,6 +98,7 @@ public class DotExportTest {
                 "\t\trankdir=LR;label=\"java.lang\";\n" +
                 "\t\t\"java.lang.Boolean\" [label=\"Boolean\"]\n" +
                 "\t\t\"java.lang.Class\" [label=\"Class\"]\n" +
+                "\t\t\"java.lang.Enum\" [label=\"Enum\"]\n" +
                 "\t\t\"java.lang.Exception\" [label=\"Exception\"]\n" +
                 "\t\t\"java.lang.Integer\" [label=\"Integer\"]\n" +
                 "\t\t\"java.lang.NullPointerException\" [label=\"NullPointerException\"]\n" +

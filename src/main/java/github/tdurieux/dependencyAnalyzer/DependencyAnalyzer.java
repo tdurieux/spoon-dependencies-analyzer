@@ -9,15 +9,10 @@ import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependenc
 import github.tdurieux.dependencyAnalyzer.graph.node.packageDep.PackageDependencyLocationFactory;
 import github.tdurieux.dependencyAnalyzer.spoon.analyzer.DependencyAnalyzerProcessor;
 import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import spoon.Launcher;
 import spoon.processing.ProcessingManager;
 import spoon.reflect.factory.Factory;
 import spoon.support.QueueProcessingManager;
-
-import java.util.Collections;
-import java.util.List;
 
 /**
  * is the class used to start the analysis
@@ -100,7 +95,7 @@ public class DependencyAnalyzer {
         }
 
         // analyze all classes
-        p.process(factory.Class().getAll());
+        p.process();
 
         // generate the output
         if (config.isVerbose()) {
@@ -114,11 +109,7 @@ public class DependencyAnalyzer {
      * Disable spoon logs
      */
     private static void disableLog() {
-        List<Logger> loggers = Collections.<Logger>list(LogManager.getCurrentLoggers());
-        loggers.add(LogManager.getRootLogger());
-        for (Logger logger : loggers) {
-            logger.setLevel(Level.OFF);
-        }
+        Launcher.LOGGER.setLevel(Level.OFF);
     }
 
 }

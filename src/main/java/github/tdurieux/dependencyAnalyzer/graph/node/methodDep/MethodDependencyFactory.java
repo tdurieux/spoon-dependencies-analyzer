@@ -105,9 +105,13 @@ public class MethodDependencyFactory extends AbstractNodeFactory {
     }
 
     private String getSignature(CtExecutableReference ctExecutable) {
-        String output = ctExecutable.getDeclaringType().getQualifiedName();
-        output += "::" + getMethodSignature(ctExecutable);
-        return output;
+        try {
+            String output = ctExecutable.getDeclaringType().getQualifiedName();
+            output += "::" + getMethodSignature(ctExecutable);
+            return output;
+        } catch (NullPointerException e) {
+            return ctExecutable.getSimpleName() + "::" + getMethodSignature(ctExecutable);
+        }
     }
 
     private String getMethodSignature(CtExecutableReference ctExecutable) {

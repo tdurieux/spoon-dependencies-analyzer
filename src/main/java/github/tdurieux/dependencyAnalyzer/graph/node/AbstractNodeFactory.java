@@ -23,7 +23,11 @@ public abstract class AbstractNodeFactory implements NodeFactory {
      * @return true if the element is declared in an external source.
      */
     protected boolean isExternal(CtReference e) {
-        return isExternal(e.getDeclaration());
+        try {
+            return isExternal(e.getDeclaration());
+        } catch (NullPointerException e1) {
+            return false;
+        }
     }
 
     /**

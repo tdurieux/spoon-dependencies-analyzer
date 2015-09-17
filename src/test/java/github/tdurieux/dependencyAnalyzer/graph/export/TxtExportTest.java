@@ -75,6 +75,7 @@ public class TxtExportTest {
                 "        Type\n" +
                 "            <-- github.tdurieux.testProject.entity.Administrator\n" +
                 "            <-- github.tdurieux.testProject.entity.User\n" +
+                "            --> java.lang.Enum *\n" +
                 "java.io *\n" +
                 "    Serializable *\n" +
                 "        <-- github.tdurieux.testProject.entity.Administrator\n" +
@@ -86,6 +87,8 @@ public class TxtExportTest {
                 "    Class *\n" +
                 "        <-- github.tdurieux.testProject.entity.User\n" +
                 "        <--     $1\n" +
+                "    Enum *\n" +
+                "        <-- github.tdurieux.testProject.entity.User$Type\n" +
                 "    Exception *\n" +
                 "        <-- github.tdurieux.testProject.entity.User\n" +
                 "    Integer *\n" +
