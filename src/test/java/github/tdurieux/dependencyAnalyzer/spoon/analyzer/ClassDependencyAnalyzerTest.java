@@ -15,12 +15,12 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
-public class ClassDepencencyAnalyzerTest {
+public class ClassDependencyAnalyzerTest {
 
     private github.tdurieux.dependencyAnalyzer.DependencyAnalyzer dependencyAnalyzer;
     private DependencyGraph graph;
 
-    public ClassDepencencyAnalyzerTest() throws Exception {
+    public ClassDependencyAnalyzerTest() throws Exception {
         AnalyzerConfig config = AnalyzerConfig.INSTANCE;
         config.setLevel(Level.CLASS);
 

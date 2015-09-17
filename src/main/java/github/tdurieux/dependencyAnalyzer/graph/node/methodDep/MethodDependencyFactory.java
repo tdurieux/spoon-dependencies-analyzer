@@ -99,6 +99,9 @@ public class MethodDependencyFactory extends AbstractNodeFactory {
 
 
         Type type = Type.METHOD;
+        if(element.isConstructor()) {
+            type = Type.CONSTRUCTOR;
+        }
         return new DependencyNodeImpl(
                 getSignature(element), getMethodSignature(element), type,
                 isExternal, isInternal, isAbstract, isAnonymous, isPrimitive);

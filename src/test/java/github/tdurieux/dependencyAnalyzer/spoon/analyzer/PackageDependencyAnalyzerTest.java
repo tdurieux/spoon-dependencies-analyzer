@@ -14,12 +14,12 @@ import java.util.Map;
 
 import static org.junit.Assert.assertTrue;
 
-public class PackageDepencencyAnalyzerTest {
+public class PackageDependencyAnalyzerTest {
 
     private DependencyAnalyzer dependencyAnalyzer;
     private DependencyGraph graph;
 
-    public PackageDepencencyAnalyzerTest() throws Exception {
+    public PackageDependencyAnalyzerTest() throws Exception {
         AnalyzerConfig config = AnalyzerConfig.INSTANCE;
         config.setLevel(Level.PACKAGE);
 
