@@ -1,4 +1,6 @@
-# Extraction du graphe de dépendances avec Spoon [![Build Status](https://travis-ci.org/tdurieux/spoon-dependencies-analizer.svg)](https://travis-ci.org/tdurieux/spoon-dependencies-analizer)
+[![Build Status](https://travis-ci.org/tdurieux/spoon-dependencies-analizer.svg)](https://travis-ci.org/tdurieux/spoon-dependencies-analizer) [![Coverage Status](https://coveralls.io/repos/tdurieux/spoon-dependencies-analizer/badge.svg?branch=master&service=github)](https://coveralls.io/github/tdurieux/spoon-dependencies-analizer?branch=master)
+
+# Extraction du graphe de dépendances avec Spoon
 
 ```text
 Jérémy Bossut
