@@ -95,7 +95,7 @@ public class DependencyAnalyzer {
         }
 
         // analyze all classes
-        p.process();
+        p.process(factory.Class().getAll());
 
         // generate the output
         if (config.isVerbose()) {

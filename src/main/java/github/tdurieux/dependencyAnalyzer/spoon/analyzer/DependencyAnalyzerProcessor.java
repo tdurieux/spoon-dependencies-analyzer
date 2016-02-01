@@ -10,6 +10,7 @@ import github.tdurieux.dependencyAnalyzer.util.Tuple;
 import spoon.processing.AbstractProcessor;
 import spoon.reflect.code.CtInvocation;
 import spoon.reflect.code.CtLiteral;
+import spoon.reflect.code.CtTypeAccess;
 import spoon.reflect.declaration.*;
 import spoon.reflect.reference.CtExecutableReference;
 import spoon.reflect.reference.CtTypeReference;
@@ -171,6 +172,10 @@ public class DependencyAnalyzerProcessor extends AbstractProcessor<CtTypedElemen
             for (CtTypeReference<? extends Throwable> ctTypeReference : thrownTypes) {
                 listDependencies.x.add(ctTypeReference);
             }
+        }
+        if(element instanceof CtTypeAccess) {
+            listDependencies.x.add(((CtTypeAccess) element).getAccessedType());
+            return listDependencies;
         }
 
         listDependencies.x.add(element.getType());
